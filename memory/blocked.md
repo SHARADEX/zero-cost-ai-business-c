@@ -1,36 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-- [2026-08-06] [MEDIUM] **Affiliate programs** (commission-based)
-  - Fallback active: "Recommended Services" section with plain links (no commission)
-  - Upgrade: register for each:
-    - DigitalOcean: https://partners.digitalocean.com
-    - Vultr: https://www.vultr.com/affiliates
-    - Notion: https://www.notion.so/affiliates
-    - Frontend Masters: https://frontendmasters.com/affiliates
-  - After registration: edit `memory/affiliate_links.md` and replace ``
-    with your real codes. Agent will auto-inject them on next `monetize_inject` call.
-
-- [2026-08-06] [MEDIUM] **GitHub Sponsors / Buy Me a Coffee** (direct support)
-  - Fallback active: tip box with crypto-only CTA
-  - Upgrade: enable GitHub Sponsors at https://github.com/sponsors/SHARADEX
-    and/or register at https://buymeacoffee.com
-  - After registration: edit `docs/guides/crypto-tips.html` to replace the
-    `SHARADEX` in the GH Sponsors / BMC URLs.
-
-- [2026-08-06] [MEDIUM] **GoatCounter** (page-level analytics)
-  - Fallback active: GitHub Traffic API (uses GH_PAT, zero setup, repo-level data)
-  - Upgrade: register at https://goatcounter.com (free under 100k pageviews/month)
-  - After registration: set `GC_API_TOKEN` and `GC_SITE_ID` secrets
-  - Agent will auto-switch from GitHub Traffic API to GoatCounter
-
-- [2026-08-06] [MEDIUM] **Buttondown** (real newsletter)
-  - Fallback active: mailto: link (uses your email)
-  - Upgrade: register at https://buttondown.com (free under 100 subscribers)
-  - After registration: set `BUTTONDOWN_SLUG` secret
-  - Agent will auto-switch from mailto to Buttondown form
-
-## LOW (unlock advanced features — only when traffic justifies)
-
 - [2026-08-06] [LOW] **Google Indexing API** (faster SEO indexing)
   - Fallback active: URLs queued in `memory/seo_queue.md`, submitted when API configured
   - Upgrade: create Google Cloud service account, enable Indexing API, add as owner in Search Console
@@ -128,3 +97,18 @@ FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: {"error":{"message":"Acce
 CIRCUIT_OPEN groq
 SKIP gemini - unhealthy (circuit breaker)
 SKIP openrouter - budget exhausted
+
+[2026-08-10 18:37:12 UTC] Agent output failed validation twice. Last error: Missing 'action' field. Must be one of: analytics_fetch, append_doc, delete_file, distribution_post, done, http_get, list_dir, log_experiment, monetize_inject, read_file, revenue_verify, seo_submit, seo_update_sitemap, update_experiment, validate_html, write_file
+
+[2026-08-10 18:37:12 UTC] LLM call failed at step 2.
+All LLM providers failed. Attempts:
+FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403: error code: 1010
+
+FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvemen

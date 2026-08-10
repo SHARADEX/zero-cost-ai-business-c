@@ -5,127 +5,127 @@
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786374543.0976896
+      "timestamp": 1786387032.6063964
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786374543.1324816
+      "timestamp": 1786387032.6577148
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786374543.166019
+      "timestamp": 1786387032.7028522
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786374543.8202112
+      "timestamp": 1786387033.3563645
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786374544.0249853
+      "timestamp": 1786387033.5285444
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786374544.1930058
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "The read operation timed out",
-      "timestamp": 1786374604.2773075
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "The read operation timed out",
-      "timestamp": 1786374669.3652985
+      "timestamp": 1786387033.7015228
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1786374708.8957567
+      "timestamp": 1786387062.526184
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786374708.9595077
+      "timestamp": 1786387062.6153777
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786374708.9884605
+      "timestamp": 1786387062.6631536
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786374709.0177972
+      "timestamp": 1786387062.7094543
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786374709.519589
+      "timestamp": 1786387063.2368822
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786374709.7321637
+      "timestamp": 1786387063.4380698
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786374709.9279609
+      "timestamp": 1786387063.6200635
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "gemini returned empty text in first part",
-      "timestamp": 1786374766.5381377
+      "error": "429",
+      "timestamp": 1786387063.8063173
+    },
+    {
+      "provider": "gemini",
+      "success": true,
+      "error": "",
+      "timestamp": 1786387072.161543
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786387072.2538822
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786387072.3006148
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786387072.3477826
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "The read operation timed out",
-      "timestamp": 1786374831.60202
+      "error": "429",
+      "timestamp": 1786387072.7810402
     },
     {
-      "provider": "groq",
+      "provider": "gemini",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786374836.6642754
+      "error": "429",
+      "timestamp": 1786387072.9859056
     },
     {
-      "provider": "groq",
+      "provider": "gemini",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786374836.6982543
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786374836.7323809
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 403: {\"error\":{\"message\":\"Access denied. Please check your network settings.\"}}",
-      "timestamp": 1786376580.4799547
+      "error": "429",
+      "timestamp": 1786387073.1203582
     }
   ]
 }
