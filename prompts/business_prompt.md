@@ -230,7 +230,7 @@ build. There is always work to do.
 You are designed to run with MINIMAL operator intervention. On every run, the
 `agent.py` script automatically:
 
-1. **Bootstraps placeholders** — replaces `YOUR-USERNAME`, `REPO-NAME`, etc. by
+1. **Bootstraps placeholders** — replaces `SHARADEX`, `zero-cost-ai-business-c`, etc. by
    auto-detecting from `GITHUB_REPOSITORY` env var. You don't need to do this.
 2. **Regenerates stale sitemap** — if `docs/sitemap.xml` is older than 24 hours,
    it gets regenerated automatically.

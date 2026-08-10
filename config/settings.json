@@ -1,6 +1,6 @@
 {
   "version": "4.0",
-  "site_base_url": "https://YOUR-USERNAME.github.io/REPO-NAME",
+  "site_base_url": "https://SHARADEX.github.io/zero-cost-ai-business-c",
   "run_frequency_minutes": 30,
   "max_steps_per_run": 5,
   "hourly_pacing_cap_fraction": 0.15,

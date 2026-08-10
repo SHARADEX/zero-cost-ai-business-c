@@ -9,13 +9,13 @@ Format: `- [ ] [YYYY-MM-DD HH:MM:SS UTC] https://...`
 
 ## Pending
 
-- [ ] [2026-08-06 00:00:00 UTC] https://YOUR-USERNAME.github.io/REPO-NAME/
-- [ ] [2026-08-06 00:00:00 UTC] https://YOUR-USERNAME.github.io/REPO-NAME/tools/
-- [ ] [2026-08-06 00:00:00 UTC] https://YOUR-USERNAME.github.io/REPO-NAME/converters/
-- [ ] [2026-08-06 00:00:00 UTC] https://YOUR-USERNAME.github.io/REPO-NAME/calculators/
-- [ ] [2026-08-06 00:00:00 UTC] https://YOUR-USERNAME.github.io/REPO-NAME/blog/
-- [ ] [2026-08-06 00:00:00 UTC] https://YOUR-USERNAME.github.io/REPO-NAME/guides/crypto-tips.html
-- [ ] [2026-08-06 00:00:00 UTC] https://YOUR-USERNAME.github.io/REPO-NAME/guides/affiliate-disclosure.html
+- [ ] [2026-08-06 00:00:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/
+- [ ] [2026-08-06 00:00:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/tools/
+- [ ] [2026-08-06 00:00:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/converters/
+- [ ] [2026-08-06 00:00:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/
+- [ ] [2026-08-06 00:00:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/blog/
+- [ ] [2026-08-06 00:00:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/guides/crypto-tips.html
+- [ ] [2026-08-06 00:00:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/guides/affiliate-disclosure.html
 
 ## Submitted
 

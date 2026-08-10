@@ -33,7 +33,7 @@ git add -A && git commit -m "initial" && git push
 - Trigger the first agent run
 
 **That's it.** The agent is now running. It will:
-- Auto-replace all `YOUR-USERNAME` / `REPO-NAME` placeholders on first run
+- Auto-replace all `SHARADEX` / `zero-cost-ai-business-c` placeholders on first run
 - Auto-inject monetization (house ads, mailto newsletter, affiliate placeholders)
 - Auto-regenerate sitemap, robots.txt
 - Auto-use GitHub Traffic API for analytics (zero setup)
@@ -139,13 +139,13 @@ Add the LLM keys you got (any subset works — at minimum, add Groq + Gemini):
 Also add:
 - `GH_PAT` — a GitHub Personal Access Token with `repo` scope (for the agent to
   commit changes back). Create at https://github.com/settings/tokens.
-- `SITE_BASE_URL` — your GitHub Pages URL, e.g., `https://YOUR-USERNAME.github.io/zero-cost-ai-business-v4`
+- `SITE_BASE_URL` — your GitHub Pages URL, e.g., `https://SHARADEX.github.io/zero-cost-ai-business-v4`
 
 ### Step 4: Enable GitHub Pages
 
 1. In your repo: **Settings → Pages → Build and deployment → Source = GitHub Actions**
 2. The included `.github/workflows/deploy-pages.yml` handles deployment.
-3. Your site will be live at `https://YOUR-USERNAME.github.io/REPO-NAME/`.
+3. Your site will be live at `https://SHARADEX.github.io/zero-cost-ai-business-c/`.
 
 ### Step 5: Replace placeholders
 
@@ -153,8 +153,8 @@ The repo ships with these placeholders that MUST be replaced before going live:
 
 | Placeholder | Where | Replace with |
 |---|---|---|
-| `YOUR-USERNAME` | All HTML files, sitemap, robots, README | Your GitHub username |
-| `REPO-NAME` | All HTML files, sitemap, robots | Your repo name |
+| `SHARADEX` | All HTML files, sitemap, robots, README | Your GitHub username |
+| `zero-cost-ai-business-c` | All HTML files, sitemap, robots | Your repo name |
 | `skip` | All HTML files (GoatCounter script tag) | Your GoatCounter site code |
 | `skip` | All HTML files (Buttondown form) | Your Buttondown newsletter slug |
 | `0xd6DFE6b54bF3dBC919Fde57009452fe6bbb0D997` (etc.) | docs/guides/crypto-tips.html, memory/revenue.md, revenue.py | YOUR wallet addresses |
@@ -449,7 +449,7 @@ in `docs/guides/crypto-tips.html`. Or fork it and build your own.
 This is an autonomous AI agent that runs continuously. The operator is responsible
 for:
 - Ensuring the agent's output is appropriate (review the action log)
-- Replacing all placeholder values (`YOUR-USERNAME`, wallet addresses, etc.) before
+- Replacing all placeholder values (`SHARADEX`, wallet addresses, etc.) before
   going live
 - Complying with FTC affiliate disclosure rules (the `affiliate-disclosure.html` page
   is included for this purpose)

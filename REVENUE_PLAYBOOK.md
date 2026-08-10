@@ -139,9 +139,9 @@ Sponsors and BMC let them tip $3-25 with a credit card. BMC also supports
 recurring monthly donations.
 
 **Operator setup required**:
-1. Enable GitHub Sponsors at https://github.com/sponsors/YOUR-USERNAME
+1. Enable GitHub Sponsors at https://github.com/sponsors/SHARADEX
 2. Register at https://buymeacoffee.com
-3. Update `docs/guides/crypto-tips.html` — replace `YOUR-USERNAME` in the GH
+3. Update `docs/guides/crypto-tips.html` — replace `SHARADEX` in the GH
    Sponsors URL and BMC URL with your real usernames
 
 **How the agent contributes**:

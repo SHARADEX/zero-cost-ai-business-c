@@ -56,10 +56,10 @@ more revenue but is NOT required for the agent to function.
 
 - [2026-08-06] [MEDIUM] **GitHub Sponsors / Buy Me a Coffee** (direct support)
   - Fallback active: tip box with crypto-only CTA
-  - Upgrade: enable GitHub Sponsors at https://github.com/sponsors/YOUR-USERNAME
+  - Upgrade: enable GitHub Sponsors at https://github.com/sponsors/SHARADEX
     and/or register at https://buymeacoffee.com
   - After registration: edit `docs/guides/crypto-tips.html` to replace the
-    `YOUR-USERNAME` in the GH Sponsors / BMC URLs.
+    `SHARADEX` in the GH Sponsors / BMC URLs.
 
 - [2026-08-06] [MEDIUM] **GoatCounter** (page-level analytics)
   - Fallback active: GitHub Traffic API (uses GH_PAT, zero setup, repo-level data)
@@ -100,7 +100,7 @@ more revenue but is NOT required for the agent to function.
 
 These are listed for transparency — the agent handles them automatically:
 
-- ✅ Placeholder replacement (`YOUR-USERNAME`, `REPO-NAME`) — handled by `bootstrap.py`
+- ✅ Placeholder replacement (`SHARADEX`, `zero-cost-ai-business-c`) — handled by `bootstrap.py`
 - ✅ Sitemap regeneration — handled by `agent.py` self-healing
 - ✅ Robots.txt generation — handled by `seo.py`
 - ✅ Budget tracking — handled by `budget.py`
@@ -110,3 +110,13 @@ These are listed for transparency — the agent handles them automatically:
 - ✅ House ads injection — handled by `monetization.py`
 - ✅ Newsletter form (mailto fallback) — handled by `monetization.py`
 - ✅ Analytics (GitHub Traffic API fallback) — handled by `analytics.py`
+
+[2026-08-10 09:54:46 UTC] LLM call failed at step 1.
+All LLM providers failed. Attempts:
+FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403: error code: 1010
+
+CIRCUIT_OPEN groq
