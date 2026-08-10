@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lorem Ipsum Generator — Free Online Tool</title>
+  <meta name="description" content="Generate placeholder text for designs and mockups. Customize paragraph count. Free, browser-based.">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/tools/lorem-ipsum.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+  <div class="ad-zone" data-ea-publisher="zerocostai" data-ea-type="text"></div>
+
+  <main class="container tool-page">
+    <h1>Lorem Ipsum Generator — Free Online Tool</h1>
+    <p class="subtitle">Generate placeholder text for designs and mockups. Customize paragraph count. Free, browser-based.</p>
+
+    <div style="margin-bottom:16px;">
+      <label style="display:block; margin-bottom:8px; color:var(--text-dim);">Number of paragraphs:</label>
+      <input type="number" id="count" value="3" min="1" max="20">
+    </div>
+    <button class="btn btn-primary" onclick="generate()">Generate</button>
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">Output:</label>
+    <div id="output" class="output" style="white-space:normal;">Click Generate to create placeholder text.</div>
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER_SLUG" method="post" target="popupwindow">
+    <label for="newsletter-email">Get notified when we add new tools:</label>
+    <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" required>
+    <input type="hidden" value="1" name="embed">
+    <button type="submit" class="btn btn-sm">Subscribe</button>
+    <p class="disclosure">No spam. One email per week max. Unsubscribe anytime.</p>
+  </form>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a> · <a href="https://github.com/sponsors/YOUR-USERNAME">GitHub Sponsors</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script>
+    const WORDS = "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum".split(' ');
+    function randSentence() {
+      const n = 8 + Math.floor(Math.random() * 12);
+      const words = Array.from({length: n}, () => WORDS[Math.floor(Math.random() * WORDS.length)]);
+      words[0] = words[0][0].toUpperCase() + words[0].slice(1);
+      return words.join(' ') + '.';
+    }
+    function randParagraph() {
+      const n = 3 + Math.floor(Math.random() * 4);
+      return Array.from({length: n}, randSentence).join(' ');
+    }
+    function generate() {
+      const n = Math.min(20, parseInt(document.getElementById('count').value) || 1);
+      document.getElementById('output').innerHTML = Array.from({length: n}, randParagraph).map(p => '<p>' + p + '</p>').join('');
+    }
+    window.addEventListener('load', generate);
+  </script>
+</body>
+</html>

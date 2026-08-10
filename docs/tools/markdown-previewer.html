@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Previewer — Live GitHub-Flavored Markdown</title>
+  <meta name="description" content="Live markdown to HTML preview. GitHub-flavored. Free, browser-based, no sign-up.">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/tools/markdown-previewer.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+  <div class="ad-zone" data-ea-publisher="zerocostai" data-ea-type="text"></div>
+
+  <main class="container tool-page">
+    <h1>Markdown Previewer — Live GitHub-Flavored Markdown</h1>
+    <p class="subtitle">Live markdown to HTML preview. GitHub-flavored. Free, browser-based, no sign-up.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;">
+      <div>
+        <label style="display:block; margin-bottom:8px; color:var(--text-dim);">Markdown:</label>
+        <textarea id="input" oninput="render()" style="min-height:300px;"># Hello World
+
+This is **bold** and *italic*.
+
+- List item 1
+- List item 2
+
+[Link](https://example.com)
+
+`inline code`
+
+```js
+console.log('hello');
+```
+</textarea>
+      </div>
+      <div>
+        <label style="display:block; margin-bottom:8px; color:var(--text-dim);">Preview:</label>
+        <div id="output" class="output" style="min-height:300px; white-space:normal;"></div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER_SLUG" method="post" target="popupwindow">
+    <label for="newsletter-email">Get notified when we add new tools:</label>
+    <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" required>
+    <input type="hidden" value="1" name="embed">
+    <button type="submit" class="btn btn-sm">Subscribe</button>
+    <p class="disclosure">No spam. One email per week max. Unsubscribe anytime.</p>
+  </form>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a> · <a href="https://github.com/sponsors/YOUR-USERNAME">GitHub Sponsors</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+  <script>
+    function render() {
+      const v = document.getElementById('input').value;
+      try { document.getElementById('output').innerHTML = marked.parse(v); }
+      catch (e) { document.getElementById('output').textContent = 'Error: ' + e.message; }
+    }
+    window.addEventListener('load', render);
+  </script>
+</body>
+</html>

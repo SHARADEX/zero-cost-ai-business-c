@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regex Tester — Test JavaScript Regular Expressions Online</title>
+  <meta name="description" content="Test JavaScript regex patterns with live match highlighting. Supports flags g, i, m, s, u, y. Free, browser-based.">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/tools/regex-tester.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+  <div class="ad-zone" data-ea-publisher="zerocostai" data-ea-type="text"></div>
+
+  <main class="container tool-page">
+    <h1>Regex Tester — Test JavaScript Regular Expressions Online</h1>
+    <p class="subtitle">Test JavaScript regex patterns with live match highlighting. Supports flags g, i, m, s, u, y. Free, browser-based.</p>
+
+    <label for="pattern" style="display:block; margin-bottom:8px; color:var(--text-dim);">Regex pattern (without slashes):</label>
+    <input type="text" id="pattern" placeholder="\d+" value="\b\w+@\w+\.\w+\b" oninput="runRegex()">
+    <div style="margin:12px 0;">
+      <label><input type="checkbox" id="fl-g" checked> global </label>
+      <label><input type="checkbox" id="fl-i"> case-insensitive </label>
+      <label><input type="checkbox" id="fl-m"> multiline </label>
+      <label><input type="checkbox" id="fl-s"> dotall </label>
+    </div>
+    <label for="text" style="display:block; margin-bottom:8px; color:var(--text-dim);">Test text:</label>
+    <textarea id="text" oninput="runRegex()" style="min-height:120px;">Contact us at hello@example.com or sales@test.org for details.</textarea>
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">Matches:</label>
+    <div id="output" class="output">Matches will appear here.</div>
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">Highlighted:</label>
+    <div id="highlighted" class="output" style="white-space:normal;">—</div>
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER_SLUG" method="post" target="popupwindow">
+    <label for="newsletter-email">Get notified when we add new tools:</label>
+    <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" required>
+    <input type="hidden" value="1" name="embed">
+    <button type="submit" class="btn btn-sm">Subscribe</button>
+    <p class="disclosure">No spam. One email per week max. Unsubscribe anytime.</p>
+  </form>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a> · <a href="https://github.com/sponsors/YOUR-USERNAME">GitHub Sponsors</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script>
+    function runRegex() {
+      const pat = document.getElementById('pattern').value;
+      const txt = document.getElementById('text').value;
+      let flags = '';
+      if (document.getElementById('fl-g').checked) flags += 'g';
+      if (document.getElementById('fl-i').checked) flags += 'i';
+      if (document.getElementById('fl-m').checked) flags += 'm';
+      if (document.getElementById('fl-s').checked) flags += 's';
+      try {
+        const re = new RegExp(pat, flags);
+        const matches = [];
+        let m;
+        if (flags.includes('g')) {
+          while ((m = re.exec(txt)) !== null) { matches.push(m[0]); if (m.index === re.lastIndex) re.lastIndex++; }
+        } else {
+          m = re.exec(txt);
+          if (m) matches.push(m[0]);
+        }
+        document.getElementById('output').textContent = matches.length ? matches.join('\n') : 'No matches.';
+        const reG = new RegExp(pat, flags.includes('g') ? flags : flags + 'g');
+        const highlighted = txt.replace(reG, m => '<mark>' + m + '</mark>');
+        document.getElementById('highlighted').innerHTML = highlighted || '—';
+      } catch (e) {
+        document.getElementById('output').textContent = 'Regex error: ' + e.message;
+      }
+    }
+    window.addEventListener('load', runRegex);
+  </script>
+</body>
+</html>

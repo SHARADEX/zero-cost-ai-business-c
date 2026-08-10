@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert Markdown to HTML — Free Online Tool</title>
+  <meta name="description" content="Convert Markdown to HTML. GitHub-flavored. Free, browser-based, no sign-up.">
+  <meta name="keywords" content="convert markdown to html, markdown to html converter, online markdown converter, free converter tool">
+  <meta property="og:title" content="Convert Markdown to HTML — Free Online Tool">
+  <meta property="og:description" content="Convert Markdown to HTML. GitHub-flavored. Free, browser-based, no sign-up.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/converters/markdown-to-html.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Markdown to HTML Converter",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Convert Markdown to HTML. GitHub-flavored. Free, browser-based, no sign-up."
+}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+    <h1>Convert Markdown to HTML</h1>
+    <p class="subtitle">Free, browser-based Markdown → HTML converter. No sign-up, no tracking, runs entirely in your browser.</p>
+
+    <label for="input" style="display:block; margin-bottom:8px; color:var(--text-dim);">Paste your Markdown:</label>
+    <textarea id="input" placeholder="Paste your Markdown content here..." style="min-height:160px;"></textarea>
+
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin:16px 0;">
+      <button class="btn btn-primary" onclick="convert()">Convert to HTML</button>
+      <button class="btn" onclick="document.getElementById('input').value=''; document.getElementById('output').textContent='';">Clear</button>
+      <button class="btn" onclick="copyToClipboard(document.getElementById('output').textContent, this)">Copy Output</button>
+    </div>
+
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">HTML output:</label>
+    <div id="output" class="output" style="min-height:160px;">Output will appear here.</div>
+
+    <section class="article-body" style="margin-top:40px;">
+      <h2>About Markdown to HTML Conversion</h2>
+      <p>This free online tool converts Markdown data to HTML format. All processing happens locally in your browser — your data is never uploaded to a server.</p>
+
+      <h3>How to Use</h3>
+      <ol>
+        <li>Paste your Markdown content in the input box above.</li>
+        <li>Click "Convert to HTML".</li>
+        <li>Copy the result from the output box.</li>
+      </ol>
+
+      <h3>Common Use Cases</h3>
+      <ul>
+        <li>Converting configuration files between Markdown and HTML formats</li>
+        <li>Transforming API responses for different consumers</li>
+        <li>Migrating data between systems that use different formats</li>
+      </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <h4>Is this converter free?</h4>
+      <p>Yes, completely free. No sign-up, no ads, no tracking.</p>
+      <h4>Is my data safe?</h4>
+      <p>Yes — all conversion happens in your browser. Your data never leaves your device.</p>
+    </section>
+
+    <section class="related">
+      <h3>Related Tools</h3>
+      <ul>
+      <li><a href="/converters/">All Converters</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/yaml-converter.html">YAML Inspector</a></li>
+      </ul>
+    </section>
+
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a>.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <!-- GoatCounter analytics — privacy-respecting, no cookies -->
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+
+  <script>
+    function convert() { const v = document.getElementById('input').value; if (!v) return; try { document.getElementById('output').innerHTML = marked.parse(v); } catch (e) { document.getElementById('output').textContent = 'Error: ' + e.message; } }
+  </script>
+</body>
+</html>

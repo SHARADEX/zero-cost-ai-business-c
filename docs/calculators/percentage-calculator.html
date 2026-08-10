@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Calculator — Free Online Calculator</title>
+  <meta name="description" content="Calculate percentages, percentage change, and what percent one number is of another. Free, browser-based, no sign-up.">
+  <meta name="keywords" content="percentage calculator, online percentage calculator, free calculator, percentage calculator">
+  <meta property="og:title" content="Percentage Calculator — Free Online Calculator">
+  <meta property="og:description" content="Calculate percentages, percentage change, and what percent one number is of another. Free, browser-based, no sign-up.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/calculators/percentage-calculator.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Percentage Calculator",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Calculate percentages, percentage change, and what percent one number is of another. Free, browser-based, no sign-up."
+}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+    <h1>Percentage Calculator</h1>
+    <p class="subtitle">Calculate percentages, percentage change, and what percent one number is of another.</p>
+
+    <div class="calc-form">
+      <label>What is <input type="number" id="p1" value="20" style="display:inline; width:80px;">% of <input type="number" id="p2" value="200" style="display:inline; width:100px;">?</label>
+      <label>X is what % of Y? X = <input type="number" id="p3" value="50" style="display:inline; width:80px;">, Y = <input type="number" id="p4" value="200" style="display:inline; width:100px;"></label>
+      <label>% change from <input type="number" id="p5" value="100" style="display:inline; width:100px;"> to <input type="number" id="p6" value="150" style="display:inline; width:100px;">?</label>
+      <button class="btn btn-primary" onclick="calculate()">Calculate</button>
+    </div>
+
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">Result:</label>
+    <div id="output" class="output">Enter values above and click Calculate.</div>
+
+    <section class="article-body" style="margin-top:40px;">
+      <h2>About the Percentage Calculator</h2>
+      <p>This free online calculator computes calculate percentages, percentage change, and what percent one number is of another. All calculations happen locally in your browser — no data is sent to a server.</p>
+
+      <h3>Formula</h3>
+      <p>Calculate percentages, percentage change, and what percent one number is of another.</p>
+    </section>
+
+    <section class="related">
+      <h3>Related Tools</h3>
+      <ul>
+      <li><a href="/calculators/">All Calculators</a></li>
+      </ul>
+    </section>
+
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a>.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <!-- GoatCounter analytics — privacy-respecting, no cookies -->
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+
+  <script>
+    function calculate() { const p1 = parseFloat(document.getElementById('p1').value) || 0; const p2 = parseFloat(document.getElementById('p2').value) || 0; const p3 = parseFloat(document.getElementById('p3').value) || 0; const p4 = parseFloat(document.getElementById('p4').value) || 0; const p5 = parseFloat(document.getElementById('p5').value) || 0; const p6 = parseFloat(document.getElementById('p6').value) || 0; const r1 = (p1 / 100) * p2; const r2 = p4 === 0 ? 0 : (p3 / p4) * 100; const r3 = p5 === 0 ? 0 : ((p6 - p5) / p5) * 100; document.getElementById('output').innerHTML = p1 + '% of ' + p2 + ' = <strong>' + r1 + '</strong><br>' + p3 + ' is <strong>' + r2 + '%</strong> of ' + p4 + '<br>Change from ' + p5 + ' to ' + p6 + ' = <strong>' + r3 + '%</strong>'; }
+  </script>
+</body>
+</html>

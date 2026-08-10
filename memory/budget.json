@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-06",
+  "last_updated": "2026-08-06 00:00:00 UTC",
+  "providers": {
+    "groq":        {"requests_used": 0, "tokens_used": 0},
+    "gemini":      {"requests_used": 0, "tokens_used": 0},
+    "cerebras":    {"requests_used": 0, "tokens_used": 0},
+    "sambanova":   {"requests_used": 0, "tokens_used": 0},
+    "cloudflare":  {"requests_used": 0, "tokens_used": 0},
+    "huggingface": {"requests_used": 0, "tokens_used": 0},
+    "openrouter":  {"requests_used": 0, "tokens_used": 0}
+  },
+  "hourly_usage": {}
+}

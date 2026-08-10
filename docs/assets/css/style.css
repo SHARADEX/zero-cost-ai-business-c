@@ -1,0 +1,335 @@
+/* Zero-Cost AI Business v4 — shared stylesheet
+   Clean, modern, mobile-first. No external dependencies.
+   Adds: ad-zone, affiliate-section, newsletter-form styles. */
+
+:root {
+  --bg: #0f1117;
+  --bg-elev: #1a1d27;
+  --bg-card: #161922;
+  --text: #e6e9ef;
+  --text-dim: #9aa3b2;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --border: #2a2e3a;
+  --radius: 8px;
+  --max-width: 960px;
+  --mono: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent-hover); text-decoration: none; }
+a:hover { color: var(--accent); text-decoration: underline; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background: var(--bg-elev);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+header .logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+header .logo span { color: var(--accent); }
+header nav { display: flex; gap: 16px; flex-wrap: wrap; }
+header nav a { color: var(--text-dim); font-size: 0.9rem; }
+header nav a:hover { color: var(--text); }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 0 60px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 16px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn:hover { border-color: var(--accent); text-decoration: none; }
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+.btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn-sm { padding: 4px 10px; font-size: 0.8rem; }
+
+/* Ad zone — ethical ads (Carbon Ads / EthicalAds) */
+.ad-zone {
+  max-width: 728px;
+  margin: 24px auto;
+  min-height: 90px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+.ad-zone::before {
+  content: "Sponsored";
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  position: absolute;
+  margin-top: -32px;
+}
+
+/* Grid of tools */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 40px 0;
+}
+.tool-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: all 0.15s;
+}
+.tool-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.tool-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.tool-card p { margin: 0; color: var(--text-dim); font-size: 0.85rem; }
+
+/* Tool page layout */
+.tool-page { padding: 40px 0; }
+.tool-page h1 { margin: 0 0 8px; font-size: 1.8rem; }
+.tool-page .subtitle { color: var(--text-dim); margin: 0 0 24px; }
+
+textarea, input[type="text"], input[type="number"], input[type="email"] {
+  width: 100%;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  padding: 12px;
+  resize: vertical;
+}
+textarea:focus, input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+textarea { min-height: 120px; }
+
+.output {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  min-height: 60px;
+  margin-top: 12px;
+}
+
+/* Affiliate section */
+.affiliate-section {
+  margin: 32px 0;
+  padding: 20px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.affiliate-section h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.affiliate-section .disclosure { font-size: 0.75rem; color: var(--text-dim); margin: 0 0 12px; }
+.affiliate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.affiliate-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+.affiliate-card .affiliate-name { font-size: 0.95rem; }
+.affiliate-card .affiliate-desc { font-size: 0.8rem; color: var(--text-dim); margin: 6px 0 10px; min-height: 32px; }
+
+/* Newsletter form */
+.newsletter-form {
+  margin: 32px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(99,102,241,0.05), rgba(168,85,247,0.05));
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.newsletter-form label { flex: 1 1 200px; font-size: 0.9rem; }
+.newsletter-form input[type="email"] { flex: 1 1 200px; min-width: 0; }
+.newsletter-form .disclosure { width: 100%; font-size: 0.7rem; color: var(--text-dim); margin: 4px 0 0; }
+
+/* Tip / support box */
+.tip-box {
+  background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(168,85,247,0.1));
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 40px 0;
+  text-align: center;
+}
+.tip-box h2 { margin: 0 0 8px; font-size: 1.2rem; }
+.tip-box p { color: var(--text-dim); margin: 0 0 16px; font-size: 0.95rem; }
+.tip-box .wallets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+  text-align: left;
+}
+.tip-box .wallet {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+.tip-box .wallet .label { color: var(--text-dim); display: block; margin-bottom: 4px; font-family: var(--sans); }
+.tip-box .wallet .addr { word-break: break-all; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  margin-top: 60px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-align: center;
+}
+footer a { color: var(--text-dim); }
+footer a:hover { color: var(--text); }
+
+/* Article styling */
+.article {
+  padding: 40px 0;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.article h1 { font-size: 2rem; margin: 0 0 8px; }
+.article .meta { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 32px; }
+.article h2 { margin-top: 32px; font-size: 1.4rem; }
+.article h3 { margin-top: 24px; font-size: 1.15rem; }
+.article p { margin: 16px 0; }
+.article ul, .article ol { padding-left: 24px; }
+.article li { margin: 6px 0; }
+.article code {
+  background: var(--bg-elev);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 0.9em;
+}
+.article pre {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  overflow-x: auto;
+}
+.article pre code { background: none; padding: 0; }
+
+/* Related links section */
+.related {
+  margin: 32px 0;
+  padding: 20px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.related h3 { margin: 0 0 12px; font-size: 1rem; }
+.related ul { margin: 0; padding-left: 20px; }
+.related li { margin: 4px 0; font-size: 0.9rem; }
+
+/* Calculator form */
+.calc-form {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 16px 0;
+}
+.calc-form label { display: block; margin: 12px 0 4px; color: var(--text-dim); font-size: 0.9rem; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero { padding: 48px 0 32px; }
+  header .container { flex-direction: column; align-items: flex-start; }
+  .ad-zone { display: none; }  /* Hide ads on mobile to keep UX clean */
+}

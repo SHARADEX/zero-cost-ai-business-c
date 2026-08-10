@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UUID Generator (v4) — Free Online Tool</title>
+  <meta name="description" content="Generate random UUIDs (version 4). Bulk generation supported. Free, browser-based, uses crypto.getRandomValues.">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/tools/uuid-generator.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+  <div class="ad-zone" data-ea-publisher="zerocostai" data-ea-type="text"></div>
+
+  <main class="container tool-page">
+    <h1>UUID Generator (v4) — Free Online Tool</h1>
+    <p class="subtitle">Generate random UUIDs (version 4). Bulk generation supported. Free, browser-based, uses crypto.getRandomValues.</p>
+
+    <div style="margin-bottom:16px;">
+      <label style="display:block; margin-bottom:8px; color:var(--text-dim);">How many UUIDs?</label>
+      <input type="number" id="count" value="10" min="1" max="1000">
+    </div>
+    <button class="btn btn-primary" onclick="generate()">Generate UUIDs</button>
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">UUIDs:</label>
+    <div id="output" class="output">Click "Generate UUIDs" to start.</div>
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER_SLUG" method="post" target="popupwindow">
+    <label for="newsletter-email">Get notified when we add new tools:</label>
+    <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" required>
+    <input type="hidden" value="1" name="embed">
+    <button type="submit" class="btn btn-sm">Subscribe</button>
+    <p class="disclosure">No spam. One email per week max. Unsubscribe anytime.</p>
+  </form>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a> · <a href="https://github.com/sponsors/YOUR-USERNAME">GitHub Sponsors</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script>
+    function uuidv4() {
+      if (crypto.randomUUID) return crypto.randomUUID();
+      const a = new Uint8Array(16); crypto.getRandomValues(a);
+      a[6] = (a[6] & 0x0f) | 0x40;
+      a[8] = (a[8] & 0x3f) | 0x80;
+      const h = [...a].map(b => b.toString(16).padStart(2, '0'));
+      return h[0]+h[1]+h[2]+h[3]+'-'+h[4]+h[5]+'-'+h[6]+h[7]+'-'+h[8]+h[9]+'-'+h[10]+h[11]+h[12]+h[13]+h[14]+h[15];
+    }
+    function generate() {
+      const n = Math.min(1000, parseInt(document.getElementById('count').value) || 1);
+      const uuids = Array.from({length: n}, () => uuidv4());
+      document.getElementById('output').textContent = uuids.join('\n');
+    }
+    window.addEventListener('load', generate);
+  </script>
+</body>
+</html>

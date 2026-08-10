@@ -1,0 +1,47 @@
+{
+  "version": "4.0",
+  "site_base_url": "https://YOUR-USERNAME.github.io/REPO-NAME",
+  "run_frequency_minutes": 30,
+  "max_steps_per_run": 5,
+  "hourly_pacing_cap_fraction": 0.15,
+  "revenue_streams": [
+    "programmatic_seo",
+    "ethical_ads",
+    "affiliate_links",
+    "crypto_tips",
+    "github_sponsors_bmc",
+    "newsletter",
+    "sponsored_placements"
+  ],
+  "wallets": {
+    "bitcoin": "bc1qh3areygq598ntxht0yp5yv87ej7g6aqvw8fl4z",
+    "ethereum": "0xd6DFE6b54bF3dBC919Fde57009452fe6bbb0D997",
+    "solana": "2emXSLoziaB5wdC8y48ovbu41agh9PzR5ro8o7kRDUvM",
+    "tron": "TJxkyJW57Tb8qmvvv5rCh3L2FYssRvWFEv"
+  },
+  "analytics": {
+    "provider": "goatcounter",
+    "site_id_env": "GC_SITE_ID",
+    "api_token_env": "GC_API_TOKEN"
+  },
+  "ad_network": {
+    "provider": "ethicalads_or_carbon",
+    "publisher_id_placeholder": "zerocostai"
+  },
+  "newsletter": {
+    "provider": "buttondown",
+    "slug_placeholder": "skip"
+  },
+  "distribution_channels": [
+    {"name": "reddit", "rate_limit_hours": 168},
+    {"name": "devto", "rate_limit_hours": 24},
+    {"name": "twitter", "rate_limit_hours": 0.5},
+    {"name": "linkedin", "rate_limit_hours": 168},
+    {"name": "hackernews", "rate_limit_hours": 336}
+  ],
+  "kill_switch": {
+    "file": "PAUSE",
+    "env_var": "PAUSE_AGENT",
+    "github_issue_label": "agent-pause"
+  }
+}

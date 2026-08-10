@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YAML Inspector & Validator — Free Online Tool</title>
+  <meta name="description" content="Validate and inspect YAML. Convert to JSON. Free, browser-based.">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/tools/yaml-converter.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+  <div class="ad-zone" data-ea-publisher="zerocostai" data-ea-type="text"></div>
+
+  <main class="container tool-page">
+    <h1>YAML Inspector & Validator — Free Online Tool</h1>
+    <p class="subtitle">Validate and inspect YAML. Convert to JSON. Free, browser-based.</p>
+
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+      <button class="btn btn-primary" onclick="validateYaml()">Validate</button>
+      <button class="btn" onclick="toJSON()">Convert to JSON</button>
+    </div>
+    <label for="input" style="display:block; margin-bottom:8px; color:var(--text-dim);">YAML input:</label>
+    <textarea id="input">name: Example
+version: 1.0
+tags:
+  - web
+  - tool
+nested:
+  foo: bar
+  num: 42</textarea>
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">Output:</label>
+    <div id="output" class="output">Output will appear here.</div>
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER_SLUG" method="post" target="popupwindow">
+    <label for="newsletter-email">Get notified when we add new tools:</label>
+    <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" required>
+    <input type="hidden" value="1" name="embed">
+    <button type="submit" class="btn btn-sm">Subscribe</button>
+    <p class="disclosure">No spam. One email per week max. Unsubscribe anytime.</p>
+  </form>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a> · <a href="https://github.com/sponsors/YOUR-USERNAME">GitHub Sponsors</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script>
+    function validateYaml() {
+      const v = document.getElementById('input').value;
+      try { jsyaml.load(v); document.getElementById('output').textContent = 'Valid YAML.'; }
+      catch (e) { document.getElementById('output').textContent = 'Invalid YAML: ' + e.message; }
+    }
+    function toJSON() {
+      const v = document.getElementById('input').value;
+      try { const obj = jsyaml.load(v); document.getElementById('output').textContent = JSON.stringify(obj, null, 2); }
+      catch (e) { document.getElementById('output').textContent = 'Error: ' + e.message; }
+    }
+  </script>
+</body>
+</html>

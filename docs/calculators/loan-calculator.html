@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Calculator — Free Online Calculator</title>
+  <meta name="description" content="Calculate monthly payment for a fixed-rate loan. Enter principal, interest rate, and term. Free, browser-based, no sign-up.">
+  <meta name="keywords" content="loan calculator, online loan calculator, free calculator, loan calculator">
+  <meta property="og:title" content="Loan Calculator — Free Online Calculator">
+  <meta property="og:description" content="Calculate monthly payment for a fixed-rate loan. Enter principal, interest rate, and term. Free, browser-based, no sign-up.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/calculators/loan-calculator.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Loan Calculator",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Calculate monthly payment for a fixed-rate loan. Enter principal, interest rate, and term. Free, browser-based, no sign-up."
+}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+    <h1>Loan Calculator</h1>
+    <p class="subtitle">Calculate monthly payment for a fixed-rate loan. Enter principal, interest rate, and term.</p>
+
+    <div class="calc-form">
+      <label>Loan amount ($): <input type="number" id="principal" value="10000"></label>
+      <label>Annual interest rate (%): <input type="number" id="rate" value="5" step="0.1"></label>
+      <label>Term (years): <input type="number" id="years" value="5"></label>
+      <button class="btn btn-primary" onclick="calculate()">Calculate</button>
+    </div>
+
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">Result:</label>
+    <div id="output" class="output">Enter values above and click Calculate.</div>
+
+    <section class="article-body" style="margin-top:40px;">
+      <h2>About the Loan Calculator</h2>
+      <p>This free online calculator computes calculate monthly payment for a fixed-rate loan. enter principal, interest rate, and term. All calculations happen locally in your browser — no data is sent to a server.</p>
+
+      <h3>Formula</h3>
+      <p>Calculate monthly payment for a fixed-rate loan. Enter principal, interest rate, and term.</p>
+    </section>
+
+    <section class="related">
+      <h3>Related Tools</h3>
+      <ul>
+      <li><a href="/calculators/">All Calculators</a></li>
+      </ul>
+    </section>
+
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a>.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <!-- GoatCounter analytics — privacy-respecting, no cookies -->
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+
+  <script>
+    function calculate() { const p = parseFloat(document.getElementById('principal').value); const r = (parseFloat(document.getElementById('rate').value) || 0) / 100 / 12; const n = (parseFloat(document.getElementById('years').value) || 0) * 12; if (!p || !n) { document.getElementById('output').textContent = 'Please enter values.'; return; } const monthly = r === 0 ? p / n : (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1); const total = monthly * n; const interest = total - p; document.getElementById('output').innerHTML = 'Monthly payment: <strong>$' + monthly.toFixed(2) + '</strong><br>Total paid: $' + total.toFixed(2) + '<br>Total interest: $' + interest.toFixed(2); }
+  </script>
+</body>
+</html>

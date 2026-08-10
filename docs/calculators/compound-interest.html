@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest Calculator — Free Online Calculator</title>
+  <meta name="description" content="Calculate compound interest. Enter principal, rate, time, and compounding frequency. Free, browser-based, no sign-up.">
+  <meta name="keywords" content="compound interest calculator, online compound interest calculator, free calculator, compound interest">
+  <meta property="og:title" content="Compound Interest Calculator — Free Online Calculator">
+  <meta property="og:description" content="Calculate compound interest. Enter principal, rate, time, and compounding frequency. Free, browser-based, no sign-up.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/calculators/compound-interest.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Compound Interest Calculator",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Calculate compound interest. Enter principal, rate, time, and compounding frequency. Free, browser-based, no sign-up."
+}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+    <h1>Compound Interest Calculator</h1>
+    <p class="subtitle">Calculate compound interest. Enter principal, rate, time, and compounding frequency.</p>
+
+    <div class="calc-form">
+      <label>Principal ($): <input type="number" id="principal" value="1000"></label>
+      <label>Annual rate (%): <input type="number" id="rate" value="7" step="0.1"></label>
+      <label>Years: <input type="number" id="years" value="10"></label>
+      <label>Compounds per year: <input type="number" id="n" value="12"></label>
+      <button class="btn btn-primary" onclick="calculate()">Calculate</button>
+    </div>
+
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">Result:</label>
+    <div id="output" class="output">Enter values above and click Calculate.</div>
+
+    <section class="article-body" style="margin-top:40px;">
+      <h2>About the Compound Interest Calculator</h2>
+      <p>This free online calculator computes calculate compound interest. enter principal, rate, time, and compounding frequency. All calculations happen locally in your browser — no data is sent to a server.</p>
+
+      <h3>Formula</h3>
+      <p>Calculate compound interest. Enter principal, rate, time, and compounding frequency.</p>
+    </section>
+
+    <section class="related">
+      <h3>Related Tools</h3>
+      <ul>
+      <li><a href="/calculators/">All Calculators</a></li>
+      </ul>
+    </section>
+
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a>.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <!-- GoatCounter analytics — privacy-respecting, no cookies -->
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+
+  <script>
+    function calculate() { const p = parseFloat(document.getElementById('principal').value); const r = (parseFloat(document.getElementById('rate').value) || 0) / 100; const t = parseFloat(document.getElementById('years').value); const n = parseFloat(document.getElementById('n').value); if (!p || !t || !n) { document.getElementById('output').textContent = 'Please enter values.'; return; } const a = p * Math.pow(1 + r / n, n * t); const interest = a - p; document.getElementById('output').innerHTML = 'Final amount: <strong>$' + a.toFixed(2) + '</strong><br>Interest earned: $' + interest.toFixed(2); }
+  </script>
+</body>
+</html>

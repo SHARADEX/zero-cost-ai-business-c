@@ -1,0 +1,8 @@
+# Dependencies for the Zero-Cost AI Business Agent v4
+# Core agent uses Python standard library only (urllib, json, os, re).
+# These are for optional integrations:
+requests>=2.31.0
+# Google Indexing API support (optional — agent works without it)
+google-auth>=2.0.0
+# PyYAML for some config parsing (optional)
+PyYAML>=6.0

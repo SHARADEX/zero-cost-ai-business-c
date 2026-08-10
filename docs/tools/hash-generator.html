@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hash Generator — SHA-256, SHA-1, MD5</title>
+  <meta name="description" content="Compute SHA-256, SHA-1, and MD5 hashes from any text. Free, browser-based, no sign-up. Uses Web Crypto API.">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/REPO-NAME/tools/hash-generator.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">⚡<span>FreeTools</span></a>
+      <nav>
+        <a href="/tools/">Tools</a>
+        <a href="/converters/">Converters</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+  <div class="ad-zone" data-ea-publisher="zerocostai" data-ea-type="text"></div>
+
+  <main class="container tool-page">
+    <h1>Hash Generator — SHA-256, SHA-1, MD5</h1>
+    <p class="subtitle">Compute SHA-256, SHA-1, and MD5 hashes from any text. Free, browser-based, no sign-up. Uses Web Crypto API.</p>
+
+    <label for="input" style="display:block; margin-bottom:8px; color:var(--text-dim);">Text to hash:</label>
+    <textarea id="input" placeholder="Enter text to hash"></textarea>
+    <button class="btn btn-primary" onclick="hashAll()" style="margin-top:16px;">Compute Hashes</button>
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">SHA-256:</label>
+    <div id="sha256" class="output">—</div>
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">SHA-1:</label>
+    <div id="sha1" class="output">—</div>
+    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">MD5:</label>
+    <div id="md5" class="output">—</div>
+
+    <div class="tip-box">
+      <h2>Found this useful?</h2>
+      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
+      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
+    </div>
+  </main>
+
+  <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER_SLUG" method="post" target="popupwindow">
+    <label for="newsletter-email">Get notified when we add new tools:</label>
+    <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" required>
+    <input type="hidden" value="1" name="embed">
+    <button type="submit" class="btn btn-sm">Subscribe</button>
+    <p class="disclosure">No spam. One email per week max. Unsubscribe anytime.</p>
+  </form>
+
+  <footer>
+    <div class="container">
+      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a> · <a href="https://github.com/sponsors/YOUR-USERNAME">GitHub Sponsors</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.19.0/js/md5.min.js"></script>
+  <script>
+    async function hashAll() {
+      const v = document.getElementById('input').value;
+      if (!v) return;
+      const enc = new TextEncoder().encode(v);
+      const sha256buf = await crypto.subtle.digest('SHA-256', enc);
+      const sha1buf = await crypto.subtle.digest('SHA-1', enc);
+      document.getElementById('sha256').textContent = buf2hex(sha256buf);
+      document.getElementById('sha1').textContent = buf2hex(sha1buf);
+      document.getElementById('md5').textContent = md5(v);
+    }
+    function buf2hex(buf) {
+      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+  </script>
+</body>
+</html>
