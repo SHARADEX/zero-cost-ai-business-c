@@ -1,23 +1,4 @@
 {
-  "last_updated": "2026-08-06T00:00:00Z",
-  "events": [
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786355686.4617317
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786355686.505737
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786355686.5538237
-    }
-  ]
+  "last_updated": "2026-08-10T00:00:00Z",
+  "events": []
 }
