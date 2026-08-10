@@ -120,3 +120,6 @@ FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
 FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403: error code: 1010
 
 CIRCUIT_OPEN groq
+
+[2026-08-10 09:55:14 UTC] LLM call failed at step 1.
+All configured providers exhausted or unhealthy. Configured: ['groq']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
