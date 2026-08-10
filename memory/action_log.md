@@ -87,3 +87,16 @@ provider performance comparison.
   - Step 1: append_doc (OK) — Appended 153 chars to: docs/guides/crypto-tips.html
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-10 12:35:32 UTC
+**Model:** openrouter
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 13077
+
+**Steps:**
+  Step 1: action=seo_submit | tokens=13077 | result=SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (err
+  - Stopped: LLM failed at step 2.
+---

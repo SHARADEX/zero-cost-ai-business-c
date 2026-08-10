@@ -174,6 +174,12 @@
       "success": false,
       "error": "429",
       "timestamp": 1786363930.250543
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786365350.5308692
     }
   ]
 }
