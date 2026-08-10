@@ -43,7 +43,11 @@ DAILY_LIMITS: Dict[str, Dict[str, int]] = {
 MAX_HOURLY_FRACTION = 0.15
 
 # Provider health: if failures in last 60 min >= this, mark provider as unhealthy
-HEALTH_FAILURE_THRESHOLD = 3
+# v4.1: raised from 3 to 10 — a single retry burst (3 models × 3 attempts = 9 failures)
+# no longer trips the breaker for a full hour. The breaker should trip on SUSTAINED
+# failure, not transient blips. This way one Cloudflare 403 from Groq doesn't block
+# all future runs for an hour — the next run will retry Groq fresh.
+HEALTH_FAILURE_THRESHOLD = 10
 HEALTH_WINDOW_SECONDS = 3600
 
 
