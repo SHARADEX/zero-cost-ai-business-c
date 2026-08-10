@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# Memory cache (transient — agent regenerates)
+memory/models_cache/
+
+# Local dev
+.env
+.env.local
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jekyll build output
+_site/
+.jekyll-cache/
+
+# Pause file (operator-controlled, never commit)
+PAUSE
+
+# Temp files
+*.tmp
+*.bak
+*.swp
