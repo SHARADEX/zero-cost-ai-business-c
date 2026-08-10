@@ -168,7 +168,27 @@ def _discover_gemini():
 
 
 def _discover_openrouter():
-    return ["openrouter/free"]
+    """OpenRouter has free models that change over time. We use a curated list of
+    reliable free models. The 'openrouter/free' alias is flaky (sometimes returns
+    no model), so we prefer explicit free model IDs."""
+    return [
+        "meta-llama/llama-3.2-3b-instruct:free",
+        "google/gemini-flash-1.5:free",
+        "mistralai/mistral-7b-instruct:free",
+        "qwen/qwen-2-7b-instruct:free",
+        "openrouter/free",  # alias as last resort
+    ]
+
+
+def _invalidate_openrouter_cache():
+    """Clear OpenRouter's cached model list so the new list takes effect."""
+    try:
+        cache_path = _cache_path("openrouter")
+        if os.path.exists(cache_path):
+            os.remove(cache_path)
+            print("[llm_client] Cleared OpenRouter model cache")
+    except Exception:
+        pass
 
 
 def _discover_cerebras():
@@ -260,6 +280,60 @@ def get_models_for_provider(provider):
 # Provider call implementations
 # ---------------------------------------------------------------------------
 
+def _extract_chat_content(data, provider_name):
+    """
+    Safely extract content + tokens from an OpenAI-compatible chat completion
+    response (Groq, OpenRouter, Cerebras, SambaNova, HuggingFace all use this shape).
+
+    Returns: (content, tokens)
+    Raises:  RuntimeError with a useful message if the response is malformed.
+    """
+    # Some providers return errors inline (200 OK with error body)
+    if data.get("error"):
+        err = data["error"]
+        if isinstance(err, dict):
+            err = err.get("message") or str(err)
+        raise RuntimeError(f"{provider_name} returned error: {err}")
+    # Missing choices entirely
+    choices = data.get("choices")
+    if not choices or not isinstance(choices, list):
+        msg = data.get("message") or "no choices in response"
+        raise RuntimeError(f"{provider_name} returned no choices: {msg}")
+    first = choices[0] if isinstance(choices[0], dict) else {}
+    msg_obj = first.get("message") or {}
+    content = msg_obj.get("content")
+    if not content:
+        finish = first.get("finish_reason", "unknown")
+        raise RuntimeError(f"{provider_name} returned empty content (finish_reason={finish})")
+    usage = data.get("usage") or {}
+    tokens = usage.get("total_tokens") or _estimate_tokens(content)
+    return content, tokens
+
+
+def _extract_gemini_content(data):
+    """Safely extract content from a Gemini response (different shape)."""
+    if data.get("error"):
+        err = data["error"]
+        if isinstance(err, dict):
+            err = err.get("message") or str(err)
+        raise RuntimeError(f"gemini returned error: {err}")
+    candidates = data.get("candidates")
+    if not candidates:
+        msg = data.get("promptFeedback", {}).get("blockReason") or "no candidates in response"
+        raise RuntimeError(f"gemini returned no candidates: {msg}")
+    first = candidates[0] if isinstance(candidates[0], dict) else {}
+    parts = (first.get("content") or {}).get("parts") or []
+    if not parts:
+        finish = first.get("finishReason", "unknown")
+        raise RuntimeError(f"gemini returned empty content (finishReason={finish})")
+    content = parts[0].get("text", "")
+    if not content:
+        raise RuntimeError("gemini returned empty text in first part")
+    usage = data.get("usageMetadata") or {}
+    tokens = usage.get("totalTokenCount") or _estimate_tokens(content)
+    return content, tokens
+
+
 def _call_groq(messages, model, max_tokens, temperature, json_mode=False):
     api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
@@ -270,9 +344,7 @@ def _call_groq(messages, model, max_tokens, temperature, json_mode=False):
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
     data = _post_json(url, headers, payload, timeout=60)
-    content = data["choices"][0]["message"]["content"]
-    usage = data.get("usage", {})
-    tokens = usage.get("total_tokens", _estimate_tokens(content))
+    content, tokens = _extract_chat_content(data, "groq")
     return content, "groq", tokens
 
 
@@ -291,9 +363,7 @@ def _call_openrouter(messages, model, max_tokens, temperature, json_mode=False):
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
     data = _post_json(url, headers, payload, timeout=60)
-    content = data["choices"][0]["message"]["content"]
-    usage = data.get("usage", {})
-    tokens = usage.get("total_tokens", _estimate_tokens(content))
+    content, tokens = _extract_chat_content(data, "openrouter")
     return content, "openrouter", tokens
 
 
@@ -324,9 +394,7 @@ def _call_gemini(messages, model, max_tokens, temperature, json_mode=False):
     }
     payload = {k: v for k, v in payload.items() if v is not None}
     data = _post_json(url, {"Content-Type": "application/json"}, payload, timeout=60)
-    content = data["candidates"][0]["content"]["parts"][0]["text"]
-    usage = data.get("usageMetadata", {})
-    tokens = usage.get("totalTokenCount", _estimate_tokens(content))
+    content, tokens = _extract_gemini_content(data)
     return content, "gemini", tokens
 
 
@@ -340,9 +408,7 @@ def _call_cerebras(messages, model, max_tokens, temperature, json_mode=False):
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
     data = _post_json(url, headers, payload, timeout=60)
-    content = data["choices"][0]["message"]["content"]
-    usage = data.get("usage", {})
-    tokens = usage.get("total_tokens", _estimate_tokens(content))
+    content, tokens = _extract_chat_content(data, "cerebras")
     return content, "cerebras", tokens
 
 
@@ -356,9 +422,7 @@ def _call_sambanova(messages, model, max_tokens, temperature, json_mode=False):
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
     data = _post_json(url, headers, payload, timeout=90)
-    content = data["choices"][0]["message"]["content"]
-    usage = data.get("usage", {})
-    tokens = usage.get("total_tokens", _estimate_tokens(content))
+    content, tokens = _extract_chat_content(data, "sambanova")
     return content, "sambanova", tokens
 
 
@@ -373,7 +437,15 @@ def _call_cloudflare(messages, model, max_tokens, temperature, json_mode=False):
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
     data = _post_json(url, headers, payload, timeout=60)
-    content = data["result"]["response"]
+    # Cloudflare uses a different shape: { "result": { "response": "..." } }
+    if not data.get("success", True):
+        errors = data.get("errors", [])
+        err_msg = errors[0].get("message") if errors else "unknown cloudflare error"
+        raise RuntimeError(f"cloudflare returned error: {err_msg}")
+    result = data.get("result") or {}
+    content = result.get("response")
+    if not content:
+        raise RuntimeError("cloudflare returned empty response")
     tokens = _estimate_tokens(content)
     return content, "cloudflare", tokens
 
@@ -388,9 +460,7 @@ def _call_huggingface(messages, model, max_tokens, temperature, json_mode=False)
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
     data = _post_json(url, headers, payload, timeout=60)
-    content = data["choices"][0]["message"]["content"]
-    usage = data.get("usage", {})
-    tokens = usage.get("total_tokens", _estimate_tokens(content))
+    content, tokens = _extract_chat_content(data, "huggingface")
     return content, "huggingface", tokens
 
 
