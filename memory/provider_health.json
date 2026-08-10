@@ -120,6 +120,12 @@
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
       "timestamp": 1786374836.7323809
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: {\"error\":{\"message\":\"Access denied. Please check your network settings.\"}}",
+      "timestamp": 1786376580.4799547
     }
   ]
 }

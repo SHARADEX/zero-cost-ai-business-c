@@ -1,11 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-- [2026-08-06] [MEDIUM] **EthicalAds or Carbon Ads** (paid ad network)
-  - Fallback active: house ads (cross-promotion of your own tools)
-  - Upgrade: register at https://ethicalads.io (easy approval) or https://carbonads.net
-  - After registration: set `ETHICALADS_PUBLISHER_ID` or `CARBON_ADS_ID` secret
-  - Agent will auto-upgrade from house ads to paid ads on next run
-
 - [2026-08-06] [MEDIUM] **Affiliate programs** (commission-based)
   - Fallback active: "Recommended Services" section with plain links (no commission)
   - Upgrade: register for each:
@@ -125,5 +119,12 @@ FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
 
 FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403: error code: 1010
 
+SKIP gemini - unhealthy (circuit breaker)
+SKIP openrouter - budget exhausted
+
+[2026-08-10 15:43:00 UTC] LLM call failed at step 1.
+All LLM providers failed. Attempts:
+FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: {"error":{"message":"Access denied. Please check your network settings."}}
+CIRCUIT_OPEN groq
 SKIP gemini - unhealthy (circuit breaker)
 SKIP openrouter - budget exhausted
