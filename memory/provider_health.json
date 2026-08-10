@@ -156,6 +156,24 @@
       "success": true,
       "error": "",
       "timestamp": 1786363693.8522263
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786363914.6193893
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786363929.3868704
+    },
+    {
+      "provider": "openrouter",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786363930.250543
     }
   ]
 }

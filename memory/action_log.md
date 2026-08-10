@@ -74,3 +74,16 @@ provider performance comparison.
   - Step 5: seo_update_sitemap (OK) — Regenerated sitemap.xml (43 pages) and robots.txt
   - Completed all 5 steps.
 ---
+## Run 2026-08-10 12:11:09 UTC
+**Model:** openrouter
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 26565
+
+**Steps:**
+  Step 1: action=append_doc | tokens=13042 | result=Appended 153 chars to: docs/guides/crypto-tips.html
+
+**Run Summary:**
+  - Step 1: append_doc (OK) — Appended 153 chars to: docs/guides/crypto-tips.html
+  - Stopped: LLM failed at step 2.
+---

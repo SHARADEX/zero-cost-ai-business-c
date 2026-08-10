@@ -1,9 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-**v4.1 Philosophy:** The agent runs PROFITABLY from day 1 with zero operator setup
-beyond LLM API key + GH_PAT. Everything below is an OPTIONAL ENHANCEMENT — the
-agent has zero-setup fallbacks for each.
-
 Key rules:
 1. NEVER omit a pending request requiring human action.
 2. Do not stall workflow waiting on a pending item — the agent keeps working.
@@ -127,3 +123,10 @@ SKIP gemini - unhealthy (circuit breaker)
 FAIL openrouter/openrouter/free attempt 1: object of type 'NoneType' has no len()
 
 [2026-08-10 12:04:52 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
+
+[2026-08-10 12:11:09 UTC] LLM call failed at step 2.
+All LLM providers failed. Attempts:
+SKIP groq - unhealthy (circuit breaker)
+SKIP gemini - unhealthy (circuit breaker)
+FAIL openrouter/meta-llama/llama-3.2-3b-instruct:free attempt 1: HTTP 404: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct","code":404},"user_id":"user_3HJomoKgwYYqCFDG6t6Kr9fAylq"}
+FAIL openrouter/google/gemini-flash-1.5:free attempt 1: HTTP 404: {"error":{"message":"No endpoints

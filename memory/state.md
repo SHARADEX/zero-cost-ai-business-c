@@ -1,11 +1,4 @@
 ## Summary
-2026-08-10 09:55:14 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-10 10:19:25 UTC | model=openrouter | budget=full | steps=1 | tokens=10655
 First action: seo_submit
 Summary: Step 1: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (err | Stopped: LLM failed at step 2.
@@ -31,4 +24,12 @@ Step 2: action=list_dir | tokens=11702 | result=Contents of docs/converters/:
   Step 3: action=write_file | tokens=13118 | result=Wrote file: docs/converters/json-to-markdown.html (225 chars)
   Step 4: action=monetize_inject | tokens=12257 | result=No changes needed — already monetized: docs/converters/json-to-markdown.html
   Step 5: action=seo_update_sitemap | tokens=13051 | result=Regenerated sitemap.xml (43 pages) and robo...
+
+## Summary
+2026-08-10 12:11:09 UTC | model=openrouter | budget=full | steps=1 | tokens=26565
+First action: append_doc
+Summary: Step 1: append_doc (OK) — Appended 153 chars to: docs/guides/crypto-tips.html | Stopped: LLM failed at step 2.
+
+Step details:
+Step 1: action=append_doc | tokens=13042 | result=Appended 153 chars to: docs/guides/crypto-tips.html
 
