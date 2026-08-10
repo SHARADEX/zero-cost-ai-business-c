@@ -1,0 +1,126 @@
+name: Zero-Cost Business Autonomous Loop (v4)
+
+on:
+  schedule:
+    # Every 30 minutes — the agent spreads its daily LLM budget across the whole day.
+    # GitHub Actions cron can be delayed 5-15 min during high load; this is fine.
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Allow manual trigger from Actions tab
+  issues:
+    types: [opened, closed, labeled]
+
+# Prevent overlapping runs — if a previous run is still going, the new one
+# waits (or replaces pending runs).
+concurrency:
+  group: agent-loop-v4
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: read
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run agent (v4 — profit engine with strict validation)
+        run: python3 agent.py
+        env:
+          # LLM provider keys
+          GROQ_API_KEY:        ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY:  ${{ secrets.OPENROUTER_API_KEY }}
+          CEREBRAS_API_KEY:    ${{ secrets.CEREBRAS_API_KEY }}
+          SAMBANOVA_API_KEY:   ${{ secrets.SAMBANOVA_API_KEY }}
+          CF_API_TOKEN:        ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID:       ${{ secrets.CF_ACCOUNT_ID }}
+          HF_TOKEN:            ${{ secrets.HF_TOKEN }}
+          # GitHub PAT for commits + kill switch issue check
+          GH_PAT:              ${{ secrets.GH_PAT }}
+          GITHUB_REPOSITORY:   ${{ github.repository }}
+          # Optional: PAUSE_AGENT=true to halt via env var
+          PAUSE_AGENT:         ${{ secrets.PAUSE_AGENT }}
+          # Site URL for SEO (replace with your real URL)
+          SITE_BASE_URL:       ${{ secrets.SITE_BASE_URL }}
+          # Google Indexing API (optional)
+          GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_INDEXING_SA_PATH: ${{ secrets.GOOGLE_INDEXING_SA_PATH }}
+          # Bing Webmaster (optional)
+          BING_API_KEY:        ${{ secrets.BING_API_KEY }}
+          # Analytics (GoatCounter — optional)
+          GC_API_TOKEN:        ${{ secrets.GC_API_TOKEN }}
+          GC_SITE_ID:          ${{ secrets.GC_SITE_ID }}
+          # Distribution channels (optional)
+          REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME:      ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD:      ${{ secrets.REDDIT_PASSWORD }}
+          DEVTO_API_KEY:        ${{ secrets.DEVTO_API_KEY }}
+        continue-on-error: true
+
+      - name: Show run summary
+        if: always()
+        run: |
+          echo "=== Last state ==="
+          cat memory/state.md 2>/dev/null || echo "(no state.md)"
+          echo ""
+          echo "=== Budget ==="
+          cat memory/budget.md 2>/dev/null || echo "(no budget.md)"
+          echo ""
+          echo "=== Budget JSON ==="
+          cat memory/budget.json 2>/dev/null || echo "(no budget.json)"
+          echo ""
+          echo "=== Blocked items ==="
+          cat memory/blocked.md 2>/dev/null || echo "(no blocked.md)"
+          echo ""
+          echo "=== Provider health ==="
+          cat memory/provider_health.json 2>/dev/null || echo "(no provider_health.json)"
+          echo ""
+          echo "=== Revenue ledger ==="
+          cat memory/revenue_ledger.json 2>/dev/null || echo "(no revenue_ledger.json)"
+
+      - name: Commit & push changes
+        run: |
+          git config --local user.email "autonomous@ai-business-v4.local"
+          git config --local user.name "Zero-Cost AI Agent v4"
+          # Commit docs/ (the website) + memory/ (agent state)
+          # NEVER commit prompts/ or .github/ from inside the agent — those are operator-controlled
+          git add memory/ docs/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Autonomous run v4: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+            # Retry push up to 3 times on failure (network blips)
+            for i in 1 2 3; do
+              if git push "https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}; then
+                echo "Push succeeded on attempt $i"
+                break
+              else
+                echo "Push failed on attempt $i, retrying in 5s..."
+                sleep 5
+              fi
+            done
+          fi
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        continue-on-error: true
