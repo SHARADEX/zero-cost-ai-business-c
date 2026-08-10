@@ -1,0 +1,79 @@
+name: Daily SEO Submission (v4)
+
+on:
+  schedule:
+    # Once a day at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  seo-submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run SEO submission
+        run: |
+          python3 -c "
+          import sys, os
+          sys.path.insert(0, '.')
+          import seo
+          # Regenerate sitemap from current docs/
+          base_url = os.environ.get('SITE_BASE_URL', 'https://testuser.github.io/my-tools-repo')
+          count = seo.regenerate_sitemap(base_url)
+          seo.regenerate_robots(base_url)
+          print(f'Regenerated sitemap with {count} pages')
+          # Get pending URLs from queue
+          pending = seo.get_pending_seo_urls()
+          print(f'Pending URLs in queue: {len(pending)}')
+          if pending:
+              # Submit up to 100 URLs per batch (Google API limit)
+              batch = pending[:100]
+              google_result = seo.submit_to_google_indexing(batch)
+              bing_result = seo.submit_to_bing(batch)
+              print(f'Google: {google_result}')
+              print(f'Bing: {bing_result}')
+              # Mark submitted URLs in queue
+              submitted = []
+              if google_result.get('submitted', 0) > 0:
+                  submitted += batch[:google_result['submitted']]
+              if bing_result.get('submitted', 0) > 0:
+                  submitted += batch
+              if submitted:
+                  seo.mark_seo_queue_submitted(list(set(submitted)))
+          "
+        env:
+          SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
+          GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_INDEXING_SA_PATH: ${{ secrets.GOOGLE_INDEXING_SA_PATH }}
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
+
+      - name: Commit sitemap + queue updates
+        run: |
+          git config --local user.email "seo@ai-business-v4.local"
+          git config --local user.name "SEO Bot v4"
+          git add docs/sitemap.xml docs/robots.txt memory/seo_queue.md 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Daily SEO submission: $(date -u +'%Y-%m-%d')"
+            git push "https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}
+          fi
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        continue-on-error: true
