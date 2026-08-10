@@ -123,3 +123,9 @@ CIRCUIT_OPEN groq
 
 [2026-08-10 09:55:14 UTC] LLM call failed at step 1.
 All configured providers exhausted or unhealthy. Configured: ['groq']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
+
+[2026-08-10 10:19:25 UTC] LLM call failed at step 2.
+All LLM providers failed. Attempts:
+SKIP groq - unhealthy (circuit breaker)
+SKIP gemini - unhealthy (circuit breaker)
+FAIL openrouter/openrouter/free attempt 1: object of type 'NoneType' has no len()

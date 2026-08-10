@@ -1,4 +1,53 @@
 {
   "last_updated": "2026-08-10T00:00:00Z",
-  "events": []
+  "events": [
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786357165.8508244
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786357165.886118
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786357165.921225
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786357166.5491726
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The requested combination of response modalities (TEXT) is not supported by the model. models/gemini-2.5-flash-preview-tts accepts the followi",
+      "timestamp": 1786357166.7932248
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786357166.996541
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786357226.4804802
+    },
+    {
+      "provider": "openrouter",
+      "success": false,
+      "error": "object of type 'NoneType' has no len()",
+      "timestamp": 1786357285.5701687
+    }
+  ]
 }

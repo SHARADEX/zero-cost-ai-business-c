@@ -1,7 +1,7 @@
 # Daily LLM Budget Tracker
 
-Date: 2026-08-06
-Last Updated: 2026-08-06 00:00:00 UTC
+Date: 2026-08-10
+Last Updated: 2026-08-10 10:20:26 UTC
 
 ## Provider Usage (resets at UTC midnight)
 
@@ -13,6 +13,9 @@ Last Updated: 2026-08-06 00:00:00 UTC
 | sambanova | 0/500 (500 rem) [OK] | 0/500000 (500000 rem) |
 | cloudflare | 0/1000 (1000 rem) [OK] | 0/200000 (200000 rem) |
 | huggingface | 0/500 (500 rem) [OK] | 0/200000 (200000 rem) |
-| openrouter | 0/50 (50 rem) [OK] | 0/100000 (100000 rem) |
+| openrouter | 1/50 (49 rem) [OK] | 10655/100000 (89345 rem) |
 
-**TOTAL:** 0/18550 requests, 0/3000000 tokens
+**TOTAL:** 1/18550 requests, 10655/3000000 tokens
+
+## Hourly Usage (UTC)
+- 10:00 → 1 req, 10655 tok

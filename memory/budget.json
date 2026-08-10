@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "last_updated": "2026-08-10 09:54:46 UTC",
+  "last_updated": "2026-08-10 10:20:26 UTC",
   "providers": {
     "groq": {
       "requests_used": 0,
@@ -27,9 +27,14 @@
       "tokens_used": 0
     },
     "openrouter": {
-      "requests_used": 0,
-      "tokens_used": 0
+      "requests_used": 1,
+      "tokens_used": 10655
     }
   },
-  "hourly_usage": {}
+  "hourly_usage": {
+    "10": {
+      "requests": 1,
+      "tokens": 10655
+    }
+  }
 }
