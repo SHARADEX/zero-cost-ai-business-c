@@ -5,49 +5,157 @@
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786357165.8508244
+      "timestamp": 1786363492.7675223
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786357165.886118
+      "timestamp": 1786363492.7982938
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786357165.921225
+      "timestamp": 1786363492.829176
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786357166.5491726
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The requested combination of response modalities (TEXT) is not supported by the model. models/gemini-2.5-flash-preview-tts accepts the followi",
-      "timestamp": 1786357166.7932248
+      "timestamp": 1786363493.4775274
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786357166.996541
+      "timestamp": 1786363493.6746924
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786363493.8566124
+    },
+    {
+      "provider": "gemini",
+      "success": true,
+      "error": "",
+      "timestamp": 1786363516.1622822
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786363516.2257597
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786363516.2567482
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786363516.2864149
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786363516.7586236
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786363517.1515276
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786363517.3158941
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786363517.5125492
+    },
+    {
+      "provider": "gemini",
+      "success": true,
+      "error": "",
+      "timestamp": 1786363527.5490673
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786363527.6081748
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786363527.637081
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786363527.6661625
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786363528.1130657
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786363528.3043425
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786363528.4888432
     },
     {
       "provider": "openrouter",
       "success": true,
       "error": "",
-      "timestamp": 1786357226.4804802
+      "timestamp": 1786363565.6008437
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 403: error code: 1010\n",
+      "timestamp": 1786363565.661333
     },
     {
       "provider": "openrouter",
-      "success": false,
-      "error": "object of type 'NoneType' has no len()",
-      "timestamp": 1786357285.5701687
+      "success": true,
+      "error": "",
+      "timestamp": 1786363608.2217202
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786363671.5328317
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786363693.8522263
     }
   ]
 }

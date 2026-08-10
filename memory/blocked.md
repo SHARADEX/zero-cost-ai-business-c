@@ -1,9 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-**Purpose:** Track optional enhancements the operator can make.
-**Format:** One clear request per entry with timestamp. Human reviews at their leisure.
-**Auto-capped to last 30 entries.**
-
 **v4.1 Philosophy:** The agent runs PROFITABLY from day 1 with zero operator setup
 beyond LLM API key + GH_PAT. Everything below is an OPTIONAL ENHANCEMENT — the
 agent has zero-setup fallbacks for each.
@@ -129,3 +125,5 @@ All LLM providers failed. Attempts:
 SKIP groq - unhealthy (circuit breaker)
 SKIP gemini - unhealthy (circuit breaker)
 FAIL openrouter/openrouter/free attempt 1: object of type 'NoneType' has no len()
+
+[2026-08-10 12:04:52 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
