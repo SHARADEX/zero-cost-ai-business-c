@@ -1,29 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
----
-
-## CRITICAL (agent can't run without these)
-
-(If you're seeing this, you've already set these during setup.sh. Skip this section.)
-
-- [2026-08-06] [CRITICAL] `GROQ_API_KEY` (or any LLM API key) — required for agent to function.
-- [2026-08-06] [CRITICAL] `GH_PAT` (GitHub PAT with repo scope) — required for agent to commit changes.
-
-## HIGH (revenue goes to wrong place until fixed)
-
-- [2026-08-06] [HIGH] **Replace wallet addresses** in these files with your own:
-  - `docs/guides/crypto-tips.html`
-  - `memory/revenue.md`
-  - `revenue.py` (the `WALLETS` dict at top of file)
-  
-  Until you do this, tips go to the original author's wallets. This is the SINGLE
-  most important manual step. The agent cannot auto-generate wallets for you.
-
-## MEDIUM (upgrade revenue streams — fallbacks are active)
-
-Each of these has a zero-setup fallback that's already active. Upgrading unlocks
-more revenue but is NOT required for the agent to function.
-
 - [2026-08-06] [MEDIUM] **EthicalAds or Carbon Ads** (paid ad network)
   - Fallback active: house ads (cross-promotion of your own tools)
   - Upgrade: register at https://ethicalads.io (easy approval) or https://carbonads.net
@@ -127,3 +103,27 @@ FAIL openrouter/google/gemini-flash-1.5:free attempt 1: HTTP 404: {"error":{"mes
 
 [2026-08-10 12:35:32 UTC] LLM call failed at step 2.
 All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
+
+[2026-08-10 15:09:02 UTC] LLM retry failed at step 1.
+All LLM providers failed. Attempts:
+FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403: error code: 1010
+
+FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvemen
+
+[2026-08-10 15:09:02 UTC] LLM call failed at step 2.
+All LLM providers failed. Attempts:
+FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403: error code: 1010
+
+SKIP gemini - unhealthy (circuit breaker)
+SKIP openrouter - budget exhausted

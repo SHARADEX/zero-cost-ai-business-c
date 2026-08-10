@@ -100,3 +100,16 @@ provider performance comparison.
   - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (err
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-10 15:09:02 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 17700
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: LLM retry failed.
+  - Stopped: LLM failed at step 2.
+---
