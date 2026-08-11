@@ -4,128 +4,134 @@
     {
       "provider": "groq",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786459589.8138278
+      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.1-8b-instant` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requ",
+      "timestamp": 1786470485.2347763
     },
     {
       "provider": "groq",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786459589.8566413
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1786470485.3053331
     },
     {
       "provider": "groq",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786459589.8878713
+      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.3-70b-versatile` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 12000, ",
+      "timestamp": 1786470485.3849275
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1786470485.4495294
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786459590.486776
+      "timestamp": 1786470486.612581
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786459590.649976
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "The read operation timed out",
-      "timestamp": 1786459650.7348216
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "The read operation timed out",
-      "timestamp": 1786459715.821687
+      "timestamp": 1786470486.9485347
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1786459738.1083157
+      "timestamp": 1786470498.2313058
     },
     {
       "provider": "groq",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786459738.1685655
+      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.1-8b-instant` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requ",
+      "timestamp": 1786470498.310188
     },
     {
       "provider": "groq",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786459738.1970634
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1786470498.3782308
     },
     {
       "provider": "groq",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786459738.2277014
+      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.3-70b-versatile` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 12000, ",
+      "timestamp": 1786470498.4545212
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1786470498.5306382
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786459738.628336
+      "timestamp": 1786470498.735976
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786459738.7714784
+      "timestamp": 1786470498.9656808
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "The read operation timed out",
-      "timestamp": 1786459798.82466
+      "error": "429",
+      "timestamp": 1786470499.1800911
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1786459843.0188522
+      "timestamp": 1786470507.866928
     },
     {
       "provider": "groq",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786459843.0791452
+      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.1-8b-instant` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requ",
+      "timestamp": 1786470507.9409585
     },
     {
       "provider": "groq",
       "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786459843.109603
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786459843.142411
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1786470508.0092692
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786459843.5984092
+      "timestamp": 1786470508.2026992
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786459843.7421625
+      "timestamp": 1786470508.3488355
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "The read operation timed out",
-      "timestamp": 1786459903.8158011
+      "error": "429",
+      "timestamp": 1786470508.5568838
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1786470508.723532
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Requests ending with a model turn are not supported.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
+      "timestamp": 1786470508.944402
     }
   ]
 }
