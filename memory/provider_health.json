@@ -5,139 +5,127 @@
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446637.8722706
+      "timestamp": 1786459589.8138278
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446637.9029498
+      "timestamp": 1786459589.8566413
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446637.9372017
+      "timestamp": 1786459589.8878713
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786446638.661184
+      "timestamp": 1786459590.486776
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786446638.8864408
+      "timestamp": 1786459590.649976
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "gemini returned empty text in first part",
-      "timestamp": 1786446642.6992934
+      "error": "The read operation timed out",
+      "timestamp": 1786459650.7348216
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "The read operation timed out",
+      "timestamp": 1786459715.821687
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1786446706.0423455
+      "timestamp": 1786459738.1083157
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446706.1052604
+      "timestamp": 1786459738.1685655
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446706.142446
+      "timestamp": 1786459738.1970634
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446706.173333
+      "timestamp": 1786459738.2277014
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786446706.737953
+      "timestamp": 1786459738.628336
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786446706.9447086
+      "timestamp": 1786459738.7714784
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "gemini returned empty text in first part",
-      "timestamp": 1786446742.7405026
+      "error": "The read operation timed out",
+      "timestamp": 1786459798.82466
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1786446788.8560376
+      "timestamp": 1786459843.0188522
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446788.9145076
+      "timestamp": 1786459843.0791452
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446788.9422717
+      "timestamp": 1786459843.109603
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446788.9719067
+      "timestamp": 1786459843.142411
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786446789.5602915
+      "timestamp": 1786459843.5984092
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786446789.7739587
-    },
-    {
-      "provider": "gemini",
-      "success": true,
-      "error": "",
-      "timestamp": 1786446836.4382613
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 403: error code: 1010\n",
-      "timestamp": 1786446836.5039644
+      "timestamp": 1786459843.7421625
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "429",
-      "timestamp": 1786446837.1438537
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "429",
-      "timestamp": 1786446837.2961876
+      "error": "The read operation timed out",
+      "timestamp": 1786459903.8158011
     }
   ]
 }

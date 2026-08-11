@@ -1,22 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-[2026-08-10 15:09:02 UTC] LLM retry failed at step 1.
-All LLM providers failed. Attempts:
-FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
-
-FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
-
-FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403: error code: 1010
-
-FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvemen
-
-[2026-08-10 15:09:02 UTC] LLM call failed at step 2.
-All LLM providers failed. Attempts:
-FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
-
 FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
 
 FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403: error code: 1010
@@ -96,3 +79,18 @@ FAIL gemini/gemini-2.5
 
 [2026-08-11 11:10:37 UTC] LLM call failed at step 3.
 All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
+
+[2026-08-11 14:46:29 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
+
+[2026-08-11 14:46:29 UTC] LLM call failed at step 2.
+All LLM providers failed. Attempts:
+FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403: error code: 1010
+
+FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvemen
