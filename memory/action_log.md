@@ -274,3 +274,17 @@ provider performance comparison.
   - Step 1: validation failed twice — skipped.
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-11 22:27:39 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 29902
+
+**Steps:**
+  Step 1: action=seo_submit | tokens=14516 | result=SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (err
+  - Step 2: LLM retry failed.
+  - Stopped: LLM failed at step 3.
+---
