@@ -192,3 +192,20 @@ provider performance comparison.
   - Step 5: write_file (OK) — Wrote file: docs/converters/markdown-to-pdf.html (267 chars)
   - Stopped: repeated action detected.
 ---
+## Run 2026-08-11 08:15:12 UTC
+**Model:** openrouter
+**Budget:** full
+**Steps taken:** 3
+**Tokens used:** 76080
+
+**Steps:**
+  Step 1: action=seo_update_sitemap | tokens=14993 | result=Regenerated sitemap.xml (46 pages) and robots.txt
+  Step 2: action=seo_update_sitemap | tokens=14991 | result=Regenerated sitemap.xml (46 pages) and robots.txt
+  Step 3: action=seo_submit | tokens=15519 | result=SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: seo_update_sitemap (OK) — Regenerated sitemap.xml (46 pages) and robots.txt
+  - Step 2: seo_update_sitemap (OK) — Regenerated sitemap.xml (46 pages) and robots.txt
+  - Step 3: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (err
+  - Stopped: LLM failed at step 4.
+---
