@@ -1,7 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-[2026-08-10 18:37:12 UTC] Agent output failed validation twice. Last error: Missing 'action' field. Must be one of: analytics_fetch, append_doc, delete_file, distribution_post, done, http_get, list_dir, log_experiment, monetize_inject, read_file, revenue_verify, seo_submit, seo_update_sitemap, update_experiment, validate_html, write_file
-
 [2026-08-10 18:37:12 UTC] LLM call failed at step 2.
 All LLM providers failed. Attempts:
 FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
@@ -103,3 +101,6 @@ FAIL gemini/gemma-4-26b-a4b-it attempt 1: HTTP 429: {
   "error": {
     "code": 429,
     "message": "You 
+
+[2026-08-11 18:07:03 UTC] LLM call failed at step 1.
+All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
