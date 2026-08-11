@@ -1,11 +1,4 @@
 ## Summary
-2026-08-10 23:19:42 UTC | model=gemini | budget=full | steps=0 | tokens=28456
-First action: none
-Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
-
-Step details:
-
-## Summary
 2026-08-11 04:07:44 UTC | model=openrouter | budget=full | steps=4 | tokens=85578
 First action: none
 Summary: Step 1: validation failed twice — skipped. | Step 2: list_dir (OK) — Contents of docs/converters/:
@@ -33,4 +26,12 @@ Step details:
 Step 1: action=seo_update_sitemap | tokens=14993 | result=Regenerated sitemap.xml (46 pages) and robots.txt
   Step 2: action=seo_update_sitemap | tokens=14991 | result=Regenerated sitemap.xml (46 pages) and robots.txt
   Step 3: action=seo_submit | tokens=15519 | result=SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (errors: 1). URLs added to queue regardless.
+
+## Summary
+2026-08-11 11:10:37 UTC | model=gemini | budget=full | steps=0 | tokens=52003
+First action: none
+Summary: Step 1: validation failed twice — skipped. | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+
 

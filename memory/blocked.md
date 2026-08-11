@@ -1,23 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-[2026-08-10 10:19:25 UTC] LLM call failed at step 2.
-All LLM providers failed. Attempts:
-SKIP groq - unhealthy (circuit breaker)
-SKIP gemini - unhealthy (circuit breaker)
-FAIL openrouter/openrouter/free attempt 1: object of type 'NoneType' has no len()
-
-[2026-08-10 12:04:52 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
-
-[2026-08-10 12:11:09 UTC] LLM call failed at step 2.
-All LLM providers failed. Attempts:
-SKIP groq - unhealthy (circuit breaker)
-SKIP gemini - unhealthy (circuit breaker)
-FAIL openrouter/meta-llama/llama-3.2-3b-instruct:free attempt 1: HTTP 404: {"error":{"message":"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct","code":404},"user_id":"user_3HJomoKgwYYqCFDG6t6Kr9fAylq"}
-FAIL openrouter/google/gemini-flash-1.5:free attempt 1: HTTP 404: {"error":{"message":"No endpoints
-
-[2026-08-10 12:35:32 UTC] LLM call failed at step 2.
-All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
-
 [2026-08-10 15:09:02 UTC] LLM retry failed at step 1.
 All LLM providers failed. Attempts:
 FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
@@ -97,4 +79,20 @@ FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
 [2026-08-11 04:07:44 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
 
 [2026-08-11 08:15:12 UTC] LLM call failed at step 4.
+All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
+
+[2026-08-11 11:10:37 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
+
+[2026-08-11 11:10:37 UTC] LLM retry failed at step 2.
+All LLM providers failed. Attempts:
+FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
+
+CIRCUIT_OPEN groq
+FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-t
+FAIL gemini/gemini-2.5
+
+[2026-08-11 11:10:37 UTC] LLM call failed at step 3.
 All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
