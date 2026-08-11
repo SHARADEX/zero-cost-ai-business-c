@@ -261,3 +261,16 @@ provider performance comparison.
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-11 20:29:48 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 27072
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Stopped: LLM failed at step 2.
+---
