@@ -152,14 +152,32 @@ def regenerate_robots(base_url: str = DEFAULT_BASE_URL):
 
 
 def add_to_seo_queue(urls: List[str]):
-    """Add URLs to the indexing submission queue."""
+    """
+    Add URLs to the indexing submission queue.
+
+    Dedupes against URLs already in the file (pending OR submitted) so that
+    calling seo_submit repeatedly on the same URLs — which happens every run
+    while Google/Bing indexing APIs are unconfigured, since submission keeps
+    failing and nothing ever gets marked done — doesn't make the queue file
+    grow by the same handful of URLs forever.
+    """
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     existing = _read_file(SEO_QUEUE_FILE, "")
     lines = existing.split("\n")
     # Strip trailing empty
     while lines and not lines[-1].strip():
         lines.pop()
-    for url in urls:
+    already_queued = set()
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("- ["):
+            # Split on the LAST ']' — a line looks like
+            # "- [ ] [2026-08-06 00:00:00 UTC] https://...", which has
+            # multiple ']' characters. Splitting on the first one (the old
+            # bug here) captured the timestamp bracket as part of the "URL".
+            already_queued.add(stripped.rsplit("]", 1)[-1].strip())
+    new_urls = [u for u in urls if u not in already_queued]
+    for url in new_urls:
         lines.append(f"- [ ] [{ts}] {url}")
     _write_file(SEO_QUEUE_FILE, "\n".join(lines) + "\n")
 
@@ -179,10 +197,11 @@ def get_pending_seo_urls() -> List[str]:
     for line in content.split("\n"):
         line = line.strip()
         if line.startswith("- [ ]"):
-            # Extract URL from end
-            m = re.search(r"\](.*)$", line)
-            if m:
-                urls.append(m.group(1).strip())
+            # Split on the LAST ']' — see the note in add_to_seo_queue() for
+            # why splitting on the first one (the old bug here) was wrong.
+            url = line.rsplit("]", 1)[-1].strip()
+            if url:
+                urls.append(url)
     return urls
 
 

@@ -63,14 +63,31 @@ def _write_json(path, data):
         json.dump(data, f, indent=2)
 
 
+# Same issue as llm_client.py: bare urllib requests (no User-Agent) get
+# blocked by Cloudflare-fronted APIs (etherscan, coingecko, etc. all sit
+# behind it). _get_text already defaulted a UA; _get_json did not — fixed
+# here so Ethereum/Tron/price lookups don't silently fail the same way Groq did.
+_DEFAULT_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json",
+}
+
+
 def _get_json(url, headers=None, timeout=15):
-    req = urllib.request.Request(url, headers=headers or {}, method="GET")
+    merged = dict(_DEFAULT_HEADERS)
+    merged.update(headers or {})
+    req = urllib.request.Request(url, headers=merged, method="GET")
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return json.loads(r.read().decode("utf-8", errors="replace"))
 
 
 def _get_text(url, headers=None, timeout=15):
-    req = urllib.request.Request(url, headers=headers or {"User-Agent": "ZeroCostAI/4.0"}, method="GET")
+    merged = dict(_DEFAULT_HEADERS)
+    merged.update(headers or {})
+    req = urllib.request.Request(url, headers=merged, method="GET")
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read().decode("utf-8", errors="replace")
 

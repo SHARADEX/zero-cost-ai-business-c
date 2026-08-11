@@ -76,15 +76,36 @@ DEPRECATED_PATTERNS = [
 # HTTP helpers
 # ---------------------------------------------------------------------------
 
+# IMPORTANT: bare urllib requests send "User-Agent: Python-urllib/3.x" (or no
+# UA at all on some paths). Groq, and many other providers, sit behind
+# Cloudflare, and Cloudflare's bot-management WAF blocks that signature by
+# default (HTTP 403, error code 1010 — "banned based on your browser's
+# signature"). This was silently killing 100% of Groq calls from GitHub
+# Actions runners. Every outbound call must send browser-like headers.
+DEFAULT_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json",
+}
+
+
+def _merged_headers(headers):
+    merged = dict(DEFAULT_HEADERS)
+    merged.update(headers or {})
+    return merged
+
+
 def _post_json(url, headers, payload, timeout=45):
     data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+    req = urllib.request.Request(url, data=data, headers=_merged_headers(headers), method="POST")
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
 def _get_json(url, headers, timeout=30):
-    req = urllib.request.Request(url, headers=headers, method="GET")
+    req = urllib.request.Request(url, headers=_merged_headers(headers), method="GET")
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
@@ -129,6 +150,50 @@ def _write_cache(provider, models):
         json.dump({"timestamp": time.time(), "models": models}, f, indent=2)
 
 
+# ---------------------------------------------------------------------------
+# Dead-model blacklist
+#
+# The bug this fixes: a model that 404s ("no longer available", "decommissioned",
+# etc.) was being retried on EVERY single run forever, because the per-run
+# fallback loop moves to the next model but nothing persists that memory
+# across runs. That burns a request + a slow timeout every 30 minutes for a
+# model that will never work again until you fix the fallback list. This
+# blacklists a model for 24h after a 404/"not found"/"decommissioned" failure
+# so subsequent runs skip it immediately and move to the next model.
+# ---------------------------------------------------------------------------
+
+DEAD_MODELS_PATH = os.path.join("memory", "models_cache", "dead_models.json")
+DEAD_MODEL_TTL_SECONDS = 86400
+
+
+def _read_dead_models():
+    try:
+        with open(DEAD_MODELS_PATH, "r") as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError, IOError):
+        return {}
+    now = time.time()
+    return {k: v for k, v in data.items() if now - v < DEAD_MODEL_TTL_SECONDS}
+
+
+def _write_dead_models(data):
+    os.makedirs(os.path.dirname(DEAD_MODELS_PATH), exist_ok=True)
+    with open(DEAD_MODELS_PATH, "w") as f:
+        json.dump(data, f, indent=2)
+
+
+def blacklist_model(provider, model, reason=""):
+    data = _read_dead_models()
+    data[f"{provider}/{model}"] = time.time()
+    _write_dead_models(data)
+    print(f"[llm_client] Blacklisted {provider}/{model} for 24h: {reason[:150]}")
+
+
+def _is_blacklisted(provider, model):
+    data = _read_dead_models()
+    return f"{provider}/{model}" in data
+
+
 def _discover_groq():
     api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
@@ -168,27 +233,43 @@ def _discover_gemini():
 
 
 def _discover_openrouter():
-    """OpenRouter has free models that change over time. We use a curated list of
-    reliable free models. The 'openrouter/free' alias is flaky (sometimes returns
-    no model), so we prefer explicit free model IDs."""
-    return [
-        "meta-llama/llama-3.2-3b-instruct:free",
-        "google/gemini-flash-1.5:free",
-        "mistralai/mistral-7b-instruct:free",
-        "qwen/qwen-2-7b-instruct:free",
-        "openrouter/free",  # alias as last resort
-    ]
-
-
-def _invalidate_openrouter_cache():
-    """Clear OpenRouter's cached model list so the new list takes effect."""
+    """
+    OpenRouter's free catalog rotates constantly — free model IDs from even a
+    few months ago routinely 404 ("no endpoints found"/"use the paid slug
+    instead"). A hardcoded list goes stale fast, which is exactly what was
+    happening here. Query OpenRouter's own /models endpoint and keep only
+    models that are ACTUALLY free right now (prompt price == completion
+    price == "0"). Falls back to a curated list only if the live query fails.
+    """
     try:
-        cache_path = _cache_path("openrouter")
-        if os.path.exists(cache_path):
-            os.remove(cache_path)
-            print("[llm_client] Cleared OpenRouter model cache")
+        data = _get_json("https://openrouter.ai/api/v1/models", {}, timeout=15)
+        free_models = []
+        for m in data.get("data", []):
+            pricing = m.get("pricing", {}) or {}
+            try:
+                prompt_price = float(pricing.get("prompt", "1") or "1")
+                completion_price = float(pricing.get("completion", "1") or "1")
+            except (TypeError, ValueError):
+                continue
+            if prompt_price == 0 and completion_price == 0:
+                model_id = m.get("id")
+                if model_id:
+                    free_models.append(model_id)
+        if free_models:
+            # Prefer models whose id is explicitly tagged ":free" (OpenRouter's
+            # own convention for the free-routing versions of paid models).
+            free_models.sort(key=lambda m: (not m.endswith(":free"), m))
+            return free_models[:20]
     except Exception:
         pass
+    # Fallback: curated list, used only if the live discovery call itself fails
+    # (network issue, OpenRouter outage, etc.) — NOT as the everyday source of
+    # truth, since these specific IDs WILL go stale again.
+    return [
+        "mistralai/mistral-7b-instruct:free",
+        "qwen/qwen-2.5-7b-instruct:free",
+        "openrouter/free",  # alias as last resort
+    ]
 
 
 def _discover_cerebras():
@@ -262,18 +343,21 @@ DISCOVERERS = {
 
 def get_models_for_provider(provider):
     cached = _read_cache(provider)
-    if cached:
-        return cached
-    discoverer = DISCOVERERS.get(provider)
-    if discoverer:
-        try:
-            models = discoverer()
-            if models:
-                _write_cache(provider, models)
-                return models
-        except Exception:
-            pass
-    return FALLBACK_MODELS.get(provider, [])
+    if not cached:
+        discoverer = DISCOVERERS.get(provider)
+        if discoverer:
+            try:
+                models = discoverer()
+                if models:
+                    _write_cache(provider, models)
+                    cached = models
+            except Exception:
+                pass
+    if not cached:
+        cached = FALLBACK_MODELS.get(provider, [])
+    # Filter out models that recently 404'd/decommissioned — see blacklist_model().
+    live = [m for m in cached if not _is_blacklisted(provider, m)]
+    return live or cached  # if EVERYTHING is blacklisted, try anyway rather than give up
 
 
 # ---------------------------------------------------------------------------
@@ -563,13 +647,16 @@ def call_llm_with_fallback(messages, max_tokens=3000, temperature=0.7, json_mode
                 except urllib.error.HTTPError as e:
                     err_body = ""
                     try:
-                        err_body = e.read().decode("utf-8", errors="replace")[:300]
+                        err_body = e.read().decode("utf-8", errors="replace")[:500]
                     except Exception:
                         pass
                     err_msg = f"HTTP {e.code}: {err_body}"
                     attempts.append(f"FAIL {provider_name}/{model} attempt {attempt}: {err_msg}")
-                    # 404 → model not found, move to next model
+                    # 404 → model not found / retired / not available on this key.
+                    # Blacklist it for 24h so future runs don't waste a request on
+                    # a model that will 404 again, then move to the next model.
                     if e.code == 404:
+                        blacklist_model(provider_name, model, err_body)
                         break
                     # 429 → rate limited, move to next provider
                     if e.code == 429:

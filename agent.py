@@ -290,7 +290,7 @@ seo_queue_content   = read_file("memory/seo_queue.md")
 distribution_log    = read_file("memory/distribution_log.md")
 affiliate_inv       = read_file("memory/affiliate_links.md")
 revenue_streams     = read_file("memory/revenue_streams.md")
-action_log_tail     = read_file("memory/action_log.md")[-6000:]
+action_log_tail     = read_file("memory/action_log.md")[-3000:]
 business_prompt     = read_file("prompts/business_prompt.md")
 
 if not business_prompt.strip():
@@ -511,7 +511,7 @@ for step_num in range(1, max_steps + 1):
         for a in attempts:
             print(f"    {a}")
     except RuntimeError as e:
-        err = str(e)[:500]
+        err = str(e)[:2000]
         append_file("memory/blocked.md",
                     f"\n[{TIMESTAMP}] LLM call failed at step {step_num}.\n{err}\n")
         cap_log("memory/blocked.md", max_entries=30)
@@ -549,7 +549,7 @@ for step_num in range(1, max_steps + 1):
                 run_summary_parts.append(f"Step {step_num}: validation failed twice — skipped.")
                 continue
         except RuntimeError as e:
-            err = str(e)[:500]
+            err = str(e)[:2000]
             append_file("memory/blocked.md",
                         f"\n[{TIMESTAMP}] LLM retry failed at step {step_num}.\n{err}\n")
             cap_log("memory/blocked.md", max_entries=30)
