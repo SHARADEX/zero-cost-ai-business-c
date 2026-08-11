@@ -1,7 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-CIRCUIT_OPEN groq
-
 [2026-08-10 09:55:14 UTC] LLM call failed at step 1.
 All configured providers exhausted or unhealthy. Configured: ['groq']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
 
@@ -98,3 +96,5 @@ FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
   "error": {
     "code": 404,
     "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvemen
+
+[2026-08-11 04:07:44 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
