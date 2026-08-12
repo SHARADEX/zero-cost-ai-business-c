@@ -4,134 +4,164 @@
     {
       "provider": "groq",
       "success": false,
-      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.3-70b-versatile` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 12000, ",
-      "timestamp": 1786487259.7902644
-    },
-    {
-      "provider": "groq",
-      "success": false,
       "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.1-8b-instant` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requ",
-      "timestamp": 1786487259.9312162
+      "timestamp": 1786511563.5930037
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1786487260.0535583
+      "timestamp": 1786511563.8571804
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1786487260.1837597
+      "timestamp": 1786511564.2652729
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.3-70b-versatile` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 12000, ",
+      "timestamp": 1786511564.6616495
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786487260.792469
+      "timestamp": 1786511565.1819432
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786487260.9132752
+      "timestamp": 1786511565.314333
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "gemini returned empty text in first part",
-      "timestamp": 1786487264.6210134
+      "timestamp": 1786511568.8066761
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "The read operation timed out",
-      "timestamp": 1786487329.7108803
+      "timestamp": 1786511633.851534
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1786487340.4685729
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.3-70b-versatile` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 12000, ",
-      "timestamp": 1786487340.605391
+      "timestamp": 1786511654.1547136
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.1-8b-instant` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requ",
-      "timestamp": 1786487340.7514534
+      "timestamp": 1786511654.2376964
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1786487340.8619957
+      "timestamp": 1786511654.6662867
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1786487340.984572
+      "timestamp": 1786511655.1522512
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.3-70b-versatile` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 12000, ",
+      "timestamp": 1786511655.2367094
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786487341.1040463
+      "timestamp": 1786511655.368699
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786487341.2158678
+      "timestamp": 1786511655.5159914
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "gemini returned empty text in first part",
-      "timestamp": 1786487369.1567647
+      "timestamp": 1786511658.5587032
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1786487420.1139696
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.3-70b-versatile` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 12000, ",
-      "timestamp": 1786487420.2523785
+      "timestamp": 1786511683.27512
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 413: {\"error\":{\"message\":\"Request too large for model `llama-3.1-8b-instant` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requ",
-      "timestamp": 1786487421.785682
+      "timestamp": 1786511683.35578
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1786511683.4344726
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786487421.903396
+      "timestamp": 1786511683.5736988
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1786487422.024198
+      "timestamp": 1786511683.6976519
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "gemini returned empty text in first part",
-      "timestamp": 1786487446.2636726
+      "error": "429",
+      "timestamp": 1786511683.8346412
+    },
+    {
+      "provider": "openrouter",
+      "success": false,
+      "error": "openrouter returned empty content (finish_reason=error)",
+      "timestamp": 1786511720.8949308
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786511749.5732079
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786511764.48579
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786511771.003915
+    },
+    {
+      "provider": "openrouter",
+      "success": true,
+      "error": "",
+      "timestamp": 1786511804.359531
     }
   ]
 }
