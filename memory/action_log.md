@@ -360,3 +360,17 @@ to submit them to Google Indexing API
 
   - Stopped: LLM failed at step 5.
 ---
+## Run 2026-08-12 12:35:03 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 48747
+
+**Steps:**
+  Step 2: action=write_file | tokens=17045 | result=REJECTED write_file — security scan failed: External script from non-allowlisted domain: gc.zgo.gl; Broken internal link: /assets/style.css (resolved to docs/assets/style.css)
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Step 2: write_file (FAIL) — REJECTED write_file — security scan failed: External script from non-allowlisted
+  - Stopped: LLM failed at step 3.
+---
