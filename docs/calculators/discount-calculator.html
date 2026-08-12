@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Calculator - Calculate Sale Price &amp; Savings</title>
+  <meta name="description" content="Calculate discounted prices, total savings, and final costs instantly with our free online discount calculator. Fast, simple, and easy to use.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/discount-calculator.html">
+  <meta property="og:title" content="Discount Calculator - Calculate Sale Price &amp; Savings">
+  <meta property="og:description" content="Calculate discounted prices, total savings, and final costs instantly with our free online discount calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/discount-calculator.html">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a> |
+      <a href="../calculators/">Calculators</a> |
+      <a href="../converters/">Converters</a> |
+      <a href="../blog/">Blog</a> |
+      <a href="../guides/crypto-tips.html">Support Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Online Discount Calculator</h1>
+      <p>Quickly calculate the final price after applying percentage discounts and sales tax.</p>
+
+      <div id="ad-zone" class="ad-zone">
+        <!-- Ad Slot -->
+        <p class="ad-placeholder">Advertisement</p>
+      </div>
+
+      <section class="tool-container">
+        <form id="discount-form">
+          <div class="form-group">
+            <label for="original-price">Original Price ($):</label>
+            <input type="number" id="original-price" step="0.01" min="0" placeholder="100.00" required>
+          </div>
+          <div class="form-group">
+            <label for="discount-percent">Discount (%):</label>
+            <input type="number" id="discount-percent" step="0.1" min="0" max="100" placeholder="20" required>
+          </div>
+          <button type="button" id="calc-btn">Calculate Discount</button>
+        </form>
+
+        <div id="results" class="results-box" style="margin-top:20px; display:none;">
+          <h3>Calculation Summary</h3>
+          <p><strong>Discount Amount:</strong> $<span id="saved-amount">0.00</span></p>
+          <p><strong>Final Price:</strong> $<span id="final-price">0.00</span></p>
+        </div>
+      </section>
+
+      <section class="cta-box" style="margin-top: 30px;">
+        <h3>Support Our Free Tools</h3>
+        <p>If you find this calculator helpful, consider supporting our open-source tools project.</p>
+        <a href="../guides/crypto-tips.html" class="btn">Send a Tip / Support Us</a>
+      </section>
+
+      <section class="newsletter-box" style="margin-top: 30px;">
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>Get weekly updates on new free web tools, calculators, and developer guides.</p>
+        <form action="https://buttondown.email/api/emails/embed-subscribe/example" method="post" target="popupwindow">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Free Web Tools. All rights reserved. | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      var price = parseFloat(document.getElementById('original-price').value);
+      var discount = parseFloat(document.getElementById('discount-percent').value);
+      if (isNaN(price) || isNaN(discount)) return;
+      
+      var saved = price * (discount / 100);
+      var finalPrice = price - saved;
+      
+      document.getElementById('saved-amount').textContent = saved.toFixed(2);
+      document.getElementById('final-price').textContent = finalPrice.toFixed(2);
+      document.getElementById('results').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

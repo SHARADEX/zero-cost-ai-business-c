@@ -415,3 +415,18 @@ to submit them to Google Indexing API
 <html lang="en
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-12 22:26:02 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 2
+**Tokens used:** 36258
+
+**Steps:**
+  Step 1: action=seo_submit | tokens=17723 | result=SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (errors: 1). URLs added to queue regardless.
+  Step 2: action=write_file | tokens=18535 | result=Wrote file: docs/calculators/discount-calculator.html (4160 chars)
+
+**Run Summary:**
+  - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (err
+  - Step 2: write_file (OK) — Wrote file: docs/calculators/discount-calculator.html (4160 chars)
+  - Stopped: LLM failed at step 3.
+---
