@@ -1,12 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-[2026-08-11 04:07:44 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
-
-[2026-08-11 08:15:12 UTC] LLM call failed at step 4.
-All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
-
-[2026-08-11 11:10:37 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
-
 [2026-08-11 11:10:37 UTC] LLM retry failed at step 2.
 All LLM providers failed. Attempts:
 FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 403: error code: 1010
@@ -154,3 +147,24 @@ FAIL gemini/gemma-4-31b-it attempt 1: HTTP 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please check your plan and billing details. For more i
+
+[2026-08-12 20:02:59 UTC] LLM call failed at step 2.
+All LLM providers failed. Attempts:
+FAIL groq/meta-llama/llama-prompt-guard-2-22m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
+
+FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
+
+CIRCUIT_OPEN groq
+FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 10000, model: gemini-2.5-flash-tts\nPlease retry in 34.74158779s.",
+    "status": "RESOURCE_EX
+FAIL gemini/gemini-2.5-pro-preview-tts attempt 1: HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro-tts\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_c
+FAIL gemini/gemma-4-26b-a4b-it attempt 1: HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-l

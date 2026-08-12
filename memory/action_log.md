@@ -394,3 +394,24 @@ to submit them to Google Indexing API
   bmi-calculat
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-12 20:02:59 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 31957
+
+**Steps:**
+  Step 1: action=read_file | tokens=16052 | result=Contents of docs/calculators/roi-calculator.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROI
+
+**Run Summary:**
+  - Step 1: read_file (OK) — Contents of docs/calculators/roi-calculator.html:
+<!DOCTYPE html>
+<html lang="en
+  - Stopped: LLM failed at step 2.
+---
