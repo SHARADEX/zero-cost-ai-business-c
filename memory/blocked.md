@@ -1,10 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvemen
-
 [2026-08-10 23:19:42 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
 
 [2026-08-10 23:19:42 UTC] LLM call failed at step 2.
@@ -124,3 +119,11 @@ FAIL gemini/gemini-2.5-pro-preview-tts attempt 1: HTTP 429: {
 
 [2026-08-11 22:27:39 UTC] LLM call failed at step 3.
 All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
+
+[2026-08-12 09:43:45 UTC] LLM call failed at step 5.
+All LLM providers failed. Attempts:
+SKIP groq - unhealthy (circuit breaker)
+SKIP gemini - unhealthy (circuit breaker)
+FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+CIRCUIT_OPEN cerebras
+SKIP openrouter - budget exhausted
