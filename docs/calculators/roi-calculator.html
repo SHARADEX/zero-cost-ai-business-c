@@ -3,100 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROI Calculator - Calculate Return on Investment Fast & Free</title>
-  <meta name="description" content="Free online ROI calculator. Quickly calculate Return on Investment, profit margin, and annual returns for your business or investments.">
-  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/roi-calculator.html">
-  <meta property="og:title" content="ROI Calculator - Return on Investment">
-  <meta property="og:description" content="Calculate business and investment ROI instantly online for free.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/roi-calculator.html">
-  <link rel="stylesheet" href="../css/style.css">
-  <script data-goatcounter="https://zero-cost-ai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "ROI Calculator",
-    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/roi-calculator.html",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "All",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  }
-  </script>
+  <title>Free ROI Calculator - Calculate Return on Investment</title>
+  <meta name="description" content="Calculate your Return on Investment (ROI) and annualized ROI quickly and easily with our free, privacy-friendly online calculator.">
+  <link rel="canonical" href="https://sharadex.github.io/zero-cost-ai-business-c/calculators/roi-calculator.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script data-goatcounter="https://zero-cost-biz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
   <header>
     <nav>
-      <a href="../index.html">Home</a> |
-      <a href="../tools/index.html">Tools</a> |
-      <a href="index.html">Calculators</a> |
-      <a href="../converters/index.html">Converters</a> |
-      <a href="../blog/index.html">Blog</a>
+      <a href="../index.html">Home</a> | 
+      <a href="../calculators/">Calculators</a> | 
+      <a href="../converters/">Converters</a> | 
+      <a href="../guides/crypto-tips.html">Support</a>
     </nav>
+    <h1>Return on Investment (ROI) Calculator</h1>
   </header>
 
   <main>
-    <h1>ROI Calculator (Return on Investment)</h1>
-    <p>Calculate your investment gain, total profit percentage, and annualized return quickly and accurately.</p>
-
-    <div id="ad-zone" class="ad-container">
-      <!-- EthicalAds / Carbon placeholder -->
-      <p class="ad-notice">Advertisement</p>
+    <div class="ad-slot" id="ad-top">
+      <!-- Ethical Ads Placeholder -->
+      <p><small>Sponsored / Recommended: <a href="https://www.vultr.com/?ref=YOUR_REFERRAL_CODE" rel="noopener" target="_blank">High Performance Cloud VPS - $100 Free Credit</a></small></p>
     </div>
 
     <section class="calculator-box">
-      <label for="initial-inv">Initial Amount Invested ($):</label>
-      <input type="number" id="initial-inv" placeholder="10000" step="any">
+      <form id="roi-form" onsubmit="return false;">
+        <label for="initial-inv">Initial Investment ($):</label>
+        <input type="number" id="initial-inv" step="any" required placeholder="e.g. 1000">
 
-      <label for="final-val">Final Value / Amount Returned ($):</label>
-      <input type="number" id="final-val" placeholder="15000" step="any">
+        <label for="final-val">Final Value / Returned ($):</label>
+        <input type="number" id="final-val" step="any" required placeholder="e.g. 1500">
 
-      <button onclick="calculateROI()">Calculate ROI</button>
+        <button type="button" id="calc-btn" onclick="calcROI()">Calculate ROI</button>
+      </form>
 
-      <div id="roi-result" class="result-box" style="margin-top: 15px;"></div>
+      <div id="roi-result" style="margin-top: 1.5rem; display: none;">
+        <h3>Results</h3>
+        <p>Total Profit: <strong id="net-profit">$0.00</strong></p>
+        <p>ROI: <strong id="roi-percentage">0.00%</strong></p>
+      </div>
     </section>
 
-    <script>
-      function calculateROI() {
-        var init = parseFloat(document.getElementById('initial-inv').value);
-        var fin = parseFloat(document.getElementById('final-val').value);
-        var resDiv = document.getElementById('roi-result');
-        if (isNaN(init) || isNaN(fin) || init <= 0) {
-          resDiv.innerHTML = '<p style="color:red;">Please enter valid positive numbers.</p>';
-          return;
-        }
-        var profit = fin - init;
-        var roi = (profit / init) * 100;
-        resDiv.innerHTML = '<h3>Results</h3>' +
-          '<p><strong>Net Profit:</strong> $' + profit.toFixed(2) + '</p>' +
-          '<p><strong>Return on Investment (ROI):</strong> ' + roi.toFixed(2) + '%</p>';
-      }
-    </script>
-
-    <section class="cta-box">
-      <h3>Recommended Tools & Hosting</h3>
-      <p>Scale your cloud infrastructure with high performance VPS hosting on <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="nofollow sponsored">DigitalOcean (Get $200 free credit)</a>.</p>
+    <section class="info-content">
+      <h2>How is ROI Calculated?</h2>
+      <p>The Return on Investment formula is: <code>ROI = ((Final Value - Initial Cost) / Initial Cost) * 100</code>.</p>
+      <p>Use this tool for stocks, crypto, real estate, marketing campaigns, or personal finance tracking.</p>
     </section>
 
-    <section class="newsletter-box">
-      <h3>Get Free Weekly Financial & Web Tools</h3>
-      <form action="mailto:subscribe@example.com" method="post">
-        <input type="email" placeholder="Enter your email" required>
+    <section class="newsletter-signup">
+      <h3>Subscribe for Free Business & Finance Tools</h3>
+      <p>Get weekly updates with zero spam.</p>
+      <form action="mailto:contact@example.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
       </form>
-    </section>
-
-    <section class="support-box">
-      <p>Enjoyed this free calculator? Consider supporting us with a small <a href="../guides/crypto-tips.html">crypto tip</a> or sponsor on GitHub.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Zero-Cost AI Business. All rights reserved. | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    <p>Support this free tool: <a href="../guides/crypto-tips.html">Crypto Tips & Sponsors</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
   </footer>
+
+  <script>
+    function calcROI() {
+      var init = parseFloat(document.getElementById('initial-inv').value);
+      var fin = parseFloat(document.getElementById('final-val').value);
+      if (isNaN(init) || isNaN(fin) || init === 0) {
+        alert('Please enter valid numbers (Initial Investment cannot be zero).');
+        return;
+      }
+      var profit = fin - init;
+      var roi = (profit / init) * 100;
+      document.getElementById('net-profit').textContent = '$' + profit.toFixed(2);
+      document.getElementById('roi-percentage').textContent = roi.toFixed(2) + '%';
+      document.getElementById('roi-result').style.display = 'block';
+    }
+  </script>
 </body>
 </html>

@@ -515,3 +515,16 @@ FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403
   - Step 2: validate_html (OK) — ✓ docs/calculators/profit-margin-calculator.html passed validation (no issues)
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-13 19:47:26 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 35960
+
+**Steps:**
+  Step 1: action=write_file | tokens=18744 | result=Wrote file: docs/calculators/roi-calculator.html (3619 chars)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/roi-calculator.html (3619 chars)
+  - Stopped: LLM failed at step 2.
+---
