@@ -467,3 +467,23 @@ to submit them to Google Indexing API
 **Purpose:** Track A/B tes
   - Stopped: repeated action detected.
 ---
+## Run 2026-08-13 09:43:11 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 70879
+
+**Steps:**
+  Step 2: action=read_file | tokens=15032 | result=Contents of memory/blocked.md:
+# Blocked Actions Log — v4.1 (Autonomous Edition)
+
+FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
+
+FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Step 2: read_file (OK) — Contents of memory/blocked.md:
+# Blocked Actions Log — v4.1 (Autonomous Edition)
+  - Stopped: LLM failed at step 3.
+---
