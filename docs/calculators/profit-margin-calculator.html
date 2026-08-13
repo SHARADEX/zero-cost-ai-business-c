@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Profit Margin Calculator - Gross & Net Margin</title>
+  <meta name="description" content="Calculate gross profit margin, net profit margin, and markup instantly with this free online financial tool for business owners and entrepreneurs.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/profit-margin-calculator.html">
+  <link rel="stylesheet" href="../style.css">
+  <script data-goatcounter="https://zero-cost-ai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Profit Margin Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/profit-margin-calculator.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a> | 
+      <a href="index.html">Calculators</a> | 
+      <a href="../converters/index.html">Converters</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="ad-zone"></div>
+
+    <h1>Profit Margin Calculator</h1>
+    <p>Calculate your product or service gross profit margin, net profit margin, and percentage markup quickly.</p>
+
+    <div class="calculator-box">
+      <label for="cost">Cost ($):</label>
+      <input type="number" id="cost" placeholder="e.g. 50" step="any">
+
+      <label for="revenue">Revenue / Selling Price ($):</label>
+      <input type="number" id="revenue" placeholder="e.g. 100" step="any">
+
+      <button onclick="calculateMargin()">Calculate</button>
+
+      <div id="results" style="margin-top: 15px; font-weight: bold;"></div>
+    </div>
+
+    <script>
+    function calculateMargin() {
+      const cost = parseFloat(document.getElementById('cost').value);
+      const revenue = parseFloat(document.getElementById('revenue').value);
+      const resultsDiv = document.getElementById('results');
+
+      if (isNaN(cost) || isNaN(revenue) || revenue === 0) {
+        resultsDiv.innerHTML = '<span style="color:red;">Please enter valid numbers (Revenue must be > 0).</span>';
+        return;
+      }
+
+      const profit = revenue - cost;
+      const margin = (profit / revenue) * 100;
+      const markup = cost > 0 ? (profit / cost) * 100 : 0;
+
+      resultsDiv.innerHTML = `
+        <p>Gross Profit: $${profit.toFixed(2)}</p>
+        <p>Profit Margin: ${margin.toFixed(2)}%</p>
+        <p>Markup: ${markup.toFixed(2)}%</p>
+      `;
+    }
+    </script>
+
+    <section>
+      <h2>What is Profit Margin?</h2>
+      <p>Profit margin measures how much out of every dollar in sales a company keeps in earnings. It reflects business efficiency and pricing strategy strength.</p>
+    </section>
+
+    <div class="affiliate-box">
+      <p><strong>Recommended Tool:</strong> Streamline your financial planning and operations with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" rel="nofollow">Notion</a> workspaces.</p>
+    </div>
+
+    <section class="support-section">
+      <h3>Support Free Tools</h3>
+      <p>If this calculator saved you time, consider supporting our work! Learn how on our <a href="../guides/crypto-tips.html">Tip & Support Guide</a>.</p>
+    </section>
+
+    <section class="newsletter-section">
+      <h3>Stay Updated</h3>
+      <p>Get new free business calculators and tools delivered straight to your inbox.</p>
+      <form action="mailto:newsletter@example.com" method="post" enctype="text/plain">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Free Web Tools. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="https://github.com/sponsors">GitHub Sponsors</a></p>
+  </footer>
+</body>
+</html>
