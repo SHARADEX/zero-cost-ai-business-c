@@ -1,13 +1,4 @@
 ## Summary
-2026-08-12 22:26:02 UTC | model=gemini | budget=full | steps=2 | tokens=36258
-First action: seo_submit
-Summary: Step 1: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (err | Step 2: write_file (OK) — Wrote file: docs/calculators/discount-calculator.html (4160 chars) | Stopped: LLM failed at step 3.
-
-Step details:
-Step 1: action=seo_submit | tokens=17723 | result=SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (errors: 1). URLs added to queue regardless.
-  Step 2: action=write_file | tokens=18535 | result=Wrote file: docs/calculators/discount-calculator.html (4160 chars)
-
-## Summary
 2026-08-13 05:18:06 UTC | model=openrouter | budget=full | steps=3 | tokens=130417
 First action: none
 Summary: Step 1: validation failed twice — skipped. | Step 2: read_file (OK) — Contents of memory/blocked.md:
@@ -42,4 +33,12 @@ Step 2: action=read_file | tokens=15032 | result=Contents of memory/blocked.md:
 FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 403: error code: 1010
 
 FAIL groq/mixtral-8x7b-32768 attempt 1: HTTP 403
+
+## Summary
+2026-08-13 12:35:55 UTC | model=gemini | budget=full | steps=0 | tokens=34549
+First action: none
+Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
+
+Step details:
+
 
