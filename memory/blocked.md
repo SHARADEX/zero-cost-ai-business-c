@@ -1,16 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-CIRCUIT_OPEN groq
-FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 10000, model: gemini-2.5-flash-tts\nPlease retry in 38.113484295s.",
-    "status": "RESOURCE_E
-FAIL gemini/gemini-2.5-pro-preview-tts attempt 1: HTTP 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro-tts\n* Quota e
-
 [2026-08-11 22:27:39 UTC] LLM call failed at step 3.
 All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.
 
@@ -194,3 +183,11 @@ FAIL gemini/gemma-4-26b-a4b-it attempt 1: HTTP 429: {
   "error": {
     "code": 429,
     "message"
+
+[2026-08-14 15:25:50 UTC] LLM call failed at step 5.
+All LLM providers failed. Attempts:
+SKIP groq - unhealthy (circuit breaker)
+SKIP gemini - unhealthy (circuit breaker)
+FAIL cerebras/zai-glm-4.7 attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+CIRCUIT_OPEN cerebras
+SKIP openrouter - budget exhausted

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTV to CAC Ratio Calculator — SaaS Metrics & Unit Economics</title>
+    <meta name="description" content="Free LTV to CAC calculator for SaaS and subscription businesses. Easily calculate customer lifetime value, customer acquisition cost, and profitability health ratios.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/ltv-cac-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">🚀 ZeroCost Tools</a>
+            <div class="nav-links">
+                <a href="../converters/">Converters</a>
+                <a href="../calculators/" class="active">Calculators</a>
+                <a href="../blog/">Blog</a>
+                <a href="../guides/crypto-tips.html">Tip Jar</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>LTV to CAC Ratio Calculator</h1>
+            <p>Evaluate your SaaS unit economics and determine if your customer acquisition engine is sustainable.</p>
+        </section>
+
+        <div class="tool-container">
+            <div class="form-group">
+                <label for="arpu">Average Revenue Per User (ARPU) [Monthly]:</label>
+                <input type="number" id="arpu" value="100" step="1">
+            </div>
+            <div class="form-group">
+                <label for="margin">Gross Margin (%):</label>
+                <input type="number" id="margin" value="80" step="1">
+            </div>
+            <div class="form-group">
+                <label for="churn">Monthly Churn Rate (%):</label>
+                <input type="number" id="churn" value="2.5" step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="cac">Customer Acquisition Cost (CAC) [$]:</label>
+                <input type="number" id="cac" value="300" step="1">
+            </div>
+
+            <button class="btn" onclick="calculateLTV()">Calculate LTV & Ratio</button>
+
+            <div id="result" class="result-box" style="margin-top: 20px; display: none;">
+                <h3>Results</h3>
+                <p><strong>Customer Lifetime Value (LTV):</strong> <span id="ltvVal">$0</span></p>
+                <p><strong>LTV / CAC Ratio:</strong> <span id="ratioVal">0</span>x</p>
+                <p><strong>Health Assessment:</strong> <span id="healthVal">-</span></p>
+            </div>
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot" style="margin: 40px 0; padding: 20px; background: #f4f5f7; text-align: center; border-radius: 8px;">
+            <small>Sponsored Ad</small>
+            <p>Need scalable cloud infrastructure for your growing SaaS? <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">Try DigitalOcean with $200 free credit</a>.</p>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter" style="margin-top: 40px; padding: 20px; background: #eef2ff; border-radius: 8px;">
+            <h3>Get Weekly Growth & Financial Calculators</h3>
+            <form action="https://buttondown.email/api/emails/embed-subscribe/your-newsletter" method="post" target="popupwindow">
+                <input type="email" name="email" placeholder="your@email.com" required style="padding: 8px; width: 250px; margin-right: 8px;">
+                <input type="submit" value="Subscribe" class="btn" style="padding: 8px 16px;">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ZeroCost Tools. <a href="../guides/crypto-tips.html">Support this project</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateLTV() {
+            const arpu = parseFloat(document.getElementById('arpu').value) || 0;
+            const margin = (parseFloat(document.getElementById('margin').value) || 0) / 100;
+            const churn = (parseFloat(document.getElementById('churn').value) || 0) / 100;
+            const cac = parseFloat(document.getElementById('cac').value) || 1;
+
+            if (churn <= 0) {
+                alert('Churn rate must be greater than 0.');
+                return;
+            }
+
+            const lifetimeMonths = 1 / churn;
+            const ltv = arpu * margin * lifetimeMonths;
+            const ratio = ltv / cac;
+
+            let health = 'Poor (< 3x)';
+            if (ratio >= 5) {
+                health = 'Excellent (5x+ — Consider investing more in acquisition)';
+            } else if (ratio >= 3) {
+                health = 'Good/Healthy (3x - 5x)';
+            }
+
+            document.getElementById('ltvVal').innerText = '$' + ltv.toFixed(2);
+            document.getElementById('ratioVal').innerText = ratio.toFixed(2);
+            document.getElementById('healthVal').innerText = health;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
