@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burn Rate & Runway Calculator | Free Startup Financial Tool</title>
+  <meta name="description" content="Calculate startup gross burn, net burn, and cash runway in months. Accurately forecast your runway with our free, privacy-friendly online calculator.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/burn-rate-calculator.html">
+  <meta property="og:title" content="Burn Rate & Runway Calculator | Free Startup Financial Tool">
+  <meta property="og:description" content="Calculate startup gross burn, net burn, and cash runway in months. Free financial planning tool.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/burn-rate-calculator.html">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <style>
+    .calc-container { max-width: 700px; margin: 2rem auto; padding: 1.5rem; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+    .form-group input { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; box-sizing: border-box; }
+    .btn-calc { background: #2563eb; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-size: 1rem; cursor: pointer; width: 100%; font-weight: bold; }
+    .btn-calc:hover { background: #1d4ed8; }
+    .result-box { margin-top: 1.5rem; padding: 1.25rem; background: #f8fafc; border-left: 4px solid #2563eb; border-radius: 4px; display: none; }
+    .result-item { margin-bottom: 0.75rem; font-size: 1.1rem; }
+    .result-val { font-weight: bold; color: #1e293b; }
+    .explainer { max-width: 700px; margin: 2rem auto; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../calculators/">Calculators</a>
+      <a href="../converters/">Converters</a>
+      <a href="../blog/">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="calc-container">
+      <h1>Burn Rate & Runway Calculator</h1>
+      <p>Estimate monthly cash burn and remaining runway to prepare your next fundraising round or reach profitability.</p>
+      
+      <div id="ad-zone-top" class="ad-slot"></div>
+
+      <form id="burn-calc-form">
+        <div class="form-group">
+          <label for="cash-balance">Current Cash Balance ($)</label>
+          <input type="number" id="cash-balance" min="0" step="any" placeholder="e.g., 250000" required>
+        </div>
+        <div class="form-group">
+          <label for="monthly-expenses">Monthly Operating Expenses ($)</label>
+          <input type="number" id="monthly-expenses" min="0" step="any" placeholder="e.g., 30000" required>
+        </div>
+        <div class="form-group">
+          <label for="monthly-revenue">Monthly Revenue ($)</label>
+          <input type="number" id="monthly-revenue" min="0" step="any" placeholder="e.g., 10000" value="0">
+        </div>
+        <button type="submit" class="btn-calc">Calculate Runway</button>
+      </form>
+
+      <div id="results" class="result-box">
+        <div class="result-item">Gross Monthly Burn: <span id="gross-burn" class="result-val">$0.00</span></div>
+        <div class="result-item">Net Monthly Burn: <span id="net-burn" class="result-val">$0.00</span></div>
+        <div class="result-item">Estimated Runway: <span id="runway-months" class="result-val">0 Months</span></div>
+        <p id="runway-status" style="margin-top: 0.5rem; font-size: 0.95rem;"></p>
+      </div>
+    </div>
+
+    <div class="explainer">
+      <h2>How Startup Burn Rate & Runway Are Calculated</h2>
+      <p><strong>Gross Burn Rate:</strong> The total operating expenses incurred every month regardless of incoming revenue.</p>
+      <p><strong>Net Burn Rate:</strong> <code>Total Monthly Expenses - Total Monthly Revenue</code>. This represents actual cash lost each month.</p>
+      <p><strong>Runway (Months):</strong> <code>Current Cash Balance / Net Monthly Burn</code>. Indicates how long your company can operate before running out of funds.</p>
+      
+      <h3>Related Business Calculators</h3>
+      <ul>
+        <li><a href="break-even-calculator.html">Break-Even Calculator</a> - Find your point of profitability.</li>
+        <li><a href="margin-calculator.html">Profit Margin Calculator</a> - Calculate gross and net profit margins.</li>
+        <li><a href="roi-calculator.html">ROI Calculator</a> - Evaluate returns on your investments.</li>
+        <li><a href="ltv-cac-calculator.html">LTV:CAC Calculator</a> - Measure customer acquisition economics.</li>
+      </ul>
+    </div>
+
+    <div class="tip-cta-container" style="max-width:700px; margin:2rem auto; padding:1.25rem; background:#eff6ff; border-radius:6px;">
+      <h3>Support Independent Free Tools</h3>
+      <p>We build free, ad-light developer and business tools. Consider supporting ongoing server and development costs via our <a href="../guides/crypto-tips.html">Crypto Tips & Support Page</a>.</p>
+    </div>
+
+    <div class="newsletter-container" style="max-width:700px; margin:2rem auto; padding:1.25rem; border:1px solid #e2e8f0; border-radius:6px;">
+      <h3>Join Our Tech & Business Tools Newsletter</h3>
+      <p>Get actionable business calculators, developer cheatsheets, and updates once a month.</p>
+      <form action="mailto:newsletter@example.com" method="post" enctype="text/plain">
+        <input type="email" placeholder="Your email address" style="padding:0.5rem; width:70%; margin-right:0.5rem;" required>
+        <button type="submit" style="padding:0.5rem 1rem; background:#0f172a; color:#fff; border:none; border-radius:4px;">Subscribe</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Free Business Tools. Built with privacy and zero trackers.</p>
+    <p><a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../guides/crypto-tips.html">Tip Jar</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('burn-calc-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const cash = parseFloat(document.getElementById('cash-balance').value) || 0;
+      const expenses = parseFloat(document.getElementById('monthly-expenses').value) || 0;
+      const revenue = parseFloat(document.getElementById('monthly-revenue').value) || 0;
+
+      const grossBurn = expenses;
+      const netBurn = Math.max(0, expenses - revenue);
+      
+      document.getElementById('gross-burn').textContent = '$' + grossBurn.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('net-burn').textContent = '$' + netBurn.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      
+      const resultsDiv = document.getElementById('results');
+      const runwaySpan = document.getElementById('runway-months');
+      const statusP = document.getElementById('runway-status');
+
+      if (expenses <= revenue) {
+        runwaySpan.textContent = 'Profitable / Infinite';
+        statusP.textContent = 'Your revenue exceeds or equals your monthly expenses (Cash-flow positive).';
+        statusP.style.color = '#16a34a';
+      } else {
+        const months = netBurn > 0 ? (cash / netBurn).toFixed(1) : 0;
+        runwaySpan.textContent = months + ' Months';
+        if (months < 6) {
+          statusP.textContent = 'Warning: Runway is under 6 months. Consider immediate cost reduction or fundraising.';
+          statusP.style.color = '#dc2626';
+        } else {
+          statusP.textContent = 'Healthy runway window for ongoing operations and planning.';
+          statusP.style.color = '#2563eb';
+        }
+      }
+      resultsDiv.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

@@ -665,3 +665,18 @@ to submit them to Google Indexing API
   - Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (54 pages) and robots.txt
   - Stopped: LLM failed at step 4.
 ---
+## Run 2026-08-14 22:54:03 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 2
+**Tokens used:** 42382
+
+**Steps:**
+  Step 1: action=write_file | tokens=21174 | result=Wrote file: docs/calculators/burn-rate-calculator.html (8123 chars)
+  Step 2: action=validate_html | tokens=21208 | result=✓ docs/calculators/burn-rate-calculator.html passed validation (no issues)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/burn-rate-calculator.html (8123 chars)
+  - Step 2: validate_html (OK) — ✓ docs/calculators/burn-rate-calculator.html passed validation (no issues)
+  - Stopped: LLM failed at step 3.
+---
