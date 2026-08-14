@@ -648,3 +648,20 @@ to submit them to Google Indexing API
   - Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (53 pages) and robots.txt
   - Stopped: LLM failed at step 4.
 ---
+## Run 2026-08-14 21:43:57 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 3
+**Tokens used:** 60124
+
+**Steps:**
+  Step 1: action=write_file | tokens=20099 | result=Wrote file: docs/calculators/margin-calculator.html (6164 chars)
+  Step 2: action=validate_html | tokens=19934 | result=✓ docs/calculators/margin-calculator.html passed validation (no issues)
+  Step 3: action=seo_update_sitemap | tokens=20091 | result=Regenerated sitemap.xml (54 pages) and robots.txt
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/margin-calculator.html (6164 chars)
+  - Step 2: validate_html (OK) — ✓ docs/calculators/margin-calculator.html passed validation (no issues)
+  - Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (54 pages) and robots.txt
+  - Stopped: LLM failed at step 4.
+---
