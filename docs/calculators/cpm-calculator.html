@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPM Calculator — Free Cost Per Mille & Ad Revenue Tool</title>
+  <meta name="description" content="Calculate CPM (Cost Per Thousand impressions), total ad campaign cost, or required impressions instantly with this free online advertising calculator.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cpm-calculator.html">
+  <meta property="og:title" content="CPM Calculator — Free Cost Per Mille Tool">
+  <meta property="og:description" content="Calculate CPM, total campaign cost, and ad impressions instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cpm-calculator.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CPM Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cpm-calculator.html",
+    "description": "Calculate advertising Cost Per Mille (CPM), impressions, and total campaign budgets.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">DevTools & Calculators</a>
+      <nav>
+        <a href="../converters/">Converters</a>
+        <a href="../calculators/">Calculators</a>
+        <a href="../blog/">Blog</a>
+        <a href="../guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <div id="ad-placement-top" class="ad-zone" data-ad-slot="top-banner"></div>
+
+    <h1>CPM Calculator (Cost Per Mille)</h1>
+    <p class="lead">Calculate campaign cost, CPM rate, or required impressions for your online advertising campaigns.</p>
+
+    <div class="tool-card">
+      <form id="cpm-form" onsubmit="event.preventDefault(); calculateCPM();">
+        <div class="form-group">
+          <label for="calc-mode">What do you want to calculate?</label>
+          <select id="calc-mode" class="form-control" onchange="updateFields()">
+            <option value="cpm">CPM (Cost per 1,000 Impressions)</option>
+            <option value="cost">Total Campaign Cost</option>
+            <option value="impressions">Impressions Needed</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="group-cost">
+          <label for="input-cost">Total Cost ($)</label>
+          <input type="number" id="input-cost" class="form-control" placeholder="e.g. 500" step="any" min="0">
+        </div>
+
+        <div class="form-group" id="group-cpm" style="display:none;">
+          <label for="input-cpm">CPM ($ per 1,000 impressions)</label>
+          <input type="number" id="input-cpm" class="form-control" placeholder="e.g. 2.50" step="any" min="0">
+        </div>
+
+        <div class="form-group" id="group-impressions">
+          <label for="input-impressions">Ad Impressions</label>
+          <input type="number" id="input-impressions" class="form-control" placeholder="e.g. 200000" step="any" min="0">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Calculate</button>
+      </form>
+
+      <div id="results-card" class="results-box" style="display:none; margin-top: 1.5rem;">
+        <h3>Result</h3>
+        <div id="result-value" class="result-highlight"></div>
+        <p id="result-details"></p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>How CPM is Calculated</h2>
+      <p><strong>CPM</strong> stands for <em>Cost Per Mille</em> (Mille = thousand in Latin). The formula is:</p>
+      <pre><code>CPM = (Total Cost / Total Impressions) × 1,000</code></pre>
+      <p>Use CPM to compare the cost efficiency of different ad networks, newsletter sponsorships, or display campaigns.</p>
+    </section>
+
+    <section class="affiliate-box">
+      <h3>Recommended Cloud & Hosting Tools</h3>
+      <p>Scale your ad-supported sites and applications with reliable infrastructure:</p>
+      <ul>
+        <li><a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow noopener sponsored" target="_blank">DigitalOcean</a> — Get $200 free cloud credit for high-traffic VPS hosting.</li>
+        <li><a href="https://vercel.com/?utm_source=YOUR_REFERRAL_CODE" rel="nofollow noopener sponsored" target="_blank">Vercel</a> — Fast frontend deployment and serverless architecture.</li>
+      </ul>
+    </section>
+
+    <section class="newsletter-box">
+      <h3>Get Free Web Tools & Developer Tips</h3>
+      <form action="mailto:newsletter@example.com" method="post" enctype="text/plain">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </section>
+
+    <div id="ad-placement-bottom" class="ad-zone" data-ad-slot="bottom-banner"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 DevTools. Open Source & Privacy-Friendly.</p>
+      <p><a href="../guides/crypto-tips.html">Support with Crypto</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function updateFields() {
+      const mode = document.getElementById('calc-mode').value;
+      document.getElementById('group-cost').style.display = (mode === 'cost') ? 'none' : 'block';
+      document.getElementById('group-cpm').style.display = (mode === 'cpm') ? 'none' : 'block';
+      document.getElementById('group-impressions').style.display = (mode === 'impressions') ? 'none' : 'block';
+      document.getElementById('results-card').style.display = 'none';
+    }
+
+    function calculateCPM() {
+      const mode = document.getElementById('calc-mode').value;
+      const cost = parseFloat(document.getElementById('input-cost').value);
+      const cpm = parseFloat(document.getElementById('input-cpm').value);
+      const impressions = parseFloat(document.getElementById('input-impressions').value);
+      const resCard = document.getElementById('results-card');
+      const resVal = document.getElementById('result-value');
+      const resDetails = document.getElementById('result-details');
+
+      if (mode === 'cpm') {
+        if (!cost || !impressions || impressions <= 0) return;
+        const calcCpm = (cost / impressions) * 1000;
+        resVal.textContent = 'CPM: $' + calcCpm.toFixed(2);
+        resDetails.textContent = 'Cost per impression: $' + (cost / impressions).toFixed(5);
+      } else if (mode === 'cost') {
+        if (!cpm || !impressions) return;
+        const calcCost = (cpm * impressions) / 1000;
+        resVal.textContent = 'Total Cost: $' + calcCost.toFixed(2);
+        resDetails.textContent = 'At $' + cpm.toFixed(2) + ' CPM for ' + impressions.toLocaleString() + ' impressions.';
+      } else if (mode === 'impressions') {
+        if (!cost || !cpm || cpm <= 0) return;
+        const calcImp = (cost / cpm) * 1000;
+        resVal.textContent = 'Impressions: ' + Math.round(calcImp).toLocaleString();
+        resDetails.textContent = 'Budget of $' + cost.toFixed(2) + ' at $' + cpm.toFixed(2) + ' CPM.';
+      }
+      resCard.style.display = 'block';
+    }
+  </script>
+  <script data-goatcounter="https://zero-cost-ai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
