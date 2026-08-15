@@ -1,7 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-[2026-08-13 05:18:06 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
-
 [2026-08-13 09:43:11 UTC] Agent output failed validation twice. Last error: Missing 'action' field. Must be one of: analytics_fetch, append_doc, delete_file, distribution_post, done, http_get, list_dir, log_experiment, monetize_inject, read_file, revenue_verify, seo_submit, seo_update_sitemap, update_experiment, validate_html, write_file
 
 [2026-08-13 09:43:11 UTC] LLM call failed at step 3.
@@ -244,4 +242,18 @@ CIRCUIT_OPEN gemini
 FAIL cerebras/zai-glm-4.7 attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
 FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
 FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+SKIP openrouter - budget exhausted
+
+[2026-08-15 10:50:18 UTC] LLM call failed at step 4.
+All LLM providers failed. Attempts:
+SKIP groq - unhealthy (circuit breaker)
+FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 10000, model: gemini-2.5-flash-tts\nPlease retry in 17.069648356s.",
+    "status": "RESOURCE_E
+CIRCUIT_OPEN gemini
+FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/zai-glm-4.7 attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
 SKIP openrouter - budget exhausted
