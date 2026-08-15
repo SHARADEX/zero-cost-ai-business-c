@@ -1,11 +1,4 @@
 ## Summary
-2026-08-15 11:40:45 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-15 13:38:58 UTC | model=gemini | budget=full | steps=4 | tokens=88423
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/mrr-calculator.html (6770 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/mrr-calculator.html passed validation (no issues) | Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (58 pages) and robots.txt
@@ -23,4 +16,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/arr-calculator
 
 Step details:
 Step 1: action=write_file | tokens=20958 | result=Wrote file: docs/calculators/arr-calculator.html (2793 chars)
+
+## Summary
+2026-08-15 15:42:48 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
