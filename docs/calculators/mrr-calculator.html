@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free MRR Calculator - Monthly Recurring Revenue &amp; ARR Forecaster</title>
+  <meta name="description" content="Calculate monthly recurring revenue (MRR), ARR, net MRR growth rate, and SaaS churn impact instantly. 100% free interactive business revenue tool.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/mrr-calculator.html">
+  <meta property="og:title" content="Free MRR Calculator - Monthly Recurring Revenue &amp; ARR Forecaster">
+  <meta property="og:description" content="Calculate monthly recurring revenue (MRR), ARR, and net growth with this fast interactive SaaS calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/mrr-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script data-goatcounter="https://zero-cost-agent.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Monthly Recurring Revenue (MRR) Calculator",
+    "description": "Free SaaS calculation tool for MRR, ARR, and net expansion growth forecasting.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <a href="../index.html" class="logo">WebTools Central</a>
+      <div class="nav-links">
+        <a href="../tools/">Tools</a>
+        <a href="../converters/">Converters</a>
+        <a href="./">Calculators</a>
+        <a href="../blog/">Blog</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="ad-slot" id="ad-top"></div>
+
+    <h1>Monthly Recurring Revenue (MRR) Calculator</h1>
+    <p class="lead">Calculate your SaaS MRR, Annual Recurring Revenue (ARR), Net New MRR, and growth rates in real time.</p>
+
+    <section class="tool-card">
+      <form id="mrr-form" class="calc-grid">
+        <div class="input-group">
+          <label for="starting-mrr">Starting MRR ($):</label>
+          <input type="number" id="starting-mrr" value="5000" min="0" step="any" required>
+        </div>
+        <div class="input-group">
+          <label for="new-mrr">New Customer MRR ($):</label>
+          <input type="number" id="new-mrr" value="1200" min="0" step="any" required>
+        </div>
+        <div class="input-group">
+          <label for="expansion-mrr">Expansion / Upgrade MRR ($):</label>
+          <input type="number" id="expansion-mrr" value="300" min="0" step="any" required>
+        </div>
+        <div class="input-group">
+          <label for="churned-mrr">Churned / Lost MRR ($):</label>
+          <input type="number" id="churned-mrr" value="400" min="0" step="any" required>
+        </div>
+        <button type="button" id="calc-btn" class="btn-primary">Calculate MRR Metrics</button>
+      </form>
+
+      <div class="results-box" id="results" style="margin-top: 1.5rem;">
+        <h3>Revenue Breakdown</h3>
+        <p><strong>Net New MRR:</strong> <span id="out-net-new">$1,100.00</span></p>
+        <p><strong>Ending MRR:</strong> <span id="out-ending-mrr">$6,100.00</span></p>
+        <p><strong>Annual Recurring Revenue (ARR):</strong> <span id="out-arr">$73,200.00</span></p>
+        <p><strong>Monthly Growth Rate:</strong> <span id="out-growth-rate">22.00%</span></p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>How MRR &amp; ARR Are Calculated</h2>
+      <p>Monthly Recurring Revenue (MRR) measures normalized monthly recurring subscription earnings. The standard formula for Net New MRR is:</p>
+      <code>Net New MRR = New MRR + Expansion MRR - Churned MRR</code>
+      <p>Annual Recurring Revenue (ARR) is annualized regular income:</p>
+      <code>ARR = Ending MRR &times; 12</code>
+    </section>
+
+    <section class="affiliate-box">
+      <h3>Recommended Infrastructure for SaaS</h3>
+      <p>Deploying your SaaS or web apps? Try <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="noopener" target="_blank">DigitalOcean Cloud</a> with $200 free credits or deploy frontend apps seamlessly on <a href="https://vercel.com/?utm_source=YOUR_REFERRAL_CODE" rel="noopener" target="_blank">Vercel</a>.</p>
+    </section>
+
+    <section class="newsletter-box">
+      <h3>Subscribe to Growth &amp; Tech Insights</h3>
+      <p>Get actionable business formulas, automation templates, and development guides straight to your inbox.</p>
+      <form action="mailto:contact@example.com" method="get" class="newsletter-form">
+        <input type="email" name="email" placeholder="Your best email" required>
+        <button type="submit" class="btn-secondary">Join Newsletter</button>
+      </form>
+    </section>
+
+    <section class="tip-box">
+      <p>Find this calculator helpful? Support our open web tools! <a href="../guides/crypto-tips.html" class="cta-link">Send a Tip / Support Us</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 WebTools Central. Free programmatic utilities &amp; business tools.</p>
+    <p><a href="../guides/crypto-tips.html">Support Project</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+  </footer>
+
+  <script>
+    function calculateMRR() {
+      const starting = parseFloat(document.getElementById('starting-mrr').value) || 0;
+      const newMrr = parseFloat(document.getElementById('new-mrr').value) || 0;
+      const expansion = parseFloat(document.getElementById('expansion-mrr').value) || 0;
+      const churned = parseFloat(document.getElementById('churned-mrr').value) || 0;
+
+      const netNew = newMrr + expansion - churned;
+      const ending = starting + netNew;
+      const arr = ending * 12;
+      const growthRate = starting > 0 ? ((netNew / starting) * 100) : 0;
+
+      document.getElementById('out-net-new').textContent = '$' + netNew.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('out-ending-mrr').textContent = '$' + ending.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('out-arr').textContent = '$' + arr.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('out-growth-rate').textContent = growthRate.toFixed(2) + '%';
+    }
+
+    document.getElementById('calc-btn').addEventListener('click', calculateMRR);
+    document.querySelectorAll('#mrr-form input').forEach(function(input) {
+      input.addEventListener('input', calculateMRR);
+    });
+  </script>
+</body>
+</html>
