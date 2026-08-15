@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Churn Rate Calculator — Customer &amp; Revenue Churn</title>
+  <meta name="description" content="Calculate customer churn rate, revenue churn rate, and projected customer lifetime with our free, interactive SaaS churn calculator.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/churn-rate-calculator.html">
+  <meta property="og:title" content="SaaS Churn Rate Calculator — Customer &amp; Revenue Churn">
+  <meta property="og:description" content="Calculate customer churn rate, revenue churn rate, and projected customer lifetime with our free, interactive SaaS churn calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/churn-rate-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SaaS Churn Rate Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/churn-rate-calculator.html",
+    "description": "Free interactive tool to compute customer churn rate, revenue churn rate, and average customer lifespan.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <a href="../index.html" class="brand">ToolStack</a>
+      <div class="nav-links">
+        <a href="../calculators/">Calculators</a>
+        <a href="../converters/">Converters</a>
+        <a href="../blog/">Blog</a>
+        <a href="../guides/crypto-tips.html">Support</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>SaaS Churn Rate Calculator</h1>
+    <p class="subtitle">Quickly measure customer churn, monthly revenue churn, and average customer lifetime to improve subscription retention.</p>
+
+    <div class="ad-slot" id="ad-header"></div>
+
+    <section class="tool-card">
+      <div class="input-grid">
+        <div class="form-group">
+          <label for="startCustomers">Customers at Start of Period</label>
+          <input type="number" id="startCustomers" value="1000" min="1" step="1">
+        </div>
+        <div class="form-group">
+          <label for="lostCustomers">Customers Lost During Period</label>
+          <input type="number" id="lostCustomers" value="35" min="0" step="1">
+        </div>
+        <div class="form-group">
+          <label for="startMRR">Starting MRR ($)</label>
+          <input type="number" id="startMRR" value="50000" min="0" step="100">
+        </div>
+        <div class="form-group">
+          <label for="lostMRR">Lost / Downgraded MRR ($)</label>
+          <input type="number" id="lostMRR" value="1750" min="0" step="50">
+        </div>
+      </div>
+
+      <button type="button" id="calcBtn" class="btn-primary">Calculate Churn</button>
+
+      <div class="results-panel" id="resultsArea">
+        <h2>Results Summary</h2>
+        <div class="metrics-grid">
+          <div class="metric-box">
+            <span class="metric-label">Customer Churn Rate</span>
+            <span class="metric-value" id="customerChurnVal">3.50%</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">Revenue Churn Rate</span>
+            <span class="metric-value" id="revenueChurnVal">3.50%</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">Retention Rate</span>
+            <span class="metric-value" id="retentionVal">96.50%</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">Implied Lifespan</span>
+            <span class="metric-value" id="lifetimeVal">28.6 Months</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>How Churn Rate Is Calculated</h2>
+      <p>Customer churn rate represents the percentage of subscribers that cancel or do not renew during a given time period:</p>
+      <p><code>Customer Churn Rate = (Customers Lost in Period / Starting Customers) &times; 100</code></p>
+      <p>Similarly, Gross Revenue Churn measures the direct loss of Monthly Recurring Revenue (MRR) before factoring in expansion or new sales:</p>
+      <p><code>Revenue Churn Rate = (Lost MRR / Starting MRR) &times; 100</code></p>
+      <p>To calculate average customer lifetime in months, divide 1 by your monthly churn rate (e.g. <code>1 / 0.035 = 28.57 months</code>).</p>
+
+      <h3>Related Business Calculators</h3>
+      <ul>
+        <li><a href="clv-calculator.html">Customer Lifetime Value (CLV) Calculator</a></li>
+        <li><a href="cac-calculator.html">Customer Acquisition Cost (CAC) Calculator</a></li>
+        <li><a href="mrr-calculator.html">MRR (Monthly Recurring Revenue) Calculator</a></li>
+        <li><a href="arr-calculator.html">ARR (Annual Recurring Revenue) Calculator</a></li>
+      </ul>
+    </section>
+
+    <section class="affiliate-box">
+      <h3>Recommended Cloud Infrastructure</h3>
+      <p>Deploy high-availability SaaS platforms and optimize uptime with top-tier cloud providers:</p>
+      <div class="affiliate-links">
+        <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="noopener sponsored" class="aff-link">DigitalOcean ($200 Credit)</a>
+        <a href="https://www.vultr.com/?ref=YOUR_REFERRAL_CODE" target="_blank" rel="noopener sponsored" class="aff-link">Vultr ($100 Credit)</a>
+      </div>
+    </section>
+
+    <section class="newsletter-box">
+      <h3>Get SaaS Growth &amp; Tech Guides</h3>
+      <p>Join our newsletter for weekly metrics breakdowns, open-source tools, and revenue engineering strategies.</p>
+      <form action="mailto:contact@example.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn-secondary">Subscribe</button>
+      </form>
+    </section>
+
+    <div class="ad-slot" id="ad-footer"></div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2026 ToolStack. All tools run 100% client-side for maximum privacy.</p>
+      <p><a href="../guides/crypto-tips.html">Support &amp; Donate</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function calculate() {
+      const startCust = parseFloat(document.getElementById('startCustomers').value) || 0;
+      const lostCust = parseFloat(document.getElementById('lostCustomers').value) || 0;
+      const startMRR = parseFloat(document.getElementById('startMRR').value) || 0;
+      const lostMRR = parseFloat(document.getElementById('lostMRR').value) || 0;
+
+      const custChurn = startCust > 0 ? (lostCust / startCust) * 100 : 0;
+      const revChurn = startMRR > 0 ? (lostMRR / startMRR) * 100 : 0;
+      const retention = Math.max(0, 100 - custChurn);
+      const lifetime = custChurn > 0 ? (100 / custChurn) : 0;
+
+      document.getElementById('customerChurnVal').textContent = custChurn.toFixed(2) + '%';
+      document.getElementById('revenueChurnVal').textContent = revChurn.toFixed(2) + '%';
+      document.getElementById('retentionVal').textContent = retention.toFixed(2) + '%';
+      document.getElementById('lifetimeVal').textContent = lifetime > 0 ? lifetime.toFixed(1) + ' Months' : 'N/A';
+    }
+
+    document.getElementById('calcBtn').addEventListener('click', calculate);
+    ['startCustomers', 'lostCustomers', 'startMRR', 'lostMRR'].forEach(id => {
+      document.getElementById(id).addEventListener('input', calculate);
+    });
+  </script>
+</body>
+</html>
