@@ -1,13 +1,4 @@
 ## Summary
-2026-08-14 22:54:03 UTC | model=gemini | budget=full | steps=2 | tokens=42382
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/burn-rate-calculator.html (8123 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/burn-rate-calculator.html passed validation (no issues) | Stopped: LLM failed at step 3.
-
-Step details:
-Step 1: action=write_file | tokens=21174 | result=Wrote file: docs/calculators/burn-rate-calculator.html (8123 chars)
-  Step 2: action=validate_html | tokens=21208 | result=✓ docs/calculators/burn-rate-calculator.html passed validation (no issues)
-
-## Summary
 2026-08-14 23:50:30 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -32,4 +23,22 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
     "code": 429,
     "m
   ...
+
+## Summary
+2026-08-15 04:57:29 UTC | model=openrouter | budget=full | steps=5 | tokens=106102
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/cac-calculator.html (7771 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/cac-calculator.html passed validation (no issues) | Step 3: write_file (OK) — Wrote file: docs/calculators/cac-calculator.html (7771 chars)
+
+Step details:
+Step 1: action=write_file | tokens=20902 | result=Wrote file: docs/calculators/cac-calculator.html (7771 chars)
+  Step 2: action=validate_html | tokens=20825 | result=✓ docs/calculators/cac-calculator.html passed validation (no issues)
+  Step 3: action=write_file | tokens=22516 | result=Wrote file: docs/calculators/cac-calculator.html (7771 chars)
+  Step 4: action=read_file | tokens=20375 | result=Contents of memory/blocked.md:
+# Blocked Actions Log — v4.1 (Autonomous Edition)
+
+CIRCUIT_OPEN groq
+FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
+  "error": {
+    "code": 429,
+    "...
 

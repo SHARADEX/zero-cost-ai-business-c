@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Acquisition Cost (CAC) Calculator | Free Online Tool</title>
+  <meta name="description" content="Calculate your Customer Acquisition Cost (CAC) instantly. Free, fast online calculator with formulas, benchmarks, and actionable SaaS marketing tips.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cac-calculator.html">
+  <meta property="og:title" content="Customer Acquisition Cost (CAC) Calculator">
+  <meta property="og:description" content="Free online CAC calculator to accurately measure marketing spend per customer acquired.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cac-calculator.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Customer Acquisition Cost Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cac-calculator.html",
+    "description": "Calculate CAC (Customer Acquisition Cost) by inputting sales, marketing costs, and new customers acquired.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+  <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <a href="../index.html" class="brand-logo">Free Web Tools</a>
+      <div class="nav-links">
+        <a href="../tools/index.html">Tools</a>
+        <a href="../converters/index.html">Converters</a>
+        <a href="index.html">Calculators</a>
+        <a href="../blog/index.html">Blog</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="ad-slot" id="ad-zone-header"></div>
+
+    <h1>Customer Acquisition Cost (CAC) Calculator</h1>
+    <p class="lead">Calculate how much it costs your business to acquire a single paying customer. Perfect for SaaS startups, e-commerce, and digital marketers.</p>
+
+    <section class="tool-card">
+      <form id="cac-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="marketingCost">Total Marketing & Advertising Spend ($):</label>
+          <input type="number" id="marketingCost" class="form-control" placeholder="e.g. 5000" min="0" step="any" required>
+        </div>
+        <div class="form-group">
+          <label for="salesCost">Total Sales Team & Tool Costs ($):</label>
+          <input type="number" id="salesCost" class="form-control" placeholder="e.g. 3000" min="0" step="any" value="0">
+        </div>
+        <div class="form-group">
+          <label for="customersAcquired">New Customers Acquired:</label>
+          <input type="number" id="customersAcquired" class="form-control" placeholder="e.g. 160" min="1" step="1" required>
+        </div>
+        <button type="button" id="calcBtn" class="btn btn-primary">Calculate CAC</button>
+      </form>
+
+      <div id="resultsArea" class="results-box" style="display:none; margin-top: 20px;">
+        <h3>Results</h3>
+        <p><strong>Total Acquisition Spend:</strong> $<span id="totalSpend">0.00</span></p>
+        <p><strong>Customer Acquisition Cost (CAC):</strong> <span class="highlight-stat">$<span id="cacValue">0.00</span></span></p>
+        <p id="cacAnalysis" class="text-muted"></p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>How Customer Acquisition Cost is Calculated</h2>
+      <p>The standard CAC formula divides total sales and marketing expenses by the number of new customers acquired during a specific time period:</p>
+      <pre><code>CAC = (Total Marketing Spend + Total Sales Spend) / New Customers Acquired</code></pre>
+      <p>Monitoring your CAC helps maintain unit economics and ensures your Customer Lifetime Value (LTV) is at least 3x your CAC (target LTV:CAC ratio is 3:1 or higher).</p>
+
+      <h3>Related Business Calculators</h3>
+      <ul>
+        <li><a href="cpm-calculator.html">CPM (Cost Per Mille) Calculator</a></li>
+        <li><a href="burn-rate-calculator.html">Startup Burn Rate Calculator</a></li>
+        <li><a href="margin-calculator.html">Profit Margin Calculator</a></li>
+      </ul>
+    </section>
+
+    <section class="affiliate-box">
+      <h3>Recommended Tools for Growing Your Business</h3>
+      <p>Scale your cloud infrastructure and customer operations with reliable platforms:</p>
+      <ul>
+        <li><a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow noopener" target="_blank">DigitalOcean — Get $200 free cloud credits to host your SaaS apps</a></li>
+        <li><a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" rel="nofollow noopener" target="_blank">Notion — All-in-one workspace for managing marketing campaigns and sales funnels</a></li>
+      </ul>
+      <p><small><a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></small></p>
+    </section>
+
+    <section class="newsletter-box">
+      <h3>Get Free Growth & Web Tools in Your Inbox</h3>
+      <p>Join our newsletter for weekly guides, free conversion templates, and startup tools.</p>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER" method="post" target="popupwindow" class="newsletter-form">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </section>
+
+    <section class="tip-box">
+      <p>Found this calculator helpful? Support our open-source free tools project with a tip or GitHub sponsorship!</p>
+      <a href="../guides/crypto-tips.html" class="btn btn-secondary">Support Project / Crypto Tip</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Free Web Tools. Built with 100% free open-source infrastructure.</p>
+      <p><a href="https://github.com/SHARADEX/zero-cost-ai-business-c" rel="noopener" target="_blank">GitHub Repository</a> | <a href="../guides/crypto-tips.html">Donate</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('calcBtn').addEventListener('click', function() {
+      var mCost = parseFloat(document.getElementById('marketingCost').value) || 0;
+      var sCost = parseFloat(document.getElementById('salesCost').value) || 0;
+      var customers = parseFloat(document.getElementById('customersAcquired').value) || 0;
+
+      if (customers <= 0) {
+        alert('Please enter a valid number of new customers acquired (at least 1).');
+        return;
+      }
+
+      var total = mCost + sCost;
+      var cac = total / customers;
+
+      document.getElementById('totalSpend').textContent = total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('cacValue').textContent = cac.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+      var analysis = '';
+      if (cac < 10) {
+        analysis = 'Excellent low acquisition cost. Ensure your customer retention and conversion rates are sustained.';
+      } else if (cac < 100) {
+        analysis = 'Healthy mid-range acquisition cost typical for consumer tech, e-commerce, and SMB SaaS.';
+      } else {
+        analysis = 'Higher CAC typical for enterprise B2B sales. Verify your average LTV justifies this acquisition investment.';
+      }
+      document.getElementById('cacAnalysis').textContent = analysis;
+      document.getElementById('resultsArea').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
