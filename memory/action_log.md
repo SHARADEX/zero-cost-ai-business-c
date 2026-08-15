@@ -996,3 +996,15 @@ to submit them to Google Indexing API
   - Step 3: LLM retry failed.
   - Stopped: LLM failed at step 4.
 ---
+## Run 2026-08-15 23:40:31 UTC
+**Model:** unknown
+**Budget:** high
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---
