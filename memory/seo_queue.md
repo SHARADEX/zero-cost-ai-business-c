@@ -20,3 +20,6 @@ Format: `- [ ] [YYYY-MM-DD HH:MM:SS UTC] https://...`
 ## Submitted
 
 (none yet — agent will move URLs here after successful submission)
+- [ ] [2026-08-15 07:20:49 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/roi-calculator.html
+- [ ] [2026-08-15 07:20:49 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cac-calculator.html
+- [ ] [2026-08-15 07:20:49 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cpm-calculator.html

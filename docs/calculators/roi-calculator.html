@@ -1,63 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROI Calculator - Return on Investment Tool</title>
-    <meta name="description" content="Calculate your Return on Investment (ROI) quickly and accurately with our free online ROI calculator.">
-    <link rel="stylesheet" href="../assets/style.css">
-    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free ROI Calculator - Calculate Return on Investment Online</title>
+  <meta name="description" content="Calculate your Return on Investment (ROI) and annualized ROI instantly with our free, fast, and privacy-friendly online investment return calculator.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/roi-calculator.html">
+  <meta property="og:title" content="Free ROI Calculator - Calculate Return on Investment">
+  <meta property="og:description" content="Easily calculate investment returns, total profit, and annualized ROI percentage instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/roi-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ROI Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/roi-calculator.html",
+    "description": "Calculate Return on Investment (ROI) and annualized rate of return.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+  <script data-goatcounter="https://zero-cost-tools.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../calculators/">Calculators</a>
-            <a href="../converters/">Converters</a>
-            <a href="../guides/crypto-tips.html">Support Us</a>
-        </nav>
-    </header>
-    <main>
-        <h1>Return on Investment (ROI) Calculator</h1>
-        <p>Enter your investment details below to calculate net profit and ROI percentage.</p>
-        
-        <div class="calculator-box">
-            <label for="initial">Initial Investment ($):</label>
-            <input type="number" id="initial" value="1000">
-            
-            <label for="final">Final Value ($):</label>
-            <input type="number" id="final" value="1500">
-            
-            <button onclick="calculateROI()">Calculate ROI</button>
-            
-            <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
-        </div>
+  <header>
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">FreeTools Hub</a>
+      <div class="nav-links">
+        <a href="../calculators/">Calculators</a>
+        <a href="../converters/">Converters</a>
+        <a href="../blog/">Articles</a>
+        <a href="../guides/crypto-tips.html" class="tip-link">Support Us</a>
+      </div>
+    </nav>
+  </header>
 
-        <script>
-            function calculateROI() {
-                const initial = parseFloat(document.getElementById('initial').value);
-                const final = parseFloat(document.getElementById('final').value);
-                if (isNaN(initial) || isNaN(final) || initial <= 0) {
-                    document.getElementById('result').innerText = 'Please enter valid positive numbers.';
-                    return;
-                }
-                const netProfit = final - initial;
-                const roi = (netProfit / initial) * 100;
-                document.getElementById('result').innerText = `Net Profit: $${netProfit.toFixed(2)} | ROI: ${roi.toFixed(2)}%`;
-            }
-        </script>
+  <main class="container">
+    <!-- Ad Zone Placeholder -->
+    <div id="ad-zone" class="ad-placeholder">
+      <span>Ethical Ads Placeholder - Privacy-focused developer ads</span>
+    </div>
 
-        <div class="ad-zone" style="margin: 30px 0; padding: 20px; background: #f4f4f4; text-align: center;">
-            <p>Sponsored Advertisement</p>
-        </div>
+    <article class="tool-wrapper">
+      <h1>ROI Calculator (Return on Investment)</h1>
+      <p class="lead">Quickly calculate your total ROI percentage, net gain, and annualized return for any business investment, project, or asset.</p>
 
-        <div class="affiliate-box" style="margin: 30px 0; padding: 15px; border: 1px solid #ddd;">
-            <h3>Recommended Tools</h3>
-            <p>Looking to scale your business? Check out <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank">DigitalOcean Cloud Hosting</a> ($200 free credit).</p>
+      <div class="calculator-box">
+        <div class="input-group">
+          <label for="initial-investment">Initial Investment Cost ($):</label>
+          <input type="number" id="initial-investment" placeholder="e.g. 5000" min="0" step="any">
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2026 Free Business Tools. Support via <a href="../guides/crypto-tips.html">Crypto Tips</a>.</p>
-    </footer>
+        <div class="input-group">
+          <label for="final-value">Final Value / Total Return ($):</label>
+          <input type="number" id="final-value" placeholder="e.g. 7500" min="0" step="any">
+        </div>
+        <div class="input-group">
+          <label for="time-years">Investment Period (Years, optional):</label>
+          <input type="number" id="time-years" placeholder="e.g. 2" min="0" step="any">
+        </div>
+        <button id="calc-btn" class="btn primary-btn">Calculate ROI</button>
+      </div>
+
+      <div id="results" class="results-box" style="display:none;">
+        <h3>Calculation Results</h3>
+        <p><strong>Net Profit / Gain:</strong> $<span id="net-gain">0.00</span></p>
+        <p><strong>Total ROI:</strong> <span id="roi-percent" class="highlight">0.00</span>%</p>
+        <p id="annual-row" style="display:none;"><strong>Annualized ROI:</strong> <span id="annual-roi">0.00</span>% per year</p>
+      </div>
+
+      <section class="info-section">
+        <h2>How to Calculate ROI Formula</h2>
+        <p>The Return on Investment formula is:</p>
+        <pre><code>ROI (%) = ((Final Value - Initial Cost) / Initial Cost) * 100</code></pre>
+        <p>Annualized ROI accounts for the compounding effect over multi-year periods:</p>
+        <pre><code>Annualized ROI = [((Final Value / Initial Cost) ^ (1 / Years)) - 1] * 100</code></pre>
+      </section>
+
+      <!-- Recommended Affiliate Section -->
+      <div class="affiliate-box">
+        <h3>Recommended Cloud & Infrastructure</h3>
+        <p>Looking to host your projects with top-tier uptime? Get <strong>$200 free credit</strong> on DigitalOcean.</p>
+        <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" class="btn secondary-btn" target="_blank" rel="noopener nofollow">Claim $200 DigitalOcean Credit &rarr;</a>
+        <p class="disclosure"><small>Disclosure: We may earn a commission if you sign up via this link at no additional cost to you.</small></p>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="newsletter-box">
+        <h3>Get Free Tools & Developer Insights</h3>
+        <p>Join our weekly digest for free productivity tools, business calculators, and tech tips.</p>
+        <form action="https://buttondown.email/api/emails/embed-subscribe/YOUR_NEWSLETTER" method="post" target="popupwindow" class="newsletter-form">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn primary-btn">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Tip / Support CTA -->
+      <div class="tip-cta-box">
+        <h3>Support Zero-Cost Open Tools</h3>
+        <p>This project is 100% free and open source. If this calculator saved you time, consider supporting our ongoing development!</p>
+        <a href="../guides/crypto-tips.html" class="btn tip-btn">Donate Crypto / Support Project</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 FreeTools Hub. Built transparently with open web standards.</p>
+    <p><a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="https://github.com/SHARADEX/zero-cost-ai-business-c" target="_blank" rel="noopener">GitHub Repository</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      const initial = parseFloat(document.getElementById('initial-investment').value);
+      const finalVal = parseFloat(document.getElementById('final-value').value);
+      const years = parseFloat(document.getElementById('time-years').value);
+
+      if (isNaN(initial) || isNaN(finalVal) || initial <= 0) {
+        alert('Please enter valid positive numbers for Initial Investment and Final Value.');
+        return;
+      }
+
+      const netGain = finalVal - initial;
+      const roi = (netGain / initial) * 100;
+      
+      document.getElementById('net-gain').textContent = netGain.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('roi-percent').textContent = roi.toFixed(2);
+
+      const annualRow = document.getElementById('annual-row');
+      if (!isNaN(years) && years > 0) {
+        const annualized = (Math.pow(finalVal / initial, 1 / years) - 1) * 100;
+        document.getElementById('annual-roi').textContent = annualized.toFixed(2);
+        annualRow.style.display = 'block';
+      } else {
+        annualRow.style.display = 'none';
+      }
+
+      document.getElementById('results').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
