@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARR Calculator - Annual Recurring Revenue Tool for SaaS</title>
+    <meta name="description" content="Calculate your Annual Recurring Revenue (ARR) quickly and accurately. Essential SaaS metric calculator for subscription businesses.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/arr-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../calculators/index.html">Calculators</a>
+            <a href="../converters/index.html">Converters</a>
+            <a href="../guides/crypto-tips.html">Support Us</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Annual Recurring Revenue (ARR) Calculator</h1>
+        <p>Calculate your subscription business ARR based on monthly recurring revenue or active subscriptions.</p>
+        
+        <div class="calculator-box">
+            <label for="mrrInput">Monthly Recurring Revenue (MRR) ($):</label>
+            <input type="number" id="mrrInput" placeholder="e.g. 5000" value="5000">
+            
+            <button onclick="calculateARR()">Calculate ARR</button>
+            
+            <div id="result" class="result-display">
+                <h3>Estimated ARR: <span id="arrOutput">$60,000</span></h3>
+            </div>
+        </div>
+
+        <div class="ad-zone" style="margin: 20px 0; padding: 15px; background: #f4f4f4; text-align: center;">
+            <p>Sponsored Ad</p>
+            <a href="https://vercel.com/?utm_source=YOUR_REFERRAL_CODE" target="_blank">Deploy your SaaS frontend free on Vercel</a>
+        </div>
+
+        <section class="newsletter" style="margin-top: 30px; padding: 20px; background: #eef;">
+            <h3>Get SaaS Growth Tips</h3>
+            <form action="https://buttondown.com/api/emails/embed-subscribe/your-newsletter" method="post">
+                <input type="email" name="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 FreeTools. <a href="../guides/crypto-tips.html">Crypto Tips & Support</a></p>
+    </footer>
+    <script>
+        function calculateARR() {
+            const mrr = parseFloat(document.getElementById('mrrInput').value) || 0;
+            const arr = mrr * 12;
+            document.getElementById('arrOutput').innerText = '$' + arr.toLocaleString();
+        }
+    </script>
+</body>
+</html>
