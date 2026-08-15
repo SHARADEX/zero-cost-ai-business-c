@@ -1,60 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARR Calculator - Annual Recurring Revenue Tool for SaaS</title>
-    <meta name="description" content="Calculate your Annual Recurring Revenue (ARR) quickly and accurately. Essential SaaS metric calculator for subscription businesses.">
-    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/arr-calculator.html">
-    <link rel="stylesheet" href="../assets/style.css">
-    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARR Calculator - Calculate Annual Recurring Revenue | Free SaaS Tool</title>
+  <meta name="description" content="Free online ARR Calculator for SaaS & subscription businesses. Calculate Annual Recurring Revenue, ARR growth rate, customer expansion, churn impact, and MRR conversion.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/arr-calculator.html">
+  <meta property="og:title" content="ARR Calculator - Calculate Annual Recurring Revenue">
+  <meta property="og:description" content="Instant ARR calculator for founders & finance teams. Calculate Annual Recurring Revenue, MRR multipliers, and net ARR change.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/arr-calculator.html">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script data-goatcounter="https://zero-cost-business.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ARR Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/arr-calculator.html",
+    "description": "Free SaaS ARR calculator for computing annual recurring revenue and growth trajectory.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+  <style>
+    .calc-container { max-width: 800px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; color: #333; }
+    .form-group input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 16px; }
+    .results-box { background: #f8fafc; border-left: 4px solid #2563eb; padding: 20px; border-radius: 4px; margin-top: 20px; }
+    .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 15px; }
+    .metric-card { background: #fff; padding: 15px; border-radius: 6px; border: 1px solid #e2e8f0; text-align: center; }
+    .metric-val { font-size: 1.6rem; font-weight: bold; color: #2563eb; margin-top: 5px; }
+    .metric-label { font-size: 0.85rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+    .btn-calc { background: #2563eb; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: 600; width: 100%; }
+    .btn-calc:hover { background: #1d4ed8; }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../calculators/index.html">Calculators</a>
-            <a href="../converters/index.html">Converters</a>
-            <a href="../guides/crypto-tips.html">Support Us</a>
-        </nav>
-    </header>
-    <main>
-        <h1>Annual Recurring Revenue (ARR) Calculator</h1>
-        <p>Calculate your subscription business ARR based on monthly recurring revenue or active subscriptions.</p>
-        
-        <div class="calculator-box">
-            <label for="mrrInput">Monthly Recurring Revenue (MRR) ($):</label>
-            <input type="number" id="mrrInput" placeholder="e.g. 5000" value="5000">
-            
-            <button onclick="calculateARR()">Calculate ARR</button>
-            
-            <div id="result" class="result-display">
-                <h3>Estimated ARR: <span id="arrOutput">$60,000</span></h3>
-            </div>
-        </div>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../calculators/index.html">Calculators</a>
+      <a href="../converters/index.html">Converters</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../guides/crypto-tips.html">Support</a>
+    </nav>
+  </header>
 
-        <div class="ad-zone" style="margin: 20px 0; padding: 15px; background: #f4f4f4; text-align: center;">
-            <p>Sponsored Ad</p>
-            <a href="https://vercel.com/?utm_source=YOUR_REFERRAL_CODE" target="_blank">Deploy your SaaS frontend free on Vercel</a>
-        </div>
+  <main class="calc-container">
+    <!-- Ad Zone Top -->
+    <div class="ad-zone" id="ad-top" style="margin-bottom: 20px; min-height: 60px; background: #f1f5f9; text-align: center; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #94a3b8;">
+      <span>Advertisement</span>
+    </div>
 
-        <section class="newsletter" style="margin-top: 30px; padding: 20px; background: #eef;">
-            <h3>Get SaaS Growth Tips</h3>
-            <form action="https://buttondown.com/api/emails/embed-subscribe/your-newsletter" method="post">
-                <input type="email" name="email" placeholder="Your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 FreeTools. <a href="../guides/crypto-tips.html">Crypto Tips & Support</a></p>
-    </footer>
-    <script>
-        function calculateARR() {
-            const mrr = parseFloat(document.getElementById('mrrInput').value) || 0;
-            const arr = mrr * 12;
-            document.getElementById('arrOutput').innerText = '$' + arr.toLocaleString();
-        }
-    </script>
+    <h1>ARR Calculator (Annual Recurring Revenue)</h1>
+    <p>Calculate your subscription business's Annual Recurring Revenue (ARR), analyze new bookings, expansion ARR, and contraction/churn to forecast net annualized growth.</p>
+
+    <div class="calc-box">
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="mrr">Current Monthly Recurring Revenue (MRR) ($)</label>
+          <input type="number" id="mrr" placeholder="e.g. 25000" value="25000">
+        </div>
+        <div class="form-group">
+          <label for="new_arr">Annualized New Bookings ($/year)</label>
+          <input type="number" id="new_arr" placeholder="e.g. 50000" value="50000">
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="expansion_arr">Expansion ARR (Upsells/Add-ons) ($/year)</label>
+          <input type="number" id="expansion_arr" placeholder="e.g. 15000" value="15000">
+        </div>
+        <div class="form-group">
+          <label for="churn_arr">Churn & Contraction ARR ($/year)</label>
+          <input type="number" id="churn_arr" placeholder="e.g. 8000" value="8000">
+        </div>
+      </div>
+
+      <button type="button" class="btn-calc" onclick="calculateARR()">Calculate Projected ARR</button>
+
+      <div class="results-box" id="results">
+        <h3>ARR Breakdown & Forecast</h3>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <div class="metric-label">Baseline ARR (MRR x 12)</div>
+            <div class="metric-val" id="res-base">$300,000</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Net New ARR Added</div>
+            <div class="metric-val" id="res-net-new" style="color:#16a34a;">+$57,000</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Projected Total ARR</div>
+            <div class="metric-val" id="res-total-arr">$357,000</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Annual Growth Rate</div>
+            <div class="metric-val" id="res-growth">19.0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section style="margin-top: 40px;">
+      <h2>What is Annual Recurring Revenue (ARR)?</h2>
+      <p>Annual Recurring Revenue (ARR) is the predictable and recurring revenue components generated by customers over a 365-day period in a subscription or SaaS business model. It excludes one-off consulting fees, setup charges, and non-recurring hardware revenue.</p>
+      
+      <h3>The Standard ARR Formula</h3>
+      <p><code>ARR = (Total Monthly Recurring Revenue) &times; 12</code></p>
+      <p>When computing Net New ARR over a fiscal cycle:</p>
+      <p><code>Net New ARR = New Bookings ARR + Expansion ARR - Churn/Contraction ARR</code></p>
+
+      <h3>Why Track ARR?</h3>
+      <ul>
+        <li><strong>Business Valuation:</strong> SaaS enterprise multiples are almost universally calculated as a multiple of forward-looking ARR.</li>
+        <li><strong>Cash Runway Planning:</strong> Predict future cash flow to time hiring, infrastructure expansion, and product investments.</li>
+        <li><strong>Churn Visibility:</strong> Uncovers whether sales growth is masking excessive churn and logo loss.</li>
+      </ul>
+    </section>
+
+    <!-- Recommended Tools / Affiliate -->
+    <section class="affiliate-box" style="margin-top: 30px; padding: 15px; border: 1px dashed #cbd5e1; border-radius: 6px; background: #fafafa;">
+      <h3>Recommended Infrastructure & Productivity Tools</h3>
+      <ul>
+        <li><a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="noopener noreferrer nofollow"><strong>DigitalOcean</strong></a> &mdash; Deploy cloud servers and scalable databases with $200 in free credits.</li>
+        <li><a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="noopener noreferrer nofollow"><strong>Notion</strong></a> &mdash; Organize your SaaS financial models, roadmap, and company wiki in one workspace.</li>
+        <li><a href="../calculators/mrr-calculator.html"><strong>MRR Calculator</strong></a> &mdash; Calculate granular Monthly Recurring Revenue and cohort metrics.</li>
+        <li><a href="../calculators/clv-calculator.html"><strong>Customer Lifetime Value (CLV) Calculator</strong></a> &mdash; Model long-term customer monetization.</li>
+      </ul>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-box" style="margin-top: 30px; padding: 20px; background: #eff6ff; border-radius: 6px;">
+      <h3>Free SaaS & Growth Playbooks</h3>
+      <p>Get weekly operational benchmarks, financial models, and free automation tools delivered to your inbox.</p>
+      <form action="mailto:newsletter@example.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Enter your work email" required style="padding: 8px 12px; width: 60%; max-width: 300px; border: 1px solid #cbd5e1; border-radius: 4px;">
+        <button type="submit" style="padding: 8px 16px; background: #2563eb; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Tip / Support Section -->
+    <section style="margin-top: 30px; text-align: center; font-size: 0.95rem;">
+      <p>Building open tools for bootstrapped founders. <a href="../guides/crypto-tips.html">Support our work with a tip or crypto donation &rarr;</a></p>
+    </section>
+  </main>
+
+  <footer style="margin-top: 50px; text-align: center; color: #64748b; font-size: 0.9rem; padding: 20px;">
+    <p>&copy; 2026 Zero-Cost AI Business Tools. All calculations run client-side.</p>
+    <p><a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../guides/crypto-tips.html">Crypto Tips</a></p>
+  </footer>
+
+  <script>
+    function formatUSD(num) {
+      return '$' + Math.round(num).toLocaleString('en-US');
+    }
+
+    function calculateARR() {
+      const mrr = parseFloat(document.getElementById('mrr').value) || 0;
+      const newArr = parseFloat(document.getElementById('new_arr').value) || 0;
+      const expArr = parseFloat(document.getElementById('expansion_arr').value) || 0;
+      const churnArr = parseFloat(document.getElementById('churn_arr').value) || 0;
+
+      const baseArr = mrr * 12;
+      const netNew = newArr + expArr - churnArr;
+      const totalArr = Math.max(0, baseArr + netNew);
+      const growthRate = baseArr > 0 ? ((netNew / baseArr) * 100).toFixed(1) : 0;
+
+      document.getElementById('res-base').innerText = formatUSD(baseArr);
+      
+      const netNewEl = document.getElementById('res-net-new');
+      netNewEl.innerText = (netNew >= 0 ? '+' : '') + formatUSD(netNew);
+      netNewEl.style.color = netNew >= 0 ? '#16a34a' : '#dc2626';
+
+      document.getElementById('res-total-arr').innerText = formatUSD(totalArr);
+      document.getElementById('res-growth').innerText = (netNew >= 0 ? '+' : '') + growthRate + '%';
+    }
+
+    window.addEventListener('DOMContentLoaded', calculateARR);
+  </script>
 </body>
 </html>
