@@ -807,3 +807,22 @@ to submit them to Google Indexing API
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-15 09:44:22 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 4
+**Tokens used:** 83261
+
+**Steps:**
+  Step 1: action=write_file | tokens=20772 | result=Wrote file: docs/calculators/clv-calculator.html (6078 chars)
+  Step 2: action=validate_html | tokens=20660 | result=✓ docs/calculators/clv-calculator.html passed validation (no issues)
+  Step 3: action=seo_update_sitemap | tokens=20817 | result=Regenerated sitemap.xml (57 pages) and robots.txt
+  Step 4: action=seo_submit | tokens=21012 | result=SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/clv-calculator.html (6078 chars)
+  - Step 2: validate_html (OK) — ✓ docs/calculators/clv-calculator.html passed validation (no issues)
+  - Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (57 pages) and robots.txt
+  - Step 4: seo_submit (OK) — SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (err
+  - Stopped: LLM failed at step 5.
+---
