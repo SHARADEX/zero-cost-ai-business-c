@@ -795,3 +795,15 @@ to submit them to Google Indexing API
   - Step 4: seo_submit (OK) — SEO submit complete. Google: 0/3 submitted (errors: 1). Bing: 0/3 submitted (err
   - Stopped: LLM failed at step 5.
 ---
+## Run 2026-08-15 08:02:33 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---
