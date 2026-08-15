@@ -1,12 +1,4 @@
 ## Summary
-2026-08-15 14:52:06 UTC | model=gemini | budget=full | steps=1 | tokens=20958
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/arr-calculator.html (2793 chars) | Stopped: LLM failed at step 2.
-
-Step details:
-Step 1: action=write_file | tokens=20958 | result=Wrote file: docs/calculators/arr-calculator.html (2793 chars)
-
-## Summary
 2026-08-15 15:42:48 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -21,4 +13,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/arr-calculator
 Step details:
 Step 1: action=write_file | tokens=23308 | result=Wrote file: docs/calculators/arr-calculator.html (10721 chars)
   Step 2: action=validate_html | tokens=23219 | result=✓ docs/calculators/arr-calculator.html passed validation (no issues)
+
+## Summary
+2026-08-15 17:43:15 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
