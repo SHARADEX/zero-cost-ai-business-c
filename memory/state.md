@@ -1,11 +1,4 @@
 ## Summary
-2026-08-15 08:02:33 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-15 09:44:22 UTC | model=gemini | budget=full | steps=4 | tokens=83261
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/clv-calculator.html (6078 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/clv-calculator.html passed validation (no issues) | Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (57 pages) and robots.txt
@@ -25,4 +18,12 @@ Step details:
 Step 1: action=write_file | tokens=21806 | result=Wrote file: docs/calculators/burn-rate-calculator.html (7871 chars)
   Step 2: action=validate_html | tokens=21634 | result=✓ docs/calculators/burn-rate-calculator.html passed validation (no issues)
   Step 3: action=seo_update_sitemap | tokens=21795 | result=Regenerated sitemap.xml (57 pages) and robots.txt
+
+## Summary
+2026-08-15 11:40:45 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
