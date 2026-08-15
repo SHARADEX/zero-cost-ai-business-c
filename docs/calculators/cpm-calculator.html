@@ -3,152 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CPM Calculator — Free Cost Per Mille & Ad Revenue Tool</title>
-  <meta name="description" content="Calculate CPM (Cost Per Thousand impressions), total ad campaign cost, or required impressions instantly with this free online advertising calculator.">
-  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cpm-calculator.html">
-  <meta property="og:title" content="CPM Calculator — Free Cost Per Mille Tool">
-  <meta property="og:description" content="Calculate CPM, total campaign cost, and ad impressions instantly.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cpm-calculator.html">
-  <link rel="stylesheet" href="../assets/style.css">
+  <title>CPM Calculator — Free Online Cost Per Mille Tool</title>
+  <meta name="description" content="Calculate Cost Per Mille (CPM), total ad campaign cost, and required impressions instantly with our free, fast online CPM calculator.">
+  <link rel="canonical" href="https://sharadex.github.io/zero-cost-ai-business-c/calculators/cpm-calculator.html">
+  <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "CPM Calculator",
-    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cpm-calculator.html",
-    "description": "Calculate advertising Cost Per Mille (CPM), impressions, and total campaign budgets.",
+    "url": "https://sharadex.github.io/zero-cost-ai-business-c/calculators/cpm-calculator.html",
+    "description": "Calculate Cost Per Mille (CPM), total ad campaign cost, and required impressions.",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "All"
   }
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="../index.html" class="logo">DevTools & Calculators</a>
-      <nav>
-        <a href="../converters/">Converters</a>
-        <a href="../calculators/">Calculators</a>
-        <a href="../blog/">Blog</a>
-        <a href="../guides/crypto-tips.html">Support</a>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a> | 
+      <a href="../tools/index.html">Tools</a> | 
+      <a href="../converters/index.html">Converters</a> | 
+      <a href="../calculators/index.html">Calculators</a> | 
+      <a href="../blog/index.html">Blog</a>
+    </nav>
   </header>
-
-  <main class="container main-content">
-    <div id="ad-placement-top" class="ad-zone" data-ad-slot="top-banner"></div>
-
+  <main class="container">
     <h1>CPM Calculator (Cost Per Mille)</h1>
-    <p class="lead">Calculate campaign cost, CPM rate, or required impressions for your online advertising campaigns.</p>
+    <p>Calculate your advertising Cost Per Mille (cost per 1,000 impressions), total campaign expenditure, or total impressions.</p>
 
-    <div class="tool-card">
-      <form id="cpm-form" onsubmit="event.preventDefault(); calculateCPM();">
-        <div class="form-group">
-          <label for="calc-mode">What do you want to calculate?</label>
-          <select id="calc-mode" class="form-control" onchange="updateFields()">
-            <option value="cpm">CPM (Cost per 1,000 Impressions)</option>
-            <option value="cost">Total Campaign Cost</option>
-            <option value="impressions">Impressions Needed</option>
-          </select>
-        </div>
+    <div class="ad-zone" id="ad-container">
+      <!-- EthicalAds / House Ad placeholder -->
+      <p class="small-text">Sponsored: Fast, reliable cloud hosting with $200 credits at <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow noopener sponsored" target="_blank">DigitalOcean</a>.</p>
+    </div>
 
-        <div class="form-group" id="group-cost">
-          <label for="input-cost">Total Cost ($)</label>
-          <input type="number" id="input-cost" class="form-control" placeholder="e.g. 500" step="any" min="0">
-        </div>
+    <div class="calculator-box card">
+      <div class="form-group">
+        <label for="calcType">Calculation Target:</label>
+        <select id="calcType">
+          <option value="cpm">Calculate CPM ($)</option>
+          <option value="cost">Calculate Total Cost ($)</option>
+          <option value="impressions">Calculate Impressions</option>
+        </select>
+      </div>
 
-        <div class="form-group" id="group-cpm" style="display:none;">
-          <label for="input-cpm">CPM ($ per 1,000 impressions)</label>
-          <input type="number" id="input-cpm" class="form-control" placeholder="e.g. 2.50" step="any" min="0">
-        </div>
+      <div class="form-group" id="costGroup">
+        <label for="totalCost">Total Campaign Cost ($):</label>
+        <input type="number" id="totalCost" placeholder="e.g. 500" min="0" step="any">
+      </div>
 
-        <div class="form-group" id="group-impressions">
-          <label for="input-impressions">Ad Impressions</label>
-          <input type="number" id="input-impressions" class="form-control" placeholder="e.g. 200000" step="any" min="0">
-        </div>
+      <div class="form-group" id="impressionsGroup">
+        <label for="impressions">Total Impressions:</label>
+        <input type="number" id="impressions" placeholder="e.g. 100000" min="1" step="1">
+      </div>
 
-        <button type="submit" class="btn btn-primary">Calculate</button>
-      </form>
+      <div class="form-group" id="cpmGroup" style="display: none;">
+        <label for="cpmValue">CPM Rate ($):</label>
+        <input type="number" id="cpmValue" placeholder="e.g. 5.00" min="0" step="any">
+      </div>
 
-      <div id="results-card" class="results-box" style="display:none; margin-top: 1.5rem;">
-        <h3>Result</h3>
-        <div id="result-value" class="result-highlight"></div>
-        <p id="result-details"></p>
+      <button id="calculateBtn" class="btn-primary">Calculate</button>
+
+      <div id="resultBox" class="result-box" style="display:none; margin-top: 15px;">
+        <h3>Result:</h3>
+        <p id="resultText" class="highlight"></p>
       </div>
     </div>
 
-    <section class="content-section">
+    <section class="info-section">
       <h2>How CPM is Calculated</h2>
-      <p><strong>CPM</strong> stands for <em>Cost Per Mille</em> (Mille = thousand in Latin). The formula is:</p>
-      <pre><code>CPM = (Total Cost / Total Impressions) × 1,000</code></pre>
-      <p>Use CPM to compare the cost efficiency of different ad networks, newsletter sponsorships, or display campaigns.</p>
+      <p>The standard CPM formula is:</p>
+      <code>CPM = (Total Cost / Total Impressions) &times; 1000</code>
+      <p>Cost Per Mille measures the cost effectiveness of display, social media, and video advertising campaigns per 1,000 views or impressions.</p>
     </section>
 
-    <section class="affiliate-box">
-      <h3>Recommended Cloud & Hosting Tools</h3>
-      <p>Scale your ad-supported sites and applications with reliable infrastructure:</p>
-      <ul>
-        <li><a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow noopener sponsored" target="_blank">DigitalOcean</a> — Get $200 free cloud credit for high-traffic VPS hosting.</li>
-        <li><a href="https://vercel.com/?utm_source=YOUR_REFERRAL_CODE" rel="nofollow noopener sponsored" target="_blank">Vercel</a> — Fast frontend deployment and serverless architecture.</li>
-      </ul>
-    </section>
+    <div class="card affiliate-box">
+      <h3>Recommended Tools & Hosting</h3>
+      <p>Running high-volume ad servers or tracking tools? Deploy on high-performance cloud VPS instances with <a href="https://www.vultr.com/?ref=YOUR_REFERRAL_CODE" rel="nofollow noopener sponsored" target="_blank">Vultr</a> or organize marketing plans in <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" rel="nofollow noopener sponsored" target="_blank">Notion</a>.</p>
+    </div>
 
-    <section class="newsletter-box">
-      <h3>Get Free Web Tools & Developer Tips</h3>
+    <div class="newsletter-box card">
+      <h3>Join Our Free Developer & Marketer Digest</h3>
+      <p>Get weekly updates on new tools, SEO insights, and high-margin online business strategies.</p>
       <form action="mailto:newsletter@example.com" method="post" enctype="text/plain">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit" class="btn">Subscribe</button>
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit" class="btn-secondary">Subscribe</button>
       </form>
-    </section>
+    </div>
 
-    <div id="ad-placement-bottom" class="ad-zone" data-ad-slot="bottom-banner"></div>
+    <div class="support-box card">
+      <p>Found this tool helpful? Support our open-source project via <a href="../guides/crypto-tips.html">Crypto Tips</a> or sponsor on GitHub.</p>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 DevTools. Open Source & Privacy-Friendly.</p>
-      <p><a href="../guides/crypto-tips.html">Support with Crypto</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
-    </div>
+  <footer>
+    <p>&copy; 2026 Free Web Tools Hub. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../guides/crypto-tips.html">Tip Jar</a></p>
   </footer>
 
   <script>
-    function updateFields() {
-      const mode = document.getElementById('calc-mode').value;
-      document.getElementById('group-cost').style.display = (mode === 'cost') ? 'none' : 'block';
-      document.getElementById('group-cpm').style.display = (mode === 'cpm') ? 'none' : 'block';
-      document.getElementById('group-impressions').style.display = (mode === 'impressions') ? 'none' : 'block';
-      document.getElementById('results-card').style.display = 'none';
-    }
+    const calcType = document.getElementById('calcType');
+    const costGroup = document.getElementById('costGroup');
+    const impressionsGroup = document.getElementById('impressionsGroup');
+    const cpmGroup = document.getElementById('cpmGroup');
+    const calculateBtn = document.getElementById('calculateBtn');
+    const resultBox = document.getElementById('resultBox');
+    const resultText = document.getElementById('resultText');
 
-    function calculateCPM() {
-      const mode = document.getElementById('calc-mode').value;
-      const cost = parseFloat(document.getElementById('input-cost').value);
-      const cpm = parseFloat(document.getElementById('input-cpm').value);
-      const impressions = parseFloat(document.getElementById('input-impressions').value);
-      const resCard = document.getElementById('results-card');
-      const resVal = document.getElementById('result-value');
-      const resDetails = document.getElementById('result-details');
-
-      if (mode === 'cpm') {
-        if (!cost || !impressions || impressions <= 0) return;
-        const calcCpm = (cost / impressions) * 1000;
-        resVal.textContent = 'CPM: $' + calcCpm.toFixed(2);
-        resDetails.textContent = 'Cost per impression: $' + (cost / impressions).toFixed(5);
-      } else if (mode === 'cost') {
-        if (!cpm || !impressions) return;
-        const calcCost = (cpm * impressions) / 1000;
-        resVal.textContent = 'Total Cost: $' + calcCost.toFixed(2);
-        resDetails.textContent = 'At $' + cpm.toFixed(2) + ' CPM for ' + impressions.toLocaleString() + ' impressions.';
-      } else if (mode === 'impressions') {
-        if (!cost || !cpm || cpm <= 0) return;
-        const calcImp = (cost / cpm) * 1000;
-        resVal.textContent = 'Impressions: ' + Math.round(calcImp).toLocaleString();
-        resDetails.textContent = 'Budget of $' + cost.toFixed(2) + ' at $' + cpm.toFixed(2) + ' CPM.';
+    calcType.addEventListener('change', function() {
+      const val = this.value;
+      if (val === 'cpm') {
+        costGroup.style.display = 'block';
+        impressionsGroup.style.display = 'block';
+        cpmGroup.style.display = 'none';
+      } else if (val === 'cost') {
+        costGroup.style.display = 'none';
+        impressionsGroup.style.display = 'block';
+        cpmGroup.style.display = 'block';
+      } else if (val === 'impressions') {
+        costGroup.style.display = 'block';
+        impressionsGroup.style.display = 'none';
+        cpmGroup.style.display = 'block';
       }
-      resCard.style.display = 'block';
-    }
+      resultBox.style.display = 'none';
+    });
+
+    calculateBtn.addEventListener('click', function() {
+      const target = calcType.value;
+      const cost = parseFloat(document.getElementById('totalCost').value);
+      const impressions = parseFloat(document.getElementById('impressions').value);
+      const cpm = parseFloat(document.getElementById('cpmValue').value);
+
+      if (target === 'cpm') {
+        if (isNaN(cost) || isNaN(impressions) || impressions <= 0) {
+          alert('Please enter valid Cost and Impressions (> 0).');
+          return;
+        }
+        const calculatedCPM = (cost / impressions) * 1000;
+        resultText.textContent = 'Calculated CPM: $' + calculatedCPM.toFixed(2);
+      } else if (target === 'cost') {
+        if (isNaN(cpm) || isNaN(impressions) || impressions <= 0) {
+          alert('Please enter valid CPM and Impressions (> 0).');
+          return;
+        }
+        const calculatedCost = (cpm * impressions) / 1000;
+        resultText.textContent = 'Total Campaign Cost: $' + calculatedCost.toFixed(2);
+      } else if (target === 'impressions') {
+        if (isNaN(cost) || isNaN(cpm) || cpm <= 0) {
+          alert('Please enter valid Cost and CPM (> 0).');
+          return;
+        }
+        const calculatedImpressions = (cost / cpm) * 1000;
+        resultText.textContent = 'Required Impressions: ' + Math.round(calculatedImpressions).toLocaleString();
+      }
+      resultBox.style.display = 'block';
+    });
   </script>
-  <script data-goatcounter="https://zero-cost-ai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
