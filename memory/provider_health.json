@@ -222,6 +222,12 @@
       "success": true,
       "error": "",
       "timestamp": 1786770129.905683
+    },
+    {
+      "provider": "cerebras",
+      "success": false,
+      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
+      "timestamp": 1786773376.588791
     }
   ]
 }

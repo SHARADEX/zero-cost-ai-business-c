@@ -1,11 +1,4 @@
 ## Summary
-2026-08-14 23:50:30 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-15 03:03:04 UTC | model=openrouter | budget=full | steps=5 | tokens=96516
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/cpm-calculator.html (7320 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/cpm-calculator.html passed validation (no issues) | Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (55 pages) and robots.txt
@@ -41,4 +34,12 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
   "error": {
     "code": 429,
     "...
+
+## Summary
+2026-08-15 05:56:15 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
