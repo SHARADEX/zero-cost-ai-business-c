@@ -1080,3 +1080,16 @@ SKIP groq - unhealthy (circui
   - Step 1: write_file (OK) — Wrote file: docs/calculators/conversion-rate-calculator.html (6858 chars)
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-16 08:56:32 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 38586
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Stopped: LLM failed at step 2.
+---
