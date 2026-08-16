@@ -1192,3 +1192,15 @@ SKIP groq - unhealthy (circui
   - Step 2: validate_html (OK) — ✓ docs/calculators/cac-payback-calculator.html passed validation (no issues)
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-16 17:40:05 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---
