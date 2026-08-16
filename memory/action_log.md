@@ -1230,3 +1230,16 @@ SKIP groq - unhealthy (circui
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-16 20:50:20 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 37221
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Stopped: LLM failed at step 2.
+---
