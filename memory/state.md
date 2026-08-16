@@ -1,11 +1,4 @@
 ## Summary
-2026-08-16 15:44:44 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-16 16:55:13 UTC | model=gemini | budget=full | steps=2 | tokens=38416
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/cac-payback-calculator.html (2733 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/cac-payback-calculator.html passed validation (no issues) | Stopped: LLM failed at step 3.
@@ -21,4 +14,11 @@ Summary: Stopped: LLM failed at step 1.
 
 Step details:
 
+## Summary
+2026-08-16 19:00:10 UTC | model=gemini | budget=full | steps=1 | tokens=38565
+First action: seo_update_sitemap
+Summary: Step 1: seo_update_sitemap (OK) — Regenerated sitemap.xml (64 pages) and robots.txt | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=seo_update_sitemap | tokens=18349 | result=Regenerated sitemap.xml (64 pages) and robots.txt
 
