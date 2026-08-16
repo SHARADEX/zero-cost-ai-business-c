@@ -4,153 +4,163 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burn Rate & Runway Calculator - Free Startup Finance Tool</title>
-  <meta name="description" content="Calculate startup monthly net burn rate, gross burn, and cash runway in months. Free interactive financial planning calculator for founders and startups.">
+  <meta name="description" content="Calculate startup net burn rate, gross burn rate, and runway in months instantly with our free, privacy-friendly online burn rate calculator.">
   <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/burn-rate-calculator.html">
   <meta property="og:title" content="Burn Rate & Runway Calculator - Free Startup Finance Tool">
-  <meta property="og:description" content="Calculate your startup monthly net burn rate, gross burn rate, and runway. Free interactive finance calculator.">
+  <meta property="og:description" content="Calculate net burn rate, gross burn rate, and runway in months instantly for your startup or business.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/burn-rate-calculator.html">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Startup Burn Rate & Runway Calculator",
     "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/burn-rate-calculator.html",
-    "description": "Calculate startup gross burn, net burn rate, and cash runway in months.",
+    "description": "Calculate startup gross burn, net burn rate, and cash runway accurately.",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "All"
   }
   </script>
+  <script data-goatcounter="https://zero-cost-ai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="../" class="logo">FreeDevTools</a>
-      <nav>
-        <a href="../converters/">Converters</a>
+  <header>
+    <nav class="nav-container">
+      <a href="../index.html" class="brand-logo">FreeDevTools</a>
+      <div class="nav-links">
         <a href="../calculators/">Calculators</a>
+        <a href="../converters/">Converters</a>
         <a href="../blog/">Blog</a>
         <a href="../guides/crypto-tips.html">Support</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
-  <main class="container content-area">
-    <div id="ad-zone" class="ad-slot" data-ad-unit="header-banner"></div>
+  <main class="container">
+    <article class="tool-article">
+      <header class="tool-header">
+        <h1>Burn Rate & Runway Calculator</h1>
+        <p class="subtitle">Determine your startup's monthly cash burn and runway to plan hiring, spending, and fundraising.</p>
+      </header>
 
-    <h1>Startup Burn Rate & Runway Calculator</h1>
-    <p class="lead">Calculate your monthly gross burn rate, net burn rate, and remaining runway in months to ensure healthy startup financial runway.</p>
-
-    <div class="tool-card">
-      <form id="burn-rate-form" class="calc-form">
-        <div class="form-group">
-          <label for="cash-balance">Current Cash Balance ($):</label>
-          <input type="number" id="cash-balance" min="0" step="any" placeholder="e.g. 250000" required>
-        </div>
-
-        <div class="form-group">
-          <label for="monthly-expenses">Monthly Operating Expenses ($ / Gross Burn):</label>
-          <input type="number" id="monthly-expenses" min="0" step="any" placeholder="e.g. 35000" required>
-        </div>
-
-        <div class="form-group">
-          <label for="monthly-revenue">Monthly Revenue / Income ($):</label>
-          <input type="number" id="monthly-revenue" min="0" step="any" placeholder="e.g. 10000" value="0">
-        </div>
-
-        <button type="submit" class="btn-primary">Calculate Runway</button>
-      </form>
-
-      <div id="result-box" class="result-container hidden">
-        <h3>Calculated Results</h3>
-        <div class="result-grid">
-          <div class="metric-box">
-            <span class="metric-label">Gross Burn Rate</span>
-            <span id="res-gross-burn" class="metric-val">$0.00</span>
-          </div>
-          <div class="metric-box">
-            <span class="metric-label">Net Burn Rate</span>
-            <span id="res-net-burn" class="metric-val">$0.00</span>
-          </div>
-          <div class="metric-box highlight">
-            <span class="metric-label">Runway</span>
-            <span id="res-runway" class="metric-val">0 Months</span>
-          </div>
-        </div>
-        <p id="runway-status" class="status-note"></p>
+      <!-- Ethical Ad Zone -->
+      <div class="ad-zone" id="ad-slot-top">
+        <div class="ad-placeholder"><small>Sponsored / Partner Listing</small><br>Need scalable cloud hosting? Deploy reliable servers on <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow noopener" target="_blank">DigitalOcean with $200 Free Credit</a>.</div>
       </div>
-    </div>
 
-    <section class="info-section">
-      <h2>How to Calculate Burn Rate & Runway</h2>
-      <p>Understanding your startup financial metrics is essential for planning fundraising rounds and sustaining growth.</p>
-      <ul>
-        <li><strong>Gross Burn Rate:</strong> Total monthly operating cash outlay (salaries, hosting, rent, SaaS subscriptions).</li>
-        <li><strong>Net Burn Rate:</strong> <code>Gross Burn Rate - Monthly Revenue</code>. Represents real net cash loss each month.</li>
-        <li><strong>Cash Runway:</strong> <code>Current Cash Balance / Net Burn Rate</code> (measured in months).</li>
-      </ul>
-    </section>
+      <section class="calculator-box card">
+        <form id="burn-form" onsubmit="event.preventDefault(); calculateBurn();">
+          <div class="form-group">
+            <label for="cash-balance">Current Cash Balance ($):</label>
+            <input type="number" id="cash-balance" min="0" step="any" placeholder="e.g. 150000" required>
+          </div>
 
-    <section class="affiliate-card">
-      <h3>Recommended Startup Infrastructure</h3>
-      <p>Optimize operational expenses with reliable developer cloud platforms. Get $200 in free VPS credits with <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow noopener sponsored" target="_blank">DigitalOcean Cloud Hosting</a> or organize product roadmaps with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" rel="nofollow noopener sponsored" target="_blank">Notion Workspace</a>.</p>
-    </section>
+          <div class="form-group">
+            <label for="monthly-expenses">Total Monthly Operating Expenses / Gross Burn ($):</label>
+            <input type="number" id="monthly-expenses" min="0" step="any" placeholder="e.g. 25000" required>
+          </div>
 
-    <section class="newsletter-box">
-      <h3>Subscribe for Free Developer & Founder Tools</h3>
-      <p>Get notified when new calculators, converters, and engineering toolkits launch.</p>
-      <form action="mailto:newsletter@example.com" method="post" enctype="text/plain" class="newsletter-form">
-        <input type="email" name="email" placeholder="your-email@example.com" required aria-label="Email address">
-        <button type="submit" class="btn-secondary">Subscribe</button>
-      </form>
-    </section>
+          <div class="form-group">
+            <label for="monthly-revenue">Monthly Revenue / Cash Inflow ($):</label>
+            <input type="number" id="monthly-revenue" min="0" step="any" placeholder="e.g. 10000" value="0">
+          </div>
 
-    <section class="tip-box">
-      <h3>Support Independent Free Tools</h3>
-      <p>Help us keep these tools free, open-source, and privacy-first without invasive paywalls.</p>
-      <a href="../guides/crypto-tips.html" class="btn-outline">Tip via Crypto / Support</a>
-    </section>
+          <button type="button" class="btn btn-primary" onclick="calculateBurn()">Calculate Runway</button>
+        </form>
+
+        <div id="results-box" class="results-card" style="margin-top: 1.5rem; display: none;">
+          <h3>Calculation Results</h3>
+          <div class="metric-grid">
+            <div class="metric-item">
+              <span class="metric-label">Gross Burn Rate</span>
+              <span class="metric-value" id="res-gross-burn">$0</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Net Burn Rate</span>
+              <span class="metric-value" id="res-net-burn">$0 / mo</span>
+            </div>
+            <div class="metric-item highlight">
+              <span class="metric-label">Estimated Runway</span>
+              <span class="metric-value" id="res-runway">0 Months</span>
+            </div>
+          </div>
+          <p id="runway-analysis" style="margin-top: 1rem; font-size: 0.95rem;"></p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>How to Calculate Burn Rate and Cash Runway</h2>
+        <p><strong>Gross Burn Rate</strong> is the total amount of cash your business spends each month on operational expenses (salaries, rent, software subscriptions, marketing, server infrastructure).</p>
+        <p><strong>Net Burn Rate</strong> is the actual net cash lost per month when accounting for incoming revenue:</p>
+        <code>Net Burn Rate = Total Monthly Expenses - Total Monthly Revenue</code>
+        <p><strong>Cash Runway</strong> tells founders how many months the startup can operate before running out of funds:</p>
+        <code>Runway (Months) = Cash Balance / Net Burn Rate</code>
+      </section>
+
+      <section class="content-section">
+        <h2>Recommended Productivity & Cloud Tools</h2>
+        <ul>
+          <li><strong>Cloud Infrastructure:</strong> <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow noopener" target="_blank">DigitalOcean</a> ($200 credit) or <a href="https://www.vultr.com/?ref=YOUR_REFERRAL_CODE" rel="nofollow noopener" target="_blank">Vultr</a> ($100 credit) to optimize server hosting costs.</li>
+          <li><strong>Operations & Documentation:</strong> <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" rel="nofollow noopener" target="_blank">Notion</a> to manage team roadmaps and financial tracking.</li>
+        </ul>
+      </section>
+
+      <!-- Newsletter Signup -->
+      <section class="newsletter-card card">
+        <h3>Subscribe to Tech & Founder Tools</h3>
+        <p>Get weekly zero-cost developer utilities, financial models, and productivity tools directly in your inbox.</p>
+        <form action="mailto:contact@example.com" method="get" class="newsletter-form">
+          <input type="email" name="email" placeholder="Enter your work email" required>
+          <button type="submit" class="btn btn-secondary">Subscribe Free</button>
+        </form>
+      </section>
+
+      <!-- Support CTA -->
+      <div class="support-box">
+        <p>Find this free calculator useful? Help keep our tools 100% free with a small tip: <a href="../guides/crypto-tips.html">Support via Crypto or GitHub Sponsors</a>.</p>
+      </div>
+    </article>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 FreeDevTools. Built with open-source tools. <a href="https://github.com/sponsors/YOUR-USERNAME">GitHub Sponsors</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
-    </div>
+  <footer>
+    <p>&copy; 2026 FreeDevTools. Built autonomously on free-tier infrastructure. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../guides/crypto-tips.html">Donate</a></p>
   </footer>
 
   <script>
-    document.getElementById('burn-rate-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var cash = parseFloat(document.getElementById('cash-balance').value) || 0;
-      var expenses = parseFloat(document.getElementById('monthly-expenses').value) || 0;
-      var revenue = parseFloat(document.getElementById('monthly-revenue').value) || 0;
+    function calculateBurn() {
+      const cash = parseFloat(document.getElementById('cash-balance').value) || 0;
+      const expenses = parseFloat(document.getElementById('monthly-expenses').value) || 0;
+      const revenue = parseFloat(document.getElementById('monthly-revenue').value) || 0;
 
-      var grossBurn = expenses;
-      var netBurn = Math.max(0, expenses - revenue);
-      
-      var runwayText = 'Infinite (Profitable/Cash Neutral)';
-      var statusText = 'Great news! Your revenue covers monthly expenses.';
-      
-      if (expenses > revenue) {
-        var months = cash / netBurn;
-        runwayText = months.toFixed(1) + ' Months';
-        if (months < 6) {
-          statusText = 'Warning: Less than 6 months of runway remaining. Consider immediate fundraising or expense reduction.';
-        } else if (months < 12) {
-          statusText = 'Moderate runway: Plan your next fundraising round or path to profitability.';
+      const grossBurn = expenses;
+      const netBurn = expenses - revenue;
+
+      const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+      document.getElementById('res-gross-burn').textContent = formatter.format(grossBurn);
+      document.getElementById('res-net-burn').textContent = formatter.format(netBurn) + ' / mo';
+
+      const resultsBox = document.getElementById('results-box');
+      const runwayVal = document.getElementById('res-runway');
+      const analysis = document.getElementById('runway-analysis');
+      resultsBox.style.display = 'block';
+
+      if (netBurn <= 0) {
+        runwayVal.textContent = 'Profitable / Infinite';
+        analysis.textContent = 'Great news! Your monthly revenue exceeds or matches your operating expenses. You are default alive and cash flow positive.';
+      } else {
+        const runwayMonths = (cash / netBurn).toFixed(1);
+        runwayVal.textContent = runwayMonths + ' Months';
+        if (runwayMonths < 6) {
+          analysis.textContent = 'Warning: Runway is under 6 months. Consider reducing non-essential expenses, renegotiating contracts, or accelerating fundraising / sales pipeline immediately.';
+        } else if (runwayMonths < 12) {
+          analysis.textContent = 'Moderate Runway: Between 6 and 12 months. Begin planning next fundraising or revenue expansion milestones soon.';
         } else {
-          statusText = 'Healthy runway: Over 12 months of runway available.';
+          analysis.textContent = 'Healthy Runway: Over 12 months of operations available at current spend rates.';
         }
       }
-
-      document.getElementById('res-gross-burn').textContent = '$' + grossBurn.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-      document.getElementById('res-net-burn').textContent = '$' + netBurn.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-      document.getElementById('res-runway').textContent = runwayText;
-      document.getElementById('runway-status').textContent = statusText;
-      document.getElementById('result-box').classList.remove('hidden');
-    });
+    }
   </script>
-  <script data-goatcounter="https://YOUR_GC_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
