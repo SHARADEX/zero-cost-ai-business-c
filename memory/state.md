@@ -1,11 +1,4 @@
 ## Summary
-2026-08-15 23:40:31 UTC | model=unknown | budget=high | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-16 03:16:00 UTC | model=openrouter | budget=full | steps=5 | tokens=103281
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/burn-rate-calculator.html (8850 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/burn-rate-calculator.html passed validation (no issues) | Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (60 pages) and robots.txt
@@ -35,4 +28,12 @@ Step 1: action=write_file | tokens=22232 | result=Wrote file: docs/calculators/r
 [2026-08-15 05:56:15 UTC] LLM call failed at step 1.
 All LLM providers failed. Attempts:
 SKIP groq - ...
+
+## Summary
+2026-08-16 07:19:17 UTC | model=gemini | budget=full | steps=1 | tokens=43963
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/conversion-rate-calculator.html (6858 chars) | Stopped: LLM failed at step 2.
+
+Step details:
+Step 1: action=write_file | tokens=22584 | result=Wrote file: docs/calculators/conversion-rate-calculator.html (6858 chars)
 
