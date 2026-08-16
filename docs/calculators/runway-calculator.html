@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Runway Calculator | Free Financial Planning Tool</title>
+  <meta name="description" content="Calculate your startup's cash runway in months. Plan hiring, funding rounds, and expense management with our free interactive runway calculator.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/runway-calculator.html">
+  <meta property="og:title" content="Startup Runway Calculator | Free Financial Planning Tool">
+  <meta property="og:description" content="Calculate startup cash runway in months accurately. Estimate zero cash date based on cash reserves, revenue, and expenses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/runway-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Startup Runway Calculator",
+    "description": "Calculate startup runway and zero cash date from cash balance and monthly burn rate.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="../index.html" class="logo">ZeroCost Tools</a>
+      <nav>
+        <a href="../converters/">Converters</a>
+        <a href="../calculators/">Calculators</a>
+        <a href="../blog/">Blog</a>
+        <a href="../guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="ad-zone" class="ad-slot" style="margin: 1.5rem 0; min-height: 90px; background: #f8f9fa; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center;">
+      <span style="color: #666; font-size: 0.85rem;">Ethical Ad / Recommended Dev Tools</span>
+    </div>
+
+    <h1>Startup Runway Calculator</h1>
+    <p class="lead">Determine how many months your business can operate before running out of capital.</p>
+
+    <section class="tool-card" style="background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin: 2rem 0;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div>
+          <label for="cashBalance"><strong>Current Cash Balance ($)</strong></label>
+          <input type="number" id="cashBalance" value="250000" min="0" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">
+        </div>
+        <div>
+          <label for="monthlyRevenue"><strong>Monthly Revenue ($)</strong></label>
+          <input type="number" id="monthlyRevenue" value="15000" min="0" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">
+        </div>
+        <div>
+          <label for="monthlyExpenses"><strong>Monthly Operating Expenses ($)</strong></label>
+          <input type="number" id="monthlyExpenses" value="35000" min="0" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">
+        </div>
+        <div>
+          <label for="growthRate"><strong>Expected MoM Revenue Growth (%)</strong></label>
+          <input type="number" id="growthRate" value="5" min="0" max="100" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">
+        </div>
+      </div>
+
+      <button id="calcBtn" style="margin-top: 1.5rem; padding: 0.75rem 2rem; background: #0066cc; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Calculate Runway</button>
+
+      <div id="results" style="margin-top: 2rem; padding: 1.5rem; background: #f0f7ff; border-left: 4px solid #0066cc; border-radius: 4px;">
+        <h3 style="margin-top: 0;">Runway Analysis</h3>
+        <p><strong>Net Monthly Burn:</strong> <span id="netBurnDisplay">$20,000</span></p>
+        <p><strong>Estimated Runway:</strong> <span id="runwayDisplay" style="font-size: 1.4rem; color: #0066cc; font-weight: bold;">12.5 months</span></p>
+        <p id="runwayAdvice">You have over 12 months of runway. Standard recommendation is to initiate fundraising when reaching 6 months of runway.</p>
+      </div>
+    </section>
+
+    <section style="margin: 3rem 0;">
+      <h2>How Startup Runway is Calculated</h2>
+      <p>The standard formula for static runway is:</p>
+      <blockquote style="background: #f4f4f4; padding: 1rem; border-left: 4px solid #555;"><strong>Runway (Months) = Total Cash Balance / Net Monthly Burn</strong></blockquote>
+      <p>Net Monthly Burn is calculated as total monthly expenses minus monthly revenue. If your revenue exceeds your expenses, your business is default alive and has infinite runway.</p>
+    </section>
+
+    <section class="affiliate-box" style="background: #fafafa; border: 1px solid #e1e4e8; padding: 1.5rem; border-radius: 6px; margin: 2rem 0;">
+      <h3>Recommended Startup Infrastructure</h3>
+      <p>Keep your operational burn rate lean with affordable cloud infrastructure and tools:</p>
+      <ul>
+        <li><a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow sponsored">DigitalOcean VPS</a> — Get $200 free credits for reliable cloud hosting.</li>
+        <li><a href="https://vercel.com/?utm_source=YOUR_REFERRAL_CODE" rel="nofollow sponsored">Vercel Frontend Hosting</a> — Deploy apps fast with minimal devops overhead.</li>
+        <li><a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" rel="nofollow sponsored">Notion Workspace</a> — Document roadmaps and financial models in one place.</li>
+      </ul>
+      <p style="font-size: 0.85rem; color: #666;">Read our <a href="../guides/affiliate-disclosure.html">affiliate disclosure</a>.</p>
+    </section>
+
+    <section class="newsletter-signup" style="margin: 2rem 0; padding: 1.5rem; background: #eef2f7; border-radius: 6px;">
+      <h3>Subscribe to Founder Tech & Growth Tips</h3>
+      <p>Get weekly zero-cost growth strategies and developer playbooks delivered to your inbox.</p>
+      <form action="mailto:contact@example.com" method="get" style="display: flex; gap: 0.5rem;">
+        <input type="email" placeholder="Your email address" required style="flex: 1; padding: 0.5rem;">
+        <button type="submit" style="padding: 0.5rem 1.5rem; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer style="margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #e1e4e8; text-align: center;">
+    <div class="container">
+      <p>Support this project via <a href="../guides/crypto-tips.html">Crypto Tips</a> or <a href="https://github.com/sponsors/YOUR-USERNAME" rel="nofollow">GitHub Sponsors</a>.</p>
+      <p style="font-size: 0.85rem; color: #666;">&copy; 2026 Zero-Cost AI Business Tools. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function calculate() {
+      const cash = parseFloat(document.getElementById('cashBalance').value) || 0;
+      let rev = parseFloat(document.getElementById('monthlyRevenue').value) || 0;
+      const exp = parseFloat(document.getElementById('monthlyExpenses').value) || 0;
+      const growth = (parseFloat(document.getElementById('growthRate').value) || 0) / 100;
+
+      const baseNetBurn = exp - rev;
+      document.getElementById('netBurnDisplay').textContent = '$' + (baseNetBurn > 0 ? baseNetBurn.toLocaleString() : '0 (Profitable)');
+
+      if (baseNetBurn <= 0) {
+        document.getElementById('runwayDisplay').textContent = 'Infinite (Default Alive)';
+        document.getElementById('runwayAdvice').textContent = 'Your business generates more revenue than it spends each month.';
+        return;
+      }
+
+      let currentCash = cash;
+      let months = 0;
+      let currentRev = rev;
+
+      while (currentCash > 0 && months < 120) {
+        const currentBurn = exp - currentRev;
+        if (currentBurn <= 0) {
+          months = Infinity;
+          break;
+        }
+        currentCash -= currentBurn;
+        currentRev += currentRev * growth;
+        months++;
+      }
+
+      if (months === Infinity) {
+        document.getElementById('runwayDisplay').textContent = 'Default Alive (due to growth)';
+        document.getElementById('runwayAdvice').textContent = 'Revenue growth outpaces burn before cash depletion.';
+      } else {
+        document.getElementById('runwayDisplay').textContent = months + ' months';
+        if (months < 6) {
+          document.getElementById('runwayAdvice').textContent = 'Warning: Critical runway level (<6 months). Cut burn or start raising immediately.';
+        } else if (months < 12) {
+          document.getElementById('runwayAdvice').textContent = 'Moderate runway (6-12 months). Prepare fundraising deck or path to profitability.';
+        } else {
+          document.getElementById('runwayAdvice').textContent = 'Healthy runway (>12 months). Focus on product-market fit and sustainable growth.';
+        }
+      }
+    }
+    document.getElementById('calcBtn').addEventListener('click', calculate);
+  </script>
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
