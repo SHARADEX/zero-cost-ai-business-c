@@ -1,11 +1,4 @@
 ## Summary
-2026-08-16 11:41:39 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-16 13:43:25 UTC | model=gemini | budget=full | steps=1 | tokens=37321
 First action: list_dir
 Summary: Step 1: list_dir (OK) — Contents of docs/calculators/:
@@ -24,6 +17,13 @@ Step 1: action=list_dir | tokens=18692 | result=Contents of docs/calculators/:
 2026-08-16 14:53:15 UTC | model=gemini | budget=full | steps=0 | tokens=39650
 First action: none
 Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
+
+Step details:
+
+## Summary
+2026-08-16 15:44:44 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
 
 Step details:
 
