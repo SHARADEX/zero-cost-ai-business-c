@@ -1,7 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-FAIL groq/llama-3.3-70b-versatile attempt 1: HTTP 413: {"error":{"message":"Request too large for model `llama-3.3-70b-versatile` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Requested 22477, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
 FAIL groq/llama-3.1-8b-instant attempt 1: HTTP 413: {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kze3xhc0e80vc2ry8ehyx6ts` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 22477, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
 
 FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
@@ -195,3 +193,12 @@ FAIL gemini/gemma-4-26b-a4b-it attempt 1: HTTP 429: {
   "error": {
     "code": 429,
     "message"
+
+[2026-08-16 09:54:05 UTC] LLM call failed at step 1.
+All LLM providers failed. Attempts:
+SKIP groq - unhealthy (circuit breaker)
+SKIP gemini - unhealthy (circuit breaker)
+FAIL cerebras/zai-glm-4.7 attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+SKIP openrouter - budget exhausted
