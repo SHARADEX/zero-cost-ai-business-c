@@ -1,14 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-[2026-08-15 23:40:31 UTC] LLM call failed at step 1.
-All LLM providers failed. Attempts:
-SKIP groq - unhealthy (circuit breaker)
-SKIP gemini - unhealthy (circuit breaker)
-FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
-FAIL cerebras/zai-glm-4.7 attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
-FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
-SKIP openrouter - budget exhausted
-
 [2026-08-16 05:02:44 UTC] LLM call failed at step 5.
 All LLM providers failed. Attempts:
 SKIP groq - unhealthy (circuit breaker)
@@ -203,4 +194,13 @@ SKIP gemini - unhealthy (circuit breaker)
 FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
 FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
 FAIL cerebras/zai-glm-4.7 attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+SKIP openrouter - budget exhausted
+
+[2026-08-16 19:42:31 UTC] LLM call failed at step 1.
+All LLM providers failed. Attempts:
+SKIP groq - unhealthy (circuit breaker)
+SKIP gemini - unhealthy (circuit breaker)
+FAIL cerebras/zai-glm-4.7 attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
 SKIP openrouter - budget exhausted
