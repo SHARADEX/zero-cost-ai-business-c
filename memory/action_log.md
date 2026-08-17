@@ -1515,3 +1515,18 @@ to submit them to Google Indexing API
   arr-calculat
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-17 20:59:14 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 2
+**Tokens used:** 37259
+
+**Steps:**
+  Step 1: action=write_file | tokens=18735 | result=Wrote file: docs/calculators/margin-calculator.html (5675 chars)
+  Step 2: action=validate_html | tokens=18524 | result=✓ docs/calculators/margin-calculator.html passed validation (no issues)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/margin-calculator.html (5675 chars)
+  - Step 2: validate_html (OK) — ✓ docs/calculators/margin-calculator.html passed validation (no issues)
+  - Stopped: LLM failed at step 3.
+---

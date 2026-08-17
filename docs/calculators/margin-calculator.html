@@ -3,110 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Margin Calculator | Calculate Profit Margin and Markup Online</title>
-  <meta name="description" content="Free online margin calculator. Easily calculate gross profit margin, markup percentage, revenue, and gross profit from cost and selling price.">
+  <title>Profit Margin Calculator - Free Online Business Tool</title>
+  <meta name="description" content="Calculate gross profit margin, markup percentage, and total profit from cost and revenue. Free, instant, and mobile-friendly business calculator.">
   <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/margin-calculator.html">
-  <meta property="og:title" content="Margin Calculator | Free Profit Margin & Markup Tool">
-  <meta property="og:description" content="Calculate gross profit margin, markup percentage, and profit from cost and revenue with this free, client-side calculator.">
+  <meta property="og:title" content="Profit Margin Calculator - Free Online Business Tool">
+  <meta property="og:description" content="Calculate gross profit margin, markup percentage, and profit from cost and revenue instantly.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="../assets/style.css">
-  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <style>
-    .calc-container { max-width: 600px; margin: 2rem auto; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; }
-    .input-group { margin-bottom: 1.25rem; }
-    .input-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
-    .input-group input { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; box-sizing: border-box; }
-    .results { margin-top: 1.5rem; padding: 1rem; background: #f8fafc; border-radius: 6px; border-left: 4px solid #3b82f6; }
-    .result-row { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 1.1rem; }
-    .result-row:last-child { margin-bottom: 0; }
-    .result-value { font-weight: 700; color: #1e293b; }
-  </style>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Profit Margin Calculator",
+    "description": "Calculate gross profit margin, markup percentage, and total profit from cost and revenue.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="../index.html">Home</a> &gt; <a href="index.html">Calculators</a> &gt; Margin Calculator
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">Free Developer &amp; Business Tools</a>
+      <nav>
+        <a href="../calculators/">Calculators</a>
+        <a href="../converters/">Converters</a>
+        <a href="../blog/">Blog</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <article>
-      <h1>Profit Margin &amp; Markup Calculator</h1>
-      <p>Quickly calculate your gross margin, markup percentage, and total profit from your product cost and revenue.</p>
-      
-      <div class="calc-container">
-        <div class="input-group">
-          <label for="cost">Cost of Goods ($)</label>
-          <input type="number" id="cost" placeholder="e.g. 50" step="any" min="0">
-        </div>
-        <div class="input-group">
-          <label for="revenue">Revenue / Selling Price ($)</label>
-          <input type="number" id="revenue" placeholder="e.g. 100" step="any" min="0">
-        </div>
-        <div class="results" id="resultsBlock" style="display: none;">
-          <div class="result-row"><span>Gross Profit:</span> <span class="result-value" id="profitVal">$0.00</span></div>
-          <div class="result-row"><span>Profit Margin:</span> <span class="result-value" id="marginVal">0.00%</span></div>
-          <div class="result-row"><span>Markup:</span> <span class="result-value" id="markupVal">0.00%</span></div>
-        </div>
+
+  <main class="container main-content">
+    <h1>Profit Margin &amp; Markup Calculator</h1>
+    <p class="lead">Quickly calculate your gross margin percentage, markup rate, and gross profit by entering your item cost and selling price (or target margin).</p>
+
+    <div class="ad-zone" id="ad-slot-top"></div>
+
+    <section class="tool-card">
+      <div class="form-group">
+        <label for="costInput">Cost of Goods / Item Cost ($):</label>
+        <input type="number" id="costInput" min="0" step="any" placeholder="e.g. 50" class="input-field">
       </div>
-
-      <section class="content-section">
-        <h2>Margin vs Markup: What is the Difference?</h2>
-        <p><strong>Margin</strong> (gross profit margin) is gross profit divided by total revenue. It represents the portion of sales revenue remaining after accounting for the cost of goods sold.</p>
-        <p><strong>Markup</strong> is gross profit divided by cost. It is the percentage added to the cost price to determine the selling price.</p>
-      </section>
-
-      <!-- Ethical Ad Placeholder -->
-      <div id="ad-zone" class="ad-slot" style="margin: 2rem 0; padding: 1rem; border: 1px dashed #cbd5e1; text-align: center; color: #64748b;">
-        <p><small>Sponsored</small></p>
-        <p><a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow noopener" target="_blank">Need reliable cloud hosting for your SaaS or e-commerce store? Get $200 free credit on DigitalOcean.</a></p>
+      <div class="form-group">
+        <label for="revenueInput">Selling Price / Revenue ($):</label>
+        <input type="number" id="revenueInput" min="0" step="any" placeholder="e.g. 100" class="input-field">
       </div>
+      <button id="calcBtn" class="btn-primary">Calculate Margin</button>
 
-      <!-- Support & Tip Box -->
-      <section class="tip-box" style="background: #f1f5f9; padding: 1rem; border-radius: 6px; margin-top: 2rem;">
-        <h3>Support Free Tools</h3>
-        <p>Our tools are 100% free and client-side with zero tracking. If you found this useful, consider tipping or supporting us:</p>
-        <p><a href="../guides/crypto-tips.html" class="button">Send Crypto Tip / Support</a></p>
-      </section>
+      <div id="results" class="results-box" style="display:none; margin-top: 20px;">
+        <h3>Calculation Results</h3>
+        <p><strong>Gross Profit:</strong> $<span id="grossProfit">0.00</span></p>
+        <p><strong>Gross Margin:</strong> <span id="grossMargin">0.00</span>%</p>
+        <p><strong>Markup:</strong> <span id="markupPercent">0.00</span>%</p>
+      </div>
+    </section>
 
-      <!-- Newsletter Signup -->
-      <section class="newsletter-box" style="margin-top: 2rem; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 6px;">
-        <h3>Stay Updated</h3>
-        <p>Get notified when we release new free business and developer calculators.</p>
-        <form action="mailto:newsletter@example.com" method="post" enctype="text/plain">
-          <input type="email" placeholder="Your email address" required style="padding: 0.5rem; width: 60%; max-width: 300px;">
-          <button type="submit" style="padding: 0.5rem 1rem;">Subscribe</button>
-        </form>
-      </section>
-    </article>
+    <section class="content-section">
+      <h2>How Profit Margin &amp; Markup Are Calculated</h2>
+      <p>Gross Profit Margin measures the percentage of revenue remaining after subtracting the cost of goods sold (COGS):</p>
+      <code>Margin (%) = ((Revenue - Cost) / Revenue) * 100</code>
+      <p>Markup is the percentage added on top of the cost to determine the selling price:</p>
+      <code>Markup (%) = ((Revenue - Cost) / Cost) * 100</code>
+    </section>
+
+    <section class="affiliate-box">
+      <h3>Recommended Business Infrastructure</h3>
+      <p>Scale your online store or SaaS application effortlessly on reliable cloud servers with $200 free credit at <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="noopener" target="_blank">DigitalOcean</a>.</p>
+    </section>
+
+    <section class="newsletter-card">
+      <h3>Get Free Business &amp; Dev Tools</h3>
+      <p>Subscribe for updates on newly released calculators, converters, and productivity guides.</p>
+      <form action="https://buttondown.email/api/emails/embed-subscribe/YOUR_NEWSLETTER" method="post" target="popupwindow" class="newsletter-form">
+        <input type="email" name="email" placeholder="Enter your email" required class="input-field">
+        <button type="submit" class="btn-secondary">Subscribe</button>
+      </form>
+    </section>
+
+    <div class="tip-support-cta">
+      <p>Found this calculator helpful? Consider supporting our open-source project via <a href="../guides/crypto-tips.html">Crypto Tips</a> or <a href="https://buymeacoffee.com" rel="noopener" target="_blank">Buy Me a Coffee</a>.</p>
+    </div>
   </main>
-  
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Free Tools Directory. Built with zero operating costs. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+    </div>
+  </footer>
+
   <script>
-    const costEl = document.getElementById('cost');
-    const revEl = document.getElementById('revenue');
-    const resultsBlock = document.getElementById('resultsBlock');
-    const profitVal = document.getElementById('profitVal');
-    const marginVal = document.getElementById('marginVal');
-    const markupVal = document.getElementById('markupVal');
-
-    function calculate() {
-      const cost = parseFloat(costEl.value);
-      const rev = parseFloat(revEl.value);
-      if (isNaN(cost) || isNaN(rev) || cost < 0 || rev < 0) {
-        resultsBlock.style.display = 'none';
-        return;
-      }
-      const profit = rev - cost;
-      const margin = rev > 0 ? (profit / rev) * 100 : 0;
-      const markup = cost > 0 ? (profit / cost) * 100 : 0;
-
-      profitVal.textContent = '$' + profit.toFixed(2);
-      marginVal.textContent = margin.toFixed(2) + '%';
-      markupVal.textContent = markup.toFixed(2) + '%';
-      resultsBlock.style.display = 'block';
+  document.getElementById('calcBtn').addEventListener('click', function() {
+    const cost = parseFloat(document.getElementById('costInput').value);
+    const revenue = parseFloat(document.getElementById('revenueInput').value);
+    const results = document.getElementById('results');
+    
+    if (isNaN(cost) || isNaN(revenue) || revenue <= 0 || cost < 0) {
+      alert('Please enter valid positive numbers for cost and selling price.');
+      return;
     }
-
-    costEl.addEventListener('input', calculate);
-    revEl.addEventListener('input', calculate);
+    
+    const profit = revenue - cost;
+    const margin = (profit / revenue) * 100;
+    const markup = cost > 0 ? (profit / cost) * 100 : 0;
+    
+    document.getElementById('grossProfit').textContent = profit.toFixed(2);
+    document.getElementById('grossMargin').textContent = margin.toFixed(2);
+    document.getElementById('markupPercent').textContent = markup.toFixed(2);
+    results.style.display = 'block';
+  });
   </script>
+  <script data-goatcounter="https://YOUR_SITE_ID.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
