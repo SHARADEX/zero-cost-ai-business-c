@@ -3,89 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discount Calculator - Calculate Sale Price &amp; Savings</title>
-  <meta name="description" content="Calculate discounted prices, total savings, and final costs instantly with our free online discount calculator. Fast, simple, and easy to use.">
+  <title>Discount Calculator — Calculate Sale Price & Savings Instantly</title>
+  <meta name="description" content="Free online discount calculator. Easily calculate final sale price, total savings, and percentage off with multiple discount and sales tax options.">
   <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/discount-calculator.html">
-  <meta property="og:title" content="Discount Calculator - Calculate Sale Price &amp; Savings">
-  <meta property="og:description" content="Calculate discounted prices, total savings, and final costs instantly with our free online discount calculator.">
+  <meta property="og:title" content="Discount Calculator — Calculate Sale Price & Savings">
+  <meta property="og:description" content="Free tool to calculate discounted prices, percentage savings, and tax instantly.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/discount-calculator.html">
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Discount Calculator",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </head>
 <body>
   <header>
     <nav>
-      <a href="../index.html">Home</a> |
-      <a href="../calculators/">Calculators</a> |
-      <a href="../converters/">Converters</a> |
-      <a href="../blog/">Blog</a> |
-      <a href="../guides/crypto-tips.html">Support Us</a>
+      <a href="../index.html">Home</a>
+      <a href="../tools/index.html">Tools</a>
+      <a href="../calculators/index.html">Calculators</a>
+      <a href="../converters/index.html">Converters</a>
+      <a href="../blog/index.html">Blog</a>
     </nav>
   </header>
 
-  <main>
-    <article>
-      <h1>Online Discount Calculator</h1>
-      <p>Quickly calculate the final price after applying percentage discounts and sales tax.</p>
+  <main class="container">
+    <div class="ad-zone" id="ad-top"></div>
 
-      <div id="ad-zone" class="ad-zone">
-        <!-- Ad Slot -->
-        <p class="ad-placeholder">Advertisement</p>
+    <h1>Discount Calculator</h1>
+    <p class="lead">Calculate final sale prices, exact dollar savings, and applied tax instantly.</p>
+
+    <div class="tool-card">
+      <div class="form-group">
+        <label for="origPrice">Original Price ($):</label>
+        <input type="number" id="origPrice" placeholder="100.00" step="0.01" min="0">
       </div>
+      <div class="form-group">
+        <label for="discountPercent">Discount (%):</label>
+        <input type="number" id="discountPercent" placeholder="20" step="0.1" min="0" max="100">
+      </div>
+      <div class="form-group">
+        <label for="taxPercent">Sales Tax (% optional):</label>
+        <input type="number" id="taxPercent" placeholder="0" step="0.1" min="0">
+      </div>
+      <button id="calcBtn" class="btn btn-primary">Calculate</button>
 
-      <section class="tool-container">
-        <form id="discount-form">
-          <div class="form-group">
-            <label for="original-price">Original Price ($):</label>
-            <input type="number" id="original-price" step="0.01" min="0" placeholder="100.00" required>
-          </div>
-          <div class="form-group">
-            <label for="discount-percent">Discount (%):</label>
-            <input type="number" id="discount-percent" step="0.1" min="0" max="100" placeholder="20" required>
-          </div>
-          <button type="button" id="calc-btn">Calculate Discount</button>
-        </form>
+      <div id="result" class="result-box" style="display:none; margin-top:20px;">
+        <h3>Calculation Summary</h3>
+        <p><strong>You Save:</strong> $<span id="savingsVal">0.00</span></p>
+        <p><strong>Discounted Price:</strong> $<span id="discountedPriceVal">0.00</span></p>
+        <p><strong>Sales Tax:</strong> $<span id="taxVal">0.00</span></p>
+        <p><strong>Final Price:</strong> $<span id="finalPriceVal">0.00</span></p>
+      </div>
+    </div>
 
-        <div id="results" class="results-box" style="margin-top:20px; display:none;">
-          <h3>Calculation Summary</h3>
-          <p><strong>Discount Amount:</strong> $<span id="saved-amount">0.00</span></p>
-          <p><strong>Final Price:</strong> $<span id="final-price">0.00</span></p>
-        </div>
-      </section>
+    <section class="content-section">
+      <h2>How to Calculate Discounts</h2>
+      <p>To find the discounted price manually, multiply the original price by the discount percentage divided by 100, then subtract that value from the original price.</p>
+      <p><code>Discount Amount = Original Price × (Discount % / 100)</code></p>
+      <p><code>Final Price = Original Price - Discount Amount + Tax</code></p>
+    </section>
 
-      <section class="cta-box" style="margin-top: 30px;">
-        <h3>Support Our Free Tools</h3>
-        <p>If you find this calculator helpful, consider supporting our open-source tools project.</p>
-        <a href="../guides/crypto-tips.html" class="btn">Send a Tip / Support Us</a>
-      </section>
+    <div class="affiliate-box">
+      <h3>Recommended Productivity & Business Tools</h3>
+      <p>Managing store inventory or personal budgeting? Organize everything with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="noopener">Notion Workspace</a>.</p>
+    </div>
 
-      <section class="newsletter-box" style="margin-top: 30px;">
-        <h3>Subscribe to Our Newsletter</h3>
-        <p>Get weekly updates on new free web tools, calculators, and developer guides.</p>
-        <form action="https://buttondown.email/api/emails/embed-subscribe/example" method="post" target="popupwindow">
-          <input type="email" name="email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
-      </section>
-    </article>
+    <div class="newsletter-card">
+      <h3>Stay Updated</h3>
+      <p>Get new free calculators and productivity tools straight to your inbox.</p>
+      <form action="#" method="post" class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="tip-cta">
+      <p>Find this free calculator helpful? <a href="../guides/crypto-tips.html">Support this project with a tip</a> or sponsor us.</p>
+    </div>
+
+    <div class="ad-zone" id="ad-bottom"></div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Free Web Tools. All rights reserved. | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    <p>&copy; 2026 Free Online Utilities. All tools run client-side. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="https://github.com/sponsors/SHARADEX">GitHub Sponsors</a></p>
   </footer>
 
+  <script data-goatcounter="https://YOUR_SITE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <script>
-    document.getElementById('calc-btn').addEventListener('click', function() {
-      var price = parseFloat(document.getElementById('original-price').value);
-      var discount = parseFloat(document.getElementById('discount-percent').value);
-      if (isNaN(price) || isNaN(discount)) return;
+    document.getElementById('calcBtn').addEventListener('click', function() {
+      const price = parseFloat(document.getElementById('origPrice').value) || 0;
+      const discount = parseFloat(document.getElementById('discountPercent').value) || 0;
+      const tax = parseFloat(document.getElementById('taxPercent').value) || 0;
       
-      var saved = price * (discount / 100);
-      var finalPrice = price - saved;
-      
-      document.getElementById('saved-amount').textContent = saved.toFixed(2);
-      document.getElementById('final-price').textContent = finalPrice.toFixed(2);
-      document.getElementById('results').style.display = 'block';
+      const savings = price * (discount / 100);
+      const discountedPrice = price - savings;
+      const taxAmount = discountedPrice * (tax / 100);
+      const finalPrice = discountedPrice + taxAmount;
+
+      document.getElementById('savingsVal').textContent = savings.toFixed(2);
+      document.getElementById('discountedPriceVal').textContent = discountedPrice.toFixed(2);
+      document.getElementById('taxVal').textContent = taxAmount.toFixed(2);
+      document.getElementById('finalPriceVal').textContent = finalPrice.toFixed(2);
+      document.getElementById('result').style.display = 'block';
     });
   </script>
 </body>
