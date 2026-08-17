@@ -1400,3 +1400,15 @@ to submit them to Google Indexing API
   - Step 2: validate_html (OK) — ✓ docs/calculators/margin-calculator.html passed validation (no issues)
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-17 10:17:20 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---
