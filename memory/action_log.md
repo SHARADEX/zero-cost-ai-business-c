@@ -1495,3 +1495,23 @@ to submit them to Google Indexing API
   - Step 1: LLM retry failed.
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-17 19:46:45 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 33825
+
+**Steps:**
+  Step 1: action=list_dir | tokens=16940 | result=Contents of docs/calculators/:
+  age-calculator.html (6068 bytes)
+  arr-calculator.html (10721 bytes)
+  bmi-calculator.html (6037 bytes)
+  break-even-calculator.html (6537 bytes)
+  burn-rate-calculato
+
+**Run Summary:**
+  - Step 1: list_dir (OK) — Contents of docs/calculators/:
+  age-calculator.html (6068 bytes)
+  arr-calculat
+  - Stopped: LLM failed at step 2.
+---
