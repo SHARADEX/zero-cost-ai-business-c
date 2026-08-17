@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Payment Calculator - Free Monthly Payment Estimator</title>
+  <meta name="description" content="Calculate your monthly loan payment, total interest, and total cost easily with our free, instant Loan Payment Calculator. No sign up required.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/loan-payment-calculator.html">
+  <meta property="og:title" content="Loan Payment Calculator - Free Monthly Payment Estimator">
+  <meta property="og:description" content="Calculate monthly payments and total interest on personal, auto, or mortgage loans quickly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/loan-payment-calculator.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../calculators/">Calculators</a>
+      <a href="../converters/">Converters</a>
+      <a href="../blog/">Blog</a>
+      <a href="../guides/crypto-tips.html">Support</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Loan Payment Calculator</h1>
+    <p>Calculate your monthly loan amortization, interest, and total repayment effortlessly.</p>
+    
+    <div class="ad-slot" id="ad-top"><!-- EthicalAds / Carbon placeholder --></div>
+
+    <section class="calculator-box">
+      <div class="form-group">
+        <label for="principal">Loan Amount ($):</label>
+        <input type="number" id="principal" placeholder="10000" min="0" step="any">
+      </div>
+      <div class="form-group">
+        <label for="rate">Annual Interest Rate (%):</label>
+        <input type="number" id="rate" placeholder="5.5" min="0" step="any">
+      </div>
+      <div class="form-group">
+        <label for="term">Loan Term (Years):</label>
+        <input type="number" id="term" placeholder="5" min="1" step="1">
+      </div>
+      <button id="calc-btn" class="btn">Calculate Payment</button>
+
+      <div id="result" class="result-box" style="display:none;">
+        <h3>Results:</h3>
+        <p><strong>Monthly Payment:</strong> $<span id="monthly-payment">0.00</span></p>
+        <p><strong>Total Interest Paid:</strong> $<span id="total-interest">0.00</span></p>
+        <p><strong>Total Cost of Loan:</strong> $<span id="total-cost">0.00</span></p>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <h2>How to Calculate Loan Payments</h2>
+      <p>Loan payments are calculated using standard amortization formulas factoring principal, interest rate, and number of payments.</p>
+      <p>Need hosting or VPS for your projects? Check out <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow noopener">DigitalOcean</a> to deploy your apps effortlessly.</p>
+    </section>
+
+    <section class="support-cta">
+      <h3>Enjoyed this tool?</h3>
+      <p>Support free open-source tools via <a href="../guides/crypto-tips.html">Crypto Tips</a> or sponsor us on GitHub.</p>
+    </section>
+
+    <section class="newsletter-box">
+      <h3>Subscribe to our Newsletter</h3>
+      <p>Get weekly updates on new tools and web productivity guides.</p>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER" method="post" target="popupwindow">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Free Web Tools. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../guides/crypto-tips.html">Tip Jar</a></p>
+  </footer>
+  <script>
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      const p = parseFloat(document.getElementById('principal').value);
+      const r = parseFloat(document.getElementById('rate').value) / 100 / 12;
+      const n = parseFloat(document.getElementById('term').value) * 12;
+      if (p > 0 && r > 0 && n > 0) {
+        const m = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        const total = m * n;
+        const interest = total - p;
+        document.getElementById('monthly-payment').textContent = m.toFixed(2);
+        document.getElementById('total-interest').textContent = interest.toFixed(2);
+        document.getElementById('total-cost').textContent = total.toFixed(2);
+        document.getElementById('result').style.display = 'block';
+      } else if (p > 0 && r === 0 && n > 0) {
+        const m = p / n;
+        document.getElementById('monthly-payment').textContent = m.toFixed(2);
+        document.getElementById('total-interest').textContent = '0.00';
+        document.getElementById('total-cost').textContent = p.toFixed(2);
+        document.getElementById('result').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
