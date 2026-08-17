@@ -1468,3 +1468,17 @@ to submit them to Google Indexing API
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-17 17:00:00 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 36124
+
+**Steps:**
+  Step 1: action=write_file | tokens=17893 | result=Wrote file: docs/calculators/compound-interest-calculator.html (4584 chars)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/compound-interest-calculator.html (4584 chars)
+  - Step 2: LLM retry failed.
+  - Stopped: LLM failed at step 3.
+---

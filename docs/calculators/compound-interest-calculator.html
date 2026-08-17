@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator — Free Financial Growth Tool</title>
+    <meta name="description" content="Calculate compound interest growth over time with regular contributions. Free online financial tool for investments, savings, and wealth building.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/compound-interest-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../calculators/">Calculators</a>
+            <a href="../converters/">Converters</a>
+            <a href="../blog/">Blog</a>
+            <a href="../guides/crypto-tips.html">Support</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Compound Interest Calculator</h1>
+        <p class="subtitle">Estimate your wealth accumulation with compound returns and periodic deposits.</p>
+
+        <div class="calculator-box">
+            <div class="input-group">
+                <label for="principal">Initial Principal ($):</label>
+                <input type="number" id="principal" value="5000" min="0">
+            </div>
+            <div class="input-group">
+                <label for="monthly">Monthly Contribution ($):</label>
+                <input type="number" id="monthly" value="200" min="0">
+            </div>
+            <div class="input-group">
+                <label for="rate">Annual Interest Rate (%):</label>
+                <input type="number" id="rate" value="7" step="0.1" min="0">
+            </div>
+            <div class="input-group">
+                <label for="years">Time Horizon (Years):</label>
+                <input type="number" id="years" value="10" min="1" max="50">
+            </div>
+            <button id="calc-btn" class="btn">Calculate Growth</button>
+
+            <div id="result" class="result-display" style="margin-top: 20px; font-weight: bold;"></div>
+        </div>
+
+        <section class="content-section">
+            <h2>Why Compound Interest Matters</h2>
+            <p>Compound interest is the addition of interest to the principal sum of a loan or deposit. It is the result of reinvesting interest, rather than paying it out, so that interest in the next period is then earned on the principal sum plus previously accumulated interest.</p>
+        </section>
+
+        <div class="affiliate-box" style="margin-top: 30px; padding: 15px; border: 1px dashed #ccc;">
+            <h3>Recommended Tools</h3>
+            <p>Manage your portfolio and financial tracking with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank">Notion</a> or host your personal finance app on <a href="https://vercel.com/?utm_source=YOUR_REFERRAL_CODE" target="_blank">Vercel</a>.</p>
+        </div>
+
+        <div class="newsletter-box" style="margin-top: 30px; background: #f4f4f4; padding: 20px;">
+            <h3>Get Weekly Finance Tips</h3>
+            <form action="https://buttondown.com/api/emails/embed-subscribe/your-newsletter" method="post">
+                <input type="email" name="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Zero-Cost Business Agent. <a href="../guides/crypto-tips.html">Tip the Creator</a></p>
+    </footer>
+    <script>
+        document.getElementById('calc-btn').addEventListener('click', function() {
+            const p = parseFloat(document.getElementById('principal').value) || 0;
+            const pmt = parseFloat(document.getElementById('monthly').value) || 0;
+            const r = (parseFloat(document.getElementById('rate').value) || 0) / 100 / 12;
+            const n = (parseFloat(document.getElementById('years').value) || 0) * 12;
+
+            let total = p;
+            for (let i = 0; i < n; i++) {
+                total = (total + pmt) * (1 + r);
+            }
+            const totalContributions = p + (pmt * n);
+            const interestEarned = total - totalContributions;
+            document.getElementById('result').innerHTML = `Future Value: $${total.toFixed(2)} <br> Total Contributions: $${totalContributions.toFixed(2)} <br> Interest Earned: $${interestEarned.toFixed(2)}`;
+        });
+    </script>
+</body>
+</html>

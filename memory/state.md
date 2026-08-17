@@ -1,11 +1,4 @@
 ## Summary
-2026-08-17 13:56:04 UTC | model=gemini | budget=full | steps=0 | tokens=54670
-First action: none
-Summary: Step 1: validation failed twice — skipped. | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
-
-Step details:
-
-## Summary
 2026-08-17 14:57:25 UTC | model=gemini | budget=full | steps=2 | tokens=36951
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/burn-rate-calculator.html (6120 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/burn-rate-calculator.html passed validation (no issues) | Stopped: LLM failed at step 3.
@@ -21,4 +14,11 @@ Summary: Stopped: LLM failed at step 1.
 
 Step details:
 
+## Summary
+2026-08-17 17:00:00 UTC | model=gemini | budget=full | steps=1 | tokens=36124
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/compound-interest-calculator.html (4584 chars) | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=17893 | result=Wrote file: docs/calculators/compound-interest-calculator.html (4584 chars)
 
