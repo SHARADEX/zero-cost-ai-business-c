@@ -1427,3 +1427,17 @@ to submit them to Google Indexing API
   - Step 2: validate_html (OK) — ✓ docs/calculators/break-even-calculator.html passed validation (no issues)
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-17 13:56:04 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 54670
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Step 2: LLM retry failed.
+  - Stopped: LLM failed at step 3.
+---
