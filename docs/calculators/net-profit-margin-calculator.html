@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Net Profit Margin Calculator — Free Online Business Tool</title>
+  <meta name="description" content="Calculate your business net profit margin quickly and easily. Free online net profit margin calculator with instant results and formula breakdown.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/net-profit-margin-calculator.html">
+  <meta property="og:title" content="Net Profit Margin Calculator — Free Online Tool">
+  <meta property="og:description" content="Calculate your business net profit margin accurately and instantly with our free online calculator.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../css/style.css">
+  <script data-goatcounter="https://YOUR_GC_SITE_ID.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">DevTools & Calculators</a>
+      <div class="nav-links">
+        <a href="../tools/index.html">Tools</a>
+        <a href="../calculators/index.html">Calculators</a>
+        <a href="../converters/index.html">Converters</a>
+        <a href="../blog/index.html">Blog</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="ad-zone" id="ethical-ad-slot"></div>
+
+    <h1>Net Profit Margin Calculator</h1>
+    <p class="lead">Calculate your company's net profit margin to measure bottom-line profitability relative to total revenue.</p>
+
+    <div class="calculator-card">
+      <div class="form-group">
+        <label for="revenue">Total Revenue ($):</label>
+        <input type="number" id="revenue" min="0" step="any" placeholder="e.g. 100000">
+      </div>
+      <div class="form-group">
+        <label for="net-income">Net Income / Net Profit ($):</label>
+        <input type="number" id="net-income" step="any" placeholder="e.g. 15000">
+      </div>
+      <button id="calc-btn" class="btn-primary">Calculate Margin</button>
+
+      <div id="result" class="result-box" style="display: none;">
+        <h3>Results</h3>
+        <p><strong>Net Profit Margin:</strong> <span id="margin-val">0%</span></p>
+        <p class="helper-text" id="margin-desc"></p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>How to Calculate Net Profit Margin</h2>
+      <p>The net profit margin formula illustrates what percentage of revenue remains after all operating expenses, interest, taxes, and preferred stock dividends have been deducted:</p>
+      <pre><code>Net Profit Margin = (Net Income / Total Revenue) × 100</code></pre>
+
+      <h2>Related Business Calculators</h2>
+      <ul>
+        <li><a href="gross-margin-calculator.html">Gross Margin Calculator</a></li>
+        <li><a href="arr-calculator.html">ARR Calculator</a></li>
+        <li><a href="burn-rate-calculator.html">Burn Rate Calculator</a></li>
+      </ul>
+    </section>
+
+    <div class="newsletter-signup">
+      <h3>Get Free Weekly Financial & Developer Tools</h3>
+      <p>Subscribe for free calculators, cheat sheets, and productivity tools.</p>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER" method="post" target="popupwindow">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn-secondary">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="support-box">
+      <p>Find this tool useful? <a href="../guides/crypto-tips.html">Support with a tip</a> or check out <a href="https://github.com/sponsors/YOUR-USERNAME">GitHub Sponsors</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 DevTools Free Business Utilities. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+  </footer>
+
+  <script>
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      var revenue = parseFloat(document.getElementById('revenue').value);
+      var netIncome = parseFloat(document.getElementById('net-income').value);
+      var resultBox = document.getElementById('result');
+      var marginVal = document.getElementById('margin-val');
+      var marginDesc = document.getElementById('margin-desc');
+
+      if (isNaN(revenue) || isNaN(netIncome) || revenue <= 0) {
+        alert('Please enter valid numerical values. Revenue must be greater than zero.');
+        return;
+      }
+
+      var margin = (netIncome / revenue) * 100;
+      marginVal.textContent = margin.toFixed(2) + '%';
+      marginDesc.textContent = 'For every $100 in revenue, you keep $' + (margin).toFixed(2) + ' in net profit.';
+      resultBox.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

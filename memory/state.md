@@ -1,19 +1,4 @@
 ## Summary
-2026-08-18 09:06:21 UTC | model=gemini | budget=full | steps=1 | tokens=34913
-First action: list_dir
-Summary: Step 1: list_dir (OK) — Contents of docs/calculators/:
-  age-calculator.html (6068 bytes)
-  arr-calculat | Stopped: LLM failed at step 2.
-
-Step details:
-Step 1: action=list_dir | tokens=17604 | result=Contents of docs/calculators/:
-  age-calculator.html (6068 bytes)
-  arr-calculator.html (10721 bytes)
-  bmi-calculator.html (6037 bytes)
-  break-even-calculator.html (6537 bytes)
-  burn-rate-calculato
-
-## Summary
 2026-08-18 10:55:27 UTC | model=gemini | budget=full | steps=2 | tokens=38110
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/gross-margin-calculator.html (6026 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/gross-margin-calculator.html passed validation (no issues) | Stopped: LLM failed at step 3.
@@ -29,4 +14,12 @@ Summary: Stopped: LLM failed at step 1.
 
 Step details:
 
+## Summary
+2026-08-18 14:05:37 UTC | model=gemini | budget=full | steps=2 | tokens=35887
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/net-profit-margin-calculator.html (4813 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/net-profit-margin-calculator.html passed validation (no issue | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=17963 | result=Wrote file: docs/calculators/net-profit-margin-calculator.html (4813 chars)
+  Step 2: action=validate_html | tokens=17924 | result=✓ docs/calculators/net-profit-margin-calculator.html passed validation (no issues)
 
