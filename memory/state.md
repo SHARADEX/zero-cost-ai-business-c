@@ -1,11 +1,4 @@
 ## Summary
-2026-08-17 23:48:47 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-18 03:10:54 UTC | model=openrouter | budget=full | steps=3 | tokens=95032
 First action: none
 Summary: Step 1: validation failed twice — skipped. | Step 2: read_file (OK) — Contents of memory/blocked.md:
@@ -39,4 +32,13 @@ Step 1: action=write_file | tokens=17302 | result=Wrote file: docs/calculators/c
 
 FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than
   Step 4: action=read_file | tokens=15985 | res...
+
+## Summary
+2026-08-18 07:26:09 UTC | model=gemini | budget=full | steps=2 | tokens=36089
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/cagr-calculator.html (4907 chars) | Step 2: seo_submit (OK) — SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (err | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=18123 | result=Wrote file: docs/calculators/cagr-calculator.html (4907 chars)
+  Step 2: action=seo_submit | tokens=17966 | result=SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (errors: 1). URLs added to queue regardless.
 

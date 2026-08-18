@@ -1631,3 +1631,18 @@ to submit them to Google Indexing API
 
   - Stopped: LLM failed at step 5.
 ---
+## Run 2026-08-18 07:26:09 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 2
+**Tokens used:** 36089
+
+**Steps:**
+  Step 1: action=write_file | tokens=18123 | result=Wrote file: docs/calculators/cagr-calculator.html (4907 chars)
+  Step 2: action=seo_submit | tokens=17966 | result=SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/cagr-calculator.html (4907 chars)
+  - Step 2: seo_submit (OK) — SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (err
+  - Stopped: LLM failed at step 3.
+---

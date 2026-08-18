@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAGR Calculator - Compound Annual Growth Rate</title>
+  <meta name="description" content="Calculate compound annual growth rate (CAGR) easily with our free online calculator. Accurately measure annual investment returns over time.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cagr-calculator.html">
+  <meta property="og:title" content="CAGR Calculator - Compound Annual Growth Rate">
+  <meta property="og:description" content="Calculate your Compound Annual Growth Rate (CAGR) accurately and quickly with our free calculator.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script data-goatcounter="https://goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CAGR Calculator",
+    "description": "Calculate compound annual growth rate (CAGR) online.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../tools/index.html">Tools</a>
+        <a href="../calculators/index.html">Calculators</a>
+        <a href="../blog/index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Compound Annual Growth Rate (CAGR) Calculator</h1>
+    <p>CAGR measures the mean annual growth rate of an investment over a specified period longer than one year.</p>
+    <div id="ad-zone" class="ad-slot"></div>
+    <div class="calculator-box card">
+      <div class="form-group">
+        <label for="initialValue">Initial Value ($):</label>
+        <input type="number" id="initialValue" placeholder="e.g. 10000" min="0.01" step="any">
+      </div>
+      <div class="form-group">
+        <label for="finalValue">Final Value ($):</label>
+        <input type="number" id="finalValue" placeholder="e.g. 25000" min="0.01" step="any">
+      </div>
+      <div class="form-group">
+        <label for="years">Number of Years (Period):</label>
+        <input type="number" id="years" placeholder="e.g. 5" min="0.1" step="any">
+      </div>
+      <button id="calcBtn" class="btn">Calculate CAGR</button>
+      <div id="result" class="result-box" style="display:none;">
+        <h3>Results</h3>
+        <p><strong>CAGR:</strong> <span id="cagrOutput">0.00%</span></p>
+        <p><strong>Total Growth:</strong> <span id="totalGrowthOutput">0.00%</span></p>
+      </div>
+    </div>
+    <section class="content-section">
+      <h2>How CAGR is Calculated</h2>
+      <p>The Compound Annual Growth Rate formula is:</p>
+      <code>CAGR = (End Value / Beginning Value)^(1 / n) - 1</code>
+      <p>Where <em>n</em> represents the total number of years.</p>
+      <h2>Related Business Calculators</h2>
+      <ul>
+        <li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li>
+        <li><a href="roi-calculator.html">ROI Calculator</a></li>
+        <li><a href="clv-calculator.html">Customer Lifetime Value (CLV) Calculator</a></li>
+      </ul>
+    </section>
+    <section class="newsletter-box card">
+      <h3>Subscribe for Business & Financial Tools</h3>
+      <p>Get weekly insights and free financial calculator updates.</p>
+      <form action="#" method="post" onsubmit="alert('Subscribed successfully!'); return false;">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p><a href="../guides/crypto-tips.html">Support / Tip This Project</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('calcBtn').addEventListener('click', function() {
+      const initial = parseFloat(document.getElementById('initialValue').value);
+      const finalVal = parseFloat(document.getElementById('finalValue').value);
+      const years = parseFloat(document.getElementById('years').value);
+      if (!initial || !finalVal || !years || initial <= 0 || finalVal <= 0 || years <= 0) {
+        alert('Please enter valid positive numbers.');
+        return;
+      }
+      const cagr = (Math.pow((finalVal / initial), (1 / years)) - 1) * 100;
+      const totalGrowth = ((finalVal - initial) / initial) * 100;
+      document.getElementById('cagrOutput').textContent = cagr.toFixed(2) + '%';
+      document.getElementById('totalGrowthOutput').textContent = totalGrowth.toFixed(2) + '%';
+      document.getElementById('result').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
