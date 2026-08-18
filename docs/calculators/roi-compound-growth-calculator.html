@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Compound Growth Calculator - Free Online Financial Tool</title>
+    <meta name="description" content="Calculate your return on investment and compound growth over time with this free online financial tool. Plan your investments accurately.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/roi-compound-growth-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../calculators/">Calculators</a>
+            <a href="../converters/">Converters</a>
+            <a href="../blog/">Blog</a>
+        </nav>
+    </header>
+    <main>
+        <h1>ROI Compound Growth Calculator</h1>
+        <p>Estimate your future investment value using compound annual growth rate and total ROI.</p>
+        
+        <div class="calculator-box">
+            <label for="initial">Initial Investment ($):</label>
+            <input type="number" id="initial" value="1000">
+            
+            <label for="monthly">Monthly Contribution ($):</label>
+            <input type="number" id="monthly" value="100">
+            
+            <label for="rate">Annual Interest Rate (%):</label>
+            <input type="number" id="rate" value="8">
+            
+            <label for="years">Time Horizon (Years):</label>
+            <input type="number" id="years" value="10">
+            
+            <button onclick="calculate()">Calculate Growth</button>
+            
+            <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+        </div>
+
+        <script>
+            function calculate() {
+                const p = parseFloat(document.getElementById('initial').value) || 0;
+                const pmt = parseFloat(document.getElementById('monthly').value) || 0;
+                const r = (parseFloat(document.getElementById('rate').value) || 0) / 100 / 12;
+                const n = (parseFloat(document.getElementById('years').value) || 0) * 12;
+                
+                let total = p;
+                let principal = p;
+                
+                for(let i=0; i<n; i++) {
+                    total = (total + pmt) * (1 + r);
+                    principal += pmt;
+                }
+                
+                const interest = total - principal;
+                
+                document.getElementById('result').innerHTML = 
+                    'Future Value: $' + total.toFixed(2) + '<br>' +
+                    'Total Contributions: $' + principal.toFixed(2) + '<br>' +
+                    'Estimated Interest Earned: $' + interest.toFixed(2);
+            }
+        </script>
+
+        <div class="ad-zone" style="margin: 30px 0; padding: 20px; background: #f4f4f4; text-align: center;">
+            <p>Sponsored Advertisement</p>
+        </div>
+
+        <div class="affiliate-box" style="margin: 30px 0; padding: 20px; background: #eef; border-left: 4px solid #00f;">
+            <p>Recommended Tool: Manage your projects and notes effortlessly with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">Notion</a>.</p>
+        </div>
+
+        <div class="newsletter-box" style="margin: 30px 0; padding: 20px; background: #efe;">
+            <h3>Get Free Financial Tools Weekly</h3>
+            <form action="https://buttondown.com/api/emails/embed-subscribe/your-newsletter" method="post" target="popupwindow">
+                <input type="email" name="email" placeholder="Your email address" required>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+
+        <div class="tip-box" style="margin: 30px 0; padding: 20px; background: #ffefef;">
+            <p>Found this useful? Support via <a href="../guides/crypto-tips.html">Crypto Tips or GitHub Sponsors</a>.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Free Tools. All rights reserved.</p>
+    </footer>
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
