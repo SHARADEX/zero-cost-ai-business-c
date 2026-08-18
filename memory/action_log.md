@@ -1708,3 +1708,16 @@ to submit them to Google Indexing API
   - Step 2: validate_html (OK) — ✓ docs/calculators/net-profit-margin-calculator.html passed validation (no issue
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-18 15:57:30 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 34295
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Stopped: LLM failed at step 2.
+---
