@@ -1,13 +1,4 @@
 ## Summary
-2026-08-18 07:26:09 UTC | model=gemini | budget=full | steps=2 | tokens=36089
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/cagr-calculator.html (4907 chars) | Step 2: seo_submit (OK) — SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (err | Stopped: LLM failed at step 3.
-
-Step details:
-Step 1: action=write_file | tokens=18123 | result=Wrote file: docs/calculators/cagr-calculator.html (4907 chars)
-  Step 2: action=seo_submit | tokens=17966 | result=SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (errors: 1). URLs added to queue regardless.
-
-## Summary
 2026-08-18 09:06:21 UTC | model=gemini | budget=full | steps=1 | tokens=34913
 First action: list_dir
 Summary: Step 1: list_dir (OK) — Contents of docs/calculators/:
@@ -30,4 +21,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/gross-margin-c
 Step details:
 Step 1: action=write_file | tokens=19097 | result=Wrote file: docs/calculators/gross-margin-calculator.html (6026 chars)
   Step 2: action=validate_html | tokens=19013 | result=✓ docs/calculators/gross-margin-calculator.html passed validation (no issues)
+
+## Summary
+2026-08-18 11:55:48 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
