@@ -27,3 +27,4 @@ Format: `- [ ] [YYYY-MM-DD HH:MM:SS UTC] https://...`
 - [ ] [2026-08-15 13:39:30 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/mrr-calculator.html
 - [ ] [2026-08-15 19:02:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/arr-calculator.html
 - [ ] [2026-08-15 22:51:09 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/churn-rate-calculator.html
+- [ ] [2026-08-18 05:07:53 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/compound-interest-calculator.html
