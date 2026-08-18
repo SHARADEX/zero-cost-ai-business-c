@@ -1,14 +1,14 @@
 {
-  "date": "2026-08-17",
-  "last_updated": "2026-08-17 22:54:20 UTC",
+  "date": "2026-08-18",
+  "last_updated": "2026-08-18 03:12:03 UTC",
   "providers": {
     "groq": {
       "requests_used": 0,
       "tokens_used": 0
     },
     "gemini": {
-      "requests_used": 24,
-      "tokens_used": 442450
+      "requests_used": 2,
+      "tokens_used": 33739
     },
     "cerebras": {
       "requests_used": 0,
@@ -27,58 +27,14 @@
       "tokens_used": 0
     },
     "openrouter": {
-      "requests_used": 7,
-      "tokens_used": 114414
+      "requests_used": 4,
+      "tokens_used": 61293
     }
   },
   "hourly_usage": {
     "03": {
       "requests": 6,
-      "tokens": 102961
-    },
-    "05": {
-      "requests": 5,
-      "tokens": 84312
-    },
-    "08": {
-      "requests": 2,
-      "tokens": 39153
-    },
-    "10": {
-      "requests": 2,
-      "tokens": 39731
-    },
-    "11": {
-      "requests": 2,
-      "tokens": 38964
-    },
-    "13": {
-      "requests": 3,
-      "tokens": 54670
-    },
-    "14": {
-      "requests": 2,
-      "tokens": 36951
-    },
-    "17": {
-      "requests": 2,
-      "tokens": 36124
-    },
-    "18": {
-      "requests": 1,
-      "tokens": 17182
-    },
-    "19": {
-      "requests": 2,
-      "tokens": 33825
-    },
-    "21": {
-      "requests": 2,
-      "tokens": 37259
-    },
-    "22": {
-      "requests": 2,
-      "tokens": 35732
+      "tokens": 95032
     }
   }
 }
