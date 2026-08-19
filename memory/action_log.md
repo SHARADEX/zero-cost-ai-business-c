@@ -1877,3 +1877,17 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
   arr-calculat
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-19 09:08:19 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 53852
+
+**Steps:**
+  Step 2: action=write_file | tokens=18549 | result=REJECTED write_file — security scan failed: External script from non-allowlisted domain: gc.zgo.gl; Broken internal link: /style.css (resolved to docs/style.css)
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Step 2: write_file (FAIL) — REJECTED write_file — security scan failed: External script from non-allowlisted
+  - Stopped: LLM failed at step 3.
+---
