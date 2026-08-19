@@ -1,16 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-SKIP gemini - unhealthy (circuit breaker)
-FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
-FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
-SKIP openrouter - budget exhausted
-
-[2026-08-19 03:13:47 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
-
-[2026-08-19 03:13:47 UTC] Agent output failed validation twice. Last error: Invalid JSON: Extra data: line 2 column 1 (char 149). Re-emit the complete JSON object with proper escaping.
-
-[2026-08-19 03:13:47 UTC] Agent output failed validation twice. Last error: Invalid JSON: Extra data: line 2 column 1 (char 179). Re-emit the complete JSON object with proper escaping.
-
 [2026-08-19 05:05:30 UTC] LLM call failed at step 3.
 All LLM providers failed. Attempts:
 FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
@@ -155,3 +144,21 @@ FAIL gemini/gemma-4-26b-a4b-it attempt 1: HTTP 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor 
+
+[2026-08-19 17:01:45 UTC] Ethereum balance check failed via RPC/API.
+
+[2026-08-19 17:01:45 UTC] LLM call failed at step 3.
+All LLM providers failed. Attempts:
+FAIL groq/meta-llama/llama-prompt-guard-2-22m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
+
+FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
+
+FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 10000, model: gemini-2.5-flash-tts\nPlease retry in 2.983190418s.",
+    "status": "RESOURCE_EX
+CIRCUIT_OPEN gemini
+FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+SKIP openrouter - budget exhausted

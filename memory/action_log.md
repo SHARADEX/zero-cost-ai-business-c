@@ -1959,3 +1959,25 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
   - Step 1: validation failed twice — skipped.
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-19 17:01:45 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 2
+**Tokens used:** 33054
+
+**Steps:**
+  Step 1: action=revenue_verify | tokens=16437 | result=revenue_verify error: Failed to fetch balance for ethereum
+  Step 2: action=read_file | tokens=16617 | result=Contents of docs/calculators/burn-rate-runway-calculator.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1
+
+**Run Summary:**
+  - Step 1: revenue_verify (FAIL) — revenue_verify error: Failed to fetch balance for ethereum
+  - Step 2: read_file (OK) — Contents of docs/calculators/burn-rate-runway-calculator.html:
+<!DOCTYPE html>
+<
+  - Stopped: LLM failed at step 3.
+---
