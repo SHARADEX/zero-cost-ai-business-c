@@ -1,11 +1,4 @@
 ## Summary
-2026-08-18 22:55:15 UTC | model=gemini | budget=full | steps=0 | tokens=33417
-First action: none
-Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
-
-Step details:
-
-## Summary
 2026-08-18 23:49:04 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -32,4 +25,13 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
   "error": {
     "code": 429,
     "message": "You exce
+
+## Summary
+2026-08-19 05:05:30 UTC | model=gemini | budget=full | steps=2 | tokens=34148
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/burn-rate-runway-calculator.html (4105 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/burn-rate-runway-calculator.html passed validation (no issues | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=16929 | result=Wrote file: docs/calculators/burn-rate-runway-calculator.html (4105 chars)
+  Step 2: action=validate_html | tokens=17219 | result=✓ docs/calculators/burn-rate-runway-calculator.html passed validation (no issues)
 
