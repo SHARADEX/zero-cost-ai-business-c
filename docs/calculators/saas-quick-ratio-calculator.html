@@ -3,145 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SaaS Quick Ratio Calculator — Free Growth & Churn Metric Tool</title>
-  <meta name="description" content="Calculate your SaaS Quick Ratio easily. Measure monthly recurring revenue growth efficiency against churn and contraction with our free online calculator.">
-  <link rel="canonical" href="https://sharadex.github.io/zero-cost-ai-business-c/calculators/saas-quick-ratio-calculator.html">
-  <meta property="og:title" content="SaaS Quick Ratio Calculator — Free Growth Metric Tool">
-  <meta property="og:description" content="Determine whether your SaaS revenue growth outweighs churn. Instant online SaaS Quick Ratio calculator.">
+  <title>SaaS Quick Ratio Calculator - Measure Growth Efficiency</title>
+  <meta name="description" content="Calculate your SaaS Quick Ratio online. Measure your recurring revenue growth efficiency against churn and contraction with our free, interactive SaaS tool.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/saas-quick-ratio-calculator.html">
+  <meta property="og:title" content="SaaS Quick Ratio Calculator - Measure Growth Efficiency">
+  <meta property="og:description" content="Free interactive SaaS Quick Ratio Calculator. Assess revenue growth health vs churn.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sharadex.github.io/zero-cost-ai-business-c/calculators/saas-quick-ratio-calculator.html">
-  <link rel="stylesheet" href="../style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "SaaS Quick Ratio Calculator",
-    "url": "https://sharadex.github.io/zero-cost-ai-business-c/calculators/saas-quick-ratio-calculator.html",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "All",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  }
-  </script>
-  <script data-goatcounter="https://zero-cost-biz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="nav-bar">
-      <a href="../index.html" class="brand">ZeroCostTools</a>
-      <div class="nav-links">
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">FreeDevTools</a>
+      <nav>
         <a href="../calculators/">Calculators</a>
         <a href="../converters/">Converters</a>
-        <a href="../blog/">Blog</a>
-        <a href="../guides/crypto-tips.html" class="support-link">Support</a>
-      </div>
-    </nav>
+        <a href="../guides/crypto-tips.html">Support</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <div class="ad-slot" id="ad-top"><!-- House Ad / EthicalAds Placement --></div>
+  <main class="container main-content">
+    <div class="ad-zone" id="ad-top-slot">
+      <!-- EthicalAds / House Ad Placeholder -->
+      <p class="ad-label">Recommended Partner: <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="noopener nofollow">DigitalOcean - $200 Free Cloud Credit</a></p>
+    </div>
 
-    <article class="tool-wrapper">
-      <h1>SaaS Quick Ratio Calculator</h1>
-      <p class="lead-text">The SaaS Quick Ratio measures your startup's ability to grow recurring revenue relative to churn. A quick ratio > 4.0 indicates stellar growth efficiency.</p>
+    <h1>SaaS Quick Ratio Calculator</h1>
+    <p class="lead">The SaaS Quick Ratio evaluates a company's ability to grow recurring revenue despite churn and contraction. A ratio above 4.0 is considered top-tier SaaS growth efficiency.</p>
 
-      <section class="calc-box">
-        <div class="form-group">
-          <label for="new-mrr">New MRR ($):</label>
-          <input type="number" id="new-mrr" min="0" step="any" placeholder="e.g. 5000" value="5000">
-        </div>
-        <div class="form-group">
-          <label for="expansion-mrr">Expansion MRR ($):</label>
-          <input type="number" id="expansion-mrr" min="0" step="any" placeholder="e.g. 2000" value="2000">
-        </div>
-        <div class="form-group">
-          <label for="churned-mrr">Churned MRR ($):</label>
-          <input type="number" id="churned-mrr" min="0" step="any" placeholder="e.g. 1000" value="1000">
-        </div>
-        <div class="form-group">
-          <label for="contraction-mrr">Contraction MRR ($):</label>
-          <input type="number" id="contraction-mrr" min="0" step="any" placeholder="e.g. 500" value="500">
-        </div>
+    <div class="calculator-box">
+      <div class="input-group">
+        <label for="new-mrr">New MRR ($)</label>
+        <input type="number" id="new-mrr" placeholder="5000" value="5000" min="0">
+      </div>
+      <div class="input-group">
+        <label for="expansion-mrr">Expansion MRR ($)</label>
+        <input type="number" id="expansion-mrr" placeholder="2000" value="2000" min="0">
+      </div>
+      <div class="input-group">
+        <label for="churned-mrr">Churned MRR ($)</label>
+        <input type="number" id="churned-mrr" placeholder="1000" value="1000" min="0">
+      </div>
+      <div class="input-group">
+        <label for="contraction-mrr">Contraction MRR ($)</label>
+        <input type="number" id="contraction-mrr" placeholder="500" value="500" min="0">
+      </div>
 
-        <button type="button" id="calc-btn" class="btn-primary">Calculate Quick Ratio</button>
+      <button id="calc-btn" class="btn btn-primary" onclick="calculateQuickRatio()">Calculate Quick Ratio</button>
 
-        <div id="result-area" class="result-card">
-          <h3>Result</h3>
-          <p>Quick Ratio: <strong id="ratio-value">4.67</strong></p>
-          <p id="ratio-interpretation" class="badge">Healthy Growth (Ratio &gt; 4)</p>
-        </div>
-      </section>
+      <div class="results-box" id="results-container">
+        <h3>Results</h3>
+        <p><strong>Quick Ratio:</strong> <span id="result-ratio">4.67</span></p>
+        <p><strong>Gross Added MRR:</strong> $<span id="result-added">7,000.00</span></p>
+        <p><strong>Gross Lost MRR:</strong> $<span id="result-lost">1,500.00</span></p>
+        <p><strong>Health Assessment:</strong> <span id="result-health" style="color: green; font-weight: bold;">Excellent (> 4.0)</span></p>
+      </div>
+    </div>
 
-      <section class="content-guide">
-        <h2>How SaaS Quick Ratio is Calculated</h2>
-        <p><strong>Formula:</strong> <code>(New MRR + Expansion MRR) / (Churned MRR + Contraction MRR)</code></p>
-        <ul>
-          <li><strong>&gt; 4.0:</strong> Excellent growth. Revenue additions significantly outpace churn.</li>
-          <li><strong>2.0 – 4.0:</strong> Moderate growth. Startup is growing, but churn requires optimization.</li>
-          <li><strong>&lt; 2.0:</strong> High churn risk. The business is running fast just to stay in place.</li>
-        </ul>
-      </section>
+    <section class="content-section">
+      <h2>How SaaS Quick Ratio is Calculated</h2>
+      <p>The standard formula is:</p>
+      <pre><code>Quick Ratio = (New MRR + Expansion MRR) / (Churned MRR + Contraction MRR)</code></pre>
+      <ul>
+        <li><strong>&lt; 1.0:</strong> Shrinking revenue base (Critical risk).</li>
+        <li><strong>1.0 - 2.0:</strong> Slow growth, high churn friction.</li>
+        <li><strong>2.0 - 4.0:</strong> Healthy growth trajectory.</li>
+        <li><strong>&gt; 4.0:</strong> Exceptional efficiency (Venture/hyper-growth standard).</li>
+      </ul>
+    </section>
 
-      <section class="affiliate-box">
-        <h3>Recommended Tools for SaaS Growth</h3>
-        <p>Manage your SaaS metrics, workflows, and documentation in one collaborative hub with <a href="https://www.notion.so/" target="_blank" rel="noopener nofollow">Notion</a>.</p>
-      </section>
+    <section class="newsletter-signup">
+      <h3>Get Free SaaS & Web Tools in Your Inbox</h3>
+      <p>Subscribe for weekly developer calculators, converters, and startup growth cheat-sheets.</p>
+      <form action="mailto:newsletter@example.com" method="post" enctype="text/plain">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn btn-secondary">Subscribe</button>
+      </form>
+    </section>
 
-      <section class="support-box">
-        <h3>Support This Project</h3>
-        <p>All calculators here are 100% free with no paywalls. If you find them valuable, consider supporting development via crypto tips or GitHub Sponsors.</p>
-        <a href="../guides/crypto-tips.html" class="btn-secondary">Leave a Tip / Support Us</a>
-      </section>
-
-      <section class="newsletter-box">
-        <h3>Get Weekly SaaS Calculators & Growth Playbooks</h3>
-        <form action="mailto:contact@example.com" method="get" class="newsletter-form">
-          <input type="email" name="email" placeholder="Enter your email" required>
-          <button type="submit" class="btn-primary">Subscribe Free</button>
-        </form>
-      </section>
-    </article>
+    <section class="support-box">
+      <h3>Support This Project</h3>
+      <p>All our tools are 100% free and open source. Consider supporting development:</p>
+      <p><a href="../guides/crypto-tips.html" class="btn btn-outline">Crypto Tips</a> or <a href="https://github.com/sponsors/SHARADEX" target="_blank" rel="noopener">GitHub Sponsors</a></p>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 ZeroCostTools. Built autonomously for operators and builders.</p>
-    <p><a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../guides/crypto-tips.html">Donate</a></p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 FreeDevTools. Zero tracking cookies. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+    </div>
   </footer>
 
   <script>
-  document.getElementById('calc-btn').addEventListener('click', function() {
-    const newMrr = parseFloat(document.getElementById('new-mrr').value) || 0;
-    const expMrr = parseFloat(document.getElementById('expansion-mrr').value) || 0;
-    const churnMrr = parseFloat(document.getElementById('churned-mrr').value) || 0;
-    const contMrr = parseFloat(document.getElementById('contraction-mrr').value) || 0;
+    function calculateQuickRatio() {
+      const newMrr = parseFloat(document.getElementById('new-mrr').value) || 0;
+      const expansionMrr = parseFloat(document.getElementById('expansion-mrr').value) || 0;
+      const churnedMrr = parseFloat(document.getElementById('churned-mrr').value) || 0;
+      const contractionMrr = parseFloat(document.getElementById('contraction-mrr').value) || 0;
 
-    const inflow = newMrr + expMrr;
-    const outflow = churnMrr + contMrr;
-    const resultDisplay = document.getElementById('ratio-value');
-    const interpDisplay = document.getElementById('ratio-interpretation');
+      const added = newMrr + expansionMrr;
+      const lost = churnedMrr + contractionMrr;
 
-    if (outflow === 0) {
-      resultDisplay.textContent = inflow > 0 ? 'Infinity (Zero Churn)' : '0.00';
-      interpDisplay.textContent = inflow > 0 ? 'Optimal (Zero Churn/Contraction)' : 'No activity';
-      return;
+      document.getElementById('result-added').innerText = added.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-lost').innerText = lost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+      if (lost === 0) {
+        document.getElementById('result-ratio').innerText = added > 0 ? 'Infinity (0 churn)' : '0.00';
+        document.getElementById('result-health').innerText = added > 0 ? 'Flawless (No Churn)' : 'No Activity';
+        document.getElementById('result-health').style.color = 'green';
+        return;
+      }
+
+      const ratio = added / lost;
+      document.getElementById('result-ratio').innerText = ratio.toFixed(2);
+
+      let healthText = '';
+      let healthColor = 'black';
+
+      if (ratio < 1.0) {
+        healthText = 'Critical Risk (< 1.0 - Shrinking MRR)';
+        healthColor = 'red';
+      } else if (ratio < 2.0) {
+        healthText = 'Sluggish Growth (1.0 - 2.0)';
+        healthColor = 'orange';
+      } else if (ratio < 4.0) {
+        healthText = 'Healthy Growth (2.0 - 4.0)';
+        healthColor = '#2b7cd3';
+      } else {
+        healthText = 'Excellent (> 4.0 Hyper-growth efficiency)';
+        healthColor = 'green';
+      }
+
+      const healthEl = document.getElementById('result-health');
+      healthEl.innerText = healthText;
+      healthEl.style.color = healthColor;
     }
-
-    const ratio = inflow / outflow;
-    resultDisplay.textContent = ratio.toFixed(2);
-    if (ratio >= 4.0) {
-      interpDisplay.textContent = 'Excellent Growth Efficiency (Ratio >= 4.0)';
-      interpDisplay.className = 'badge badge-success';
-    } else if (ratio >= 2.0) {
-      interpDisplay.textContent = 'Moderate Growth (Ratio 2.0 - 4.0)';
-      interpDisplay.className = 'badge badge-warning';
-    } else {
-      interpDisplay.textContent = 'High Churn Alert (Ratio < 2.0)';
-      interpDisplay.className = 'badge badge-danger';
-    }
-  });
   </script>
 </body>
 </html>
