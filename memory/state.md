@@ -1,19 +1,4 @@
 ## Summary
-2026-08-19 07:26:29 UTC | model=gemini | budget=full | steps=1 | tokens=32334
-First action: list_dir
-Summary: Step 1: list_dir (OK) — Contents of docs/calculators/:
-  age-calculator.html (6068 bytes)
-  arr-calculat | Stopped: LLM failed at step 2.
-
-Step details:
-Step 1: action=list_dir | tokens=16290 | result=Contents of docs/calculators/:
-  age-calculator.html (6068 bytes)
-  arr-calculator.html (10721 bytes)
-  bmi-calculator.html (6037 bytes)
-  break-even-calculator.html (6537 bytes)
-  burn-rate-calculato
-
-## Summary
 2026-08-19 09:08:19 UTC | model=gemini | budget=full | steps=1 | tokens=53852
 First action: none
 Summary: Step 1: validation failed twice — skipped. | Step 2: write_file (FAIL) — REJECTED write_file — security scan failed: External script from non-allowlisted | Stopped: LLM failed at step 3.
@@ -43,4 +28,12 @@ Step 1: action=list_dir | tokens=16122 | result=Contents of docs/calculators/:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1
+
+## Summary
+2026-08-19 11:54:46 UTC | model=gemini | budget=full | steps=0 | tokens=17968
+First action: none
+Summary: Step 1: LLM retry failed. | Stopped: LLM failed at step 2.
+
+Step details:
+
 

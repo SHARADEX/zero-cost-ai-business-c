@@ -1920,3 +1920,16 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
 <
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-19 11:54:46 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 17968
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: LLM retry failed.
+  - Stopped: LLM failed at step 2.
+---
