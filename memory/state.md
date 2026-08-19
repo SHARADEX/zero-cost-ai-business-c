@@ -1,12 +1,4 @@
 ## Summary
-2026-08-19 09:08:19 UTC | model=gemini | budget=full | steps=1 | tokens=53852
-First action: none
-Summary: Step 1: validation failed twice — skipped. | Step 2: write_file (FAIL) — REJECTED write_file — security scan failed: External script from non-allowlisted | Stopped: LLM failed at step 3.
-
-Step details:
-Step 2: action=write_file | tokens=18549 | result=REJECTED write_file — security scan failed: External script from non-allowlisted domain: gc.zgo.gl; Broken internal link: /style.css (resolved to docs/style.css)
-
-## Summary
 2026-08-19 10:53:49 UTC | model=gemini | budget=full | steps=2 | tokens=32931
 First action: list_dir
 Summary: Step 1: list_dir (OK) — Contents of docs/calculators/:
@@ -36,4 +28,11 @@ Summary: Step 1: LLM retry failed. | Stopped: LLM failed at step 2.
 
 Step details:
 
+## Summary
+2026-08-19 14:06:25 UTC | model=gemini | budget=full | steps=1 | tokens=35708
+First action: seo_submit
+Summary: Step 1: seo_submit (OK) — SEO submit complete. Google: 0/16 submitted (errors: 1). Bing: 0/16 submitted (e | Stopped: LLM failed at step 2.
+
+Step details:
+Step 1: action=seo_submit | tokens=17863 | result=SEO submit complete. Google: 0/16 submitted (errors: 1). Bing: 0/16 submitted (errors: 1). URLs added to queue regardless.
 
