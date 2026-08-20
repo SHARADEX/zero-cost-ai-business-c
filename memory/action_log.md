@@ -2255,3 +2255,16 @@ to submit them to Google Indexing API
   - Step 1: write_file (OK) — Wrote file: docs/calculators/break-even-point-calculator.html (5175 chars)
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-20 21:01:46 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 37921
+
+**Steps:**
+  Step 1: action=seo_submit | tokens=19359 | result=SEO submit complete. Google: 0/18 submitted (errors: 1). Bing: 0/18 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/18 submitted (errors: 1). Bing: 0/18 submitted (e
+  - Stopped: LLM failed at step 2.
+---
