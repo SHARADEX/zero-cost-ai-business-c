@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAC Payback Period Calculator - SaaS Metric Tool</title>
+  <meta name="description" content="Calculate your Customer Acquisition Cost (CAC) payback period in months to evaluate SaaS unit economics and cash flow efficiency.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cac-payback-period-calculator.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../calculators/">Calculators</a>
+      <a href="../converters/">Converters</a>
+      <a href="../guides/crypto-tips.html">Support Us</a>
+    </nav>
+  </header>
+  <main>
+    <h1>CAC Payback Period Calculator</h1>
+    <p>Determine how many months it takes for a customer to repay the cost of acquiring them.</p>
+    
+    <div class="calculator-box">
+      <label for="cac">Customer Acquisition Cost (CAC) ($):</label>
+      <input type="number" id="cac" value="500">
+
+      <label for="arpu">Average Revenue Per User (ARPU) ($/month):</label>
+      <input type="number" id="arpu" value="100">
+
+      <label for="margin">Gross Margin (%):</label>
+      <input type="number" id="margin" value="80">
+
+      <button onclick="calculatePayback()">Calculate Payback</button>
+
+      <div id="result" class="result-display">
+        <h3>Payback Period: <span id="paybackMonths">-</span> months</h3>
+      </div>
+    </div>
+
+    <script>
+      function calculatePayback() {
+        const cac = parseFloat(document.getElementById('cac').value) || 0;
+        const arpu = parseFloat(document.getElementById('arpu').value) || 0;
+        const margin = (parseFloat(document.getElementById('margin').value) || 0) / 100;
+        
+        const monthlyContribution = arpu * margin;
+        if (monthlyContribution <= 0) {
+          document.getElementById('paybackMonths').innerText = 'Infinity';
+          return;
+        }
+        
+        const months = cac / monthlyContribution;
+        document.getElementById('paybackMonths').innerText = months.toFixed(1);
+      }
+      calculatePayback();
+    </script>
+  </main>
+  <footer>
+    <p>&copy; 2026 Free Business Tools. <a href="../guides/crypto-tips.html">Tip Creator</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+  </footer>
+</body>
+</html>
