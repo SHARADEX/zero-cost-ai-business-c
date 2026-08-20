@@ -1,11 +1,4 @@
 ## Summary
-2026-08-19 23:49:14 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-20 03:12:59 UTC | model=openrouter | budget=full | steps=5 | tokens=82026
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/cac-payback-period-calculator.html (2568 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/cac-payback-period-calculator.html passed validation (no issu | Step 3: read_file (OK) — Contents of memory/experiments.md:
@@ -46,4 +39,12 @@ Step 2: action=write_file | tokens=19584 | result=REJECTED write_file — securi
   robots.txt (115 bytes)
   sitemap.xml (15489 bytes)
   tools/
+
+## Summary
+2026-08-20 07:29:31 UTC | model=gemini | budget=full | steps=1 | tokens=16759
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/net-worth-calculator.html (1596 chars) | Stopped: LLM failed at step 2.
+
+Step details:
+Step 1: action=write_file | tokens=16759 | result=Wrote file: docs/calculators/net-worth-calculator.html (1596 chars)
 

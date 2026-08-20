@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Worth Calculator — Track Assets and Liabilities</title>
+    <meta name="description" content="Calculate your net worth easily with this free online tool. Track your assets, liabilities, and monitor your long-term financial growth.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/net-worth-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Net Worth Calculator</h1>
+        <p>Determine your current financial position by subtracting your total liabilities from your total assets.</p>
+        <form id="calcForm">
+            <label>Total Assets ($): <input type="number" id="assets" value="100000"></label>
+            <label>Total Liabilities ($): <input type="number" id="liabilities" value="30000"></label>
+            <button type="button" onclick="calculate()">Calculate Net Worth</button>
+        </form>
+        <div id="result" class="result-box"></div>
+        <script>
+            function calculate() {
+                const assets = parseFloat(document.getElementById('assets').value) || 0;
+                const liab = parseFloat(document.getElementById('liabilities').value) || 0;
+                const netWorth = assets - liab;
+                document.getElementById('result').innerText = 'Your Net Worth: $' + netWorth.toLocaleString();
+            }
+        </script>
+    </div>
+</body>
+</html>
