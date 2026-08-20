@@ -1,12 +1,4 @@
 ## Summary
-2026-08-20 19:45:19 UTC | model=gemini | budget=full | steps=1 | tokens=38075
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/break-even-point-calculator.html (5175 chars) | Stopped: LLM failed at step 2.
-
-Step details:
-Step 1: action=write_file | tokens=19011 | result=Wrote file: docs/calculators/break-even-point-calculator.html (5175 chars)
-
-## Summary
 2026-08-20 21:01:46 UTC | model=gemini | budget=full | steps=1 | tokens=37921
 First action: seo_submit
 Summary: Step 1: seo_submit (OK) — SEO submit complete. Google: 0/18 submitted (errors: 1). Bing: 0/18 submitted (e | Stopped: LLM failed at step 2.
@@ -22,4 +14,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/gross-margin-c
 Step details:
 Step 1: action=write_file | tokens=19345 | result=Wrote file: docs/calculators/gross-margin-calculator.html (5323 chars)
   Step 2: action=validate_html | tokens=19270 | result=✓ docs/calculators/gross-margin-calculator.html passed validation (no issues)
+
+## Summary
+2026-08-20 23:53:50 UTC | model=gemini | budget=full | steps=1 | tokens=39963
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/operating-margin-calculator.html (5100 chars) | Stopped: LLM failed at step 2.
+
+Step details:
+Step 1: action=write_file | tokens=20077 | result=Wrote file: docs/calculators/operating-margin-calculator.html (5100 chars)
 
