@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang=""en"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>Break-even Point Calculator | Free Business Calculator</title>
+    <meta name=""description"" content=""Calculate the exact units and revenue needed to cover your fixed and variable costs. Free online break-even point calculator for businesses and startups."">
+    <link rel=""canonical"" href=""https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/break-even-point-calculator.html"">
+    <link rel=""stylesheet"" href=""../assets/style.css"">
+    <meta property=""og:title"" content=""Break-even Point Calculator | Free Business Calculator"">
+    <meta property=""og:description"" content=""Calculate exact units and revenue needed to cover costs. Free online business calculator."">
+    <meta property=""og:type"" content=""website"">
+    <meta property=""og:url"" content=""https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/break-even-point-calculator.html"">
+    <script type=""application/ld+json"">
+    {
+      ""@context"": ""https://schema.org"",
+      ""@type"": ""SoftwareApplication"",
+      ""name"": ""Break-even Point Calculator"",
+      ""applicationCategory"": ""BusinessApplication"",
+      ""operatingSystem"": ""All"",
+      ""description"": ""Calculate the number of units or revenue required to break even on fixed and variable costs.""
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href=""../index.html"">Home</a>
+            <a href=""../calculators/"">Calculators</a>
+            <a href=""../converters/"">Converters</a>
+            <a href=""../blog/"">Blog</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Break-even Point Calculator</h1>
+        <p>Determine how many units you need to sell to cover all your costs and start making a profit.</p>
+        
+        <div class=""calculator-form"">
+            <label for=""fixedCosts"">Total Fixed Costs ($):</label>
+            <input type=""number"" id=""fixedCosts"" value=""10000"" min=""0"" step=""100"">
+            
+            <label for=""variableCost"">Variable Cost per Unit ($):</label>
+            <input type=""number"" id=""variableCost"" value=""15"" min=""0"" step=""0.5"">
+            
+            <label for=""pricePerUnit"">Selling Price per Unit ($):</label>
+            <input type=""number"" id=""pricePerUnit"" value=""50"" min=""0"" step=""0.5"">
+            
+            <button onclick=""calculateBreakEven()"">Calculate</button>
+        </div>
+
+        <div id=""results"" style=""margin-top: 20px; font-weight: bold;"">
+            <h3>Results:</h3>
+            <p id=""unitsResult"">Break-even Units: -</p>
+            <p id=""revenueResult"">Break-even Revenue: -</p>
+        </div>
+
+        <div class=""ad-zone"" style=""margin: 30px 0; padding: 15px; background: #f4f4f4; text-align: center;"">
+            <p>Sponsored Advertisement</p>
+            <a href=""https://m.do.co/c/YOUR_REFERRAL_CODE"" target=""_blank"" rel=""nofollow"">Need cloud hosting for your business app? Get $200 free credit with DigitalOcean.</a>
+        </div>
+
+        <section class=""newsletter"" style=""margin-top: 40px;"">
+            <h3>Get Free Business Tools Weekly</h3>
+            <form action=""#"" method=""POST"">
+                <input type=""email"" placeholder=""Enter your email"" required>
+                <button type=""submit"">Subscribe</button>
+            </form>
+        </section>
+
+        <div class=""related-links"" style=""margin-top: 30px;"">
+            <h3>Related Calculators</h3>
+            <ul>
+                <li><a href=""marketing-roi-payback-calculator.html"">Marketing ROI & Payback Calculator</a></li>
+                <li><a href=""startup-valuation-calculator.html"">Startup Valuation Calculator</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Business Tools. <a href=""../guides/crypto-tips.html"">Support & Crypto Tips</a></p>
+    </footer>
+
+    <script>
+        function calculateBreakEven() {
+            const fixed = parseFloat(document.getElementById('fixedCosts').value) || 0;
+            const variable = parseFloat(document.getElementById('variableCost').value) || 0;
+            const price = parseFloat(document.getElementById('pricePerUnit').value) || 0;
+
+            const contributionMargin = price - variable;
+            if (contributionMargin <= 0) {
+                document.getElementById('unitsResult').innerText = 'Break-even Units: Price must be greater than variable cost!';
+                document.getElementById('revenueResult').innerText = 'Break-even Revenue: -';
+                return;
+            }
+
+            const units = Math.ceil(fixed / contributionMargin);
+            const revenue = units * price;
+
+            document.getElementById('unitsResult').innerText = 'Break-even Units: ' + units.toLocaleString() + ' units';
+            document.getElementById('revenueResult').innerText = 'Break-even Revenue: $' + revenue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        }
+    </script>
+</body>
+</html>
