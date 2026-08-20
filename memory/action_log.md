@@ -2215,3 +2215,16 @@ to submit them to Google Indexing API
   - Step 2: validate_html (OK) — ✓ docs/calculators/inflation-impact-calculator.html passed validation (no issues
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-20 16:01:13 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 17385
+
+**Steps:**
+  Step 1: action=write_file | tokens=17385 | result=Wrote file: docs/calculators/startup-valuation-calculator.html (2507 chars)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/startup-valuation-calculator.html (2507 chars)
+  - Stopped: LLM failed at step 2.
+---
