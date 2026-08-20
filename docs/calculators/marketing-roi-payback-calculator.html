@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing ROI & Payback Period Calculator — Free Business Tool</title>
+    <meta name="description" content="Calculate your marketing campaign ROI, customer acquisition cost payback period, and overall marketing efficiency instantly.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/marketing-roi-payback-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="logo">ZeroCostTools</a>
+            <nav>
+                <a href="../calculators/">Calculators</a>
+                <a href="../converters/">Converters</a>
+                <a href="../blog/">Blog</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Marketing ROI & Payback Period Calculator</h1>
+        <p class="lead">Evaluate your marketing campaign returns and determine how quickly you recover your customer acquisition costs.</p>
+        
+        <div class="calculator-box">
+            <div class="input-group">
+                <label for="rev">Total Revenue Generated ($):</label>
+                <input type="number" id="rev" value="10000">
+            </div>
+            <div class="input-group">
+                <label for="spend">Total Marketing Spend ($):</label>
+                <input type="number" id="spend" value="2000">
+            </div>
+            <div class="input-group">
+                <label for="margin">Gross Margin (%):</label>
+                <input type="number" id="margin" value="70">
+            </div>
+            <div class="input-group">
+                <label for="arpu">Average Revenue Per User / Month ($):</label>
+                <input type="number" id="arpu" value="50">
+            </div>
+            <button id="calc-btn" class="btn-primary" onclick="calculate()">Calculate ROI</button>
+            
+            <div id="results" class="results">
+                <h3>Results</h3>
+                <p><strong>Marketing ROI:</strong> <span id="res-roi">--</span>%</p>
+                <p><strong>Net Profit:</strong> $<span id="res-profit">--</span></p>
+                <p><strong>Payback Period:</strong> <span id="res-payback">--</span> months</p>
+            </div>
+        </div>
+
+        <section class="content">
+            <h2>Why Measure Marketing ROI and Payback?</h2>
+            <p>Understanding your Return on Investment ensures that every marketing dollar spent is generating sustainable growth. A healthy payback period is typically under 12 months for SaaS and e-commerce businesses.</p>
+        </section>
+
+        <div class="ad-zone">
+            <p class="ad-label">Sponsored</p>
+            <div class="ad-slot">Explore top-tier hosting and analytics tools to scale your business.</div>
+        </div>
+
+        <div class="newsletter-box">
+            <h3>Get Free Business Tools Weekly</h3>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ZeroCostTools. <a href="../guides/crypto-tips.html">Support Us</a></p>
+        </div>
+    </footer>
+    <script>
+        function calculate() {
+            const rev = parseFloat(document.getElementById('rev').value) || 0;
+            const spend = parseFloat(document.getElementById('spend').value) || 0;
+            const margin = (parseFloat(document.getElementById('margin').value) || 0) / 100;
+            const arpu = parseFloat(document.getElementById('arpu').value) || 1;
+            
+            const netProfit = (rev * margin) - spend;
+            const roi = spend > 0 ? ((netProfit / spend) * 100).toFixed(1) : 0;
+            const payback = arpu > 0 ? (spend / (arpu * margin)).toFixed(1) : 0;
+            
+            document.getElementById('res-roi').innerText = roi;
+            document.getElementById('res-profit').innerText = netProfit.toFixed(2);
+            document.getElementById('res-payback').innerText = payback;
+        }
+    </script>
+</body>
+</html>
