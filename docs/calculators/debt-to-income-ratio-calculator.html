@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang=""en"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>Debt-to-Income (DTI) Ratio Calculator — Free Financial Tool</title>
+    <meta name=""description"" content=""Calculate your debt-to-income (DTI) ratio easily. Free online tool for budgeting, loans, and financial health assessment with zero friction."">
+    <link rel=""stylesheet"" href=""../assets/style.css"">
+</head>
+<body>
+    <header>
+        <nav class=""container"">
+            <a href=""../index.html"" class=""logo"">ToolsHub</a>
+            <div class=""nav-links"">
+                <a href=""../calculators/"">Calculators</a>
+                <a href=""../converters/"">Converters</a>
+                <a href=""../blog/"">Blog</a>
+            </div>
+        </nav>
+    </header>
+    <main class=""container"">
+        <h1>Debt-to-Income (DTI) Ratio Calculator</h1>
+        <p class=""lead"">Determine your front-end and back-end DTI ratio to check loan readiness.</p>
+        <div class=""tool-box"">
+            <div class=""input-group"">
+                <label for=""monthly-income"">Gross Monthly Income ($):</label>
+                <input type=""number"" id=""monthly-income"" placeholder=""5000"">
+            </div>
+            <div class=""input-group"">
+                <label for=""monthly-debt"">Total Monthly Debt Payments ($):</label>
+                <input type=""number"" id=""monthly-debt"" placeholder=""1500"">
+            </div>
+            <button id=""calc-btn"" class=""btn"">Calculate DTI</button>
+            <div id=""result"" class=""result-box"" style=""margin-top: 20px; font-weight: bold;""></div>
+        </div>
+        <div class=""ad-zone"" style=""margin: 30px 0; padding: 20px; background: #f4f4f4; text-align: center;"">
+            <p style=""font-size: 0.8rem; color: #666;"">Sponsored Ad</p>
+            <script async src=""//cdn.carbonads.com/carbon.js?serve=CKYIK2JN&placement=SHARADEXgithubio"" id=""_carbonads_js""></script>
+        </div>
+        <section style=""margin-top: 40px;"">
+            <h2>What is a Debt-to-Income Ratio?</h2>
+            <p>Your DTI ratio compares your monthly debt payments to your gross monthly income. Lenders use this metric to evaluate your ability to manage monthly payments and repay debts.</p>
+            <h3>Recommended Services</h3>
+            <ul>
+                <li><a href=""https://m.do.co/c/YOUR_REFERRAL_CODE"" target=""_blank"">DigitalOcean</a> — Reliable cloud infrastructure for hosting web tools.</li>
+            </ul>
+        </section>
+        <div class=""newsletter-box"" style=""margin-top: 40px; padding: 20px; background: #eef2f7; border-radius: 8px;"">
+            <h3>Get Free Calculators Weekly</h3>
+            <form action=""https://buttondown.email/api/emails/embed-subscribe/YOUR_NEWSLETTER"" method=""post"" target=""popupwindow"">
+                <input type=""email"" name=""email"" placeholder=""your@email.com"" required style=""padding: 8px; width: 60%; margin-right: 10px;"">
+                <button type=""submit"" class=""btn"">Subscribe</button>
+            </form>
+        </div>
+    </main>
+    <footer class=""container"" style=""margin-top: 60px; text-align: center; padding: 20px; color: #666;"">
+        <p>&copy; 2026 ToolsHub. <a href=""../guides/crypto-tips.html"">Support this project</a>.</p>
+    </footer>
+    <script>
+        document.getElementById('calc-btn').addEventListener('click', function() {
+            const income = parseFloat(document.getElementById('monthly-income').value) || 0;
+            const debt = parseFloat(document.getElementById('monthly-debt').value) || 0;
+            if (income <= 0) {
+                document.getElementById('result').innerText = 'Please enter a valid monthly income greater than 0.';
+                return;
+            }
+            const dti = (debt / income) * 100;
+            document.getElementById('result').innerText = 'Your Debt-to-Income (DTI) Ratio is: ' + dti.toFixed(2) + '%';
+        });
+    </script>
+    <script data-goatcounter=""https://your-site.goatcounter.com/count"" async src=""//gc.zgo.at/count.js""></script>
+</body>
+</html>

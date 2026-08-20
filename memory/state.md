@@ -1,23 +1,4 @@
 ## Summary
-2026-08-20 03:12:59 UTC | model=openrouter | budget=full | steps=5 | tokens=82026
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/cac-payback-period-calculator.html (2568 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/cac-payback-period-calculator.html passed validation (no issu | Step 3: read_file (OK) — Contents of memory/experiments.md:
-# Experiments Log
-
-**Purpose:** Track A/B tes
-
-Step details:
-Step 1: action=write_file | tokens=17377 | result=Wrote file: docs/calculators/cac-payback-period-calculator.html (2568 chars)
-  Step 2: action=validate_html | tokens=17561 | result=✓ docs/calculators/cac-payback-period-calculator.html passed validation (no issues)
-  Step 3: action=read_file | tokens=15171 | result=Contents of memory/experiments.md:
-# Experiments Log
-
-**Purpose:** Track A/B tests, content experiments, and revenue strategy results.
-**Rule:** Every experiment must have a hypothesis, a result, and 
-  Step 4: action=read_file | tokens=15583 | result=Contents of memory/blocked.md:
-...
-
-## Summary
 2026-08-20 05:07:24 UTC | model=openrouter | budget=full | steps=2 | tokens=92610
 First action: none
 Summary: Step 1: validation failed twice — skipped. | Step 2: write_file (FAIL) — REJECTED write_file — security scan failed: External script from non-allowlisted | Step 3: list_dir (OK) — Contents of docs/:
@@ -47,4 +28,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/net-worth-calc
 
 Step details:
 Step 1: action=write_file | tokens=16759 | result=Wrote file: docs/calculators/net-worth-calculator.html (1596 chars)
+
+## Summary
+2026-08-20 09:18:11 UTC | model=gemini | budget=full | steps=1 | tokens=36838
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/debt-to-income-ratio-calculator.html (4201 chars) | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=18168 | result=Wrote file: docs/calculators/debt-to-income-ratio-calculator.html (4201 chars)
 
