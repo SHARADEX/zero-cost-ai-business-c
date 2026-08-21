@@ -31,3 +31,4 @@ Format: `- [ ] [YYYY-MM-DD HH:MM:SS UTC] https://...`
 - [ ] [2026-08-18 07:28:23 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/cagr-calculator.html
 - [ ] [2026-08-19 22:57:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/saas-quick-ratio-calculator.html
 - [ ] [2026-08-19 22:57:00 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/burn-rate-runway-calculator.html
+- [ ] [2026-08-21 05:53:54 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/net-profit-margin-calculator.html
