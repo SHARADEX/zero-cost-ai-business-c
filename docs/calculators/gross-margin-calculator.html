@@ -3,109 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gross Margin Calculator — Free Online Profit Margin Tool</title>
-  <meta name="description" content="Calculate your gross margin percentage and gross profit instantly with this free online financial calculator. Perfect for eCommerce, SaaS, and retail.">
+  <title>Gross Margin Calculator - Free Online Business Margin Tool</title>
+  <meta name="description" content="Calculate your gross profit margin and markup percentage easily with our free online gross margin calculator. Fast, accurate, and privacy-friendly.">
   <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-margin-calculator.html">
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #f8fafc; }
-    header, footer { margin: 20px 0; }
-    .card { background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 24px; }
-    h1 { color: #0f172a; margin-top: 0; font-size: 1.8rem; }
-    h2 { color: #1e293b; font-size: 1.3rem; margin-top: 1.5rem; }
-    .input-group { margin-bottom: 16px; }
-    label { display: block; font-weight: 600; margin-bottom: 6px; color: #475569; }
-    input[type="number"] { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; box-sizing: border-box; }
-    button { background: #2563eb; color: #fff; border: none; padding: 12px 20px; font-size: 1rem; font-weight: 600; border-radius: 6px; cursor: pointer; width: 100%; }
-    button:hover { background: #1d4ed8; }
-    .results { margin-top: 20px; padding: 16px; background: #f1f5f9; border-radius: 6px; display: none; }
-    .res-item { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 1.1rem; }
-    .res-val { font-weight: 700; color: #0f172a; }
-    .ad-zone { padding: 16px; background: #e2e8f0; border-radius: 6px; text-align: center; font-size: 0.9rem; color: #64748b; margin: 24px 0; }
-    .links-box { font-size: 0.95rem; }
-    .links-box a { color: #2563eb; text-decoration: none; }
-    .links-box a:hover { text-decoration: underline; }
-  </style>
+  <meta property="og:title" content="Gross Margin Calculator - Free Online Business Margin Tool">
+  <meta property="og:description" content="Calculate gross profit margin and markup instantly with our free, privacy-friendly calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-margin-calculator.html">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Gross Margin Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-margin-calculator.html",
+    "description": "Calculate gross profit, gross margin percentage, and markup percentage from revenue and cost of goods sold (COGS).",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <a href="../index.html">← Back to Tools</a>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="brand-logo">FreeTools Hub</a>
+      <div class="nav-links">
+        <a href="../tools/index.html">Tools</a>
+        <a href="../converters/index.html">Converters</a>
+        <a href="index.html">Calculators</a>
+        <a href="../blog/index.html">Blog</a>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <div class="card">
+  <main class="main-content">
+    <article class="tool-container">
       <h1>Gross Margin Calculator</h1>
-      <p>Gross margin represents the percentage of total sales revenue that the company retains after incurring the direct costs associated with producing the goods and services.</p>
-      
-      <div class="input-group">
-        <label for="revenue">Total Revenue ($)</label>
-        <input type="number" id="revenue" placeholder="e.g. 50000" min="0" step="any">
-      </div>
+      <p class="lead-text">Calculate gross profit, gross profit margin percentage, and markup percentage from your total revenue and Cost of Goods Sold (COGS).</p>
 
-      <div class="input-group">
-        <label for="cogs">Cost of Goods Sold - COGS ($)</label>
-        <input type="number" id="cogs" placeholder="e.g. 20000" min="0" step="any">
-      </div>
+      <!-- Ad Placement Zone -->
+      <div id="ad-placement" class="ad-zone" data-ad-unit="horizontal"></div>
 
-      <button type="button" onclick="calculateMargin()">Calculate Gross Margin</button>
-
-      <div id="results" class="results">
-        <div class="res-item">
-          <span>Gross Profit:</span>
-          <span id="grossProfit" class="res-val">$0.00</span>
+      <div class="calculator-card">
+        <div class="form-group">
+          <label for="revenue">Total Revenue / Selling Price ($):</label>
+          <input type="number" id="revenue" min="0" step="any" placeholder="e.g. 1000" class="input-field">
         </div>
-        <div class="res-item">
-          <span>Gross Margin:</span>
-          <span id="grossMargin" class="res-val">0.00%</span>
+
+        <div class="form-group">
+          <label for="cogs">Cost of Goods Sold (COGS) ($):</label>
+          <input type="number" id="cogs" min="0" step="any" placeholder="e.g. 600" class="input-field">
         </div>
-        <div class="res-item">
-          <span>Markup Percentage:</span>
-          <span id="markup" class="res-val">0.00%</span>
+
+        <button id="calc-btn" class="btn-primary" type="button">Calculate Margin</button>
+
+        <div id="result-box" class="result-box" style="display:none;">
+          <h3>Results</h3>
+          <p><strong>Gross Profit:</strong> $<span id="gross-profit">0.00</span></p>
+          <p><strong>Gross Margin:</strong> <span id="gross-margin">0.00</span>%</p>
+          <p><strong>Markup:</strong> <span id="markup-percentage">0.00</span>%</p>
         </div>
       </div>
-    </div>
 
-    <div class="ad-zone">
-      <p>💡 <strong>Recommended:</strong> Need high-performance cloud hosting for your SaaS tools? Check out DigitalOcean with free trial credits.</p>
-    </div>
+      <section class="content-section">
+        <h2>Gross Margin Formula & Explanation</h2>
+        <p>Gross Profit Margin measures the percentage of revenue remaining after subtracting direct production costs:</p>
+        <pre><code>Gross Profit = Revenue - COGS
+Gross Margin (%) = (Gross Profit / Revenue) * 100
+Markup (%) = (Gross Profit / COGS) * 100</code></pre>
+        <p>A higher gross margin indicates greater operational efficiency and more capital available to cover operating expenses.</p>
+      </section>
 
-    <div class="card">
-      <h2>How to Calculate Gross Margin</h2>
-      <p>The gross margin formula is:</p>
-      <code>Gross Margin (%) = ((Total Revenue - COGS) / Total Revenue) * 100</code>
-      <p>For example, if your store generated $50,000 in revenue with $20,000 in production costs, your gross profit is $30,000 and your gross margin is 60%.</p>
-    </div>
+      <section class="related-tools">
+        <h2>Related Business Calculators</h2>
+        <ul>
+          <li><a href="net-profit-margin-calculator.html">Net Profit Margin Calculator</a></li>
+          <li><a href="operating-margin-calculator.html">Operating Margin Calculator</a></li>
+          <li><a href="break-even-calculator.html">Break-Even Calculator</a></li>
+          <li><a href="roi-calculator.html">ROI Calculator</a></li>
+        </ul>
+      </section>
+
+      <section class="newsletter-card">
+        <h3>Subscribe to Business Insights</h3>
+        <p>Get weekly updates with actionable financial formulas, calculator releases, and business tools.</p>
+        <form action="https://buttondown.email/api/emails/embed-subscribe/business-tools" method="post" target="popupwindow" class="newsletter-form">
+          <input type="email" name="email" placeholder="Enter your email" required class="input-field">
+          <button type="submit" class="btn-secondary">Subscribe</button>
+        </form>
+      </section>
+    </article>
   </main>
 
-  <footer>
-    <div class="card links-box">
-      <p><strong>Support & Info:</strong></p>
-      <ul>
-        <li><a href="../guides/crypto-tips.html">Support this free project with crypto tips</a></li>
-        <li><a href="../guides/affiliate-disclosure.html">Affiliate Disclosure & Privacy</a></li>
-        <li><a href="break-even-point-calculator.html">Break-Even Point Calculator</a></li>
-      </ul>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 FreeTools Hub. All rights reserved.</p>
+      <p>
+        <a href="../guides/crypto-tips.html">Support / Tip</a> | 
+        <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a>
+      </p>
     </div>
   </footer>
 
   <script>
-    function calculateMargin() {
+    document.getElementById('calc-btn').addEventListener('click', function() {
       const rev = parseFloat(document.getElementById('revenue').value);
       const cogs = parseFloat(document.getElementById('cogs').value);
-      
-      if (isNaN(rev) || isNaN(cogs) || rev <= 0) {
-        alert('Please enter valid positive numbers for revenue and COGS.');
+      const resBox = document.getElementById('result-box');
+
+      if (isNaN(rev) || isNaN(cogs) || rev < 0 || cogs < 0) {
+        alert('Please enter valid, non-negative numbers for revenue and COGS.');
         return;
       }
-      
+      if (rev === 0) {
+        alert('Revenue must be greater than zero to calculate margins.');
+        return;
+      }
+
       const profit = rev - cogs;
       const margin = (profit / rev) * 100;
       const markup = cogs > 0 ? (profit / cogs) * 100 : 0;
-      
-      document.getElementById('grossProfit').textContent = '$' + profit.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-      document.getElementById('grossMargin').textContent = margin.toFixed(2) + '%';
-      document.getElementById('markup').textContent = markup.toFixed(2) + '%';
-      document.getElementById('results').style.display = 'block';
-    }
+
+      document.getElementById('gross-profit').textContent = profit.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('gross-margin').textContent = margin.toFixed(2);
+      document.getElementById('markup-percentage').textContent = markup.toFixed(2);
+      resBox.style.display = 'block';
+    });
   </script>
+  <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

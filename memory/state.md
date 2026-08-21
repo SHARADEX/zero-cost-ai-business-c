@@ -1,12 +1,4 @@
 ## Summary
-2026-08-20 23:53:50 UTC | model=gemini | budget=full | steps=1 | tokens=39963
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/operating-margin-calculator.html (5100 chars) | Stopped: LLM failed at step 2.
-
-Step details:
-Step 1: action=write_file | tokens=20077 | result=Wrote file: docs/calculators/operating-margin-calculator.html (5100 chars)
-
-## Summary
 2026-08-21 03:31:10 UTC | model=openrouter | budget=full | steps=4 | tokens=63620
 First action: validate_html
 Summary: Step 1: validate_html (OK) — ✓ docs/calculators/operating-margin-calculator.html passed validation (no issues | Step 2: read_file (OK) — Contents of memory/blocked.md:
@@ -40,4 +32,13 @@ Step 1: action=write_file | tokens=19377 | result=Wrote file: docs/calculators/n
 The agent adds new pages here via `seo_submit`. The `seo_submit` tool then tries
 to submit them to Google Indexing API 
   Step 4: action=seo_submit | tokens=18785 | result=SEO submit complete. Google: 0/1...
+
+## Summary
+2026-08-21 10:03:28 UTC | model=gemini | budget=full | steps=2 | tokens=39073
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/gross-margin-calculator.html (6338 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/gross-margin-calculator.html passed validation (no issues) | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=19623 | result=Wrote file: docs/calculators/gross-margin-calculator.html (6338 chars)
+  Step 2: action=validate_html | tokens=19450 | result=✓ docs/calculators/gross-margin-calculator.html passed validation (no issues)
 
