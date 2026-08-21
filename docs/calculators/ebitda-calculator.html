@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBITDA Calculator — Free Business Valuation Tool</title>
+    <meta name="description" content="Calculate Earnings Before Interest, Taxes, Depreciation, and Amortization (EBITDA) quickly and accurately for your business valuation.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/ebitda-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://zero-cost-ai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">Zero-Cost Business Suite</a>
+            <div class="nav-links">
+                <a href="../tools/">Tools</a>
+                <a href="../converters/">Converters</a>
+                <a href="../calculators/">Calculators</a>
+                <a href="../blog/">Blog</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>EBITDA Calculator</h1>
+        <p class="lead">Determine your company's core profitability by calculating Earnings Before Interest, Taxes, Depreciation, and Amortization.</p>
+
+        <div class="tool-container">
+            <div class="input-group">
+                <label for="netIncome">Net Income ($)</label>
+                <input type="number" id="netIncome" value="100000" placeholder="100000">
+            </div>
+            <div class="input-group">
+                <label for="interest">Interest Expense ($)</label>
+                <input type="number" id="interest" value="10000" placeholder="10000">
+            </div>
+            <div class="input-group">
+                <label for="taxes">Tax Expense ($)</label>
+                <input type="number" id="taxes" value="20000" placeholder="20000">
+            </div>
+            <div class="input-group">
+                <label for="depreciation">Depreciation Expense ($)</label>
+                <input type="number" id="depreciation" value="15000" placeholder="15000">
+            </div>
+            <div class="input-group">
+                <label for="amortization">Amortization Expense ($)</label>
+                <input type="number" id="amortization" value="5000" placeholder="5000">
+            </div>
+            <button class="btn" onclick="calculateEbitda()">Calculate EBITDA</button>
+
+            <div class="result-box" id="result">
+                <h3>EBITDA: <span id="ebitdaOutput">$150,000</span></h3>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>What is EBITDA?</h2>
+            <p>EBITDA stands for Earnings Before Interest, Taxes, Depreciation, and Amortization. It is a widely used metric to evaluate a company's operating profitability by removing the impact of financing and accounting decisions.</p>
+            <h3>Why Use EBITDA?</h3>
+            <p>Investors and analysts use EBITDA to compare profitability between companies in the same industry, as it strips out non-operating variables.</p>
+        </section>
+
+        <!-- Ad Zone -->
+        <div class="ad-zone">
+            <p class="ad-label">Sponsored</p>
+            <div id="carbon-ads-container"></div>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="newsletter-box">
+            <h3>Get Free Business Calculators & Guides</h3>
+            <form action="https://buttondown.email/api/emails/embed-subscribe/zero-cost-ai" method="post" target="popupwindow">
+                <input type="email" name="email" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Zero-Cost Business Suite. All rights reserved. <a href="../guides/crypto-tips.html">Support Us</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateEbitda() {
+            const netIncome = parseFloat(document.getElementById('netIncome').value) || 0;
+            const interest = parseFloat(document.getElementById('interest').value) || 0;
+            const taxes = parseFloat(document.getElementById('taxes').value) || 0;
+            const depreciation = parseFloat(document.getElementById('depreciation').value) || 0;
+            const amortization = parseFloat(document.getElementById('amortization').value) || 0;
+
+            const ebitda = netIncome + interest + taxes + depreciation + amortization;
+            document.getElementById('ebitdaOutput').textContent = '$' + ebitda.toLocaleString();
+        }
+    </script>
+    <script src="../assets/main.js"></script>
+</body>
+</html>

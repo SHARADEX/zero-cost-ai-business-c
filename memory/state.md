@@ -1,20 +1,4 @@
 ## Summary
-2026-08-21 05:49:29 UTC | model=openrouter | budget=full | steps=5 | tokens=92992
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/net-profit-margin-calculator.html (6313 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/net-profit-margin-calculator.html passed validation (no issue | Step 3: read_file (OK) — Contents of memory/seo_queue.md:
-# SEO Queue — URLs Pending Indexing Submission
-
-Step details:
-Step 1: action=write_file | tokens=19377 | result=Wrote file: docs/calculators/net-profit-margin-calculator.html (6313 chars)
-  Step 2: action=validate_html | tokens=19242 | result=✓ docs/calculators/net-profit-margin-calculator.html passed validation (no issues)
-  Step 3: action=read_file | tokens=18048 | result=Contents of memory/seo_queue.md:
-# SEO Queue — URLs Pending Indexing Submission
-
-The agent adds new pages here via `seo_submit`. The `seo_submit` tool then tries
-to submit them to Google Indexing API 
-  Step 4: action=seo_submit | tokens=18785 | result=SEO submit complete. Google: 0/1...
-
-## Summary
 2026-08-21 10:03:28 UTC | model=gemini | budget=full | steps=2 | tokens=39073
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/gross-margin-calculator.html (6338 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/gross-margin-calculator.html passed validation (no issues) | Stopped: LLM failed at step 3.
@@ -30,4 +14,11 @@ Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at s
 
 Step details:
 
+## Summary
+2026-08-21 14:05:49 UTC | model=gemini | budget=full | steps=1 | tokens=38180
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/ebitda-calculator.html (4866 chars) | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=18933 | result=Wrote file: docs/calculators/ebitda-calculator.html (4866 chars)
 
