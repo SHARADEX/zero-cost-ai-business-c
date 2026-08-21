@@ -2408,3 +2408,16 @@ to submit them to Google Indexing API
   - Step 2: LLM retry failed.
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-21 15:59:54 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 36509
+
+**Steps:**
+  Step 1: action=validate_html | tokens=18294 | result=✓ docs/calculators/ebitda-calculator.html passed validation (no issues)
+
+**Run Summary:**
+  - Step 1: validate_html (OK) — ✓ docs/calculators/ebitda-calculator.html passed validation (no issues)
+  - Stopped: LLM failed at step 2.
+---
