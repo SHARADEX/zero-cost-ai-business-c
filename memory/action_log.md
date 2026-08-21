@@ -2498,3 +2498,15 @@ to submit them to Google Indexing API
   - Step 1: validate_html (OK) — ✓ docs/calculators/break-even-calculator.html passed validation (no issues)
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-21 23:51:45 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---
