@@ -1,23 +1,4 @@
 ## Summary
-2026-08-21 03:31:10 UTC | model=openrouter | budget=full | steps=4 | tokens=63620
-First action: validate_html
-Summary: Step 1: validate_html (OK) — ✓ docs/calculators/operating-margin-calculator.html passed validation (no issues | Step 2: read_file (OK) — Contents of memory/blocked.md:
-# Blocked Actions Log — v4.1 (Autonomous Edition) | Step 3: read_file (OK) — Contents of memory/seo_queue.md:
-# SEO Queue — URLs Pending Indexing Submission
-
-Step details:
-Step 1: action=validate_html | tokens=17399 | result=✓ docs/calculators/operating-margin-calculator.html passed validation (no issues)
-  Step 2: action=read_file | tokens=14881 | result=Contents of memory/blocked.md:
-# Blocked Actions Log — v4.1 (Autonomous Edition)
-
-FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than
-  Step 3: action=read_file | tokens=15345 | result=Contents of memory/seo_queue.md:
-# SEO Queue — URLs Pending Indexing Submission
-
-The agent adds new pages here via `seo_submit`. The `seo_submit` tool then tries
-...
-
-## Summary
 2026-08-21 05:49:29 UTC | model=openrouter | budget=full | steps=5 | tokens=92992
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/net-profit-margin-calculator.html (6313 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/net-profit-margin-calculator.html passed validation (no issue | Step 3: read_file (OK) — Contents of memory/seo_queue.md:
@@ -41,4 +22,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/gross-margin-c
 Step details:
 Step 1: action=write_file | tokens=19623 | result=Wrote file: docs/calculators/gross-margin-calculator.html (6338 chars)
   Step 2: action=validate_html | tokens=19450 | result=✓ docs/calculators/gross-margin-calculator.html passed validation (no issues)
+
+## Summary
+2026-08-21 11:47:10 UTC | model=gemini | budget=full | steps=0 | tokens=38456
+First action: none
+Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
+
+Step details:
+
 

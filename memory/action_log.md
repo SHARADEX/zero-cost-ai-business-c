@@ -2381,3 +2381,16 @@ to submit them to Google Indexing API
   - Step 2: validate_html (OK) — ✓ docs/calculators/gross-margin-calculator.html passed validation (no issues)
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-21 11:47:10 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 38456
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Stopped: LLM failed at step 2.
+---
