@@ -3,127 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Break-Even Point Calculator - Free Business Financial Tool</title>
-  <meta name="description" content="Calculate your business break-even point in units and revenue easily with our free online calculator. Optimize pricing, costs, and profit margins.">
+  <title>Break-Even Calculator - Free Online Business Tool</title>
+  <meta name="description" content="Calculate your business break-even point in units and revenue easily with our free online break-even calculator. Fast, precise, and simple.">
   <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/break-even-calculator.html">
-  <meta property="og:title" content="Break-Even Point Calculator - Free Business Financial Tool">
-  <meta property="og:description" content="Calculate your business break-even point in units and revenue easily with our free online calculator.">
+  <meta property="og:title" content="Break-Even Calculator - Free Business Financial Tool">
+  <meta property="og:description" content="Find your exact break-even point in units and sales revenue instantly.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/break-even-calculator.html">
   <link rel="stylesheet" href="../css/style.css">
-  <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <style>
-    .calc-container { max-width: 700px; margin: 2rem auto; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; }
-    .form-group { margin-bottom: 1.2rem; }
-    .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; }
-    .form-group input { width: 100%; padding: 0.6rem; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 1rem; box-sizing: border-box; }
-    .results-box { margin-top: 1.5rem; padding: 1.2rem; background: #f8fafc; border-radius: 6px; border: 1px solid #e2e8f0; }
-    .result-item { display: flex; justify-content: space-between; margin-bottom: 0.6rem; font-size: 1.1rem; }
-    .result-value { font-weight: bold; color: #0f172a; }
-    .ad-zone { margin: 2rem 0; padding: 1rem; background: #f1f5f9; text-align: center; border-radius: 6px; }
-    .support-box { margin-top: 2rem; padding: 1.2rem; background: #fefce8; border: 1px solid #fef08a; border-radius: 6px; }
-    .affiliate-box { margin: 2rem 0; padding: 1rem; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; }
-  </style>
+  <script data-goatcounter="https://zero-cost-business.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Break-Even Calculator",
+    "description": "Free online calculator to find business break-even units and revenue.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
 </head>
 <body>
   <header>
     <nav>
-      <a href="../index.html">Home</a> | 
-      <a href="index.html">Calculators</a> | 
-      <a href="../converters/index.html">Converters</a> | 
-      <a href="../blog/index.html">Blog</a>
+      <a href="../index.html">Home</a> |
+      <a href="../calculators/">Calculators</a> |
+      <a href="../converters/">Converters</a> |
+      <a href="../blog/">Blog</a> |
+      <a href="../guides/crypto-tips.html">Support</a>
     </nav>
   </header>
-
-  <main class="calc-container">
+  <main class="container">
     <h1>Break-Even Point Calculator</h1>
-    <p>Determine exactly how many units you need to sell and how much revenue you must generate to cover all fixed and variable costs.</p>
-
-    <div class="ad-zone" id="ad-slot-header">
-      <p><small>Sponsored / House Ad: Build & host your business tools with reliable cloud infrastructure.</small></p>
+    <p>Determine the exact sales volume needed to cover your total fixed and variable costs.</p>
+    <div class="ad-slot"><!-- Ad Zone --></div>
+    <div class="calculator-box">
+      <label for="fixed-costs">Total Fixed Costs ($):</label>
+      <input type="number" id="fixed-costs" placeholder="e.g. 5000" min="0">
+      <label for="unit-price">Sales Price Per Unit ($):</label>
+      <input type="number" id="unit-price" placeholder="e.g. 50" min="0">
+      <label for="unit-cost">Variable Cost Per Unit ($):</label>
+      <input type="number" id="unit-cost" placeholder="e.g. 20" min="0">
+      <button type="button" id="calc-btn" class="btn">Calculate Break-Even</button>
+      <div id="result" class="result-box"></div>
     </div>
-
-    <div class="form-group">
-      <label for="fixedCosts">Total Fixed Costs ($):</label>
-      <input type="number" id="fixedCosts" placeholder="e.g., 5000" min="0" step="any">
-    </div>
-    <div class="form-group">
-      <label for="pricePerUnit">Price Per Unit ($):</label>
-      <input type="number" id="pricePerUnit" placeholder="e.g., 50" min="0" step="any">
-    </div>
-    <div class="form-group">
-      <label for="variableCostPerUnit">Variable Cost Per Unit ($):</label>
-      <input type="number" id="variableCostPerUnit" placeholder="e.g., 20" min="0" step="any">
-    </div>
-
-    <div class="results-box">
-      <div class="result-item">
-        <span>Contribution Margin ($):</span>
-        <span id="contribMargin" class="result-value">$0.00</span>
-      </div>
-      <div class="result-item">
-        <span>Contribution Margin Ratio:</span>
-        <span id="contribRatio" class="result-value">0.00%</span>
-      </div>
-      <div class="result-item">
-        <span>Break-Even Units:</span>
-        <span id="beUnits" class="result-value">0 units</span>
-      </div>
-      <div class="result-item">
-        <span>Break-Even Revenue ($):</span>
-        <span id="beRevenue" class="result-value">$0.00</span>
-      </div>
-    </div>
-
-    <section class="affiliate-box">
-      <h3>Recommended Business Infrastructure</h3>
-      <p>Managing operational costs effectively? Deploy your backend services and databases effortlessly with <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="noopener nofollow">DigitalOcean ($200 Free Credit)</a> or <a href="https://www.vultr.com/?ref=YOUR_REFERRAL_CODE" rel="noopener nofollow">Vultr ($100 Cloud Credit)</a>.</p>
+    <section class="info-section">
+      <h2>How to Calculate Break-Even Point</h2>
+      <p>The break-even point formula in units is:</p>
+      <code>Break-Even Units = Fixed Costs / (Price per Unit - Variable Cost per Unit)</code>
+      <p>Contribution margin per unit is the sales price minus variable cost per unit.</p>
     </section>
-
-    <section class="support-box">
-      <h3>Support This Free Tool</h3>
-      <p>Enjoying our free financial calculators? Support development via <a href="../guides/crypto-tips.html">Crypto Tips</a> or buy us a coffee on GitHub Sponsors.</p>
-    </section>
-
-    <section style="margin-top: 2rem;">
-      <h3>Stay Updated</h3>
-      <p>Get weekly tips on financial modeling, SaaS growth metrics, and automation.</p>
-      <form action="#" method="post" onsubmit="alert('Subscribed! (Preview mode)'); return false;">
-        <input type="email" placeholder="your@email.com" required style="padding: 0.5rem; width: 65%;">
-        <button type="submit" style="padding: 0.5rem 1rem;">Subscribe</button>
+    <div class="tip-cta">
+      <p>Find this tool useful? Support our project with a <a href="../guides/crypto-tips.html">Crypto Tip</a> or sponsor on GitHub!</p>
+    </div>
+    <section class="newsletter-signup">
+      <h3>Get Free Business Growth & Calculator Updates</h3>
+      <form action="mailto:contact@example.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit" class="btn">Subscribe</button>
       </form>
     </section>
   </main>
-
   <footer>
-    <p>&copy; 2026 Zero-Cost AI Business Tools. All rights reserved. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    <p>&copy; 2026 Free Business Tools. Built autonomously. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
   </footer>
-
   <script>
-    function recalculate() {
-      const fixed = parseFloat(document.getElementById('fixedCosts').value) || 0;
-      const price = parseFloat(document.getElementById('pricePerUnit').value) || 0;
-      const varCost = parseFloat(document.getElementById('variableCostPerUnit').value) || 0;
-
-      const cm = price - varCost;
-      const cmRatio = price > 0 ? (cm / price) : 0;
-      
-      let beUnits = 0;
-      let beRev = 0;
-
-      if (cm > 0) {
-        beUnits = Math.ceil(fixed / cm);
-        beRev = fixed / cmRatio;
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      const fixed = parseFloat(document.getElementById('fixed-costs').value);
+      const price = parseFloat(document.getElementById('unit-price').value);
+      const cost = parseFloat(document.getElementById('unit-cost').value);
+      const resultDiv = document.getElementById('result');
+      if (isNaN(fixed) || isNaN(price) || isNaN(cost)) {
+        resultDiv.innerText = 'Please enter valid positive numbers for all fields.';
+        return;
       }
-
-      document.getElementById('contribMargin').textContent = '$' + (cm > 0 ? cm.toFixed(2) : '0.00');
-      document.getElementById('contribRatio').textContent = (cmRatio * 100).toFixed(2) + '%';
-      document.getElementById('beUnits').textContent = (beUnits > 0 ? beUnits.toLocaleString() : '0') + ' units';
-      document.getElementById('beRevenue').textContent = '$' + (beRev > 0 ? beRev.toFixed(2) : '0.00');
-    }
-
-    document.getElementById('fixedCosts').addEventListener('input', recalculate);
-    document.getElementById('pricePerUnit').addEventListener('input', recalculate);
-    document.getElementById('variableCostPerUnit').addEventListener('input', recalculate);
+      const margin = price - cost;
+      if (margin <= 0) {
+        resultDiv.innerText = 'Price per unit must be greater than variable cost per unit.';
+        return;
+      }
+      const breakEvenUnits = Math.ceil(fixed / margin);
+      const breakEvenRevenue = (breakEvenUnits * price).toFixed(2);
+      resultDiv.innerHTML = '<strong>Break-Even Units:</strong> ' + breakEvenUnits + ' units<br>' +
+                            '<strong>Break-Even Revenue:</strong> $' + breakEvenRevenue + '<br>' +
+                            '<strong>Contribution Margin:</strong> $' + margin.toFixed(2) + ' per unit (' + ((margin / price) * 100).toFixed(1) + '%)';
+    });
   </script>
 </body>
 </html>
