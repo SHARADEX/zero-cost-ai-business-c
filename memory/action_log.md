@@ -2421,3 +2421,17 @@ to submit them to Google Indexing API
   - Step 1: validate_html (OK) — ✓ docs/calculators/ebitda-calculator.html passed validation (no issues)
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-21 17:15:11 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 37837
+
+**Steps:**
+  Step 1: action=write_file | tokens=18775 | result=Wrote file: docs/calculators/markup-calculator.html (4321 chars)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/markup-calculator.html (4321 chars)
+  - Step 2: LLM retry failed.
+  - Stopped: LLM failed at step 3.
+---

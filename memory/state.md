@@ -1,11 +1,4 @@
 ## Summary
-2026-08-21 11:47:10 UTC | model=gemini | budget=full | steps=0 | tokens=38456
-First action: none
-Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
-
-Step details:
-
-## Summary
 2026-08-21 14:05:49 UTC | model=gemini | budget=full | steps=1 | tokens=38180
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/ebitda-calculator.html (4866 chars) | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
@@ -20,4 +13,12 @@ Summary: Step 1: validate_html (OK) — ✓ docs/calculators/ebitda-calculator.h
 
 Step details:
 Step 1: action=validate_html | tokens=18294 | result=✓ docs/calculators/ebitda-calculator.html passed validation (no issues)
+
+## Summary
+2026-08-21 17:15:11 UTC | model=gemini | budget=full | steps=1 | tokens=37837
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/markup-calculator.html (4321 chars) | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=18775 | result=Wrote file: docs/calculators/markup-calculator.html (4321 chars)
 

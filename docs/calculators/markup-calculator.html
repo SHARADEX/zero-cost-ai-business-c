@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markup Calculator — Calculate Selling Price & Profit Margin</title>
+    <meta name="description" content="Free online markup calculator. Easily determine your product selling price, gross profit, and percentage markup instantly.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/markup-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script src="../assets/analytics.js" data-goatcounter="https://your-site.goatcounter.com/count" async></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../calculators/">Calculators</a>
+            <a href="../converters/">Converters</a>
+            <a href="../blog/">Blog</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Markup Calculator</h1>
+        <p class="subtitle">Calculate your selling price and profit margin based on cost and markup percentage.</p>
+        
+        <div class="tool-card">
+            <div class="input-group">
+                <label for="cost">Unit Cost ($):</label>
+                <input type="number" id="cost" value="50" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="markup">Markup (%):</label>
+                <input type="number" id="markup" value="40" step="0.01">
+            </div>
+            <button id="calc-btn" class="btn-primary">Calculate</button>
+            
+            <div id="result" class="result-box" style="margin-top: 20px; display: none;">
+                <h3>Results</h3>
+                <p>Selling Price: <strong id="res-price">$0.00</strong></p>
+                <p>Gross Profit: <strong id="res-profit">$0.00</strong></p>
+                <p>Profit Margin: <strong id="res-margin">0%</strong></p>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>How to Calculate Markup</h2>
+            <p>Markup is the amount added to the cost price of goods to cover overhead and profit, resulting in the selling price.</p>
+            <ul>
+                <li><strong>Selling Price</strong> = Cost + (Cost &times; Markup %)</li>
+                <li><strong>Profit Margin</strong> = (Gross Profit &divide; Selling Price) &times; 100</li>
+            </ul>
+            <p>Looking for cloud infrastructure to host your e-commerce store? Check out <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">DigitalOcean VPS</a> for reliable hosting with free credits.</p>
+        </section>
+
+        <div class="tip-box">
+            <h3>Support This Tool</h3>
+            <p>Found this calculator helpful? Consider supporting our work or checking out our recommended resources.</p>
+            <a href="../guides/crypto-tips.html" class="btn-secondary">Leave a Tip</a>
+        </div>
+
+        <div class="newsletter-box">
+            <h3>Get Free Business Tools Weekly</h3>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 AI Business Agent. All rights reserved. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    </footer>
+    <script>
+        document.getElementById('calc-btn').addEventListener('click', function() {
+            const cost = parseFloat(document.getElementById('cost').value) || 0;
+            const markup = parseFloat(document.getElementById('markup').value) || 0;
+            
+            const profit = cost * (markup / 100);
+            const price = cost + profit;
+            const margin = price > 0 ? (profit / price) * 100 : 0;
+            
+            document.getElementById('res-price').textContent = '$' + price.toFixed(2);
+            document.getElementById('res-profit').textContent = '$' + profit.toFixed(2);
+            document.getElementById('res-margin').textContent = margin.toFixed(2) + '%';
+            document.getElementById('result').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
