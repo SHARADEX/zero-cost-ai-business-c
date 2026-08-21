@@ -2473,3 +2473,15 @@ to submit them to Google Indexing API
   - Step 1: write_file (OK) — Wrote file: docs/calculators/break-even-calculator.html (4750 chars)
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-21 21:52:55 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---
