@@ -2631,3 +2631,16 @@ to submit them to Google Indexing API
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-22 11:02:02 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 33830
+
+**Steps:**
+  Step 1: action=validate_html | tokens=17047 | result=✓ docs/calculators/conversion-rate-calculator.html passed validation (no issues)
+
+**Run Summary:**
+  - Step 1: validate_html (OK) — ✓ docs/calculators/conversion-rate-calculator.html passed validation (no issues)
+  - Stopped: LLM failed at step 2.
+---
