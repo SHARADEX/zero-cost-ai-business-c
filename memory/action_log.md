@@ -2606,3 +2606,16 @@ to submit them to Google Indexing API
   - Step 1: validate_html (OK) — ✓ docs/calculators/break-even-calculator.html passed validation (no issues)
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-22 09:02:07 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 37311
+
+**Steps:**
+  Step 1: action=write_file | tokens=18576 | result=Wrote file: docs/calculators/conversion-rate-calculator.html (3935 chars)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/conversion-rate-calculator.html (3935 chars)
+  - Stopped: LLM failed at step 2.
+---
