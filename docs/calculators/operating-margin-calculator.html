@@ -3,99 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Operating Margin Calculator | Free Online Financial Tool</title>
-  <meta name="description" content="Calculate your operating profit margin instantly with our free online calculator. Learn the formula and analyze your business profitability.">
-  <link rel="canonical" href="https://sharadex.github.io/zero-cost-ai-business-c/calculators/operating-margin-calculator.html">
-  <meta property="og:title" content="Operating Margin Calculator | Free Online Financial Tool">
-  <meta property="og:description" content="Calculate your operating profit margin instantly with our free online calculator. Learn the formula and analyze your business profitability.">
+  <title>Operating Margin Calculator - Calculate Operating Profit</title>
+  <meta name="description" content="Free online Operating Margin Calculator. Calculate your operating margin percentage, operating income, and evaluate core business operational efficiency.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/operating-margin-calculator.html">
+  <meta property="og:title" content="Operating Margin Calculator - Calculate Operating Profit">
+  <meta property="og:description" content="Calculate operating income and operating margin percentage easily with this free online financial tool.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="../assets/style.css">
-  <script data-goatcounter="https://zero-cost-biz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/operating-margin-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Operating Margin Calculator",
-    "description": "Calculate your business operating margin quickly.",
+    "description": "Calculate operating margin percentage and operating profit from revenue and operating expenses.",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "All"
   }
   </script>
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="../calculators/">Calculators</a>
-      <a href="../converters/">Converters</a>
-      <a href="../blog/">Blog</a>
-    </nav>
+    <div class="container">
+      <nav>
+        <a href="../index.html" class="logo">DevTools & Business Calculators</a>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../converters/index.html">Converters</a></li>
+          <li><a href="index.html">Calculators</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
   <main class="container">
-    <h1>Operating Margin Calculator</h1>
-    <p>Operating margin measures how much profit a company makes on a dollar of sales after paying for variable costs of production, such as wages and raw materials, but before paying interest or tax.</p>
+    <div class="ad-zone" id="ad-placement-top"></div>
 
-    <div class="ad-zone" id="ad-slot-1"></div>
+    <article>
+      <h1>Operating Margin Calculator</h1>
+      <p>Operating margin measures how much profit a company makes on a dollar of sales after paying for variable costs of production, such as wages and raw materials, but before paying interest or tax.</p>
 
-    <div class="calculator-card">
-      <form id="margin-form">
+      <section class="tool-container">
         <div class="form-group">
           <label for="revenue">Total Revenue ($):</label>
-          <input type="number" id="revenue" step="any" required placeholder="e.g. 100000">
+          <input type="number" id="revenue" min="0" step="any" placeholder="e.g. 500000">
         </div>
         <div class="form-group">
-          <label for="operating-income">Operating Income / Operating Profit ($):</label>
-          <input type="number" id="operating-income" step="any" required placeholder="e.g. 25000">
+          <label for="cogs">Cost of Goods Sold (COGS) ($):</label>
+          <input type="number" id="cogs" min="0" step="any" placeholder="e.g. 200000">
         </div>
-        <button type="button" id="calc-btn" class="btn">Calculate Operating Margin</button>
+        <div class="form-group">
+          <label for="opex">Operating Expenses (OPEX) ($):</label>
+          <input type="number" id="opex" min="0" step="any" placeholder="e.g. 150000">
+        </div>
+        <button type="button" id="calculate-btn" class="btn-primary">Calculate Operating Margin</button>
+
+        <div id="result" class="result-box" style="display:none;">
+          <h3>Results:</h3>
+          <p><strong>Operating Income (EBIT):</strong> $<span id="res-income">0.00</span></p>
+          <p><strong>Operating Margin:</strong> <span id="res-margin">0.00</span>%</p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Operating Margin Formula</h2>
+        <p>Operating Income is calculated by subtracting Cost of Goods Sold (COGS) and Operating Expenses (OPEX) from Total Revenue:</p>
+        <code>Operating Income = Revenue - COGS - Operating Expenses</code>
+        <p>Operating Margin is expressed as a percentage of revenue:</p>
+        <code>Operating Margin (%) = (Operating Income / Revenue) * 100</code>
+      </section>
+
+      <section class="related-links">
+        <h3>Related Business Calculators</h3>
+        <ul>
+          <li><a href="ebitda-calculator.html">EBITDA Calculator</a></li>
+          <li><a href="net-profit-margin-calculator.html">Net Profit Margin Calculator</a></li>
+          <li><a href="break-even-calculator.html">Break-Even Calculator</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <section class="newsletter-signup">
+      <h3>Subscribe to Free Business Tools Updates</h3>
+      <form action="#" method="post" id="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn-secondary">Subscribe</button>
       </form>
-      <div id="result" class="result-box" style="display:none; margin-top:20px;">
-        <h3>Operating Margin: <span id="margin-val">0%</span></h3>
-        <p id="margin-desc"></p>
-      </div>
-    </div>
-
-    <section class="content-section">
-      <h2>Operating Margin Formula</h2>
-      <p>The standard formula for calculating operating profit margin is:</p>
-      <pre><code>Operating Margin = (Operating Income / Total Revenue) * 100</code></pre>
-      <p>A higher operating margin indicates that the company is more efficient at controlling operational costs relative to sales.</p>
     </section>
 
-    <section class="affiliate-card">
-      <h3>Recommended Cloud Infrastructure</h3>
-      <p>Deploy your financial models and web tools with high reliability. Get $200 in free cloud credits on <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="noopener noreferrer">DigitalOcean</a>.</p>
-    </section>
-
-    <section class="newsletter-card">
-      <h3>Subscribe to Business Insights</h3>
-      <p>Get free financial calculators, SaaS templates, and business automation tips directly in your inbox.</p>
-      <form action="mailto:contact@example.com" method="post" enctype="text/plain">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit" class="btn">Subscribe</button>
-      </form>
-    </section>
-
-    <section class="support-card">
-      <p>Found this calculator helpful? Consider supporting our open-source tools via <a href="../guides/crypto-tips.html">Crypto Tips</a> or <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>.</p>
+    <section class="support-cta">
+      <p>Found this useful? Support our free tools via <a href="../guides/crypto-tips.html">Crypto Tips</a> or <a href="https://github.com/sponsors/SHARADEX" target="_blank" rel="noopener">GitHub Sponsors</a>.</p>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2026 Free Business Tools. All rights reserved. | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    <div class="container">
+      <p>&copy; 2026 DevTools & Business Calculators. Free tools for entrepreneurs & developers.</p>
+      <p><a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../guides/crypto-tips.html">Tip Jar</a></p>
+    </div>
   </footer>
+
   <script>
-    document.getElementById('calc-btn').addEventListener('click', function() {
-      const rev = parseFloat(document.getElementById('revenue').value);
-      const inc = parseFloat(document.getElementById('operating-income').value);
-      const resBox = document.getElementById('result');
-      if (isNaN(rev) || isNaN(inc) || rev === 0) {
-        alert('Please enter valid, non-zero numbers.');
+    document.getElementById('calculate-btn').addEventListener('click', function() {
+      const revenue = parseFloat(document.getElementById('revenue').value) || 0;
+      const cogs = parseFloat(document.getElementById('cogs').value) || 0;
+      const opex = parseFloat(document.getElementById('opex').value) || 0;
+      if (revenue <= 0) {
+        alert('Please enter a revenue value greater than 0.');
         return;
       }
-      const margin = (inc / rev) * 100;
-      document.getElementById('margin-val').innerText = margin.toFixed(2) + '%';
-      document.getElementById('margin-desc').innerText = `Your business retains $${margin.toFixed(2)} in operating profit for every $100 of revenue generated.`;
-      resBox.style.display = 'block';
+      const operatingIncome = revenue - cogs - opex;
+      const operatingMargin = (operatingIncome / revenue) * 100;
+      document.getElementById('res-income').textContent = operatingIncome.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('res-margin').textContent = operatingMargin.toFixed(2);
+      document.getElementById('result').style.display = 'block';
     });
   </script>
 </body>
