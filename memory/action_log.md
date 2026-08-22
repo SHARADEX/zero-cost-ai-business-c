@@ -2644,3 +2644,15 @@ to submit them to Google Indexing API
   - Step 1: validate_html (OK) — ✓ docs/calculators/conversion-rate-calculator.html passed validation (no issues)
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-22 11:59:16 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---
