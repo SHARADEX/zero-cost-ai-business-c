@@ -1,12 +1,4 @@
 ## Summary
-2026-08-21 22:54:52 UTC | model=gemini | budget=full | steps=1 | tokens=34635
-First action: validate_html
-Summary: Step 1: validate_html (OK) — ✓ docs/calculators/break-even-calculator.html passed validation (no issues) | Stopped: LLM failed at step 2.
-
-Step details:
-Step 1: action=validate_html | tokens=17326 | result=✓ docs/calculators/break-even-calculator.html passed validation (no issues)
-
-## Summary
 2026-08-21 23:51:45 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -29,4 +21,24 @@ The agent adds new pages here via `seo_submit`. The `seo_submit` tool then tries
 to submit them to Google Indexing API 
   Step 4: action=read_file | tokens=16723 | result=Contents of memory/seo_queue.md:
 # ...
+
+## Summary
+2026-08-22 05:01:41 UTC | model=openrouter | budget=full | steps=3 | tokens=69293
+First action: seo_submit
+Summary: Step 1: seo_submit (OK) — SEO submit complete. Google: 0/3 submitted (errors: 1). Bing: 0/3 submitted (err | Step 2: read_file (OK) — Contents of memory/blocked.md:
+# Blocked Actions Log — v4.1 (Autonomous Edition) | Step 3: read_file (OK) — Contents of memory/seo_queue.md:
+# SEO Queue — URLs Pending Indexing Submission
+
+Step details:
+Step 1: action=seo_submit | tokens=18096 | result=SEO submit complete. Google: 0/3 submitted (errors: 1). Bing: 0/3 submitted (errors: 1). URLs added to queue regardless.
+  Step 2: action=read_file | tokens=15685 | result=Contents of memory/blocked.md:
+# Blocked Actions Log — v4.1 (Autonomous Edition)
+
+[2026-08-21 14:05:49 UTC] LLM call failed at step 3.
+All LLM providers failed. Attempts:
+FAIL groq/meta-llama/llama-pr
+  Step 3: action=read_file | tokens=17514 | result=Contents of memory/seo_queue.md:
+# SEO Queue — URLs Pending Indexing Submission
+
+The agent adds new pages here via `seo_submit...
 
