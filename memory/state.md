@@ -1,12 +1,4 @@
 ## Summary
-2026-08-22 06:03:23 UTC | model=gemini | budget=full | steps=1 | tokens=36536
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/break-even-calculator.html (4145 chars) | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
-
-Step details:
-Step 1: action=write_file | tokens=18058 | result=Wrote file: docs/calculators/break-even-calculator.html (4145 chars)
-
-## Summary
 2026-08-22 07:52:15 UTC | model=gemini | budget=full | steps=1 | tokens=34540
 First action: validate_html
 Summary: Step 1: validate_html (OK) — ✓ docs/calculators/break-even-calculator.html passed validation (no issues) | Stopped: LLM failed at step 2.
@@ -21,4 +13,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/conversion-rat
 
 Step details:
 Step 1: action=write_file | tokens=18576 | result=Wrote file: docs/calculators/conversion-rate-calculator.html (3935 chars)
+
+## Summary
+2026-08-22 10:01:42 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
