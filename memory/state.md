@@ -1,11 +1,4 @@
 ## Summary
-2026-08-23 16:56:29 UTC | model=gemini | budget=full | steps=0 | tokens=33682
-First action: none
-Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
-
-Step details:
-
-## Summary
 2026-08-23 17:43:21 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -20,4 +13,12 @@ Summary: Step 1: seo_submit (OK) — SEO submit complete. Google: 0/21 submitted
 Step details:
 Step 1: action=seo_submit | tokens=17759 | result=SEO submit complete. Google: 0/21 submitted (errors: 1). Bing: 0/21 submitted (errors: 1). URLs added to queue regardless.
   Step 2: action=seo_update_sitemap | tokens=17114 | result=Regenerated sitemap.xml (87 pages) and robots.txt
+
+## Summary
+2026-08-23 19:56:10 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
