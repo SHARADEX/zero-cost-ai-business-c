@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Ratio (Acid Test) Calculator | Financial Liquidity Tool</title>
+    <meta name="description" content="Calculate your company's quick ratio (acid-test ratio) to assess short-term liquidity and ability to cover immediate obligations without selling inventory.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/quick-ratio-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../calculators/">Calculators</a>
+            <a href="../converters/">Converters</a>
+            <a href="../blog/">Blog</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Quick Ratio (Acid Test) Calculator</h1>
+            <p>The quick ratio measures a company's capacity to pay its current liabilities using only its most liquid assets (cash, marketable securities, and accounts receivable). Inventory is excluded.</p>
+            
+            <div class="calculator-box">
+                <label for="current-assets">Total Current Assets ($):</label>
+                <input type="number" id="current-assets" value="100000">
+                
+                <label for="inventory">Inventory ($):</label>
+                <input type="number" id="inventory" value="30000">
+                
+                <label for="current-liabilities">Total Current Liabilities ($):</label>
+                <input type="number" id="current-liabilities" value="50000">
+                
+                <button onclick="calculateQuickRatio()">Calculate Quick Ratio</button>
+                
+                <div id="result" class="result-display">
+                    <h3>Quick Ratio: <span id="ratio-output">1.40</span></h3>
+                    <p id="ratio-status">Status: Healthy liquidity (&gt; 1.0)</p>
+                </div>
+            </div>
+            
+            <script>
+                function calculateQuickRatio() {
+                    const ca = parseFloat(document.getElementById('current-assets').value) || 0;
+                    const inv = parseFloat(document.getElementById('inventory').value) || 0;
+                    const cl = parseFloat(document.getElementById('current-liabilities').value) || 0;
+                    
+                    if (cl === 0) {
+                        document.getElementById('ratio-output').innerText = 'N/A';
+                        document.getElementById('ratio-status').innerText = 'Current liabilities cannot be zero.';
+                        return;
+                    }
+                    
+                    const quickRatio = (ca - inv) / cl;
+                    document.getElementById('ratio-output').innerText = quickRatio.toFixed(2);
+                    
+                    let status = '';
+                    if (quickRatio >= 1.0) {
+                        status = 'Healthy liquidity: Company can easily cover short-term obligations.';
+                    } else {
+                        status = 'Low liquidity: Company may struggle to cover immediate debts without selling inventory.';
+                    }
+                    document.getElementById('ratio-status').innerText = status;
+                }
+            </script>
+            
+            <section class="affiliate-banner">
+                <p>Need robust financial tracking? Check out <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">Notion</a> for business dashboards.</p>
+            </section>
+        </article>
+    </main>
+    <div class="ad-zone" style="text-align:center; margin: 20px 0; padding: 10px; background: #f4f4f4;">
+        <p style="font-size: 0.8rem; color: #666;">Sponsored Advertisement</p>
+        <div id="carbon-ads-placeholder"></div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Free Business Tools. Support this project via <a href="../guides/crypto-tips.html">Crypto Tips</a> or <a href="https://github.com/sponsors/SHARADEX">GitHub Sponsors</a>.</p>
+    </footer>
+</body>
+</html>
