@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Fund Calculator - Calculate Your Safety Net</title>
+  <meta name="description" content="Use our free Emergency Fund Calculator to figure out exactly how many months of living expenses you need to save for financial security and unexpected costs.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/emergency-fund-calculator.html">
+  <meta property="og:title" content="Emergency Fund Calculator - Calculate Your Safety Net">
+  <meta property="og:description" content="Calculate the exact savings target required to build a 3-to-6 month emergency fund based on your essential monthly expenses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/emergency-fund-calculator.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Emergency Fund Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/emergency-fund-calculator.html",
+    "description": "Calculate target emergency fund savings based on essential monthly expenses and desired runway.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a> | 
+      <a href="index.html">Calculators</a> | 
+      <a href="../converters/index.html">Converters</a> | 
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="ad-zone" id="ad-top"></div>
+
+    <h1>Emergency Fund Calculator</h1>
+    <p>Determine the optimal cash reserve you need to handle unexpected life events, job loss, or emergencies.</p>
+
+    <div class="calculator-box">
+      <div class="form-group">
+        <label for="monthly-expenses">Essential Monthly Living Expenses ($):</label>
+        <input type="number" id="monthly-expenses" min="0" step="50" value="3500" placeholder="e.g. 3500">
+      </div>
+      <div class="form-group">
+        <label for="fund-months">Target Coverage (Months):</label>
+        <select id="fund-months">
+          <option value="3">3 Months (Stable income / dual-earner)</option>
+          <option value="6" selected>6 Months (Recommended standard)</option>
+          <option value="9">9 Months (Freelancers / single-earner)</option>
+          <option value="12">12 Months (High risk / volatile industry)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="current-savings">Current Emergency Savings ($):</label>
+        <input type="number" id="current-savings" min="0" step="50" value="5000" placeholder="e.g. 5000">
+      </div>
+      <button type="button" id="calc-btn" class="btn">Calculate Target</button>
+    </div>
+
+    <div class="result-box" id="results" style="display:none; margin-top:20px;">
+      <h2>Calculation Results</h2>
+      <p><strong>Total Target Fund:</strong> $<span id="target-amount">0.00</span></p>
+      <p><strong>Remaining Amount to Save:</strong> $<span id="remaining-amount">0.00</span></p>
+      <p><strong>Progress:</strong> <span id="progress-pct">0</span>%</p>
+    </div>
+
+    <section class="content-section">
+      <h2>How Much Should You Save in an Emergency Fund?</h2>
+      <p>A standard recommendation is to hold between 3 to 6 months of essential living expenses. Essential expenses include housing, utilities, groceries, debt payments, and basic healthcare, excluding discretionary spending.</p>
+      
+      <h3>Related Financial Tools</h3>
+      <ul>
+        <li><a href="debt-to-income-ratio-calculator.html">Debt-to-Income (DTI) Calculator</a></li>
+        <li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li>
+        <li><a href="burn-rate-runway-calculator.html">Burn Rate & Runway Calculator</a></li>
+      </ul>
+    </section>
+
+    <div class="newsletter-box">
+      <h3>Subscribe to Free Financial & Developer Tools</h3>
+      <p>Get notified when new interactive calculators and free guides are published.</p>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/SHARADEX" method="post" target="popupwindow" class="embeddable-buttondown-form">
+        <input type="email" name="email" placeholder="your-email@example.com" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="tip-box">
+      <h3>Support Free Tools</h3>
+      <p>Find this helpful? Consider supporting our open-source zero-cost utilities.</p>
+      <p><a href="../guides/crypto-tips.html" class="btn-secondary">Crypto Tips & Support Info</a> | <a href="https://github.com/sponsors/SHARADEX" rel="nofollow">GitHub Sponsors</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Zero-Cost AI Business. All rights reserved. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      var expenses = parseFloat(document.getElementById('monthly-expenses').value) || 0;
+      var months = parseFloat(document.getElementById('fund-months').value) || 6;
+      var current = parseFloat(document.getElementById('current-savings').value) || 0;
+
+      var target = expenses * months;
+      var remaining = Math.max(0, target - current);
+      var pct = target > 0 ? Math.min(100, Math.round((current / target) * 100)) : 100;
+
+      document.getElementById('target-amount').textContent = target.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('remaining-amount').textContent = remaining.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('progress-pct').textContent = pct;
+
+      document.getElementById('results').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
