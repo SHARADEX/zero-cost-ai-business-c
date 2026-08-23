@@ -1,100 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBITDA Calculator — Free Business Valuation Tool</title>
-    <meta name="description" content="Calculate Earnings Before Interest, Taxes, Depreciation, and Amortization (EBITDA) quickly and accurately for your business valuation.">
-    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/ebitda-calculator.html">
-    <link rel="stylesheet" href="../assets/style.css">
-    <script data-goatcounter="https://zero-cost-ai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EBITDA Calculator | Free Business Valuation & Earnings Tool</title>
+  <meta name="description" content="Calculate Earnings Before Interest, Taxes, Depreciation, and Amortization (EBITDA) and EBITDA Margin instantly with this free interactive tool.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/ebitda-calculator.html">
+  <meta property="og:title" content="EBITDA Calculator | Free Business Valuation & Earnings Tool">
+  <meta property="og:description" content="Calculate Earnings Before Interest, Taxes, Depreciation, and Amortization (EBITDA) and EBITDA Margin instantly.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "EBITDA Calculator",
+    "description": "Calculate EBITDA and EBITDA Margin from Net Income or Operating Profit.",
+    "operatingSystem": "All",
+    "applicationCategory": "BusinessApplication"
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="../index.html" class="logo">Zero-Cost Business Suite</a>
-            <div class="nav-links">
-                <a href="../tools/">Tools</a>
-                <a href="../converters/">Converters</a>
-                <a href="../calculators/">Calculators</a>
-                <a href="../blog/">Blog</a>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container">
-        <h1>EBITDA Calculator</h1>
-        <p class="lead">Determine your company's core profitability by calculating Earnings Before Interest, Taxes, Depreciation, and Amortization.</p>
-
-        <div class="tool-container">
-            <div class="input-group">
-                <label for="netIncome">Net Income ($)</label>
-                <input type="number" id="netIncome" value="100000" placeholder="100000">
-            </div>
-            <div class="input-group">
-                <label for="interest">Interest Expense ($)</label>
-                <input type="number" id="interest" value="10000" placeholder="10000">
-            </div>
-            <div class="input-group">
-                <label for="taxes">Tax Expense ($)</label>
-                <input type="number" id="taxes" value="20000" placeholder="20000">
-            </div>
-            <div class="input-group">
-                <label for="depreciation">Depreciation Expense ($)</label>
-                <input type="number" id="depreciation" value="15000" placeholder="15000">
-            </div>
-            <div class="input-group">
-                <label for="amortization">Amortization Expense ($)</label>
-                <input type="number" id="amortization" value="5000" placeholder="5000">
-            </div>
-            <button class="btn" onclick="calculateEbitda()">Calculate EBITDA</button>
-
-            <div class="result-box" id="result">
-                <h3>EBITDA: <span id="ebitdaOutput">$150,000</span></h3>
-            </div>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="../index.html" class="brand">ToolStack</a>
+        <div class="nav-links">
+          <a href="../calculators/">Calculators</a>
+          <a href="../converters/">Converters</a>
+          <a href="../blog/">Blog</a>
+          <a href="../guides/crypto-tips.html">Support</a>
         </div>
+      </nav>
+    </div>
+  </header>
 
-        <section class="content-section">
-            <h2>What is EBITDA?</h2>
-            <p>EBITDA stands for Earnings Before Interest, Taxes, Depreciation, and Amortization. It is a widely used metric to evaluate a company's operating profitability by removing the impact of financing and accounting decisions.</p>
-            <h3>Why Use EBITDA?</h3>
-            <p>Investors and analysts use EBITDA to compare profitability between companies in the same industry, as it strips out non-operating variables.</p>
-        </section>
+  <main class="container">
+    <div class="ad-zone" id="ad-top"></div>
 
-        <!-- Ad Zone -->
-        <div class="ad-zone">
-            <p class="ad-label">Sponsored</p>
-            <div id="carbon-ads-container"></div>
+    <h1>EBITDA Calculator</h1>
+    <p class="lead">Calculate your company's Earnings Before Interest, Taxes, Depreciation, and Amortization (EBITDA) and EBITDA Margin to evaluate core operational profitability.</p>
+
+    <div class="tool-card">
+      <div class="form-group">
+        <label for="calc-method">Calculation Method</label>
+        <select id="calc-method" class="form-control" onchange="toggleMethod()">
+          <option value="net-income">From Net Income (Bottom-Up)</option>
+          <option value="operating-income">From Operating Income / EBIT (Top-Down)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="revenue">Total Revenue ($)</label>
+        <input type="number" id="revenue" class="form-control" placeholder="e.g. 500000" value="500000">
+      </div>
+
+      <div id="net-income-fields">
+        <div class="form-group">
+          <label for="net-income">Net Income ($)</label>
+          <input type="number" id="net-income" class="form-control" placeholder="e.g. 80000" value="80000">
         </div>
-
-        <!-- Newsletter Signup -->
-        <div class="newsletter-box">
-            <h3>Get Free Business Calculators & Guides</h3>
-            <form action="https://buttondown.email/api/emails/embed-subscribe/zero-cost-ai" method="post" target="popupwindow">
-                <input type="email" name="email" placeholder="Your email address">
-                <button type="submit">Subscribe</button>
-            </form>
+        <div class="form-group">
+          <label for="interest">Interest Expense ($)</label>
+          <input type="number" id="interest" class="form-control" placeholder="e.g. 10000" value="10000">
         </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Zero-Cost Business Suite. All rights reserved. <a href="../guides/crypto-tips.html">Support Us</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+        <div class="form-group">
+          <label for="taxes">Taxes ($)</label>
+          <input type="number" id="taxes" class="form-control" placeholder="e.g. 20000" value="20000">
         </div>
-    </footer>
+      </div>
 
-    <script>
-        function calculateEbitda() {
-            const netIncome = parseFloat(document.getElementById('netIncome').value) || 0;
-            const interest = parseFloat(document.getElementById('interest').value) || 0;
-            const taxes = parseFloat(document.getElementById('taxes').value) || 0;
-            const depreciation = parseFloat(document.getElementById('depreciation').value) || 0;
-            const amortization = parseFloat(document.getElementById('amortization').value) || 0;
+      <div id="operating-income-fields" style="display:none;">
+        <div class="form-group">
+          <label for="operating-income">Operating Income / EBIT ($)</label>
+          <input type="number" id="operating-income" class="form-control" placeholder="e.g. 110000" value="110000">
+        </div>
+      </div>
 
-            const ebitda = netIncome + interest + taxes + depreciation + amortization;
-            document.getElementById('ebitdaOutput').textContent = '$' + ebitda.toLocaleString();
-        }
-    </script>
-    <script src="../assets/main.js"></script>
+      <div class="form-group">
+        <label for="depreciation">Depreciation & Amortization ($)</label>
+        <input type="number" id="depreciation" class="form-control" placeholder="e.g. 15000" value="15000">
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="calculateEBITDA()">Calculate EBITDA</button>
+
+      <div id="result" class="result-box" style="margin-top:20px;">
+        <h3>Results</h3>
+        <p><strong>EBITDA:</strong> <span id="res-ebitda">$125,000.00</span></p>
+        <p><strong>EBITDA Margin:</strong> <span id="res-margin">25.00%</span></p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>What is EBITDA?</h2>
+      <p>EBITDA stands for <strong>Earnings Before Interest, Taxes, Depreciation, and Amortization</strong>. It is a widely used financial metric to assess a company's operational performance and cash-generation potential without distortion from financing decisions, tax jurisdictions, or non-cash accounting items.</p>
+
+      <h2>EBITDA Formulas</h2>
+      <ul>
+        <li><strong>Bottom-up:</strong> <code>EBITDA = Net Income + Interest + Taxes + Depreciation + Amortization</code></li>
+        <li><strong>Top-down:</strong> <code>EBITDA = Operating Income (EBIT) + Depreciation + Amortization</code></li>
+        <li><strong>EBITDA Margin:</strong> <code>(EBITDA / Total Revenue) × 100</code></li>
+      </ul>
+    </section>
+
+    <section class="recommended-tools">
+      <h3>Recommended Business Infrastructure</h3>
+      <p>Scale your digital business with dependable cloud hosting and productivity tools:</p>
+      <ul>
+        <li><a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="noopener noreferrer">DigitalOcean</a> &mdash; $200 free credit for cloud servers and databases.</li>
+        <li><a href="https://www.vultr.com/?ref=YOUR_REFERRAL_CODE" target="_blank" rel="noopener noreferrer">Vultr</a> &mdash; High-performance cloud compute and NVMe hosting.</li>
+        <li><a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="noopener noreferrer">Notion</a> &mdash; Track company KPIs, roadmaps, and business finances.</li>
+      </ul>
+    </section>
+
+    <section class="newsletter-box">
+      <h3>Get Free Financial & Growth Tools</h3>
+      <p>Join our newsletter for weekly web utilities, business calculators, and tech guides.</p>
+      <form action="mailto:newsletter@example.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Enter your email" required class="form-control">
+        <button type="submit" class="btn btn-secondary">Subscribe Free</button>
+      </form>
+    </section>
+
+    <section class="support-cta">
+      <p>Find this free tool helpful? <a href="../guides/crypto-tips.html">Support our project with a tip</a> or star our repository.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ToolStack. All tools are free and open source. | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    </div>
+  </footer>
+
+  <script>
+  function toggleMethod() {
+    const method = document.getElementById('calc-method').value;
+    const netFields = document.getElementById('net-income-fields');
+    const opFields = document.getElementById('operating-income-fields');
+    if (method === 'net-income') {
+      netFields.style.display = 'block';
+      opFields.style.display = 'none';
+    } else {
+      netFields.style.display = 'none';
+      opFields.style.display = 'block';
+    }
+    calculateEBITDA();
+  }
+
+  function calculateEBITDA() {
+    const revenue = parseFloat(document.getElementById('revenue').value) || 0;
+    const method = document.getElementById('calc-method').value;
+    const da = parseFloat(document.getElementById('depreciation').value) || 0;
+    let ebitda = 0;
+
+    if (method === 'net-income') {
+      const netIncome = parseFloat(document.getElementById('net-income').value) || 0;
+      const interest = parseFloat(document.getElementById('interest').value) || 0;
+      const taxes = parseFloat(document.getElementById('taxes').value) || 0;
+      ebitda = netIncome + interest + taxes + da;
+    } else {
+      const opIncome = parseFloat(document.getElementById('operating-income').value) || 0;
+      ebitda = opIncome + da;
+    }
+
+    const margin = revenue > 0 ? (ebitda / revenue) * 100 : 0;
+
+    document.getElementById('res-ebitda').textContent = '$' + ebitda.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    document.getElementById('res-margin').textContent = margin.toFixed(2) + '%';
+  }
+
+  window.addEventListener('DOMContentLoaded', calculateEBITDA);
+  </script>
 </body>
 </html>
