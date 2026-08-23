@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Turnover Ratio Calculator - Free Business Metric Tool</title>
+  <meta name="description" content="Calculate your inventory turnover ratio easily. Measure how efficiently your business manages stock, reduces holding costs, and boosts cash flow.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/inventory-turnover-ratio-calculator.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../calculators/">Calculators</a>
+      <a href="../converters/">Converters</a>
+      <a href="../guides/crypto-tips.html">Support Us</a>
+    </nav>
+  </header>
+  <main>
+    <article class="container">
+      <h1>Inventory Turnover Ratio Calculator</h1>
+      <p>The inventory turnover ratio measures how many times a business sells and replaces its stock of goods over a period. A higher ratio typically indicates strong sales and efficient inventory management.</p>
+      
+      <div class="calculator-box">
+        <label for="cogs">Cost of Goods Sold (COGS) ($):</label>
+        <input type="number" id="cogs" placeholder="e.g., 500000">
+        
+        <label for="avg-inv">Average Inventory ($):</label>
+        <input type="number" id="avg-inv" placeholder="e.g., 100000">
+        
+        <button onclick="calculateInventoryTurnover()">Calculate Ratio</button>
+        
+        <div id="result" class="result-display">
+          <h3>Result:</h3>
+          <p id="turnover-output">Enter your numbers above.</p>
+        </div>
+      </div>
+      
+      <section class="content-section">
+        <h2>Formula</h2>
+        <p><strong>Inventory Turnover = Cost of Goods Sold (COGS) / Average Inventory</strong></p>
+        <p>Where <em>Average Inventory = (Beginning Inventory + Ending Inventory) / 2</em></p>
+      </section>
+
+      <div class="affiliate-banner">
+        <p>Need better inventory and workspace tools? Try <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">Notion</a> to manage your operations for free.</p>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 Free Business Tools. <a href="../guides/crypto-tips.html">Tip the Creator</a>.</p>
+  </footer>
+  <script>
+    function calculateInventoryTurnover() {
+      const cogs = parseFloat(document.getElementById('cogs').value);
+      const avgInv = parseFloat(document.getElementById('avg-inv').value);
+      const output = document.getElementById('turnover-output');
+      
+      if (isNaN(cogs) || isNaN(avgInv) || avgInv <= 0) {
+        output.innerHTML = "Please enter valid positive numbers.";
+        return;
+      }
+      
+      const ratio = cogs / avgInv;
+      output.innerHTML = `<strong>${ratio.toFixed(2)}</strong> turns per year`;
+    }
+  </script>
+</body>
+</html>
