@@ -3033,3 +3033,18 @@ to submit them to Google Indexing API
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-23 19:01:50 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 2
+**Tokens used:** 34873
+
+**Steps:**
+  Step 1: action=seo_submit | tokens=17759 | result=SEO submit complete. Google: 0/21 submitted (errors: 1). Bing: 0/21 submitted (errors: 1). URLs added to queue regardless.
+  Step 2: action=seo_update_sitemap | tokens=17114 | result=Regenerated sitemap.xml (87 pages) and robots.txt
+
+**Run Summary:**
+  - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/21 submitted (errors: 1). Bing: 0/21 submitted (e
+  - Step 2: seo_update_sitemap (OK) — Regenerated sitemap.xml (87 pages) and robots.txt
+  - Stopped: LLM failed at step 3.
+---
