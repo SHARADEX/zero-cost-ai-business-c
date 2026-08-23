@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gross Profit Margin Calculator — Calculate Markup & Margin Online</title>
+  <meta name="description" content="Free Gross Profit Margin Calculator. Calculate gross profit, gross margin percentage, and markup quickly with clear formulas and step-by-step breakdown.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-profit-margin-calculator.html">
+  <meta property="og:title" content="Gross Profit Margin Calculator — Free Financial Tool">
+  <meta property="og:description" content="Calculate your business gross profit margin and markup instantly with our free online calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-profit-margin-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Gross Profit Margin Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-profit-margin-calculator.html",
+    "description": "Calculate gross profit, margin percentage, and cost markup accurately.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <a href="../index.html" class="logo">FreeDevTools</a>
+      <ul class="nav-links">
+        <li><a href="../calculators/">Calculators</a></li>
+        <li><a href="../converters/">Converters</a></li>
+        <li><a href="../tools/">Tools</a></li>
+        <li><a href="../blog/">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="ad-zone" id="ad-top"><!-- EthicalAds / House Ad Slot --></div>
+
+    <h1>Gross Profit Margin Calculator</h1>
+    <p class="lead">Calculate gross profit dollar amount, profit margin percentage, and markup percentage from revenue and Cost of Goods Sold (COGS).</p>
+
+    <section class="tool-card">
+      <div class="input-group">
+        <label for="revenue">Total Revenue / Selling Price ($):</label>
+        <input type="number" id="revenue" placeholder="e.g. 10000" min="0" step="any">
+      </div>
+      <div class="input-group">
+        <label for="cogs">Cost of Goods Sold (COGS) ($):</label>
+        <input type="number" id="cogs" placeholder="e.g. 4000" min="0" step="any">
+      </div>
+      <button class="btn-primary" id="calc-btn" onclick="calculateMargin()">Calculate Margin</button>
+
+      <div id="results" class="results-box" style="display:none; margin-top:20px;">
+        <h3>Calculation Results</h3>
+        <p><strong>Gross Profit:</strong> <span id="res-profit">$0.00</span></p>
+        <p><strong>Gross Profit Margin:</strong> <span id="res-margin">0.00%</span></p>
+        <p><strong>Markup Percentage:</strong> <span id="res-markup">0.00%</span></p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>How to Calculate Gross Profit Margin</h2>
+      <p>Gross Profit Margin measures the percentage of revenue remaining after subtracting direct production costs (Cost of Goods Sold).</p>
+      <p><strong>Formulas:</strong></p>
+      <ul>
+        <li><code>Gross Profit = Revenue - COGS</code></li>
+        <li><code>Gross Profit Margin (%) = (Gross Profit / Revenue) * 100</code></li>
+        <li><code>Markup (%) = (Gross Profit / COGS) * 100</code></li>
+      </ul>
+    </section>
+
+    <section class="affiliate-card">
+      <h3>Recommended Cloud & Business Tools</h3>
+      <p>Scale your business and infrastructure reliably with vetted platforms:</p>
+      <ul>
+        <li><a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="noopener sponsored">DigitalOcean — Get $200 free cloud hosting credits</a></li>
+        <li><a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="noopener sponsored">Notion — All-in-one team workspace & finance tracker</a></li>
+      </ul>
+    </section>
+
+    <section class="newsletter-box">
+      <h3>Subscribe to Tech & Finance Insights</h3>
+      <p>Get weekly zero-cost development, SaaS metrics, and business automation tips.</p>
+      <form action="mailto:contact@example.com" method="get">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn-secondary">Subscribe Free</button>
+      </form>
+    </section>
+
+    <section class="support-box">
+      <h3>Support This Free Resource</h3>
+      <p>Enjoying our free calculators? Support maintenance via <a href="../guides/crypto-tips.html">Crypto Tips</a> or star our GitHub repository.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 FreeDevTools. Built with zero operating costs. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+  </footer>
+
+  <script>
+  function calculateMargin() {
+    const rev = parseFloat(document.getElementById('revenue').value);
+    const cogs = parseFloat(document.getElementById('cogs').value);
+    if (isNaN(rev) || isNaN(cogs) || rev <= 0 || cogs < 0) {
+      alert('Please enter valid positive numbers for revenue and COGS.');
+      return;
+    }
+    const profit = rev - cogs;
+    const margin = (profit / rev) * 100;
+    const markup = cogs > 0 ? (profit / cogs) * 100 : 0;
+
+    document.getElementById('res-profit').textContent = '$' + profit.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    document.getElementById('res-margin').textContent = margin.toFixed(2) + '%';
+    document.getElementById('res-markup').textContent = markup.toFixed(2) + '%';
+    document.getElementById('results').style.display = 'block';
+  }
+  </script>
+</body>
+</html>
