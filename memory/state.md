@@ -1,11 +1,4 @@
 ## Summary
-2026-08-23 11:43:48 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-23 13:45:08 UTC | model=gemini | budget=full | steps=2 | tokens=36224
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/working-capital-calculator.html (5925 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/working-capital-calculator.html passed validation (no issues) | Stopped: LLM failed at step 3.
@@ -21,4 +14,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/quick-ratio-ca
 
 Step details:
 Step 1: action=write_file | tokens=18066 | result=Wrote file: docs/calculators/quick-ratio-calculator.html (4322 chars)
+
+## Summary
+2026-08-23 15:48:37 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
