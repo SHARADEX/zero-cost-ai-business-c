@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Debt-to-Income (DTI) Ratio Calculator — Free Financial Tool</title>
-  <meta name="description" content="Calculate your debt-to-income ratio quickly and accurately. Essential for mortgage, loan, and financial planning applications.">
-  <link rel="stylesheet" href="../assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt-to-Income (DTI) Ratio Calculator - Free Financial Tool</title>
+    <meta name="description" content="Calculate your debt-to-income (DTI) ratio quickly and accurately. Essential for mortgage approvals, loan applications, and personal finance management.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/debt-to-income-ratio-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="../calculators/">Calculators</a>
-      <a href="../converters/">Converters</a>
-      <a href="../blog/">Blog</a>
-    </nav>
-  </header>
-  <main class="container">
-    <h1>Debt-to-Income (DTI) Ratio Calculator</h1>
-    <p>Find out your front-end and back-end debt-to-income ratios to see how lenders view your financial health.</p>
-    
-    <div class="tool-card">
-      <div class="form-group">
-        <label for="monthlyIncome">Gross Monthly Income ($):</label>
-        <input type="number" id="monthlyIncome" value="5000" min="0">
-      </div>
-      <div class="form-group">
-        <label for="monthlyHousing">Monthly Housing Debt / Rent ($):</label>
-        <input type="number" id="monthlyHousing" value="1500" min="0">
-      </div>
-      <div class="form-group">
-        <label for="otherDebts">Other Monthly Debt Payments (Loans, Credit Cards) ($):</label>
-        <input type="number" id="otherDebts" value="500" min="0">
-      </div>
-      <button id="calculateBtn" class="btn">Calculate DTI Ratio</button>
-      
-      <div id="result" class="result-box" style="margin-top: 20px; display: none;">
-        <h3>Results:</h3>
-        <p>Front-End DTI (Housing): <span id="frontEndResult">0</span>%</p>
-        <p>Back-End DTI (Total): <span id="backEndResult">0</span>%</p>
-        <p id="dtiAdvice" class="advice"></p>
-      </div>
-    </div>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../calculators/">Calculators</a>
+            <a href="../converters/">Converters</a>
+            <a href="../blog/">Blog</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Debt-to-Income (DTI) Ratio Calculator</h1>
+        <p class="subtitle">Determine your front-end and back-end DTI ratios for loan and mortgage qualification.</p>
+        
+        <div class="calculator-box">
+            <div class="form-group">
+                <label for="monthly-income">Gross Monthly Income ($):</label>
+                <input type="number" id="monthly-income" value="5000" min="0">
+            </div>
+            <div class="form-group">
+                <label for="monthly-housing">Monthly Housing Costs (Rent/Mortgage) ($):</label>
+                <input type="number" id="monthly-housing" value="1500" min="0">
+            </div>
+            <div class="form-group">
+                <label for="other-debt">Other Monthly Debt Payments (Loans, Credit Cards) ($):</label>
+                <input type="number" id="other-debt" value="500" min="0">
+            </div>
+            <button id="calculate-btn" class="btn-primary">Calculate DTI</button>
+            
+            <div id="result" class="result-box" style="margin-top: 20px;">
+                <h3>Results</h3>
+                <p>Front-End DTI (Housing): <span id="front-dti">30.0%</span></p>
+                <p>Back-End DTI (Total Debt): <span id="back-dti">40.0%</span></p>
+                <p id="dti-status" style="font-weight: bold; color: green;">Status: Generally acceptable for most conventional loans.</p>
+            </div>
+        </div>
 
-    <section class="content-section">
-      <h2>What is Debt-to-Income Ratio?</h2>
-      <p>Your debt-to-income (DTI) ratio is all your monthly debt payments divided by your gross monthly income. Lenders use this to measure your ability to manage monthly payments and repay debts.</p>
-    </section>
+        <script>
+            document.getElementById('calculate-btn').addEventListener('click', function() {
+                const income = parseFloat(document.getElementById('monthly-income').value) || 0;
+                const housing = parseFloat(document.getElementById('monthly-housing').value) || 0;
+                const other = parseFloat(document.getElementById('other-debt').value) || 0;
+                
+                if (income <= 0) {
+                    alert('Please enter a valid monthly income greater than 0.');
+                    return;
+                }
+                
+                const frontDti = (housing / income) * 100;
+                const backDti = ((housing + other) / income) * 100;
+                
+                document.getElementById('front-dti').textContent = frontDti.toFixed(1) + '%';
+                document.getElementById('back-dti').textContent = backDti.toFixed(1) + '%';
+                
+                const statusEl = document.getElementById('dti-status');
+                if (backDti <= 36) {
+                    statusEl.textContent = 'Status: Excellent! Ideal for top-tier loan rates.';
+                    statusEl.style.color = 'green';
+                } else if (backDti <= 43) {
+                    statusEl.textContent = 'Status: Good. Acceptable for many conventional mortgages.';
+                    statusEl.style.color = 'orange';
+                } else {
+                    statusEl.textContent = 'Status: High. Lenders may view this as high risk.';
+                    statusEl.style.color = 'red';
+                }
+            });
+        </script>
 
-    <div class="affiliate-box">
-      <h3>Recommended Workspace Tool</h3>
-      <p>Manage your personal finances and budgets effortlessly with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank">Notion</a>.</p>
-    </div>
-  </main>
+        <section style="margin-top: 40px;">
+            <h2>Why DTI Matters</h2>
+            <p>Lenders use your Debt-to-Income ratio to measure your ability to manage monthly payments and repay debts. A lower DTI ratio demonstrates a healthy balance between debt and income.</p>
+        </section>
 
-  <footer>
-    <p>&copy; 2026 Free Financial Tools. <a href="../guides/crypto-tips.html">Support Us</a></p>
-  </footer>
+        <div class="ad-zone" style="margin: 40px 0; padding: 20px; background: #f4f4f4; text-align: center;">
+            <p>Sponsored Advertisement</p>
+            <div id="carbon-ads-container"></div>
+        </div>
 
-  <script>
-    document.getElementById('calculateBtn').addEventListener('click', function() {
-      const income = parseFloat(document.getElementById('monthlyIncome').value) || 0;
-      const housing = parseFloat(document.getElementById('monthlyHousing').value) || 0;
-      const other = parseFloat(document.getElementById('otherDebts').value) || 0;
-      
-      if (income <= 0) {
-        alert('Please enter a valid monthly income greater than 0.');
-        return;
-      }
-
-      const frontEnd = (housing / income) * 100;
-      const backEnd = ((housing + other) / income) * 100;
-
-      document.getElementById('frontEndResult').innerText = frontEnd.toFixed(1);
-      document.getElementById('backEndResult').innerText = backEnd.toFixed(1);
-      
-      let advice = '';
-      if (backEnd <= 36) {
-        advice = 'Your DTI ratio is excellent! Most lenders prefer a back-end DTI under 36%.';
-      } else if (backEnd <= 43) {
-        advice = 'Your DTI ratio is acceptable for many loans, though lower is better.';
-      } else {
-        advice = 'Your DTI ratio is high (>43%), which may make qualifying for new credit difficult.';
-      }
-      document.getElementById('dtiAdvice').innerText = advice;
-      document.getElementById('result').style.display = 'block';
-    });
-  </script>
-  <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+        <div class="affiliate-box" style="margin: 40px 0; padding: 20px; border: 1px solid #ddd;">
+            <h3>Recommended Tool</h3>
+            <p>Manage your business and personal finances effectively with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank">Notion</a>, the all-in-one workspace.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Zero Cost Business. Support our work via <a href="../guides/crypto-tips.html">Crypto Tips</a> or <a href="https://github.com/sponsors/SHARADEX">GitHub Sponsors</a>.</p>
+    </footer>
 </body>
 </html>
