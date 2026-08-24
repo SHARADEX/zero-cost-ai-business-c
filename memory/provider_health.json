@@ -5,150 +5,6 @@
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1787567036.3505328
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1787567036.9573755
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "429",
-      "timestamp": 1787567037.5689216
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "429",
-      "timestamp": 1787567037.7138002
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "The read operation timed out",
-      "timestamp": 1787567097.7917094
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "The read operation timed out",
-      "timestamp": 1787567162.878836
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE",
-      "timestamp": 1787567213.953449
-    },
-    {
-      "provider": "gemini",
-      "success": true,
-      "error": "",
-      "timestamp": 1787567229.7675111
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1787567230.061802
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1787567230.4971602
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "429",
-      "timestamp": 1787567230.6825702
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "429",
-      "timestamp": 1787567230.8388667
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "gemini returned empty text in first part",
-      "timestamp": 1787567235.5174906
-    },
-    {
-      "provider": "gemini",
-      "success": true,
-      "error": "",
-      "timestamp": 1787567280.6316257
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1787567280.7347734
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1787567280.8378959
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "429",
-      "timestamp": 1787567281.0246477
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "429",
-      "timestamp": 1787567281.1899896
-    },
-    {
-      "provider": "cerebras",
-      "success": false,
-      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
-      "timestamp": 1787567281.3251653
-    },
-    {
-      "provider": "cerebras",
-      "success": false,
-      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
-      "timestamp": 1787567281.4511569
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1787567281.6750772
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1787567281.9038997
-    },
-    {
-      "provider": "cerebras",
-      "success": false,
-      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
-      "timestamp": 1787567281.9911363
-    },
-    {
-      "provider": "cerebras",
-      "success": false,
-      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
-      "timestamp": 1787567282.066935
-    },
-    {
-      "provider": "groq",
-      "success": false,
-      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
       "timestamp": 1787569075.2224107
     },
     {
@@ -168,6 +24,150 @@
       "success": false,
       "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
       "timestamp": 1787569075.9256294
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1787572139.8473504
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1787572139.9231672
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1787572140.4797637
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1787572140.6123123
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "gemini returned empty text in first part",
+      "timestamp": 1787572193.7015207
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "The read operation timed out",
+      "timestamp": 1787572258.778958
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "The read operation timed out",
+      "timestamp": 1787572323.8654718
+    },
+    {
+      "provider": "gemini",
+      "success": true,
+      "error": "",
+      "timestamp": 1787572332.5777357
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1787572332.9094694
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1787572333.3894503
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1787572333.5355217
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1787572333.6905062
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "gemini returned empty text in first part",
+      "timestamp": 1787572347.8066761
+    },
+    {
+      "provider": "gemini",
+      "success": true,
+      "error": "",
+      "timestamp": 1787572412.6670978
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1787572413.2337716
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1787572413.3146782
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1787572413.494143
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1787572413.6278927
+    },
+    {
+      "provider": "cerebras",
+      "success": false,
+      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
+      "timestamp": 1787572413.7751806
+    },
+    {
+      "provider": "cerebras",
+      "success": false,
+      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
+      "timestamp": 1787572413.8509874
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1787572415.978134
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1787572416.1547313
+    },
+    {
+      "provider": "cerebras",
+      "success": false,
+      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
+      "timestamp": 1787572416.2303624
+    },
+    {
+      "provider": "cerebras",
+      "success": false,
+      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
+      "timestamp": 1787572416.3035173
     }
   ]
 }

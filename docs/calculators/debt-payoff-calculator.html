@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Payoff Calculator - Calculate Your Freedom Date & Interest Saved</title>
+    <meta name="description" content="Free online debt payoff calculator. Compare snowball vs. avalanche methods to pay off debt faster, save on interest, and reach financial freedom.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/debt-payoff-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../calculators/">Calculators</a>
+            <a href="../converters/">Converters</a>
+            <a href="../blog/">Blog</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Debt Payoff Calculator</h1>
+        <p class="subtitle">Plan your debt-free journey with the Debt Snowball or Debt Avalanche strategy.</p>
+        
+        <div class="calculator-box">
+            <div class="input-group">
+                <label for="balance">Total Debt Balance ($):</label>
+                <input type="number" id="balance" value="15000" step="100">
+            </div>
+            <div class="input-group">
+                <label for="interest">Average Interest Rate (% APR):</label>
+                <input type="number" id="interest" value="18.5" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="monthly">Monthly Payment ($):</label>
+                <input type="number" id="monthly" value="450" step="10">
+            </div>
+            <button onclick="calculateDebt()" class="btn-primary">Calculate Payoff</button>
+            
+            <div id="result" class="result-box" style="margin-top: 20px;">
+                <h3>Results</h3>
+                <p>Months to Payoff: <span id="months">--</span></p>
+                <p>Total Interest Paid: $<span id="totalInterest">--</span></p>
+            </div>
+        </div>
+
+        <div class="affiliate-box" style="margin-top: 30px; padding: 15px; background: #f9f9f9; border-left: 4px solid #0070f3;">
+            <h3>Recommended Tool</h3>
+            <p>Manage your budget, subscriptions, and savings goals in one sleek workspace.</p>
+            <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">Try Notion Free &rarr;</a>
+        </div>
+
+        <section class="newsletter-section" style="margin-top: 40px;">
+            <h3>Get Weekly Finance & Tech Tips</h3>
+            <form action="mailto:newsletter@example.com" method="POST" enctype="text/plain">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Zero-Cost Business Agent. <a href="../guides/crypto-tips.html">Support / Tip Box</a></p>
+    </footer>
+    <script>
+        function calculateDebt() {
+            const P = parseFloat(document.getElementById('balance').value);
+            const r = parseFloat(document.getElementById('interest').value) / 100 / 12;
+            const PMT = parseFloat(document.getElementById('monthly').value);
+            
+            if (PMT <= P * r) {
+                document.getElementById('months').innerText = 'Never (Payment too low to cover interest)';
+                document.getElementById('totalInterest').innerText = 'Infinite';
+                return;
+            }
+            
+            const n = -Math.log(1 - (P * r) / PMT) / Math.log(1 + r);
+            const totalPaid = n * PMT;
+            const totalInterest = totalPaid - P;
+            
+            document.getElementById('months').innerText = Math.ceil(n);
+            document.getElementById('totalInterest').innerText = totalInterest.toFixed(2);
+        }
+    </script>
+</body>
+</html>
