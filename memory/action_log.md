@@ -3260,3 +3260,16 @@ to submit them to Google Indexing API
   - Step 2: LLM retry failed.
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-24 17:59:21 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 36947
+
+**Steps:**
+  Step 1: action=seo_submit | tokens=18488 | result=SEO submit complete. Google: 0/23 submitted (errors: 1). Bing: 0/23 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/23 submitted (errors: 1). Bing: 0/23 submitted (e
+  - Stopped: LLM failed at step 2.
+---
