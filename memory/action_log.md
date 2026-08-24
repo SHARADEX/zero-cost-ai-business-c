@@ -3178,3 +3178,17 @@ to submit them to Google Indexing API
 **Purpose:** Track A/B tes
   - Stopped: repeated action detected.
 ---
+## Run 2026-08-24 08:28:23 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 35054
+
+**Steps:**
+  Step 1: action=write_file | tokens=17308 | result=Wrote file: docs/calculators/burn-rate-calculator.html (2806 chars)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/burn-rate-calculator.html (2806 chars)
+  - Step 2: LLM retry failed.
+  - Stopped: LLM failed at step 3.
+---
