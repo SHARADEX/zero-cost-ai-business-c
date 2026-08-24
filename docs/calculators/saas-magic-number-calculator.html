@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Magic Number Calculator | Free Sales Efficiency Tool</title>
+  <meta name="description" content="Calculate your SaaS Magic Number to measure sales efficiency and go-to-market performance. Instant, accurate, and completely free online calculator.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/saas-magic-number-calculator.html">
+  <meta property="og:title" content="SaaS Magic Number Calculator | Free Sales Efficiency Tool">
+  <meta property="og:description" content="Calculate your SaaS Magic Number to measure sales efficiency and go-to-market performance.">
+  <meta property="og:type" content="website">
+  <style>
+    :root { --primary: #2563eb; --primary-hover: #1d4ed8; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+    header, footer { background: var(--card); border-bottom: 1px solid var(--border); padding: 1rem 2rem; text-align: center; }
+    footer { border-top: 1px solid var(--border); border-bottom: none; margin-top: 3rem; }
+    .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    .card { background: var(--card); border-radius: 8px; border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #0f172a; }
+    .subtitle { color: var(--muted); margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    input[type="number"] { width: 100%; box-sizing: border-box; padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; }
+    button { background: var(--primary); color: white; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; width: 100%; }
+    button:hover { background: var(--primary-hover); }
+    .result-box { display: none; margin-top: 1.5rem; padding: 1.25rem; background: #eff6ff; border-radius: 6px; border: 1px solid #bfdbfe; }
+    .result-value { font-size: 1.75rem; font-weight: 700; color: var(--primary); margin: 0.5rem 0; }
+    .ad-slot { background: #f1f5f9; border: 1px dashed var(--border); padding: 1rem; text-align: center; margin: 1.5rem 0; font-size: 0.85rem; color: var(--muted); border-radius: 6px; }
+    .cta-box { background: #fefce8; border: 1px solid #fef08a; padding: 1rem; border-radius: 6px; margin-top: 1.5rem; text-align: center; }
+    .affiliate-box { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 6px; margin: 1.5rem 0; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav a { margin: 0 0.75rem; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../calculators/">Calculators</a>
+      <a href="../converters/">Converters</a>
+      <a href="../guides/crypto-tips.html">Support Us</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>SaaS Magic Number Calculator</h1>
+    <p class="subtitle">Measure your sales efficiency and determine when to scale sales and marketing spend.</p>
+
+    <div class="card">
+      <div class="form-group">
+        <label for="currQuarterRev">Current Quarter Revenue ($)</label>
+        <input type="number" id="currQuarterRev" placeholder="e.g. 150000" min="0" step="any">
+      </div>
+      <div class="form-group">
+        <label for="prevQuarterRev">Previous Quarter Revenue ($)</label>
+        <input type="number" id="prevQuarterRev" placeholder="e.g. 100000" min="0" step="any">
+      </div>
+      <div class="form-group">
+        <label for="prevQuarterSM">Previous Quarter Sales & Marketing Expense ($)</label>
+        <input type="number" id="prevQuarterSM" placeholder="e.g. 80000" min="1" step="any">
+      </div>
+      <button type="button" id="calcBtn">Calculate SaaS Magic Number</button>
+
+      <div id="resultBox" class="result-box">
+        <h3>Results</h3>
+        <div class="result-value" id="magicNumVal">0.00</div>
+        <p id="evaluationText"></p>
+      </div>
+    </div>
+
+    <div class="ad-slot" id="adZone">
+      <!-- Ethical / Cross-promotion Ad Zone -->
+      <p>Need robust cloud infrastructure for your growing SaaS? Try <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="noopener nofollow">DigitalOcean</a> ($200 free credit).</p>
+    </div>
+
+    <div class="card">
+      <h2>How SaaS Magic Number Works</h2>
+      <p>The SaaS Magic Number calculates sales efficiency by comparing annualized net new revenue against previous quarter sales and marketing expenditures:</p>
+      <p><strong>Formula:</strong> <code>(Current Quarter Revenue - Prior Quarter Revenue) × 4 / Prior Quarter S&M Expense</code></p>
+      <ul>
+        <li><strong>&lt; 0.5:</strong> Low efficiency. Re-evaluate customer acquisition strategy before scaling spend.</li>
+        <li><strong>0.5 – 0.75:</strong> Moderate efficiency. Core engine working; refine unit economics.</li>
+        <li><strong>0.75 – 1.0+:</strong> High efficiency. Strong product-market fit; step on the gas and invest more in growth.</li>
+      </ul>
+    </div>
+
+    <div class="affiliate-box">
+      <h3>Recommended Tools for SaaS Founders</h3>
+      <p>Organize team knowledge, roadmaps, and metric tracking with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" rel="noopener nofollow">Notion Workspace</a>.</p>
+    </div>
+
+    <div class="cta-box">
+      <p>Found this free calculator helpful? <a href="../guides/crypto-tips.html">Leave a crypto tip or support our open tools!</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Free Web Tools & Calculators. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../guides/crypto-tips.html">Tip / Support</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('calcBtn').addEventListener('click', function() {
+      var currRev = parseFloat(document.getElementById('currQuarterRev').value);
+      var prevRev = parseFloat(document.getElementById('prevQuarterRev').value);
+      var smSpend = parseFloat(document.getElementById('prevQuarterSM').value);
+      if (isNaN(currRev) || isNaN(prevRev) || isNaN(smSpend) || smSpend <= 0) {
+        alert('Please enter valid positive numbers for all fields.');
+        return;
+      }
+      var magicNumber = ((currRev - prevRev) * 4) / smSpend;
+      var resultBox = document.getElementById('resultBox');
+      var valElem = document.getElementById('magicNumVal');
+      var evalElem = document.getElementById('evaluationText');
+      valElem.textContent = magicNumber.toFixed(2);
+      if (magicNumber < 0.5) {
+        evalElem.textContent = 'Under 0.5: Poor sales efficiency. Focus on retention, pricing, and channel-market fit before increasing marketing budget.';
+      } else if (magicNumber < 0.75) {
+        evalElem.textContent = '0.50 - 0.74: Modest sales efficiency. Unit economics are functional but could be optimized before aggressive scaling.';
+      } else if (magicNumber <= 1.0) {
+        evalElem.textContent = '0.75 - 1.0: Solid sales efficiency. Healthy return on GTM investment; consider scaling customer acquisition channels.';
+      } else {
+        evalElem.textContent = 'Over 1.0: Outstanding efficiency. Your go-to-market motion is highly profitable. Pour fuel on the fire!';
+      }
+      resultBox.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
