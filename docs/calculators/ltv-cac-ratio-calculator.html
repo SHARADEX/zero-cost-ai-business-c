@@ -3,136 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LTV to CAC Ratio Calculator | SaaS Metric Tool</title>
-  <meta name="description" content="Calculate your SaaS LTV:CAC ratio. Determine customer lifetime value vs acquisition cost to optimize your SaaS pricing and marketing spend.">
+  <title>LTV:CAC Ratio Calculator | SaaS Unit Economics Tool</title>
+  <meta name="description" content="Calculate your SaaS LTV to CAC ratio instantly. Understand your customer acquisition efficiency, payback period, and unit economics health.">
   <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/ltv-cac-ratio-calculator.html">
-  <meta property="og:title" content="LTV to CAC Ratio Calculator | SaaS Metric Tool">
-  <meta property="og:description" content="Calculate SaaS LTV:CAC ratio. Compare customer lifetime value to acquisition cost to find product-market fit and healthy unit economics.">
+  <meta property="og:title" content="LTV:CAC Ratio Calculator | SaaS Unit Economics Tool">
+  <meta property="og:description" content="Calculate your SaaS LTV to CAC ratio instantly. Benchmark your unit economics against industry standards.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/ltv-cac-ratio-calculator.html">
   <link rel="stylesheet" href="../css/style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "LTV:CAC Ratio Calculator",
-    "description": "Calculate SaaS customer lifetime value and customer acquisition cost ratio.",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "All"
-  }
-  </script>
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <a href="../index.html" class="logo">ZeroCost Tools</a>
       <nav>
-        <a href="../converters/">Converters</a>
-        <a href="../calculators/">Calculators</a>
-        <a href="../blog/">Blog</a>
-        <a href="../guides/crypto-tips.html">Support</a>
+        <a href="../index.html" class="brand">ToolBox</a>
+        <div class="nav-links">
+          <a href="../calculators/">Calculators</a>
+          <a href="../converters/">Converters</a>
+          <a href="../blog/">Blog</a>
+          <a href="../guides/crypto-tips.html">Support</a>
+        </div>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <div id="ad-zone" class="ad-slot" style="margin: 1.5rem 0; min-height: 90px; background: #f8f9fa; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center;">
-      <span style="color: #666; font-size: 0.85rem;">Ethical Ad / Recommended Dev Tools</span>
+    <h1>LTV to CAC Ratio Calculator</h1>
+    <p class="lead">Measure the long-term profitability of your SaaS marketing and customer acquisition strategy.</p>
+
+    <div id="ad-zone" class="ad-slot">
+      <!-- EthicalAds / House Ad placeholder -->
+      <div class="house-ad">
+        <p><strong>Deploying SaaS apps?</strong> Get $200 free cloud credits on <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="noopener">DigitalOcean</a>.</p>
+      </div>
     </div>
 
-    <h1>LTV:CAC Ratio Calculator</h1>
-    <p class="lead">Measure SaaS unit economics. Calculate customer lifetime value and customer acquisition cost to find out if your business model is sustainable.</p>
-
-    <section class="tool-card" style="background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin: 2rem 0;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-        <div>
-          <label for="monthlyRevenuePerCustomer"><strong>Average Monthly Revenue per Customer ($)</strong></label>
-          <input type="number" id="monthlyRevenuePerCustomer" value="50" min="0" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">
+    <div class="tool-card">
+      <form id="ltvCacForm" onsubmit="return false;">
+        <div class="form-group">
+          <label for="ltv">Customer Lifetime Value (LTV) ($):</label>
+          <input type="number" id="ltv" min="1" step="any" placeholder="e.g. 3000" required>
         </div>
-        <div>
-          <label for="customerLifespan"><strong>Customer Lifespan (Months)</strong></label>
-          <input type="number" id="customerLifespan" value="24" min="1" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">
+        <div class="form-group">
+          <label for="cac">Customer Acquisition Cost (CAC) ($):</label>
+          <input type="number" id="cac" min="1" step="any" placeholder="e.g. 1000" required>
         </div>
-        <div>
-          <label for="cacSalesMarketing"><strong>Sales & Marketing Spend per Month ($)</strong></label>
-          <input type="number" id="cacSalesMarketing" value="15000" min="0" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">
-        </div>
-        <div>
-          <label for="newCustomersAcquired"><strong>New Customers Acquired per Month</strong></label>
-          <input type="number" id="newCustomersAcquired" value="50" min="1" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">
-        </div>
-      </div>
-
-      <button id="calcBtn" style="margin-top: 1.5rem; padding: 0.75rem 2rem; background: #0066cc; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Calculate LTV:CAC</button>
-
-      <div id="results" style="margin-top: 2rem; padding: 1.5rem; background: #f0f7ff; border-left: 4px solid #0066cc; border-radius: 4px;">
-        <h3 style="margin-top: 0;">Unit Economics Analysis</h3>
-        <p><strong>Customer Lifetime Value (LTV):</strong> <span id="ltvDisplay">$1,200</span></p>
-        <p><strong>Customer Acquisition Cost (CAC):</strong> <span id="cacDisplay">$300</span></p>
-        <p><strong>LTV:CAC Ratio:</strong> <span id="ratioDisplay" style="font-size: 1.4rem; color: #0066cc; font-weight: bold;">4.0x</span></p>
-        <p id="ratioAdvice">An LTV:CAC ratio of 3:1 or higher is considered healthy for a growing SaaS business.</p>
-      </div>
-    </section>
-
-    <section style="margin: 3rem 0;">
-      <h2>Understanding LTV and CAC</h2>
-      <p>Customer Lifetime Value (LTV) represents the total revenue a business can expect from a single customer over the course of their relationship. Customer Acquisition Cost (CAC) is the total cost of sales and marketing expenses incurred to acquire a new customer.</p>
-      <p>The LTV:CAC ratio measures unit economics. A ratio of 3:1 or higher indicates a sustainable SaaS business model where the value of a customer significantly exceeds the cost to acquire them. A ratio below 1:1 means you are losing money on every customer.</p>
-    </section>
-
-    <section class="affiliate-box" style="background: #fafafa; border: 1px solid #e1e4e8; padding: 1.5rem; border-radius: 6px; margin: 2rem 0;">
-      <h3>Recommended SaaS Operations & CRM Tools</h3>
-      <p>Optimize your sales pipeline and reduce CAC with top-tier business software:</p>
-      <ul>
-        <li><a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" rel="nofollow sponsored">Notion CRM & Docs</a> — Organize customer data, track sales pipelines, and manage customer lifecycles.</li>
-        <li><a href="https://m.do.co/c/YOUR_REFERRAL_CODE" rel="nofollow sponsored">DigitalOcean App Platform</a> — Deploy SaaS applications fast with minimal DevOps overhead.</li>
-        <li><a href="https://www.vultr.com/?ref=YOUR_REFERRAL_CODE" rel="nofollow sponsored">Vultr Cloud Hosting</a> — Cost-effective VPS hosting for bootstrapped SaaS startups.</li>
-      </ul>
-      <p style="font-size: 0.85rem; color: #666;">Read our <a href="../guides/affiliate-disclosure.html">affiliate disclosure</a>.</p>
-    </section>
-
-    <section class="newsletter-signup" style="margin: 2rem 0; padding: 1.5rem; background: #eef2f7; border-radius: 6px;">
-      <h3>Subscribe to SaaS Growth Playbooks</h3>
-      <p>Get weekly guides on SaaS pricing, retention, and unit economics delivered to your inbox.</p>
-      <form action="mailto:contact@example.com" method="get" style="display: flex; gap: 0.5rem;">
-        <input type="email" placeholder="Your email address" required style="flex: 1; padding: 0.5rem;">
-        <button type="submit" style="padding: 0.5rem 1.5rem; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">Subscribe</button>
+        <button type="button" id="calcBtn" class="btn-primary">Calculate Ratio</button>
       </form>
+
+      <div id="results" class="results-box" style="display:none; margin-top: 20px;">
+        <h3>Results</h3>
+        <p><strong>LTV:CAC Ratio:</strong> <span id="ratioResult">-</span></p>
+        <p><strong>Assessment:</strong> <span id="statusResult">-</span></p>
+        <p id="recommendationResult" class="text-muted"></p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>What is the LTV:CAC Ratio?</h2>
+      <p>The LTV:CAC ratio compares the lifetime value of an average customer against the cost required to acquire that customer. It is a fundamental SaaS metric used by investors and founders to evaluate go-to-market efficiency.</p>
+      <h3>How to interpret your score:</h3>
+      <ul>
+        <li><strong>Less than 1.0:</strong> Losing money on every new customer acquired. Unsustainable.</li>
+        <li><strong>1.0 to 2.9:</strong> Low return on acquisition. Growth might be unprofitable.</li>
+        <li><strong>3.0 to 5.0:</strong> The SaaS ideal standard. Healthy growth and sustainable payback.</li>
+        <li><strong>Greater than 5.0:</strong> Highly profitable, but you may be under-investing in acquisition and leaving growth on the table.</li>
+      </ul>
+    </section>
+
+    <section class="cta-support">
+      <h3>Support This Free Tool</h3>
+      <p>Help us maintain free developer and business tools without intrusive ads or tracking.</p>
+      <a href="../guides/crypto-tips.html" class="btn-secondary">Support / Tip</a>
     </section>
   </main>
 
-  <footer style="margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #e1e4e8; text-align: center;">
+  <footer>
     <div class="container">
-      <p>Support this project via <a href="../guides/crypto-tips.html">Crypto Tips</a> or <a href="https://github.com/sponsors/YOUR-USERNAME" rel="nofollow">GitHub Sponsors</a>.</p>
-      <p style="font-size: 0.85rem; color: #666;">&copy; 2026 Zero-Cost AI Business Tools. All rights reserved.</p>
+      <p>&copy; 2026 ToolBox. All rights reserved. <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
     </div>
   </footer>
 
   <script>
-    function calculate() {
-      const mrrPerCustomer = parseFloat(document.getElementById('monthlyRevenuePerCustomer').value) || 0;
-      const lifespan = parseInt(document.getElementById('customerLifespan').value) || 1;
-      const salesMarketing = parseFloat(document.getElementById('cacSalesMarketing').value) || 0;
-      const customers = parseInt(document.getElementById('newCustomersAcquired').value) || 1;
+    document.getElementById('calcBtn').addEventListener('click', function() {
+      const ltv = parseFloat(document.getElementById('ltv').value);
+      const cac = parseFloat(document.getElementById('cac').value);
+      if (!ltv || !cac || cac <= 0) return;
 
-      const ltv = mrrPerCustomer * lifespan;
-      const cac = customers > 0 ? salesMarketing / customers : 0;
-      const ratio = cac > 0 ? ltv / cac : 0;
+      const ratio = ltv / cac;
+      const rounded = ratio.toFixed(2);
+      document.getElementById('ratioResult').textContent = rounded + 'x';
 
-      document.getElementById('ltvDisplay').textContent = '$' + ltv.toLocaleString();
-      document.getElementById('cacDisplay').textContent = '$' + cac.toLocaleString();
-      document.getElementById('ratioDisplay').textContent = ratio.toFixed(2) + 'x';
-
-      if (ratio >= 3) {
-        document.getElementById('ratioAdvice').textContent = 'Excellent unit economics. Your customer value is 3x or more than your acquisition cost.';
-      } else if (ratio >= 1) {
-        document.getElementById('ratioAdvice').textContent = 'Moderate unit economics. Consider optimizing pricing, reducing CAC, or improving retention.';
+      let status = '';
+      let rec = '';
+      if (ratio < 1.0) {
+        status = 'Critical / Unprofitable';
+        rec = 'You are spending more to acquire customers than they return over their lifetime.';
+      } else if (ratio < 3.0) {
+        status = 'Below Target';
+        rec = 'Focus on increasing retention/upsells or optimizing marketing spend to reach 3x.';
+      } else if (ratio <= 5.0) {
+        status = 'Optimal / Healthy';
+        rec = 'Your unit economics match the industry standard for sustainable growth.';
       } else {
-        document.getElementById('ratioAdvice').textContent = 'Unhealthy unit economics. You are losing money on every customer. Reduce acquisition costs or increase LTV.';
+        status = 'High Margin / Growth Under-invested';
+        rec = 'Great efficiency, but you could accelerate growth by spending more on customer acquisition.';
       }
-    }
-    document.getElementById('calcBtn').addEventListener('click', calculate);
+      document.getElementById('statusResult').textContent = status;
+      document.getElementById('recommendationResult').textContent = rec;
+      document.getElementById('results').style.display = 'block';
+    });
   </script>
-  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
