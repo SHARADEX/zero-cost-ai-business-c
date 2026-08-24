@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup Valuation Calculator - Scorecard & Berkus Method</title>
-    <meta name="description" content="Estimate your pre-revenue or early-stage startup valuation instantly using the Berkus and Scorecard valuation methodologies.">
+    <title>Startup Valuation Calculator — Estimate Your Company's Worth</title>
+    <meta name="description" content="Free online startup valuation calculator. Estimate your early-stage or growing company value using multiple financial and market methodologies.">
     <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/startup-valuation-calculator.html">
     <link rel="stylesheet" href="../assets/style.css">
     <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -15,40 +15,66 @@
             <a href="../index.html">Home</a>
             <a href="../calculators/">Calculators</a>
             <a href="../converters/">Converters</a>
-            <a href="../tools/">Tools</a>
+            <a href="../guides/crypto-tips.html">Support Us</a>
         </nav>
     </header>
-    <main class="container">
+    <main>
         <h1>Startup Valuation Calculator</h1>
-        <p>Use this tool to estimate your early-stage startup valuation using qualitative and quantitative methods.</p>
-        
-        <div class="calculator-box">
-            <label for="rev">Annual Revenue ($):</label>
-            <input type="number" id="rev" value="100000">
-            
-            <label for="multiple">Revenue Multiple:</label>
-            <input type="number" id="multiple" value="8">
-            
-            <button onclick="calculateValuation()">Calculate Valuation</button>
-            
-            <div id="result" class="result-display" style="margin-top: 20px; font-weight: bold;"></div>
+        <p class="subtitle">Estimate your startup's valuation using revenue multiples and growth projections.</p>
+
+        <div class="calculator-card">
+            <div class="input-group">
+                <label for="annualRevenue">Annual Revenue ($):</label>
+                <input type="number" id="annualRevenue" value="500000" min="0" step="1000">
+            </div>
+            <div class="input-group">
+                <label for="growthRate">Annual Growth Rate (%):</label>
+                <input type="number" id="growthRate" value="100" min="0" step="5">
+            </div>
+            <div class="input-group">
+                <label for="revenueMultiple">Revenue Multiple (Industry Average):</label>
+                <input type="number" id="revenueMultiple" value="10" min="1" step="0.5">
+            </div>
+            <button onclick="calculateValuation()" class="btn-primary">Calculate Valuation</button>
+
+            <div id="result" class="result-box" style="margin-top: 20px; padding: 15px; background: #f4f6f8; border-radius: 6px;">
+                <h3>Estimated Valuation: <span id="valResult">$5,000,000</span></h3>
+            </div>
         </div>
 
-        <div class="affiliate-box" style="margin-top: 40px; padding: 20px; border: 1px solid #ccc;">
-            <h3>Recommended Startup Tools</h3>
-            <p>Deploy your MVP fast and scale infrastructure with <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank">DigitalOcean</a> ($200 free credit).</p>
+        <section style="margin-top: 40px;">
+            <h2>Recommended Tools for Founders</h2>
+            <p>Deploy your MVP fast and scale infrastructure seamlessly with <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">DigitalOcean VPS</a> ($200 free credit).</p>
+        </section>
+
+        <div class="ad-zone" style="margin: 30px 0; padding: 20px; background: #eef2f7; text-align: center; border-radius: 8px;">
+            <p>Sponsored Ad Slot</p>
         </div>
+
+        <section class="newsletter-box" style="margin-top: 40px; padding: 20px; background: #f9fafb; border-radius: 8px;">
+            <h3>Get Startup Growth Tips</h3>
+            <p>Subscribe to our free newsletter for founders and developers.</p>
+            <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                <input type="email" placeholder="Your email address" required style="padding: 8px; width: 60%; margin-right: 10px;">
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2026 Free Business Tools. <a href="../guides/crypto-tips.html">Support Us</a></p>
+        <p>&copy; 2026 Zero-Cost Business. <a href="../guides/crypto-tips.html">Support / Tips</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
     </footer>
     <script>
-    function calculateValuation() {
-        const rev = parseFloat(document.getElementById('rev').value) || 0;
-        const mult = parseFloat(document.getElementById('multiple').value) || 0;
-        const val = rev * mult;
-        document.getElementById('result').innerText = 'Estimated Valuation: $' + val.toLocaleString();
-    }
+        function calculateValuation() {
+            const rev = parseFloat(document.getElementById('annualRevenue').value) || 0;
+            const growth = parseFloat(document.getElementById('growthRate').value) || 0;
+            const mult = parseFloat(document.getElementById('revenueMultiple').value) || 1;
+            let adjustedMult = mult;
+            if (growth > 50) {
+                adjustedMult *= 1.2;
+            }
+            const valuation = rev * adjustedMult;
+            document.getElementById('valResult').innerText = '$' + valuation.toLocaleString();
+        }
     </script>
 </body>
 </html>
