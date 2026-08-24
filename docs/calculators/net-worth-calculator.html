@@ -3,29 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Net Worth Calculator — Track Assets and Liabilities</title>
-    <meta name="description" content="Calculate your net worth easily with this free online tool. Track your assets, liabilities, and monitor your long-term financial growth.">
+    <title>Net Worth Calculator — Free Personal Finance Tool</title>
+    <meta name="description" content="Calculate your net worth easily with our free online calculator. Track your assets, liabilities, and financial health instantly.">
     <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/net-worth-calculator.html">
     <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Net Worth Calculator</h1>
-        <p>Determine your current financial position by subtracting your total liabilities from your total assets.</p>
-        <form id="calcForm">
-            <label>Total Assets ($): <input type="number" id="assets" value="100000"></label>
-            <label>Total Liabilities ($): <input type="number" id="liabilities" value="30000"></label>
-            <button type="button" onclick="calculate()">Calculate Net Worth</button>
-        </form>
-        <div id="result" class="result-box"></div>
-        <script>
-            function calculate() {
-                const assets = parseFloat(document.getElementById('assets').value) || 0;
-                const liab = parseFloat(document.getElementById('liabilities').value) || 0;
-                const netWorth = assets - liab;
-                document.getElementById('result').innerText = 'Your Net Worth: $' + netWorth.toLocaleString();
-            }
-        </script>
-    </div>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">FreeTools &amp; Calculators</a>
+            <ul class="nav-links">
+                <li><a href="../calculators/">Calculators</a></li>
+                <li><a href="../converters/">Converters</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../guides/crypto-tips.html">Support Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <article>
+            <h1>Net Worth Calculator</h1>
+            <p class="lead">Calculate your total net worth by summing your assets and subtracting your liabilities. Track your financial health over time.</p>
+            
+            <div class="tool-container">
+                <div class="form-group">
+                    <h3>Assets</h3>
+                    <label for="cash">Cash &amp; Bank Accounts ($):</label>
+                    <input type="number" id="cash" value="10000" min="0">
+                    
+                    <label for="investments">Investments &amp; Stocks ($):</label>
+                    <input type="number" id="investments" value="25000" min="0">
+                    
+                    <label for="property">Real Estate &amp; Property ($):</label>
+                    <input type="number" id="property" value="200000" min="0">
+                    
+                    <label for="other-assets">Other Assets ($):</label>
+                    <input type="number" id="other-assets" value="5000" min="0">
+                </div>
+
+                <div class="form-group">
+                    <h3>Liabilities</h3>
+                    <label for="mortgage">Mortgage Balance ($):</label>
+                    <input type="number" id="mortgage" value="150000" min="0">
+                    
+                    <label for="loans">Student Loans &amp; Other Debt ($):</label>
+                    <input type="number" id="loans" value="15000" min="0">
+                    
+                    <label for="credit-cards">Credit Card Debt ($):</label>
+                    <input type="number" id="credit-cards" value="2000" min="0">
+                </div>
+
+                <button id="calc-btn" class="btn">Calculate Net Worth</button>
+
+                <div id="result" class="result-box" style="margin-top: 20px; padding: 15px; background: #f4f4f4; border-radius: 5px; display: none;">
+                    <h3>Your Net Worth</h3>
+                    <p id="net-worth-output" style="font-size: 1.5em; font-weight: bold;">$0</p>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById('calc-btn').addEventListener('click', function() {
+                    const cash = parseFloat(document.getElementById('cash').value) || 0;
+                    const investments = parseFloat(document.getElementById('investments').value) || 0;
+                    const property = parseFloat(document.getElementById('property').value) || 0;
+                    const otherAssets = parseFloat(document.getElementById('other-assets').value) || 0;
+                    
+                    const mortgage = parseFloat(document.getElementById('mortgage').value) || 0;
+                    const loans = parseFloat(document.getElementById('loans').value) || 0;
+                    const creditCards = parseFloat(document.getElementById('credit-cards').value) || 0;
+
+                    const totalAssets = cash + investments + property + otherAssets;
+                    const totalLiabilities = mortgage + loans + creditCards;
+                    const netWorth = totalAssets - totalLiabilities;
+
+                    const output = document.getElementById('net-worth-output');
+                    output.textContent = '$' + netWorth.toLocaleString();
+                    document.getElementById('result').style.display = 'block';
+                });
+            </script>
+
+            <section style="margin-top: 40px;">
+                <h2>Why Track Your Net Worth?</h2>
+                <p>Net worth is the single best snapshot of your financial health. It goes beyond your annual salary to show what you actually own minus what you owe. Tracking this monthly helps you see the impact of saving, investing, and debt paydown.</p>
+            </section>
+
+            <div class="ad-zone" style="margin: 30px 0; padding: 20px; background: #fafafa; border: 1px dashed #ccc; text-align: center;">
+                <p style="font-size: 0.8em; color: #666;">Advertisement</p>
+                <div id="carbon-ads-container"></div>
+            </div>
+
+            <div class="newsletter-box" style="margin: 30px 0; padding: 20px; background: #eef2f7; border-radius: 5px;">
+                <h3>Get Free Financial Tools Weekly</h3>
+                <p>Subscribe to our free newsletter for more calculators and guides delivered to your inbox.</p>
+                <form action="https://buttondown.com/api/emails/embed-subscribe/your-newsletter" method="post" target="popupwindow">
+                    <input type="email" name="email" placeholder="Your email address" required style="padding: 8px; width: 60%; max-width: 300px; margin-right: 10px;">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </article>
+    </main>
+    <footer style="text-align: center; padding: 20px; margin-top: 40px; border-top: 1px solid #eee;">
+        <p>&copy; 2026 FreeTools &amp; Calculators. <a href="../guides/crypto-tips.html">Support this project</a></p>
+    </footer>
 </body>
 </html>
