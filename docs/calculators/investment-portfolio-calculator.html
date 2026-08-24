@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Portfolio Calculator - Free Online Asset Allocation Tool</title>
+    <meta name="description" content="Calculate projected returns, asset allocation growth, and compound interest for your investment portfolio. Free, fast, and no registration required.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/investment-portfolio-calculator.html">
+    <link rel="stylesheet" href="../style.css">
+    <script data-goatcounter="https://sharadex.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Investment Portfolio Calculator",
+      "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/investment-portfolio-calculator.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a> &gt;
+            <a href="../calculators/">Calculators</a> &gt;
+            <span>Investment Portfolio</span>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Investment Portfolio Growth Calculator</h1>
+            <p class="lead">Project your future wealth by modeling initial capital, monthly contributions, expected annual return, and time horizon.</p>
+            
+            <div class="tool-container">
+                <div class="input-group">
+                    <label for="initial">Initial Investment ($):</label>
+                    <input type="number" id="initial" value="10000" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="monthly">Monthly Contribution ($):</label>
+                    <input type="number" id="monthly" value="500" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="returnRate">Expected Annual Return (%):</label>
+                    <input type="number" id="returnRate" value="8" step="0.1" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="years">Time Horizon (Years):</label>
+                    <input type="number" id="years" value="10" min="1" max="50">
+                </div>
+                <button id="calculateBtn" class="btn-primary" onclick="calculatePortfolio()">Calculate Growth</button>
+                
+                <div id="result" class="result-box" style="margin-top: 20px; padding: 15px; background: #f4f6f8; border-radius: 6px; display:none;">
+                    <h3>Results</h3>
+                    <p><strong>Total Future Value:</strong> <span id="resTotal">$0</span></p>
+                    <p><strong>Total Contributions:</strong> <span id="resContrib">$0</span></p>
+                    <p><strong>Estimated Interest Earned:</strong> <span id="resInterest">$0</span></p>
+                </div>
+            </div>
+
+            <script>
+            function calculatePortfolio() {
+                const initial = parseFloat(document.getElementById('initial').value) || 0;
+                const monthly = parseFloat(document.getElementById('monthly').value) || 0;
+                const rate = (parseFloat(document.getElementById('returnRate').value) || 0) / 100 / 12;
+                const months = (parseInt(document.getElementById('years').value) || 1) * 12;
+                
+                let total = initial;
+                let totalContrib = initial;
+                
+                for (let i = 0; i < months; i++) {
+                    total = (total + monthly) * (1 + rate);
+                    totalContrib += monthly;
+                }
+                
+                const interest = total - totalContrib;
+                
+                document.getElementById('resTotal').innerText = '$' + total.toFixed(2);
+                document.getElementById('resContrib').innerText = '$' + totalContrib.toFixed(2);
+                document.getElementById('resInterest').innerText = '$' + interest.toFixed(2);
+                document.getElementById('result').style.display = 'block';
+            }
+            </script>
+
+            <section class="ad-zone" style="margin: 30px 0; padding: 20px; border: 1px dashed #ccc; text-align: center;">
+                <span>Sponsored Ad</span>
+            </section>
+
+            <section class="affiliate-box" style="margin: 30px 0; padding: 20px; background: #eef2f7; border-radius: 6px;">
+                <h3>Recommended Tools</h3>
+                <p>Looking for a powerful workspace to track your financial goals and notes? Check out <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">Notion</a>.</p>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2026 Free Business Tools. <a href="../guides/crypto-tips.html">Support &amp; Tip</a></p>
+    </footer>
+</body>
+</html>
