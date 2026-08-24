@@ -1,11 +1,4 @@
 ## Summary
-2026-08-24 10:57:54 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-24 11:48:59 UTC | model=gemini | budget=full | steps=1 | tokens=37020
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/debt-payoff-calculator.html (4090 chars) | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
@@ -20,4 +13,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/investment-por
 
 Step details:
 Step 1: action=write_file | tokens=17857 | result=Wrote file: docs/calculators/investment-portfolio-calculator.html (5207 chars)
+
+## Summary
+2026-08-24 16:06:59 UTC | model=gemini | budget=full | steps=1 | tokens=37257
+First action: write_file
+Summary: Step 1: write_file (FAIL) — REJECTED write_file — security scan failed: External script from non-allowlisted | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=17794 | result=REJECTED write_file — security scan failed: External script from non-allowlisted domain: cdn.ethicalads.io
 
