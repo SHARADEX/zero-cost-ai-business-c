@@ -3511,3 +3511,24 @@ to submit them to Google Indexing API
 <h1>JSON to Markdown Converte
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-08-25 20:59:57 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 40126
+
+**Steps:**
+  Step 1: action=list_dir | tokens=20220 | result=Contents of docs/converters/:
+  base64-decode.html (6941 bytes)
+  base64-encode.html (6925 bytes)
+  csv-to-json.html (7296 bytes)
+  csv-to-markdown.html (7268 bytes)
+  csv-to-yaml.html (7187 bytes)
+  
+
+**Run Summary:**
+  - Step 1: list_dir (OK) — Contents of docs/converters/:
+  base64-decode.html (6941 bytes)
+  base64-encode.
+  - Stopped: LLM failed at step 2.
+---
