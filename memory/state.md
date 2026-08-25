@@ -1,18 +1,4 @@
 ## Summary
-2026-08-25 17:54:54 UTC | model=gemini | budget=full | steps=1 | tokens=38120
-First action: read_file
-Summary: Step 1: read_file (OK) — Contents of memory/seo_queue.md:
-# SEO Queue — URLs Pending Indexing Submission
- | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
-
-Step details:
-Step 1: action=read_file | tokens=18232 | result=Contents of memory/seo_queue.md:
-# SEO Queue — URLs Pending Indexing Submission
-
-The agent adds new pages here via `seo_submit`. The `seo_submit` tool then tries
-to submit them to Google Indexing API
-
-## Summary
 2026-08-25 19:45:00 UTC | model=gemini | budget=full | steps=2 | tokens=36175
 First action: list_dir
 Summary: Step 1: list_dir (OK) — Contents of docs/converters/:
@@ -45,4 +31,12 @@ Step 1: action=list_dir | tokens=20220 | result=Contents of docs/converters/:
   csv-to-json.html (7296 bytes)
   csv-to-markdown.html (7268 bytes)
   csv-to-yaml.html (7187 bytes)
+
+## Summary
+2026-08-25 21:57:29 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
