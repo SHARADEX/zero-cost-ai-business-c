@@ -1,12 +1,4 @@
 ## Summary
-2026-08-24 22:48:32 UTC | model=gemini | budget=full | steps=1 | tokens=39927
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/net-worth-calculator.html (6264 chars) | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
-
-Step details:
-Step 1: action=write_file | tokens=18887 | result=Wrote file: docs/calculators/net-worth-calculator.html (6264 chars)
-
-## Summary
 2026-08-24 23:47:50 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -26,4 +18,19 @@ Step 1: action=write_file | tokens=18567 | result=Wrote file: docs/calculators/d
 # SEO Queue — URLs Pending Indexing Submission
 
 The agent adds new pages here via `seo_submit`. The `seo_submit...
+
+## Summary
+2026-08-25 05:17:22 UTC | model=gemini | budget=full | steps=1 | tokens=35743
+First action: list_dir
+Summary: Step 1: list_dir (OK) — Contents of docs/calculators/:
+  age-calculator.html (6068 bytes)
+  arr-calculat | Stopped: LLM failed at step 2.
+
+Step details:
+Step 1: action=list_dir | tokens=17902 | result=Contents of docs/calculators/:
+  age-calculator.html (6068 bytes)
+  arr-calculator.html (10721 bytes)
+  bmi-calculator.html (6037 bytes)
+  break-even-calculator.html (4147 bytes)
+  break-even-point-ca
 
