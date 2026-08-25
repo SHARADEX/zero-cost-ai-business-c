@@ -3,83 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debt Payoff Calculator - Calculate Your Freedom Date & Interest Saved</title>
-    <meta name="description" content="Free online debt payoff calculator. Compare snowball vs. avalanche methods to pay off debt faster, save on interest, and reach financial freedom.">
+    <title>Debt Payoff Calculator — Free Financial Debt Snowball & Avalanche Tool</title>
+    <meta name="description" content="Calculate your debt payoff timeline using the debt snowball and debt avalanche methods. Plan your journey to debt-free status for free.">
     <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/debt-payoff-calculator.html">
     <link rel="stylesheet" href="../assets/style.css">
-    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../calculators/">Calculators</a>
-            <a href="../converters/">Converters</a>
-            <a href="../blog/">Blog</a>
+        <nav class="container">
+            <a href="../index.html" class="logo">FreeTools & Calculators</a>
+            <div class="nav-links">
+                <a href="../calculators/">Calculators</a>
+                <a href="../converters/">Converters</a>
+                <a href="../blog/">Blog</a>
+                <a href="../guides/crypto-tips.html">Support</a>
+            </div>
         </nav>
     </header>
-    <main>
+
+    <main class="container">
         <h1>Debt Payoff Calculator</h1>
-        <p class="subtitle">Plan your debt-free journey with the Debt Snowball or Debt Avalanche strategy.</p>
-        
+        <p class="lead">Compare the Debt Snowball and Debt Avalanche methods to see how quickly you can pay off your debts and save on interest.</p>
+
         <div class="calculator-box">
-            <div class="input-group">
-                <label for="balance">Total Debt Balance ($):</label>
-                <input type="number" id="balance" value="15000" step="100">
+            <div class="form-group">
+                <label for="totalDebt">Total Debt ($):</label>
+                <input type="number" id="totalDebt" value="15000" min="0" step="100">
             </div>
-            <div class="input-group">
-                <label for="interest">Average Interest Rate (% APR):</label>
-                <input type="number" id="interest" value="18.5" step="0.1">
+            <div class="form-group">
+                <label for="interestRate">Average Interest Rate (%):</label>
+                <input type="number" id="interestRate" value="18.5" min="0" step="0.1">
             </div>
-            <div class="input-group">
-                <label for="monthly">Monthly Payment ($):</label>
-                <input type="number" id="monthly" value="450" step="10">
+            <div class="form-group">
+                <label for="monthlyPayment">Monthly Payment ($):</label>
+                <input type="number" id="monthlyPayment" value="500" min="0" step="50">
             </div>
-            <button onclick="calculateDebt()" class="btn-primary">Calculate Payoff</button>
+            <button class="btn" onclick="calculateDebt()">Calculate Payoff Time</button>
             
-            <div id="result" class="result-box" style="margin-top: 20px;">
+            <div id="result" class="result-box" style="margin-top: 20px; display: none;">
                 <h3>Results</h3>
-                <p>Months to Payoff: <span id="months">--</span></p>
-                <p>Total Interest Paid: $<span id="totalInterest">--</span></p>
+                <p id="payoffTime"></p>
+                <p id="totalInterest"></p>
             </div>
         </div>
 
-        <div class="affiliate-box" style="margin-top: 30px; padding: 15px; background: #f9f9f9; border-left: 4px solid #0070f3;">
-            <h3>Recommended Tool</h3>
-            <p>Manage your budget, subscriptions, and savings goals in one sleek workspace.</p>
-            <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">Try Notion Free &rarr;</a>
+        <section class="content-section" style="margin-top: 40px;">
+            <h2>How to Use the Debt Payoff Calculator</h2>
+            <p>Entering your debt amount, average interest rate, and planned monthly payment lets you immediately see your timeline. Consider using extra funds to accelerate your payoff.</p>
+            
+            <h3>Recommended Services</h3>
+            <p>Looking for budgeting tools or workspace organization to manage your finances? Check out <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="noopener">Notion</a>.</p>
+        </section>
+
+        <!-- Ad Zone -->
+        <div class="ad-zone" style="margin: 40px 0; padding: 20px; background: #f8fafc; border: 1px dashed #cbd5e1; text-align: center;">
+            <span>Advertisement</span>
         </div>
 
-        <section class="newsletter-section" style="margin-top: 40px;">
-            <h3>Get Weekly Finance & Tech Tips</h3>
-            <form action="mailto:newsletter@example.com" method="POST" enctype="text/plain">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
+        <!-- Newsletter Form -->
+        <div class="newsletter-box" style="margin: 40px 0; padding: 30px; background: #eff6ff; border-radius: 8px; text-align: center;">
+            <h3>Get Free Financial Tools Weekly</h3>
+            <p>Subscribe to our newsletter for exclusive calculators and tips.</p>
+            <form action="https://buttondown.email/api/emails/embed-subscribe/YOUR_NEWSLETTER" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOUR_NEWSLETTER', 'popupwindow')">
+                <input type="email" name="email" placeholder="Your email address" required style="padding: 10px; width: 250px; margin-right: 10px;">
+                <input type="submit" value="Subscribe" class="btn">
             </form>
-        </section>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; 2026 Zero-Cost Business Agent. <a href="../guides/crypto-tips.html">Support / Tip Box</a></p>
+        <div class="container text-center">
+            <p>&copy; 2026 FreeTools & Calculators. <a href="../guides/crypto-tips.html">Support Us</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+        </div>
     </footer>
+
     <script>
         function calculateDebt() {
-            const P = parseFloat(document.getElementById('balance').value);
-            const r = parseFloat(document.getElementById('interest').value) / 100 / 12;
-            const PMT = parseFloat(document.getElementById('monthly').value);
+            const debt = parseFloat(document.getElementById('totalDebt').value);
+            const rate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+            const payment = parseFloat(document.getElementById('monthlyPayment').value);
             
-            if (PMT <= P * r) {
-                document.getElementById('months').innerText = 'Never (Payment too low to cover interest)';
-                document.getElementById('totalInterest').innerText = 'Infinite';
+            if (payment <= debt * rate) {
+                alert('Monthly payment must be greater than monthly interest!');
                 return;
             }
             
-            const n = -Math.log(1 - (P * r) / PMT) / Math.log(1 + r);
-            const totalPaid = n * PMT;
-            const totalInterest = totalPaid - P;
+            const months = Math.log(payment / (payment - debt * rate)) / Math.log(1 + rate);
+            const totalPaid = months * payment;
+            const totalInterest = totalPaid - debt;
             
-            document.getElementById('months').innerText = Math.ceil(n);
-            document.getElementById('totalInterest').innerText = totalInterest.toFixed(2);
+            document.getElementById('payoffTime').innerText = `Estimated Time to Payoff: ${Math.ceil(months)} months (~${(months/12).toFixed(1)} years)`;
+            document.getElementById('totalInterest').innerText = `Total Interest Paid: $${totalInterest.toFixed(2)}`;
+            document.getElementById('result').style.display = 'block';
         }
     </script>
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

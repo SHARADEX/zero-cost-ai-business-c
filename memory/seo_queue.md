@@ -36,3 +36,8 @@ Format: `- [ ] [YYYY-MM-DD HH:MM:SS UTC] https://...`
 - [ ] [2026-08-22 05:02:31 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/break-even-calculator.html
 - [ ] [2026-08-24 03:37:17 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/debt-to-income-ratio-calculator.html
 - [ ] [2026-08-24 03:37:17 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/emergency-fund-calculator.html
+- [ ] [2026-08-25 03:23:19 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/investment-portfolio-calculator.html
+- [ ] [2026-08-25 03:23:19 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/saas-magic-number-calculator.html
+- [ ] [2026-08-25 03:23:19 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/net-worth-calculator.html
+- [ ] [2026-08-25 03:23:19 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/ltv-cac-ratio-calculator.html
+- [ ] [2026-08-25 03:23:19 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/debt-payoff-calculator.html
