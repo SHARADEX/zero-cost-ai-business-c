@@ -3544,3 +3544,18 @@ to submit them to Google Indexing API
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-25 23:00:34 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 2
+**Tokens used:** 36711
+
+**Steps:**
+  Step 1: action=revenue_verify | tokens=18177 | result=revenue_verify error: Failed to fetch balance for ethereum
+  Step 2: action=seo_submit | tokens=18534 | result=SEO submit complete. Google: 0/5 submitted (errors: 1). Bing: 0/5 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: revenue_verify (FAIL) — revenue_verify error: Failed to fetch balance for ethereum
+  - Step 2: seo_submit (OK) — SEO submit complete. Google: 0/5 submitted (errors: 1). Bing: 0/5 submitted (err
+  - Stopped: LLM failed at step 3.
+---
