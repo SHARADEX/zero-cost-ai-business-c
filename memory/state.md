@@ -1,21 +1,4 @@
 ## Summary
-2026-08-26 05:53:41 UTC | model=gemini | budget=full | steps=1 | tokens=38815
-First action: read_file
-Summary: Step 1: read_file (OK) — Contents of docs/converters/csv-to-json.html:
-<!DOCTYPE html>
-<html lang="en">
-< | Stopped: LLM failed at step 2.
-
-Step details:
-Step 1: action=read_file | tokens=19419 | result=Contents of docs/converters/csv-to-json.html:
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convert
-
-## Summary
 2026-08-26 10:18:35 UTC | model=gemini | budget=full | steps=1 | tokens=39158
 First action: read_file
 Summary: Step 1: read_file (OK) — Contents of memory/affiliate_links.md:
@@ -42,4 +25,18 @@ Summary: Stopped: LLM failed at step 1.
 
 Step details:
 
+## Summary
+2026-08-26 14:26:12 UTC | model=gemini | budget=full | steps=1 | tokens=36511
+First action: list_dir
+Summary: Step 1: list_dir (OK) — Contents of docs/converters/:
+  base64-decode.html (6941 bytes)
+  base64-encode. | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=list_dir | tokens=17191 | result=Contents of docs/converters/:
+  base64-decode.html (6941 bytes)
+  base64-encode.html (6925 bytes)
+  csv-to-json.html (7296 bytes)
+  csv-to-markdown.html (7268 bytes)
+  csv-to-yaml.html (7187 bytes)
 
