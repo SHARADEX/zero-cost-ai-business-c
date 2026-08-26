@@ -3675,3 +3675,28 @@ to submit them to Google Indexing API
 <
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-26 10:18:35 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 39158
+
+**Steps:**
+  Step 1: action=read_file | tokens=19604 | result=Contents of memory/affiliate_links.md:
+# Affiliate Link Inventory
+
+Format for each entry:
+
+```
+## ID: <unique-id>
+- vendor: <vendor name>
+- url: <affiliate link>
+- description: <short description for 
+
+**Run Summary:**
+  - Step 1: read_file (OK) — Contents of memory/affiliate_links.md:
+# Affiliate Link Inventory
+
+Format for ea
+  - Stopped: LLM failed at step 2.
+---
