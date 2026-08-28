@@ -1,19 +1,4 @@
 ## Summary
-2026-08-26 14:26:12 UTC | model=gemini | budget=full | steps=1 | tokens=36511
-First action: list_dir
-Summary: Step 1: list_dir (OK) — Contents of docs/converters/:
-  base64-decode.html (6941 bytes)
-  base64-encode. | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
-
-Step details:
-Step 1: action=list_dir | tokens=17191 | result=Contents of docs/converters/:
-  base64-decode.html (6941 bytes)
-  base64-encode.html (6925 bytes)
-  csv-to-json.html (7296 bytes)
-  csv-to-markdown.html (7268 bytes)
-  csv-to-yaml.html (7187 bytes)
-
-## Summary
 2026-08-28 00:51:51 UTC | model=openrouter | budget=full | steps=5 | tokens=128036
 First action: read_file
 Summary: Step 1: read_file (OK) — Contents of memory/seo_queue.md:
@@ -43,4 +28,12 @@ Summary: Step 1: write_file (OK) — Wrote file: docs/converters/json-to-csv.htm
 Step details:
 Step 1: action=write_file | tokens=17845 | result=Wrote file: docs/converters/json-to-csv.html (1906 chars)
   Step 2: action=validate_html | tokens=18026 | result=✓ docs/converters/json-to-csv.html passed validation (no issues)
+
+## Summary
+2026-08-28 22:03:51 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
