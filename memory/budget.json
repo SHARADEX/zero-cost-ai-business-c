@@ -1,14 +1,14 @@
 {
   "date": "2026-08-28",
-  "last_updated": "2026-08-28 00:57:32 UTC",
+  "last_updated": "2026-08-28 21:53:43 UTC",
   "providers": {
     "groq": {
       "requests_used": 0,
       "tokens_used": 0
     },
     "gemini": {
-      "requests_used": 2,
-      "tokens_used": 37321
+      "requests_used": 4,
+      "tokens_used": 73192
     },
     "cerebras": {
       "requests_used": 0,
@@ -27,14 +27,18 @@
       "tokens_used": 0
     },
     "openrouter": {
-      "requests_used": 5,
-      "tokens_used": 90715
+      "requests_used": 6,
+      "tokens_used": 109703
     }
   },
   "hourly_usage": {
     "00": {
       "requests": 7,
       "tokens": 128036
+    },
+    "21": {
+      "requests": 3,
+      "tokens": 54859
     }
   }
 }
