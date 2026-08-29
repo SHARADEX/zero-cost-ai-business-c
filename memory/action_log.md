@@ -4486,3 +4486,17 @@ FAIL groq/meta-llama/llama-pr
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-29 22:33:48 UTC
+**Model:** gemini
+**Budget:** high
+**Steps taken:** 1
+**Tokens used:** 35066
+
+**Steps:**
+  Step 1: action=revenue_verify | tokens=16758 | result=revenue_verify error: Failed to fetch balance for ethereum
+
+**Run Summary:**
+  - Step 1: revenue_verify (FAIL) — revenue_verify error: Failed to fetch balance for ethereum
+  - Step 2: LLM retry failed.
+  - Stopped: LLM failed at step 3.
+---
