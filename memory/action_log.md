@@ -4266,3 +4266,16 @@ FAIL groq/meta-llama/llama-pr
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-29 15:03:38 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 36088
+
+**Steps:**
+  Step 1: action=seo_submit | tokens=17685 | result=SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (err
+  - Stopped: LLM failed at step 2.
+---
