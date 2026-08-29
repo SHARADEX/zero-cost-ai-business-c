@@ -168,6 +168,18 @@
       "success": false,
       "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
       "timestamp": 1787967226.5554137
+    },
+    {
+      "provider": "cerebras",
+      "success": false,
+      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
+      "timestamp": 1787969023.3015673
+    },
+    {
+      "provider": "cerebras",
+      "success": false,
+      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
+      "timestamp": 1787969023.3746333
     }
   ]
 }
