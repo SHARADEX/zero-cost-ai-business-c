@@ -1,13 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-[2026-08-29 13:34:08 UTC] Agent output failed validation twice. Last error: Invalid JSON: Expecting value: line 1 column 12 (char 11). Re-emit the complete JSON object with proper escaping.
-
-[2026-08-29 13:34:08 UTC] LLM call failed at step 2.
-All LLM providers failed. Attempts:
-FAIL groq/meta-llama/llama-prompt-guard-2-22m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
-
-FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
-
 FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
   "error": {
     "code": 429,
@@ -161,3 +153,15 @@ FAIL gemini/gemini-2.5-pro-preview-tts attempt 1: HTTP 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please
+
+[2026-08-29 17:33:40 UTC] LLM call failed at step 1.
+All LLM providers failed. Attempts:
+FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
+
+FAIL groq/meta-llama/llama-prompt-guard-2-22m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
+
+CIRCUIT_OPEN groq
+SKIP gemini - unhealthy (circuit breaker)
+FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+SKIP openrouter - budget exhausted
