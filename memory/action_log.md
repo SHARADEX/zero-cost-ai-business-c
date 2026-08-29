@@ -4279,3 +4279,15 @@ FAIL groq/meta-llama/llama-pr
   - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (err
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-29 15:33:54 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---

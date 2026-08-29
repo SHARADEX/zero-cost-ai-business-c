@@ -1,11 +1,4 @@
 ## Summary
-2026-08-29 14:03:58 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-29 14:33:37 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -19,4 +12,12 @@ Summary: Step 1: seo_submit (OK) — SEO submit complete. Google: 0/7 submitted 
 
 Step details:
 Step 1: action=seo_submit | tokens=17685 | result=SEO submit complete. Google: 0/7 submitted (errors: 1). Bing: 0/7 submitted (errors: 1). URLs added to queue regardless.
+
+## Summary
+2026-08-29 15:33:54 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
