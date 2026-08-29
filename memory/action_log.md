@@ -4205,3 +4205,15 @@ FAIL groq/meta-llama/llama-pr
   - Step 1: validation failed twice — skipped.
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-29 12:33:57 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---
