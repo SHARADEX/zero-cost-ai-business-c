@@ -4031,3 +4031,15 @@ FAIL groq/meta-llama/llama-pr
 <html lang="en
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-29 05:33:49 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---
