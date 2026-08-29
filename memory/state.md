@@ -1,11 +1,4 @@
 ## Summary
-2026-08-29 03:04:12 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-29 03:34:06 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -26,4 +19,12 @@ Step 1: action=list_dir | tokens=17626 | result=Contents of docs/calculators/:
   bmi-calculator.html (6037 bytes)
   break-even-calculator.html (4147 bytes)
   break-even-point-ca
+
+## Summary
+2026-08-29 04:33:54 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
