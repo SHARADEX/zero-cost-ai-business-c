@@ -3978,3 +3978,23 @@ FAIL groq/meta-llama/llama-pr
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-29 04:03:42 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 35188
+
+**Steps:**
+  Step 1: action=list_dir | tokens=17626 | result=Contents of docs/calculators/:
+  age-calculator.html (6068 bytes)
+  arr-calculator.html (10721 bytes)
+  bmi-calculator.html (6037 bytes)
+  break-even-calculator.html (4147 bytes)
+  break-even-point-ca
+
+**Run Summary:**
+  - Step 1: list_dir (OK) — Contents of docs/calculators/:
+  age-calculator.html (6068 bytes)
+  arr-calculat
+  - Stopped: LLM failed at step 2.
+---
