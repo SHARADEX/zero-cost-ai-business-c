@@ -1,9 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-[2026-08-26 10:18:35 UTC] LLM call failed at step 2.
-All LLM providers failed. Attempts:
-FAIL groq/meta-llama/llama-prompt-guard-2-22m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
-
 FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
 
 FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
@@ -156,3 +152,6 @@ FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to a
 SKIP openrouter - budget exhausted
 
 [2026-08-29 00:03:58 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
+
+[2026-08-29 00:33:45 UTC] LLM call failed at step 1.
+All configured providers exhausted or unhealthy. Configured: ['groq', 'gemini', 'cerebras', 'openrouter']. Budget resets at UTC midnight; health resets after 1 hour of no failures.

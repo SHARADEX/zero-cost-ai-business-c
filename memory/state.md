@@ -1,11 +1,4 @@
 ## Summary
-2026-08-28 23:03:37 UTC | model=gemini | budget=full | steps=0 | tokens=36293
-First action: none
-Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
-
-Step details:
-
-## Summary
 2026-08-28 23:33:55 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -31,4 +24,12 @@ Step 2: action=read_file | tokens=14647 | result=Contents of memory/experiments.
 # SEO Queue — URLs Pending Indexing Submission
 
 The agent adds new pages here via ...
+
+## Summary
+2026-08-29 00:33:45 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
