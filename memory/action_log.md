@@ -4105,3 +4105,15 @@ FAIL groq/meta-llama/llama-pr
   - Step 1: revenue_verify (OK) — No new tips on bitcoin. Current balance: 0.0 BITCOIN. Last logged balance: 0.0.
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-08-29 08:33:42 UTC
+**Model:** unknown
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 0
+
+**Steps:**
+
+
+**Run Summary:**
+  - Stopped: LLM failed at step 1.
+---

@@ -1,11 +1,4 @@
 ## Summary
-2026-08-29 07:03:45 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-29 07:33:44 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -19,4 +12,12 @@ Summary: Step 1: revenue_verify (OK) — No new tips on bitcoin. Current balance
 
 Step details:
 Step 1: action=revenue_verify | tokens=16859 | result=No new tips on bitcoin. Current balance: 0.0 BITCOIN. Last logged balance: 0.0.
+
+## Summary
+2026-08-29 08:33:42 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
