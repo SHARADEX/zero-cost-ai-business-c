@@ -1,13 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API.",
-    "status": "NOT_FOUND"
-  }
-}
-
 FAIL gemini/gemini-2.5-pro attempt 1: HTTP 404: {
   "error": {
     "code": 404,
@@ -170,6 +162,14 @@ FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to 
 SKIP openrouter - budget exhausted
 
 [2026-08-29 09:33:46 UTC] LLM call failed at step 3.
+All LLM providers failed. Attempts:
+SKIP groq - unhealthy (circuit breaker)
+SKIP gemini - unhealthy (circuit breaker)
+FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+SKIP openrouter - budget exhausted
+
+[2026-08-29 10:03:39 UTC] LLM call failed at step 1.
 All LLM providers failed. Attempts:
 SKIP groq - unhealthy (circuit breaker)
 SKIP gemini - unhealthy (circuit breaker)
