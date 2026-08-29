@@ -1,14 +1,14 @@
 {
   "date": "2026-08-29",
-  "last_updated": "2026-08-29 19:35:58 UTC",
+  "last_updated": "2026-08-29 21:06:51 UTC",
   "providers": {
     "groq": {
       "requests_used": 0,
       "tokens_used": 0
     },
     "gemini": {
-      "requests_used": 28,
-      "tokens_used": 497622
+      "requests_used": 31,
+      "tokens_used": 555197
     },
     "cerebras": {
       "requests_used": 0,
@@ -91,6 +91,10 @@
     "19": {
       "requests": 2,
       "tokens": 34965
+    },
+    "21": {
+      "requests": 3,
+      "tokens": 57575
     }
   }
 }
