@@ -1,12 +1,4 @@
 ## Summary
-2026-08-29 08:03:45 UTC | model=gemini | budget=full | steps=1 | tokens=16859
-First action: revenue_verify
-Summary: Step 1: revenue_verify (OK) — No new tips on bitcoin. Current balance: 0.0 BITCOIN. Last logged balance: 0.0. | Stopped: LLM failed at step 2.
-
-Step details:
-Step 1: action=revenue_verify | tokens=16859 | result=No new tips on bitcoin. Current balance: 0.0 BITCOIN. Last logged balance: 0.0.
-
-## Summary
 2026-08-29 08:33:42 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -17,6 +9,13 @@ Step details:
 2026-08-29 09:03:39 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
+## Summary
+2026-08-29 09:33:46 UTC | model=gemini | budget=full | steps=0 | tokens=55684
+First action: none
+Summary: Step 1: validation failed twice — skipped. | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
 
 Step details:
 

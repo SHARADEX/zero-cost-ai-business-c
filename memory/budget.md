@@ -1,21 +1,21 @@
 # Daily LLM Budget Tracker
 
 Date: 2026-08-29
-Last Updated: 2026-08-29 08:06:07 UTC
+Last Updated: 2026-08-29 09:35:34 UTC
 
 ## Provider Usage (resets at UTC midnight)
 
 | Provider | Requests | Tokens |
 |----------|----------|--------|
 | groq | 0/14000 (14000 rem) [OK] | 0/500000 (500000 rem) |
-| gemini | 11/1500 (1489 rem) [OK] | 192369/1000000 (807631 rem) |
+| gemini | 14/1500 (1486 rem) [OK] | 248053/1000000 (751947 rem) |
 | cerebras | 0/1000 (1000 rem) [OK] | 0/500000 (500000 rem) |
 | sambanova | 0/500 (500 rem) [OK] | 0/500000 (500000 rem) |
 | cloudflare | 0/1000 (1000 rem) [OK] | 0/200000 (200000 rem) |
 | huggingface | 0/500 (500 rem) [OK] | 0/200000 (200000 rem) |
 | openrouter | 7/50 (43 rem) [EXHAUSTED] | 109053/100000 (0 rem) |
 
-**TOTAL:** 18/18550 requests, 301422/3000000 tokens
+**TOTAL:** 21/18550 requests, 357106/3000000 tokens
 
 ## Hourly Usage (UTC)
 - 00:00 → 8 req, 126045 tok
@@ -25,3 +25,4 @@ Last Updated: 2026-08-29 08:06:07 UTC
 - 05:00 → 2 req, 36074 tok
 - 06:00 → 1 req, 16898 tok
 - 08:00 → 1 req, 16859 tok
+- 09:00 → 3 req, 55684 tok
