@@ -1,11 +1,4 @@
 ## Summary
-2026-08-30 15:03:55 UTC | model=gemini | budget=full | steps=0 | tokens=17799
-First action: none
-Summary: Step 1: LLM retry failed. | Stopped: LLM failed at step 2.
-
-Step details:
-
-## Summary
 2026-08-30 15:33:54 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -19,4 +12,12 @@ Summary: Step 1: seo_update_sitemap (OK) — Regenerated sitemap.xml (92 pages) 
 
 Step details:
 Step 1: action=seo_update_sitemap | tokens=17121 | result=Regenerated sitemap.xml (92 pages) and robots.txt
+
+## Summary
+2026-08-30 16:33:48 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
