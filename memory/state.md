@@ -1,11 +1,4 @@
 ## Summary
-2026-08-30 02:03:56 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-30 02:33:58 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
@@ -19,4 +12,12 @@ Summary: Step 1: revenue_verify (FAIL) — revenue_verify error: Failed to fetch
 
 Step details:
 Step 1: action=revenue_verify | tokens=16218 | result=revenue_verify error: Failed to fetch balance for ethereum
+
+## Summary
+2026-08-30 03:34:02 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
