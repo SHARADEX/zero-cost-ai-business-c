@@ -1,11 +1,4 @@
 ## Summary
-2026-08-30 09:33:56 UTC | model=unknown | budget=full | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-30 10:03:59 UTC | model=gemini | budget=full | steps=1 | tokens=33785
 First action: list_dir
 Summary: Step 1: list_dir (OK) — Contents of docs/calculators/:
@@ -22,6 +15,13 @@ Step 1: action=list_dir | tokens=16931 | result=Contents of docs/calculators/:
 
 ## Summary
 2026-08-30 10:33:57 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
+## Summary
+2026-08-30 11:04:05 UTC | model=unknown | budget=full | steps=0 | tokens=0
 First action: none
 Summary: Stopped: LLM failed at step 1.
 
