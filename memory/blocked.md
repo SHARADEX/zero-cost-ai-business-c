@@ -1,7 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
-
 FAIL gemini/gemini-2.5-flash attempt 1: HTTP 404: {
   "error": {
     "code": 404,
@@ -182,4 +180,13 @@ SKIP groq - unhealthy (circuit breaker)
 SKIP gemini - unhealthy (circuit breaker)
 FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
 FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+SKIP openrouter - budget exhausted
+
+[2026-08-30 15:33:54 UTC] LLM call failed at step 1.
+All LLM providers failed. Attempts:
+SKIP groq - unhealthy (circuit breaker)
+SKIP gemini - unhealthy (circuit breaker)
+FAIL cerebras/gemma-4-31b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+FAIL cerebras/gpt-oss-120b attempt 1: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_required"}
+CIRCUIT_OPEN cerebras
 SKIP openrouter - budget exhausted
