@@ -1,11 +1,4 @@
 ## Summary
-2026-08-29 23:33:45 UTC | model=unknown | budget=high | steps=0 | tokens=0
-First action: none
-Summary: Stopped: LLM failed at step 1.
-
-Step details:
-
-## Summary
 2026-08-30 00:04:47 UTC | model=openrouter | budget=full | steps=5 | tokens=78782
 First action: list_dir
 Summary: Step 1: list_dir (OK) — Contents of docs/converters/:
@@ -56,4 +49,12 @@ Step 1: action=list_dir | tokens=14733 | result=Contents of memory/:
 [2026-08-29 19:03:48 UTC] LLM call failed at step 1.
 All LLM providers failed. Attempts:
 FAIL groq/meta-llama/llama-pr
+
+## Summary
+2026-08-30 01:03:52 UTC | model=unknown | budget=full | steps=0 | tokens=0
+First action: none
+Summary: Stopped: LLM failed at step 1.
+
+Step details:
+
 
