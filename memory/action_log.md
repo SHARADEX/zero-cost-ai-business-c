@@ -5055,3 +5055,16 @@ to submit them to Google Indexing API
 **Run Summary:**
   - Stopped: LLM failed at step 1.
 ---
+## Run 2026-08-30 19:55:56 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 36544
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Stopped: LLM failed at step 2.
+---
