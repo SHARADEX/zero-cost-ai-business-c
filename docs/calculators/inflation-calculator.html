@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation Calculator - Calculate Buying Power Over Time</title>
+  <meta name="description" content="Free online inflation calculator to compute cumulative inflation, future value, and historical purchasing power loss over any number of years.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/inflation-calculator.html">
+  <meta property="og:title" content="Inflation Calculator - Free Online Tool">
+  <meta property="og:description" content="Calculate cumulative inflation rate and changes in purchasing power over time.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Inflation Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/inflation-calculator.html",
+    "description": "Calculate cumulative inflation rate and future purchasing power.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a> | 
+      <a href="index.html">Calculators</a> | 
+      <a href="../converters/index.html">Converters</a> | 
+      <a href="../blog/index.html">Blog</a>
+    </nav>
+    <h1>Inflation Calculator</h1>
+    <p>Calculate the true impact of inflation on your purchasing power over time.</p>
+  </header>
+
+  <div id="ad-zone" class="ad-slot">
+    <!-- EthicalAds / Carbon Placement Placeholder -->
+    <div class="ad-placeholder"><small>Sponsored / Ethical Ad Space</small></div>
+  </div>
+
+  <main>
+    <section class="tool-container">
+      <form id="inflation-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="initial-amount">Starting Amount ($):</label>
+          <input type="number" id="initial-amount" value="1000" min="0" step="any" required>
+        </div>
+        <div class="form-group">
+          <label for="annual-inflation">Average Annual Inflation Rate (%):</label>
+          <input type="number" id="annual-inflation" value="3.5" min="0" max="1000" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="years">Number of Years:</label>
+          <input type="number" id="years" value="10" min="1" max="100" required>
+        </div>
+        <button type="button" id="calc-btn" class="btn-primary">Calculate Impact</button>
+      </form>
+
+      <div id="result" class="result-box" style="margin-top:20px;">
+        <h3>Results</h3>
+        <p><strong>Equivalent Future Cost:</strong> $<span id="future-cost">1410.60</span></p>
+        <p><strong>Future Purchasing Power of Current Amount:</strong> $<span id="future-power">708.92</span></p>
+        <p><strong>Cumulative Inflation:</strong> <span id="cumulative-rate">41.06</span>%</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>How Inflation Affects Purchasing Power</h2>
+      <p>Inflation compounds over time, reducing the real value of money held in uninvested cash. The standard formula for future equivalent price is <code>FV = PV * (1 + r)^n</code>, where <em>PV</em> is present value, <em>r</em> is annual inflation rate, and <em>n</em> is number of years.</p>
+      
+      <h3>Protect Your Wealth with Smart Financial Infrastructure</h3>
+      <p>Organize your financial tracking and business assets seamlessly with productivity tools like <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="nofollow noopener">Notion</a>, or deploy automated finance tracking tools on reliable VPS providers like <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="nofollow noopener">DigitalOcean</a>.</p>
+    </section>
+
+    <section class="cta-section">
+      <div class="support-box">
+        <h3>Support Free Web Tools</h3>
+        <p>If you find this calculator helpful, consider supporting our open-source tools with a small crypto tip or GitHub Sponsor.</p>
+        <a href="../guides/crypto-tips.html" class="btn-secondary">Support & Tip</a>
+      </div>
+
+      <div class="newsletter-box">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our free weekly newsletter for financial models, developer tools, and free utilities.</p>
+        <form action="mailto:contact@example.com" method="get">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn-submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Zero-Cost AI Business. All rights reserved. | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+  </footer>
+
+  <script>
+    function calculateInflation() {
+      const pv = parseFloat(document.getElementById('initial-amount').value) || 0;
+      const rate = (parseFloat(document.getElementById('annual-inflation').value) || 0) / 100;
+      const years = parseInt(document.getElementById('years').value, 10) || 0;
+
+      const multiplier = Math.pow(1 + rate, years);
+      const futureCost = pv * multiplier;
+      const futurePower = multiplier > 0 ? (pv / multiplier) : 0;
+      const cumulative = (multiplier - 1) * 100;
+
+      document.getElementById('future-cost').textContent = futureCost.toFixed(2);
+      document.getElementById('future-power').textContent = futurePower.toFixed(2);
+      document.getElementById('cumulative-rate').textContent = cumulative.toFixed(2);
+    }
+
+    document.getElementById('calc-btn').addEventListener('click', calculateInflation);
+    document.getElementById('initial-amount').addEventListener('input', calculateInflation);
+    document.getElementById('annual-inflation').addEventListener('input', calculateInflation);
+    document.getElementById('years').addEventListener('input', calculateInflation);
+  </script>
+</body>
+</html>
