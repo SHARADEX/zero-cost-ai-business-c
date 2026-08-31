@@ -1,11 +1,4 @@
 ## Summary
-2026-08-30 22:22:02 UTC | model=gemini | budget=full | steps=0 | tokens=35708
-First action: none
-Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
-
-Step details:
-
-## Summary
 2026-08-31 00:43:07 UTC | model=openrouter | budget=full | steps=5 | tokens=88019
 First action: seo_submit
 Summary: Step 1: seo_submit (OK) — SEO submit complete. Google: 0/28 submitted (errors: 1). Bing: 0/28 submitted (e | Step 2: revenue_verify (FAIL) — revenue_verify error: Failed to fetch balance for ethereum | Step 3: list_dir (OK) — Contents of docs/:
@@ -51,4 +44,12 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
 
 The agent adds new pages here via `seo_submit`. The `seo_submit` tool then tries
 to submit them to...
+
+## Summary
+2026-08-31 09:01:50 UTC | model=gemini | budget=full | steps=0 | tokens=37984
+First action: none
+Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at step 2.
+
+Step details:
+
 
