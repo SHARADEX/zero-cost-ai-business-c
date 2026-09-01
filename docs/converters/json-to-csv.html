@@ -1,39 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=""en"">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
     <title>JSON to CSV Converter — Free Online Tool</title>
-    <meta name="description" content="Convert JSON data to CSV format instantly in your browser. Free, secure, fast, and no data uploaded to servers.">
-    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/converters/json-to-csv.html">
-    <link rel="stylesheet" href="../assets/style.css">
-    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <meta name=""description"" content=""Convert JSON data to CSV format instantly in your browser. Free, fast, secure, client-side tool with zero server uploads."">
+    <link rel=""stylesheet"" href=""../assets/style.css"">
+    <script data-goatcounter=""https://your-site.goatcounter.com/count"" async src=""//gc.zgo.at/count.js""></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="../tools.html">Tools</a>
-            <a href="../converters/">Converters</a>
-            <a href="../calculators/">Calculators</a>
-            <a href="../blog/">Blog</a>
+            <a href=""../index.html"">Home</a>
+            <a href=""../converters/"">Converters</a>
+            <a href=""../calculators/"">Calculators</a>
+            <a href=""../guides/crypto-tips.html"">Tip Support</a>
         </nav>
     </header>
     <main>
         <h1>JSON to CSV Converter</h1>
-        <p class="subtitle">Paste your JSON array below and convert it to CSV format instantly.</p>
-        <div class="tool-container">
-            <textarea id="input" placeholder="Paste JSON here (e.g. [{'name': 'Alice', 'age': 30}])"></textarea>
-            <button id="convert-btn">Convert to CSV</button>
-            <textarea id="output" placeholder="CSV output will appear here..." readonly></textarea>
-        </div>
-        <div class="affiliate-box">
-            <h3>Recommended Hosting</h3>
-            <p>Need a reliable VPS to run your applications? Check out <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank">DigitalOcean</a> for $200 free credit.</p>
+        <p>Paste your JSON array below to convert it into a comma-separated values (CSV) spreadsheet format.</p>
+        <textarea id=""jsonInput"" placeholder=""[{""name"": ""Alice"", ""age"": 30}]"" rows=""10"" style=""width:100%"></textarea>
+        <button onclick=""convertJsonToCsv()"" style=""margin-top:10px; padding:10px 20px; background:#0070f3; color:#fff; border:none; border-radius:4px; cursor:pointer;"">Convert to CSV</button>
+        <textarea id=""csvOutput"" placeholder=""Converted CSV will appear here..."" rows=""10"" style=""width:100%; margin-top:10px;"" readonly></textarea>
+        <div class=""ad-zone"" style=""margin-top:20px; padding:15px; background:#f4f4f4; text-align:center; border:1px dashed #ccc;"">
+            <p>Sponsored Ad</p>
+            <a href=""https://m.do.co/c/YOUR_REFERRAL_CODE"">Get $200 free credit with DigitalOcean VPS hosting.</a>
         </div>
     </main>
     <footer>
-        <p>&copy; 2026 FreeTools. <a href="../guides/crypto-tips.html">Support Us</a> | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+        <p>&copy; 2026 FreeTools. Supported via <a href=""../guides/crypto-tips.html"">Crypto Tips</a> &amp; Affiliate Links.</p>
     </footer>
+    <script>
+    function convertJsonToCsv() {
+        try {
+            const data = JSON.parse(document.getElementById('jsonInput').value);
+            if (!Array.isArray(data) || data.length === 0) {
+                alert('Input must be a non-empty JSON array of objects.');
+                return;
+            }
+            const keys = Object.keys(data[0]);
+            let csv = keys.join(',') + '\n';
+            data.forEach(row => {
+                csv += keys.map(k => JSON.stringify(row[k] || '')).join(',') + '\n';
+            });
+            document.getElementById('csvOutput').value = csv;
+        } catch(e) {
+            alert('Invalid JSON: ' + e.message);
+        }
+    }
+    </script>
 </body>
 </html>
