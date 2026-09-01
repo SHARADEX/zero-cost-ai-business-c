@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang=""en"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>CSV to TSV Converter — Free Online Tool</title>
+    <meta name=""description"" content=""Convert CSV data to TSV (Tab-Separated Values) instantly in your browser. Fast, free, client-side converter with no data uploads."">
+    <link rel=""stylesheet"" href=""../assets/style.css"">
+    <link rel=""canonical"" href=""https://SHARADEX.github.io/zero-cost-ai-business-c/converters/csv-to-tsv.html"">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href=""../index.html"">Home</a>
+            <a href=""../tools/"">Tools</a>
+            <a href=""index.html"">Converters</a>
+            <a href=""../calculators/"">Calculators</a>
+            <a href=""../blog/"">Blog</a>
+        </nav>
+    </header>
+    <main>
+        <h1>CSV to TSV Converter</h1>
+        <p>Paste your CSV data below and convert it instantly to Tab-Separated Values (TSV) format.</p>
+        
+        <div class=""tool-container"">
+            <div class=""input-group"">
+                <label for=""csvInput"">CSV Input:</label>
+                <textarea id=""csvInput"" rows=""10"" placeholder=""name,age,city\nJohn,30,New York"></textarea>
+            </div>
+            <button id=""convertBtn"" class=""btn"">Convert to TSV</button>
+            <div class=""output-group"">
+                <label for=""tsvOutput"">TSV Output:</label>
+                <textarea id=""tsvOutput"" rows=""10"" readonly></textarea>
+            </div>
+        </div>
+
+        <div class=""ad-slot"">
+            <!-- Ad Zone -->
+            <script async src=""https://ethicalads.io/v1/ethicalads.min.js"" type=""text/javascript""></script>
+            <div data-ea-publisher=""zerocostai"" data-ea-type=""image""></div>
+        </div>
+
+        <section class=""affiliate-section"">
+            <h3>Recommended Developer Tools</h3>
+            <p>Need powerful hosting for your projects? Check out <a href=""https://m.do.co/c/YOUR_REFERRAL_CODE"" target=""_blank"" rel=""nofollow"">DigitalOcean VPS</a> ($200 free credit).</p>
+        </section>
+
+        <section class=""newsletter-section"">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action=""https://buttondown.com/api/emails/embed-subscribe/zerocostai"" method=""post"" target=""popupwindow"" onsubmit=""window.open('https://buttondown.com/zerocostai', 'popupwindow')"">
+                <input type=""email"" name=""email"" placeholder=""Enter your email"" required>
+                <button type=""submit"">Subscribe</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Zero-Cost AI Business Agent. <a href=""../guides/crypto-tips.html"">Support & Tips</a></p>
+    </footer>
+    <script src=""../assets/main.js""></script>
+    <script>
+        document.getElementById('convertBtn').addEventListener('click', function() {
+            const csv = document.getElementById('csvInput').value;
+            // Simple CSV to TSV conversion logic handling quoted commas correctly
+            let tsv = '';
+            let insideQuote = false;
+            for (let i = 0; i < csv.length; i++) {
+                let char = csv[i];
+                if (char === '""') {
+                    insideQuote = !insideQuote;
+                    tsv += char;
+                } else if (char === ',' && !insideQuote) {
+                    tsv += '\t';
+                } else {
+                    tsv += char;
+                }
+            }
+            document.getElementById('tsvOutput').value = tsv;
+        });
+    </script>
+</body>
+</html>
