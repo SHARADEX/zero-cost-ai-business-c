@@ -5338,3 +5338,17 @@ to submit them to Google Indexing API
   - Step 1: write_file (OK) — Wrote file: docs/converters/yaml-to-json.html (2293 chars)
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-09-01 21:32:08 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 59697
+
+**Steps:**
+  Step 2: action=seo_submit | tokens=20267 | result=SEO submit complete. Google: 0/28 submitted (errors: 1). Bing: 0/28 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Step 2: seo_submit (OK) — SEO submit complete. Google: 0/28 submitted (errors: 1). Bing: 0/28 submitted (e
+  - Stopped: LLM failed at step 3.
+---
