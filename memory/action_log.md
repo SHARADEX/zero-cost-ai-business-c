@@ -5325,3 +5325,16 @@ to submit them to Google Indexing API
   - Step 1: validation failed twice — skipped.
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-09-01 18:41:07 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 18182
+
+**Steps:**
+  Step 1: action=write_file | tokens=18182 | result=Wrote file: docs/converters/yaml-to-json.html (2293 chars)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/converters/yaml-to-json.html (2293 chars)
+  - Stopped: LLM failed at step 2.
+---
