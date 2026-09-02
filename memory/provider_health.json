@@ -5,157 +5,157 @@
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367527.1422017
+      "timestamp": 1788377770.922455
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367527.279914
+      "timestamp": 1788377770.9860024
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367527.8115966
+      "timestamp": 1788377771.8533523
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367527.937496
+      "timestamp": 1788377772.089975
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1788367534.8339689
+      "timestamp": 1788377782.0790522
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367534.9553359
+      "timestamp": 1788377782.1455655
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367535.0772872
+      "timestamp": 1788377782.2144117
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367535.2101018
+      "timestamp": 1788377782.4244525
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367535.3422134
+      "timestamp": 1788377782.6428554
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1788367544.4613857
+      "timestamp": 1788377783.673116
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367544.839247
+      "timestamp": 1788377783.739043
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367544.9693866
+      "timestamp": 1788377783.8100677
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367545.1226714
+      "timestamp": 1788377784.0404246
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367545.3523772
+      "timestamp": 1788377784.2746928
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1788367574.1394517
+      "timestamp": 1788377785.5908277
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367574.2990372
+      "timestamp": 1788377785.6695938
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367574.453035
+      "timestamp": 1788377785.7471223
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367574.5902116
+      "timestamp": 1788377786.070369
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367574.7294736
+      "timestamp": 1788377786.3093593
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1788367579.2659104
+      "timestamp": 1788377788.354134
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367579.4235125
+      "timestamp": 1788377788.4287052
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788367579.5793922
+      "timestamp": 1788377788.500714
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367579.7174454
+      "timestamp": 1788377788.709458
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788367579.8512719
+      "timestamp": 1788377788.9391003
     },
     {
       "provider": "cerebras",
       "success": false,
       "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
-      "timestamp": 1788367580.1342757
+      "timestamp": 1788377789.2423222
     },
     {
       "provider": "cerebras",
       "success": false,
       "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
-      "timestamp": 1788367580.3115396
+      "timestamp": 1788377789.3822849
     }
   ]
 }

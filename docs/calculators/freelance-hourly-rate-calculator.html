@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freelance Hourly Rate Calculator | Calculate Your Target Rate</title>
-  <meta name="description" content="Calculate your ideal freelance hourly rate based on target annual income, expenses, billable hours, and taxes. Free online calculator.">
+  <title>Freelance Hourly Rate Calculator - Calculate Your Target Rate</title>
+  <meta name="description" content="Calculate your ideal freelance hourly rate based on desired annual income, billable hours, business expenses, and taxes. Free online calculator.">
   <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/freelance-hourly-rate-calculator.html">
-  <meta property="og:title" content="Freelance Hourly Rate Calculator">
-  <meta property="og:description" content="Free online tool to calculate your target freelance hourly rate accounting for business expenses and billable hours.">
+  <meta property="og:title" content="Freelance Hourly Rate Calculator - Calculate Your Target Rate">
+  <meta property="og:description" content="Easily compute your minimum and target freelance hourly rate with this free, client-side calculator.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="../css/style.css">
-  <script data-goatcounter="https://zero-cost-ai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -21,66 +21,89 @@
     "operatingSystem": "All"
   }
   </script>
+  <style>
+    .calc-container { max-width: 640px; margin: 2rem auto; padding: 1.5rem; background: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333; }
+    .form-group input { width: 100%; padding: 0.6rem 0.8rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+    .btn-calc { background: #2563eb; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-size: 1rem; font-weight: 600; cursor: pointer; width: 100%; }
+    .btn-calc:hover { background: #1d4ed8; }
+    .result-box { margin-top: 1.5rem; padding: 1.25rem; background: #f0fdf4; border: 1px solid #86efac; border-radius: 6px; display: none; }
+    .result-box h3 { margin-top: 0; color: #166534; }
+    .rate-highlight { font-size: 1.75rem; font-weight: 700; color: #15803d; margin: 0.5rem 0; }
+    .ad-placeholder { min-height: 100px; background: #f8fafc; border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; margin: 2rem 0; color: #64748b; }
+    .monetize-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.25rem; margin-top: 2rem; }
+  </style>
 </head>
 <body>
   <header>
-    <nav><a href="../index.html">Home</a> | <a href="./index.html">Calculators</a> | <a href="../converters/">Converters</a> | <a href="../guides/crypto-tips.html">Support Us</a></nav>
+    <nav><a href="../index.html">Home</a> | <a href="index.html">Calculators</a> | <a href="../converters/index.html">Converters</a></nav>
   </header>
-  <main>
+
+  <main class="calc-container">
     <h1>Freelance Hourly Rate Calculator</h1>
-    <p>Determine the exact hourly rate you need to charge to reach your target annual net income.</p>
-    
-    <div id="ethical-ad-zone"></div>
+    <p>Determine exactly what to charge per hour to cover personal expenses, business overhead, taxes, and target profit margins.</p>
 
-    <form id="calc-form" onsubmit="event.preventDefault(); calculateRate();">
-      <label>Target Annual Net Income ($): <input type="number" id="targetIncome" value="75000" required></label><br><br>
-      <label>Annual Expenses ($): <input type="number" id="expenses" value="10000" required></label><br><br>
-      <label>Billable Hours Per Week: <input type="number" id="billableHours" value="25" required></label><br><br>
-      <label>Vacation Weeks Per Year: <input type="number" id="vacationWeeks" value="4" required></label><br><br>
-      <label>Estimated Tax Rate (%): <input type="number" id="taxRate" value="25" required></label><br><br>
-      <button type="submit">Calculate Rate</button>
-    </form>
+    <div class="form-group">
+      <label for="targetIncome">Desired Annual Take-Home Income ($):</label>
+      <input type="number" id="targetIncome" value="60000" min="1000" step="1000">
+    </div>
+    <div class="form-group">
+      <label for="annualExpenses">Annual Business Expenses ($):</label>
+      <input type="number" id="annualExpenses" value="6000" min="0" step="500">
+    </div>
+    <div class="form-group">
+      <label for="taxRate">Estimated Tax Rate (%):</label>
+      <input type="number" id="taxRate" value="25" min="0" max="60" step="1">
+    </div>
+    <div class="form-group">
+      <label for="billableWeeks">Billable Weeks per Year:</label>
+      <input type="number" id="billableWeeks" value="48" min="1" max="52" step="1">
+    </div>
+    <div class="form-group">
+      <label for="billableHours">Billable Hours per Week:</label>
+      <input type="number" id="billableHours" value="25" min="1" max="60" step="1">
+    </div>
 
-    <div id="result" style="margin-top:20px; font-weight:bold;"></div>
+    <button type="button" class="btn-calc" id="calculateBtn">Calculate Hourly Rate</button>
 
-    <script>
-      function calculateRate() {
-        const income = parseFloat(document.getElementById('targetIncome').value) || 0;
-        const exp = parseFloat(document.getElementById('expenses').value) || 0;
-        const hoursPerWeek = parseFloat(document.getElementById('billableHours').value) || 1;
-        const vacation = parseFloat(document.getElementById('vacationWeeks').value) || 0;
-        const tax = parseFloat(document.getElementById('taxRate').value) || 0;
-        
-        const workingWeeks = Math.max(1, 52 - vacation);
-        const totalBillableHours = workingWeeks * hoursPerWeek;
-        const grossNeeded = (income + exp) / (1 - (tax / 100));
-        const rate = grossNeeded / totalBillableHours;
-        
-        document.getElementById('result').innerText = 'Recommended Hourly Rate: $' + rate.toFixed(2) + ' / hr (Annual billable hours: ' + totalBillableHours + ' hrs)';
-      }
-    </script>
+    <div class="result-box" id="resultBox">
+      <h3>Recommended Hourly Rate</h3>
+      <div class="rate-highlight" id="hourlyRateDisplay">$0.00 / hr</div>
+      <p id="breakdownDetails"></p>
+    </div>
 
-    <section style="margin-top:30px;">
-      <h2>Recommended Freelance Tools</h2>
-      <p>Organize projects with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="noopener">Notion Workspace</a> or host web apps with <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="noopener">DigitalOcean Cloud</a>.</p>
-    </section>
+    <div id="ad-zone" class="ad-placeholder">
+      <span>Ethical Advertisement Slot</span>
+    </div>
 
-    <section style="margin-top:30px;">
-      <h2>Newsletter Signup</h2>
-      <p>Get free updates and business optimization templates.</p>
-      <form action="mailto:subscribe@example.com" method="post" enctype="text/plain">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
+    <section class="monetize-box">
+      <h3>Support This Free Tool</h3>
+      <p>Found this calculator helpful? Support maintenance via <a href="../guides/crypto-tips.html">crypto tip</a> or sponsor on <a href="https://github.com/sponsors/SHARADEX" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>.</p>
+      <form action="https://buttondown.email/api/emails/embed-subscribe/SHARADEX" method="post" target="popupwindow" class="newsletter-form">
+        <label for="bd-email">Subscribe to our developer & freelance tool updates:</label><br>
+        <input type="email" name="email" id="bd-email" placeholder="you@domain.com" required style="margin-top:0.5rem; padding:0.4rem 0.6rem;">
+        <button type="submit" style="padding:0.4rem 0.8rem;">Subscribe</button>
       </form>
     </section>
-
-    <section style="margin-top:30px;">
-      <h2>Support Our Tools</h2>
-      <p>Find value in our free tools? Consider leaving a <a href="../guides/crypto-tips.html">crypto tip</a> to support hosting.</p>
-    </section>
   </main>
-  <footer>
-    <p>&copy; 2026 Zero-Cost AI Business | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../guides/crypto-tips.html">Tip Box</a></p>
-  </footer>
+
+  <script>
+    document.getElementById('calculateBtn').addEventListener('click', function() {
+      var income = parseFloat(document.getElementById('targetIncome').value) || 0;
+      var expenses = parseFloat(document.getElementById('annualExpenses').value) || 0;
+      var taxRate = parseFloat(document.getElementById('taxRate').value) || 0;
+      var weeks = parseFloat(document.getElementById('billableWeeks').value) || 1;
+      var hoursPerWeek = parseFloat(document.getElementById('billableHours').value) || 1;
+
+      var grossNeeded = (income / (1 - (taxRate / 100))) + expenses;
+      var totalBillableHours = weeks * hoursPerWeek;
+      var hourlyRate = totalBillableHours > 0 ? (grossNeeded / totalBillableHours) : 0;
+
+      document.getElementById('hourlyRateDisplay').textContent = '$' + hourlyRate.toFixed(2) + ' / hr';
+      document.getElementById('breakdownDetails').textContent = 'To take home $' + income.toLocaleString() + ' with $' + expenses.toLocaleString() + ' in expenses across ' + totalBillableHours + ' billable hours annually, your gross revenue target is $' + Math.round(grossNeeded).toLocaleString() + '.';
+      document.getElementById('resultBox').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
