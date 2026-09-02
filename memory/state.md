@@ -1,12 +1,4 @@
 ## Summary
-2026-09-01 23:44:07 UTC | model=gemini | budget=full | steps=1 | tokens=37701
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/converters/json-to-csv.html (2686 chars) | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
-
-Step details:
-Step 1: action=write_file | tokens=18616 | result=Wrote file: docs/converters/json-to-csv.html (2686 chars)
-
-## Summary
 2026-09-02 02:28:48 UTC | model=openrouter | budget=full | steps=4 | tokens=112901
 First action: none
 Summary: Step 1: validation failed twice — skipped. | Step 2: read_file (OK) — Contents of memory/blocked.md:
@@ -47,4 +39,12 @@ Step 1: action=list_dir | tokens=18447 | result=Contents of docs/converters/:
   break-even-point-ca
   Step 3: action=read_file | tokens=16337 | result=Contents of memory/blocked.md:
 # Blocked Actions ...
+
+## Summary
+2026-09-02 12:12:50 UTC | model=gemini | budget=full | steps=1 | tokens=37289
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/advanced-compound-interest-calculator.html (2825 ch | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=write_file | tokens=18400 | result=Wrote file: docs/calculators/advanced-compound-interest-calculator.html (2825 chars)
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Compound Interest Calculator — Free Financial Tool</title>
+    <meta name="description" content="Calculate your investment growth over time with our free advanced compound interest calculator. Factor in monthly contributions and varying interest rates.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/advanced-compound-interest-calculator.html">
+    <link rel="stylesheet" href="../style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../calculators/">Calculators</a>
+            <a href="../converters/">Converters</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Advanced Compound Interest Calculator</h1>
+        <p>Plan your financial future by projecting how your investments can grow with compound interest.</p>
+        
+        <div class="calculator-box">
+            <label>Initial Principal ($): <input type="number" id="principal" value="10000"></label>
+            <label>Annual Interest Rate (%): <input type="number" id="rate" value="7"></label>
+            <label>Years to Grow: <input type="number" id="years" value="10"></label>
+            <label>Monthly Contribution ($): <input type="number" id="contribution" value="500"></label>
+            <button onclick="calculateCompound()">Calculate Growth</button>
+            <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+        </div>
+
+        <script>
+        function calculateCompound() {
+            let P = parseFloat(document.getElementById('principal').value);
+            let r = parseFloat(document.getElementById('rate').value) / 100;
+            let t = parseFloat(document.getElementById('years').value);
+            let PMT = parseFloat(document.getElementById('contribution').value);
+            let n = 12;
+            
+            let total = P * Math.pow(1 + r/n, n*t);
+            for(let i = 1; i <= t*n; i++) {
+                total += PMT * Math.pow(1 + r/n, (t*n - i));
+            }
+            document.getElementById('result').innerText = 'Future Value: $' + total.toFixed(2);
+        }
+        </script>
+
+        <section class="affiliate-cta">
+            <h3>Recommended Tool</h3>
+            <p>Manage your finances and notes securely with <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank" rel="nofollow">Notion</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Free Tools Hub. <a href="../guides/crypto-tips.html">Support Us</a></p>
+    </footer>
+</body>
+</html>
