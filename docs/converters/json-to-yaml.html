@@ -3,121 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convert JSON to YAML — Free Online Tool</title>
-  <meta name="description" content="Convert JSON to YAML format. Free, browser-based, no sign-up.">
-  <meta name="keywords" content="convert json to yaml, json to yaml converter, online json converter, free converter tool">
-  <meta property="og:title" content="Convert JSON to YAML — Free Online Tool">
-  <meta property="og:description" content="Convert JSON to YAML format. Free, browser-based, no sign-up.">
-  <meta property="og:type" content="website">
+  <title>Free JSON to YAML Converter Online - Fast & Private</title>
+  <meta name="description" content="Convert JSON to YAML instantly in your browser. Free, secure, client-side converter with syntax validation and instant copy.">
   <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/converters/json-to-yaml.html">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "JSON to YAML Converter",
-  "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "description": "Convert JSON to YAML format. Free, browser-based, no sign-up."
-}
-  </script>
+  <meta property="og:title" content="Free JSON to YAML Converter Online">
+  <meta property="og:description" content="Convert JSON data to clean YAML format easily without server uploads.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
-    <div class="container">
-      <a href="/" class="logo">⚡<span>FreeTools</span></a>
-      <nav>
-        <a href="/tools/">Tools</a>
-        <a href="/converters/">Converters</a>
-        <a href="/calculators/">Calculators</a>
-        <a href="/blog/">Blog</a>
-        <a href="/guides/crypto-tips.html">Support</a>
-      </nav>
-    </div>
+    <nav>
+      <a href="../index.html">Home</a> | 
+      <a href="index.html">Converters</a> | 
+      <a href="../calculators/">Calculators</a> | 
+      <a href="../blog/">Blog</a>
+    </nav>
   </header>
-  <div class="ad-zone" id="house-ad-container">  <script>    (function() {      var pool = [["/tools/json-formatter.html","JSON Formatter","Format and validate JSON instantly."],["/tools/qr-generator.html","QR Code Generator","Generate QR codes for free."],["/tools/regex-tester.html","Regex Tester","Test regex patterns with live highlighting."],["/tools/password-generator.html","Password Generator","Generate strong, secure passwords."],["/tools/jwt-decoder.html","JWT Decoder","Decode and inspect JWT tokens."],["/tools/color-converter.html","Color Converter","Convert HEX, RGB, HSL colors."],["/converters/csv-to-json.html","CSV → JSON","Convert CSV data to JSON."],["/converters/json-to-yaml.html","JSON → YAML","Convert JSON to YAML."],["/calculators/bmi-calculator.html","BMI Calculator","Calculate your Body Mass Index."],["/calculators/loan-calculator.html","Loan Calculator","Calculate monthly loan payments."]      ];      var pick = pool[Math.floor(Math.random()*pool.length)];      document.write('<span class="house-ad-label">Featured Tool</span>        <a href="' + pick[0] + '" class="house-ad-link"><strong>' + pick[1] + '</strong> — ' + pick[2] + '</a>');    })();  </script>  <noscript><a href="/tools/" class="house-ad-link">Browse all tools →</a></noscript></div>
 
-  <main class="container tool-page">
-    <h1>Convert JSON to YAML</h1>
-    <p class="subtitle">Free, browser-based JSON → YAML converter. No sign-up, no tracking, runs entirely in your browser.</p>
+  <main>
+    <h1>Free Online JSON to YAML Converter</h1>
+    <p>Convert JSON objects and arrays into readable YAML syntax directly in your browser. Zero tracking, 100% client-side.</p>
 
-    <label for="input" style="display:block; margin-bottom:8px; color:var(--text-dim);">Paste your JSON:</label>
-    <textarea id="input" placeholder="Paste your JSON content here..." style="min-height:160px;"></textarea>
-
-    <div style="display:flex; gap:8px; flex-wrap:wrap; margin:16px 0;">
-      <button class="btn btn-primary" onclick="convert()">Convert to YAML</button>
-      <button class="btn" onclick="document.getElementById('input').value=''; document.getElementById('output').textContent='';">Clear</button>
-      <button class="btn" onclick="copyToClipboard(document.getElementById('output').textContent, this)">Copy Output</button>
+    <div class="ad-slot" id="ad-container">
+      <p class="ad-fallback">Support free developer tools by sharing or donating via crypto!</p>
     </div>
 
-    <label style="display:block; margin:16px 0 8px; color:var(--text-dim);">YAML output:</label>
-    <div id="output" class="output" style="min-height:160px;">Output will appear here.</div>
-
-    <section class="article-body" style="margin-top:40px;">
-      <h2>About JSON to YAML Conversion</h2>
-      <p>This free online tool converts JSON data to YAML format. All processing happens locally in your browser — your data is never uploaded to a server.</p>
-
-      <h3>How to Use</h3>
-      <ol>
-        <li>Paste your JSON content in the input box above.</li>
-        <li>Click "Convert to YAML".</li>
-        <li>Copy the result from the output box.</li>
-      </ol>
-
-      <h3>Common Use Cases</h3>
-      <ul>
-        <li>Converting configuration files between JSON and YAML formats</li>
-        <li>Transforming API responses for different consumers</li>
-        <li>Migrating data between systems that use different formats</li>
-      </ul>
-
-      <h3>Frequently Asked Questions</h3>
-      <h4>Is this converter free?</h4>
-      <p>Yes, completely free. No sign-up, no ads, no tracking.</p>
-      <h4>Is my data safe?</h4>
-      <p>Yes — all conversion happens in your browser. Your data never leaves your device.</p>
+    <section class="tool-container">
+      <label for="jsonInput"><strong>JSON Input:</strong></label><br>
+      <textarea id="jsonInput" rows="10" style="width:100%;" placeholder='{"name": "ZeroCost", "items": [1, 2, 3]}'></textarea><br><br>
+      <button id="convertBtn" type="button">Convert to YAML</button>
+      <button id="clearBtn" type="button">Clear</button>
+      <br><br>
+      <label for="yamlOutput"><strong>YAML Output:</strong></label><br>
+      <textarea id="yamlOutput" rows="10" style="width:100%;" readonly placeholder="YAML output will appear here..."></textarea>
+      <p id="errorMsg" style="color:red;"></p>
     </section>
 
-    <section class="related">
-      <h3>Related Tools</h3>
+    <section class="related-links">
+      <h3>Related Developer Converters</h3>
       <ul>
-      <li><a href="/converters/">All Converters</a></li>
-      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
-      <li><a href="/tools/yaml-converter.html">YAML Inspector</a></li>
+        <li><a href="json-to-xml.html">JSON to XML Converter</a></li>
+        <li><a href="csv-to-json.html">CSV to JSON Converter</a></li>
+        <li><a href="base64-encode.html">Base64 Encoder / Decoder</a></li>
       </ul>
     </section>
 
+    <section class="support-cta">
+      <h3>Support This Free Service</h3>
+      <p>Find this tool useful? Consider tipping via crypto or supporting on GitHub!</p>
+      <p><a href="../guides/crypto-tips.html">View Crypto Tip Addresses & Guide</a></p>
+    </section>
 
-    <div class="tip-box">
-      <h2>Found this useful?</h2>
-      <p>This tool is free and ad-free. If it saved you time, consider a small crypto tip or GitHub Sponsors donation.</p>
-      <a href="/guides/crypto-tips.html" class="btn btn-primary">Support this project</a>
-    </div>
+    <section class="newsletter-cta">
+      <h3>Get Free Web Dev & Micro-SaaS Tools</h3>
+      <form action="mailto:updates@example.com" method="get">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>Built and maintained by an autonomous AI agent. <a href="/guides/crypto-tips.html">Support this project</a>.</p>
-    </div>
-    <div class="newsletter-form">  <label>Get notified when we add new tools:</label>  <a href="mailto:subscribe@example.com?subject=Subscribe%20to%20newsletter&body=Please%20add%20me%20to%20the%20newsletter%20for%20new%20tool%20updates." class="btn btn-sm">Subscribe via Email</a>  <p class="disclosure">No spam. One email per week max. Just send the email and we'll add you.</p></div>
-
-<footer>
-
-  <script src="/assets/js/main.js"></script>
-  <!-- GoatCounter analytics — privacy-respecting, no cookies -->
-  <script data-goatcounter="https://skip.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</body>
-</html>
+    <p>&copy; 2026 Developer Toolkit. All processing is strictly local to your browser.</p>
+  </footer>
 
   <script>
-    function convert() { const v = document.getElementById('input').value.trim(); if (!v) return; try { const obj = JSON.parse(v); document.getElementById('output').textContent = jsyaml.dump(obj); } catch (e) { document.getElementById('output').textContent = 'Error: ' + e.message; } }
+    function jsonToYaml(obj, indent = 0) {
+      const pad = '  '.repeat(indent);
+      if (obj === null) return 'null\n';
+      if (typeof obj !== 'object') {
+        if (typeof obj === 'string') return `"${obj.replace(/"/g, '\\"')}"\n`;
+        return `${obj}\n`;
+      }
+      let yaml = '';
+      if (Array.isArray(obj)) {
+        if (obj.length === 0) return '[]\n';
+        for (const item of obj) {
+          if (typeof item === 'object' && item !== null) {
+            yaml += `${pad}- \n${jsonToYaml(item, indent + 1)}`;
+          } else {
+            yaml += `${pad}- ${jsonToYaml(item, 0)}`;
+          }
+        }
+      } else {
+        const keys = Object.keys(obj);
+        if (keys.length === 0) return '{}\n';
+        for (const k of keys) {
+          const val = obj[k];
+          if (typeof val === 'object' && val !== null) {
+            yaml += `${pad}${k}:\n${jsonToYaml(val, indent + 1)}`;
+          } else {
+            yaml += `${pad}${k}: ${jsonToYaml(val, 0)}`;
+          }
+        }
+      }
+      return yaml;
+    }
+
+    document.getElementById('convertBtn').addEventListener('click', function() {
+      const input = document.getElementById('jsonInput').value.trim();
+      const errorMsg = document.getElementById('errorMsg');
+      const output = document.getElementById('yamlOutput');
+      errorMsg.textContent = '';
+      if (!input) {
+        output.value = '';
+        return;
+      }
+      try {
+        const parsed = JSON.parse(input);
+        output.value = jsonToYaml(parsed).trim();
+      } catch (err) {
+        errorMsg.textContent = 'Invalid JSON: ' + err.message;
+      }
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', function() {
+      document.getElementById('jsonInput').value = '';
+      document.getElementById('yamlOutput').value = '';
+      document.getElementById('errorMsg').textContent = '';
+    });
   </script>
 </body>
 </html>

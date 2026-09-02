@@ -5440,3 +5440,22 @@ FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"me
   - Step 2: LLM retry failed.
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-09-02 16:45:26 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 4
+**Tokens used:** 78466
+
+**Steps:**
+  Step 1: action=seo_submit | tokens=19615 | result=SEO submit complete. Google: 0/28 submitted (errors: 1). Bing: 0/28 submitted (errors: 1). URLs added to queue regardless.
+  Step 2: action=revenue_verify | tokens=18439 | result=revenue_verify error: Failed to fetch balance for ethereum
+  Step 3: action=write_file | tokens=20116 | result=Wrote file: docs/converters/json-to-yaml.html (4935 chars)
+  Step 4: action=validate_html | tokens=20296 | result=✓ docs/converters/json-to-yaml.html passed validation (no issues)
+
+**Run Summary:**
+  - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/28 submitted (errors: 1). Bing: 0/28 submitted (e
+  - Step 2: revenue_verify (FAIL) — revenue_verify error: Failed to fetch balance for ethereum
+  - Step 3: write_file (OK) — Wrote file: docs/converters/json-to-yaml.html (4935 chars)
+  - Step 4: validate_html (OK) — ✓ docs/converters/json-to-yaml.html passed validation (no issues)
+  - Stopped: LLM failed at step 5.
+---
