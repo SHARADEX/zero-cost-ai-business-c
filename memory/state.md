@@ -1,15 +1,4 @@
 ## Summary
-2026-09-02 19:36:10 UTC | model=gemini | budget=full | steps=4 | tokens=81039
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/freelance-hourly-rate-calculator.html (6527 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/freelance-hourly-rate-calculator.html passed validation (no i | Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (95 pages) and robots.txt
-
-Step details:
-Step 1: action=write_file | tokens=20434 | result=Wrote file: docs/calculators/freelance-hourly-rate-calculator.html (6527 chars)
-  Step 2: action=validate_html | tokens=20030 | result=✓ docs/calculators/freelance-hourly-rate-calculator.html passed validation (no issues)
-  Step 3: action=seo_update_sitemap | tokens=20188 | result=Regenerated sitemap.xml (95 pages) and robots.txt
-  Step 4: action=seo_submit | tokens=20387 | result=SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (errors: 1). URLs added to queue regardless.
-
-## Summary
 2026-09-02 22:16:01 UTC | model=gemini | budget=full | steps=3 | tokens=80749
 First action: list_dir
 Summary: Step 1: list_dir (OK) — Contents of docs/calculators/:
@@ -43,4 +32,27 @@ Step 1: action=seo_update_sitemap | tokens=18546 | result=Regenerated sitemap.xm
   csv-to-tsv.html (3668 bytes)
   c
   Step 4: action=read_file | tokens=15896 | result=Contents of memor...
+
+## Summary
+2026-09-03 04:52:29 UTC | model=openrouter | budget=full | steps=3 | tokens=52189
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/net-salary-calculator.html (2553 chars) | Step 2: read_file (OK) — Contents of memory/seo_queue.md:
+# SEO Queue — URLs Pending Indexing Submission
+ | Step 3: read_file (OK) — Contents of memory/blocked.md:
+# Blocked Actions Log — v4.1 (Autonomous Edition)
+
+Step details:
+Step 1: action=write_file | tokens=18942 | result=Wrote file: docs/calculators/net-salary-calculator.html (2553 chars)
+  Step 2: action=read_file | tokens=16407 | result=Contents of memory/seo_queue.md:
+# SEO Queue — URLs Pending Indexing Submission
+
+The agent adds new pages here via `seo_submit`. The `seo_submit` tool then tries
+to submit them to Google Indexing API 
+  Step 3: action=read_file | tokens=16840 | result=Contents of memory/blocked.md:
+# Blocked Actions Log — v4.1 (Autonomous Edition)
+
+FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
+  "error": {
+    "code": 429,
+  ...
 
