@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang=""en"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>Debt Consolidation Calculator — Estimate Savings & Monthly Payments</title>
+    <meta name=""description"" content=""Calculate how much you can save by consolidating multiple high-interest debts into a single lower-interest loan. Free, fast, and mobile-friendly calculator."">
+    <link rel=""canonical"" href=""https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/debt-consolidation-calculator.html"">
+    <link rel=""stylesheet"" href=""../assets/style.css"">
+</head>
+<body>
+    <header class=""site-header"">
+        <nav class=""container"">
+            <a href=""../index.html"" class=""logo"">ZeroCostTools</a>
+            <div class=""nav-links"">
+                <a href=""../calculators/"">Calculators</a>
+                <a href=""../converters/"">Converters</a>
+                <a href=""../guides/crypto-tips.html"">Support</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class=""container"">
+        <h1>Debt Consolidation Calculator</h1>
+        <p class=""subtitle"">Combine multiple debts into one monthly payment and see your potential savings.</p>
+        
+        <div class=""tool-container"">
+            <div class=""form-group"">
+                <label for=""currentDebt1"">Debt 1 Balance ($)</label>
+                <input type=""number"" id=""currentDebt1"" value=""5000"">
+                <label for=""currentRate1"">Debt 1 APR (%)</label>
+                <input type=""number"" id=""currentRate1"" value=""22.5"">
+            </div>
+            <div class=""form-group"">
+                <label for=""currentDebt2"">Debt 2 Balance ($)</label>
+                <input type=""number"" id=""currentDebt2"" value=""3000"">
+                <label for=""currentRate2"">Debt 2 APR (%)</label>
+                <input type=""number"" id=""currentRate2"" value=""19.9"">
+            </div>
+            <div class=""form-group"">
+                <label for=""newRate"">New Consolidated Loan APR (%)</label>
+                <input type=""number"" id=""newRate"" value=""9.9"">
+                <label for=""newTerm"">New Loan Term (Months)</label>
+                <input type=""number"" id=""newTerm"" value=""36"">
+            </div>
+            <button class=""btn-primary"" onclick=""calculateDebtConsolidation()"">Calculate Savings</button>
+            
+            <div id=""result"" class=""result-box"" style=""margin-top: 20px; display: none;"">
+                <h3>Consolidation Results</h3>
+                <p id=""resultSummary""></p>
+            </div>
+        </div>
+
+        <section class=""content-section"">
+            <h2>Why Use Debt Consolidation?</h2>
+            <p>Managing multiple credit cards and loans with varying interest rates and due dates can be overwhelming. Debt consolidation allows you to replace multiple high-interest obligations with a single fixed-rate loan.</p>
+            <ul>
+                <li>Lower overall interest rate</li>
+                <li>Single predictable monthly payment</li>
+                <li>Clearer path to becoming debt-free</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class=""site-footer"">
+        <div class=""container"">
+            <p>&copy; 2026 ZeroCostTools. Built for maximum utility.</p>
+            <p><a href=""../guides/crypto-tips.html"">Support this project</a> | <a href=""../guides/affiliate-disclosure.html"">Affiliate Disclosure</a></p>
+        </div>
+    </footer>
+
+    <script>
+    function calculateDebtConsolidation() {
+        const d1 = parseFloat(document.getElementById('currentDebt1').value) || 0;
+        const r1 = (parseFloat(document.getElementById('currentRate1').value) || 0) / 100 / 12;
+        const d2 = parseFloat(document.getElementById('currentDebt2').value) || 0;
+        const r2 = (parseFloat(document.getElementById('currentRate2').value) || 0) / 100 / 12;
+        const newRate = (parseFloat(document.getElementById('newRate').value) || 0) / 100 / 12;
+        const newTerm = parseInt(document.getElementById('newTerm').value) || 36;
+
+        const totalDebt = d1 + d2;
+        // Rough approximation of current weighted minimum payment or standard amortization
+        const payment1 = r1 > 0 ? (d1 * r1 * Math.pow(1 + r1, 36)) / (Math.pow(1 + r1, 36) - 1) : d1 / 36;
+        const payment2 = r2 > 0 ? (d2 * r2 * Math.pow(1 + r2, 36)) / (Math.pow(1 + r2, 36) - 1) : d2 / 36;
+        const totalCurrentPayment = payment1 + payment2;
+
+        const newPayment = newRate > 0 ? (totalDebt * newRate * Math.pow(1 + newRate, newTerm)) / (Math.pow(1 + newRate, newTerm) - 1) : totalDebt / newTerm;
+        const monthlySavings = totalCurrentPayment - newPayment;
+        const totalSavings = (monthlySavings * newTerm);
+
+        const resBox = document.getElementById('result');
+        const resSummary = document.getElementById('resultSummary');
+        resSummary.innerHTML = `Total Debt: <strong>$${totalDebt.toFixed(2)}</strong><br>` +
+                                 `Estimated Current Monthly Payment: <strong>$${totalCurrentPayment.toFixed(2)}</strong><br>` +
+                                 `New Monthly Payment: <strong>$${newPayment.toFixed(2)}</strong><br>` +
+                                 `Estimated Monthly Savings: <strong>$${monthlySavings.toFixed(2)}</strong><br>` +
+                                 `Total Savings Over Term: <strong>$${totalSavings.toFixed(2)}</strong>`;
+        resBox.style.display = 'block';
+    }
+    </script>
+    <script data-goatcounter=""https://your-site.goatcounter.com/count"" async src=""//gc.zgo.at/count.js""></script>
+</body>
+</html>
