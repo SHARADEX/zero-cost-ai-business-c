@@ -5615,3 +5615,18 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
   - Step 2: validate_html (OK) — ✓ docs/calculators/debt-consolidation-calculator.html passed validation (no issu
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-09-03 20:01:57 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 2
+**Tokens used:** 36768
+
+**Steps:**
+  Step 1: action=seo_update_sitemap | tokens=18552 | result=Regenerated sitemap.xml (97 pages) and robots.txt
+  Step 2: action=seo_submit | tokens=18216 | result=SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: seo_update_sitemap (OK) — Regenerated sitemap.xml (97 pages) and robots.txt
+  - Step 2: seo_submit (OK) — SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (err
+  - Stopped: LLM failed at step 3.
+---
