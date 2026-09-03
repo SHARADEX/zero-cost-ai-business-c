@@ -42,3 +42,4 @@ Format: `- [ ] [YYYY-MM-DD HH:MM:SS UTC] https://...`
 - [ ] [2026-08-25 03:23:19 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/ltv-cac-ratio-calculator.html
 - [ ] [2026-08-25 03:23:19 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/debt-payoff-calculator.html
 - [ ] [2026-09-02 19:36:28 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/freelance-hourly-rate-calculator.html
+- [ ] [2026-09-03 00:27:30 UTC] https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/runway-calculator.html
