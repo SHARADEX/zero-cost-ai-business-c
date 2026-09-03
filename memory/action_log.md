@@ -5630,3 +5630,17 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
   - Step 2: seo_submit (OK) — SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (err
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-09-03 22:41:41 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 58453
+
+**Steps:**
+  Step 2: action=seo_submit | tokens=20064 | result=SEO submit complete. Google: 0/32 submitted (errors: 1). Bing: 0/32 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Step 2: seo_submit (OK) — SEO submit complete. Google: 0/32 submitted (errors: 1). Bing: 0/32 submitted (e
+  - Stopped: LLM failed at step 3.
+---
