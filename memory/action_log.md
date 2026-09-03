@@ -5587,3 +5587,16 @@ FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
   - Step 2: seo_submit (OK) — SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (err
   - Stopped: LLM failed at step 3.
 ---
+## Run 2026-09-03 13:44:12 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 20051
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: LLM retry failed.
+  - Stopped: LLM failed at step 2.
+---
