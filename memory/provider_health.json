@@ -5,109 +5,121 @@
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788530167.5994606
+      "timestamp": 1788542485.0320356
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788530167.6766129
+      "timestamp": 1788542485.288271
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788530168.218567
+      "timestamp": 1788542485.9431076
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788530168.3602185
+      "timestamp": 1788542486.0965736
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "429",
-      "timestamp": 1788530173.9612448
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "429",
-      "timestamp": 1788530179.3500137
-    },
-    {
-      "provider": "gemini",
-      "success": false,
-      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE",
-      "timestamp": 1788530185.9821036
+      "error": "gemini returned empty text in first part",
+      "timestamp": 1788542503.840755
     },
     {
       "provider": "gemini",
       "success": true,
       "error": "",
-      "timestamp": 1788530249.2327757
+      "timestamp": 1788542555.7441695
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788530249.334024
+      "timestamp": 1788542555.851558
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1788530249.4160924
+      "timestamp": 1788542555.9681566
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788530249.5862906
+      "timestamp": 1788542556.145687
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788530249.7690563
+      "timestamp": 1788542556.3410544
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "gemini returned empty text in first part",
+      "timestamp": 1788542564.7921023
+    },
+    {
+      "provider": "gemini",
+      "success": true,
+      "error": "",
+      "timestamp": 1788542579.5793366
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1788542579.7100108
+    },
+    {
+      "provider": "groq",
+      "success": false,
+      "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
+      "timestamp": 1788542579.948844
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788530255.372617
+      "timestamp": 1788542580.1348312
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "429",
-      "timestamp": 1788530260.9365408
+      "timestamp": 1788542580.3204386
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE",
-      "timestamp": 1788530266.8786557
+      "error": "429",
+      "timestamp": 1788542580.5020037
+    },
+    {
+      "provider": "gemini",
+      "success": false,
+      "error": "429",
+      "timestamp": 1788542580.705006
     },
     {
       "provider": "cerebras",
       "success": false,
-      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
-      "timestamp": 1788530267.067377
+      "error": "HTTP 401: {\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}",
+      "timestamp": 1788542580.8571897
     },
     {
       "provider": "cerebras",
       "success": false,
-      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
-      "timestamp": 1788530267.1476655
-    },
-    {
-      "provider": "cerebras",
-      "success": false,
-      "error": "HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
-      "timestamp": 1788530267.2106261
+      "error": "HTTP 401: {\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}",
+      "timestamp": 1788542580.9435384
     }
   ]
 }

@@ -5738,3 +5738,16 @@ to submit them to Google Indexing API
   - Step 1: write_file (OK) — Wrote file: docs/calculators/cac-payback-period-calculator.html (2603 chars)
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-09-04 17:21:24 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 0
+**Tokens used:** 39407
+
+**Steps:**
+
+
+**Run Summary:**
+  - Step 1: validation failed twice — skipped.
+  - Stopped: LLM failed at step 2.
+---
