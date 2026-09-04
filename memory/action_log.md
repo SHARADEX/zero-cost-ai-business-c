@@ -5712,3 +5712,16 @@ to submit them to Google Indexing API
   base64-encode.
   - Stopped: LLM failed at step 5.
 ---
+## Run 2026-09-04 09:48:50 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 40359
+
+**Steps:**
+  Step 1: action=seo_submit | tokens=20197 | result=SEO submit complete. Google: 0/32 submitted (errors: 1). Bing: 0/32 submitted (errors: 1). URLs added to queue regardless.
+
+**Run Summary:**
+  - Step 1: seo_submit (OK) — SEO submit complete. Google: 0/32 submitted (errors: 1). Bing: 0/32 submitted (e
+  - Stopped: LLM failed at step 2.
+---
