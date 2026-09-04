@@ -5751,3 +5751,17 @@ to submit them to Google Indexing API
   - Step 1: validation failed twice — skipped.
   - Stopped: LLM failed at step 2.
 ---
+## Run 2026-09-04 19:45:43 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 37585
+
+**Steps:**
+  Step 1: action=validate_html | tokens=19016 | result=✓ docs/calculators/cac-payback-period-calculator.html passed validation (no issues)
+
+**Run Summary:**
+  - Step 1: validate_html (OK) — ✓ docs/calculators/cac-payback-period-calculator.html passed validation (no issu
+  - Step 2: LLM retry failed.
+  - Stopped: LLM failed at step 3.
+---

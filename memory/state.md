@@ -1,12 +1,4 @@
 ## Summary
-2026-09-04 09:48:50 UTC | model=gemini | budget=full | steps=1 | tokens=40359
-First action: seo_submit
-Summary: Step 1: seo_submit (OK) — SEO submit complete. Google: 0/32 submitted (errors: 1). Bing: 0/32 submitted (e | Stopped: LLM failed at step 2.
-
-Step details:
-Step 1: action=seo_submit | tokens=20197 | result=SEO submit complete. Google: 0/32 submitted (errors: 1). Bing: 0/32 submitted (errors: 1). URLs added to queue regardless.
-
-## Summary
 2026-09-04 13:56:06 UTC | model=gemini | budget=full | steps=1 | tokens=18961
 First action: write_file
 Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/cac-payback-period-calculator.html (2603 chars) | Stopped: LLM failed at step 2.
@@ -21,4 +13,11 @@ Summary: Step 1: validation failed twice — skipped. | Stopped: LLM failed at s
 
 Step details:
 
+## Summary
+2026-09-04 19:45:43 UTC | model=gemini | budget=full | steps=1 | tokens=37585
+First action: validate_html
+Summary: Step 1: validate_html (OK) — ✓ docs/calculators/cac-payback-period-calculator.html passed validation (no issu | Step 2: LLM retry failed. | Stopped: LLM failed at step 3.
+
+Step details:
+Step 1: action=validate_html | tokens=19016 | result=✓ docs/calculators/cac-payback-period-calculator.html passed validation (no issues)
 
