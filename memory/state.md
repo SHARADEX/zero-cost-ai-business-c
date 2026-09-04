@@ -1,13 +1,4 @@
 ## Summary
-2026-09-03 17:27:22 UTC | model=gemini | budget=full | steps=2 | tokens=39204
-First action: write_file
-Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/debt-consolidation-calculator.html (5714 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/debt-consolidation-calculator.html passed validation (no issu | Stopped: LLM failed at step 3.
-
-Step details:
-Step 1: action=write_file | tokens=19508 | result=Wrote file: docs/calculators/debt-consolidation-calculator.html (5714 chars)
-  Step 2: action=validate_html | tokens=19696 | result=✓ docs/calculators/debt-consolidation-calculator.html passed validation (no issues)
-
-## Summary
 2026-09-03 20:01:57 UTC | model=gemini | budget=full | steps=2 | tokens=36768
 First action: seo_update_sitemap
 Summary: Step 1: seo_update_sitemap (OK) — Regenerated sitemap.xml (97 pages) and robots.txt | Step 2: seo_submit (OK) — SEO submit complete. Google: 0/1 submitted (errors: 1). Bing: 0/1 submitted (err | Stopped: LLM failed at step 3.
@@ -23,4 +14,20 @@ Summary: Step 1: validation failed twice — skipped. | Step 2: seo_submit (OK) 
 
 Step details:
 Step 2: action=seo_submit | tokens=20064 | result=SEO submit complete. Google: 0/32 submitted (errors: 1). Bing: 0/32 submitted (errors: 1). URLs added to queue regardless.
+
+## Summary
+2026-09-04 00:38:40 UTC | model=openrouter | budget=full | steps=5 | tokens=95143
+First action: write_file
+Summary: Step 1: write_file (OK) — Wrote file: docs/calculators/saas-payback-period-calculator.html (4899 chars) | Step 2: validate_html (OK) — ✓ docs/calculators/saas-payback-period-calculator.html passed validation (no iss | Step 3: seo_update_sitemap (OK) — Regenerated sitemap.xml (98 pages) and robots.txt
+
+Step details:
+Step 1: action=write_file | tokens=20391 | result=Wrote file: docs/calculators/saas-payback-period-calculator.html (4899 chars)
+  Step 2: action=validate_html | tokens=20089 | result=✓ docs/calculators/saas-payback-period-calculator.html passed validation (no issues)
+  Step 3: action=seo_update_sitemap | tokens=18809 | result=Regenerated sitemap.xml (98 pages) and robots.txt
+  Step 4: action=read_file | tokens=17281 | result=Contents of memory/blocked.md:
+# Blocked Actions Log — v4.1 (Autonomous Edition)
+
+CIRCUIT_OPEN groq
+FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
+  "erro...
 

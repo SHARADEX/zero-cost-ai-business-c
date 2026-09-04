@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS CAC Payback Period Calculator | Free B2B Metrics Tool</title>
+  <meta name="description" content="Calculate your SaaS Customer Acquisition Cost (CAC) payback period in months. Free, instant, and accurate tool for SaaS founders and financial analysts.">
+  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/saas-payback-period-calculator.html">
+  <meta property="og:title" content="SaaS CAC Payback Period Calculator">
+  <meta property="og:description" content="Calculate your SaaS Customer Acquisition Cost (CAC) payback period in months with this free tool.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/saas-payback-period-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SaaS CAC Payback Period Calculator",
+    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/saas-payback-period-calculator.html",
+    "description": "Calculate CAC payback period in months to measure SaaS capital efficiency.",
+    "applicationCategory": "BusinessApplication"
+  }
+  </script>
+  <script data-goatcounter="https://SHARADEX.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Calculators</a>
+      <a href="../converters/index.html">Converters</a>
+      <a href="../guides/crypto-tips.html">Support</a>
+    </nav>
+  </header>
+  <main>
+    <div id="ethical-ad-zone" class="ad-slot"></div>
+    <article>
+      <h1>SaaS CAC Payback Period Calculator</h1>
+      <p>Estimate the months required to recover the cost of acquiring a new customer.</p>
+      <section class="tool-card">
+        <form id="payback-form" onsubmit="event.preventDefault(); calculatePayback();">
+          <label for="cac">Customer Acquisition Cost (CAC) ($):</label>
+          <input type="number" id="cac" name="cac" min="0" step="0.01" required value="1200">
+
+          <label for="arpu">Average Revenue Per User / Account (ARPU) ($/mo):</label>
+          <input type="number" id="arpu" name="arpu" min="0" step="0.01" required value="150">
+
+          <label for="margin">Gross Margin (%):</label>
+          <input type="number" id="margin" name="margin" min="1" max="100" step="0.1" required value="80">
+
+          <button type="submit" class="btn-primary">Calculate Payback Period</button>
+        </form>
+        <div id="result-area" class="result-box" style="margin-top:20px; font-weight:bold;"></div>
+      </section>
+      <section>
+        <h2>Formula & Definition</h2>
+        <p><strong>CAC Payback (Months)</strong> = <code>CAC / (ARPU &times; Gross Margin %)</code></p>
+        <p>Top-tier B2B SaaS companies aim for a payback period under 12 months, while 12&ndash;18 months is typical for enterprise segments.</p>
+      </section>
+      <section class="affiliate-block">
+        <h3>Recommended Cloud & Infrastructure</h3>
+        <p>Host your SaaS workloads reliably with <a href="https://m.do.co/c/YOUR_REFERRAL_CODE" target="_blank" rel="noopener">DigitalOcean ($200 free credit)</a>.</p>
+      </section>
+      <section class="newsletter-block">
+        <h3>Subscribe to SaaS Growth Insights</h3>
+        <form action="mailto:contact@example.com" method="post" enctype="text/plain">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+      <section class="support-block">
+        <p>Found this useful? Support continuous free tools via <a href="../guides/crypto-tips.html">Crypto Tips</a> or GitHub Sponsors.</p>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 Free Business Tools. All rights reserved. | <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a></p>
+  </footer>
+  <script>
+    function calculatePayback() {
+      var cac = parseFloat(document.getElementById('cac').value) || 0;
+      var arpu = parseFloat(document.getElementById('arpu').value) || 0;
+      var margin = (parseFloat(document.getElementById('margin').value) || 0) / 100;
+      var resBox = document.getElementById('result-area');
+      if (arpu <= 0 || margin <= 0) {
+        resBox.textContent = 'Please enter positive ARPU and Gross Margin.';
+        return;
+      }
+      var monthlyGrossProfit = arpu * margin;
+      var paybackMonths = (cac / monthlyGrossProfit).toFixed(1);
+      resBox.textContent = 'Estimated CAC Payback Period: ' + paybackMonths + ' months';
+    }
+    calculatePayback();
+  </script>
+</body>
+</html>
