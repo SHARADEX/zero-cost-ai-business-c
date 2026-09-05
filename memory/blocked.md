@@ -1,13 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-FAIL gemini/gemini-
-
-[2026-09-03 22:41:41 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
-
-[2026-09-03 22:41:41 UTC] LLM call failed at step 3.
-All LLM providers failed. Attempts:
-FAIL groq/meta-llama/llama-prompt-guard-2-22m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
-
 FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
 
 FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
@@ -161,3 +153,15 @@ FAIL cerebras/llama3.1-70b attempt 1: HTTP 401: {"message":"Wrong API Key","type
 SKIP openrouter - budget exhausted
 
 [2026-09-05 00:14:08 UTC] revenue_verify error: Failed to fetch balance for ethereum
+
+[2026-09-05 04:45:52 UTC] LLM call failed at step 4.
+All LLM providers failed. Attempts:
+FAIL groq/meta-llama/llama-prompt-guard-2-86m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
+
+FAIL groq/meta-llama/llama-prompt-guard-2-22m attempt 1: HTTP 400: {"error":{"message":"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model","type":"invalid_request_error","param":"max_tokens"}}
+
+CIRCUIT_OPEN groq
+SKIP gemini - unhealthy (circuit breaker)
+FAIL cerebras/llama-3.1-8b-instant attempt 1: HTTP 401: {"message":"Wrong API Key","type":"invalid_request_error","param":"api_key","code":"wrong_api_key"}
+FAIL cerebras/llama3.1-70b attempt 1: HTTP 401: {"message":"Wrong API Key","type":"invalid_request_error","param":"api_key","code":"wrong_api_key"}
+SKIP openrouter - budget exhausted
