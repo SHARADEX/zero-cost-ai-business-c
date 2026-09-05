@@ -1,22 +1,5 @@
 # Blocked Actions Log — v4.1 (Autonomous Edition)
 
-FAIL gemini/gemini-2.5-flash-preview-tts attempt 1: HTTP 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 10000, model: gemini-2.5-flash-tts\nPlease retry in 1.550984189s.",
-    "status": "RESOURCE_EX
-FAIL gemini/gemini-2.5-pro-preview-tts attempt 1: HTTP 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro-tts\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_c
-FAIL gemini/gemini-flash-latest-high-res-exp attempt 1: HTTP 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
-    "status": "UNAVAILABLE"
-  }
-}
-
 FAIL gemini/gemini-
 
 [2026-09-03 22:41:41 UTC] Agent output failed validation twice. Last error: No JSON object found. Output a single JSON object with no prose before or after.
@@ -176,3 +159,5 @@ SKIP gemini - unhealthy (circuit breaker)
 FAIL cerebras/llama-3.1-8b-instant attempt 1: HTTP 401: {"message":"Wrong API Key","type":"invalid_request_error","param":"api_key","code":"wrong_api_key"}
 FAIL cerebras/llama3.1-70b attempt 1: HTTP 401: {"message":"Wrong API Key","type":"invalid_request_error","param":"api_key","code":"wrong_api_key"}
 SKIP openrouter - budget exhausted
+
+[2026-09-05 00:14:08 UTC] revenue_verify error: Failed to fetch balance for ethereum
