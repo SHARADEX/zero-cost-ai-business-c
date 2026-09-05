@@ -1,135 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gross Margin Calculator - Free Online Business Margin Tool</title>
-  <meta name="description" content="Calculate your gross profit margin and markup percentage easily with our free online gross margin calculator. Fast, accurate, and privacy-friendly.">
-  <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-margin-calculator.html">
-  <meta property="og:title" content="Gross Margin Calculator - Free Online Business Margin Tool">
-  <meta property="og:description" content="Calculate gross profit margin and markup instantly with our free, privacy-friendly calculator.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-margin-calculator.html">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Gross Margin Calculator",
-    "url": "https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-margin-calculator.html",
-    "description": "Calculate gross profit, gross margin percentage, and markup percentage from revenue and cost of goods sold (COGS).",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "All"
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gross Margin Calculator — Free Financial Tool</title>
+    <meta name="description" content="Calculate your gross margin and gross profit quickly and accurately. Free online tool for business owners, accountants, and entrepreneurs.">
+    <link rel="canonical" href="https://SHARADEX.github.io/zero-cost-ai-business-c/calculators/gross-margin-calculator.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav-container">
-      <a href="../index.html" class="brand-logo">FreeTools Hub</a>
-      <div class="nav-links">
-        <a href="../tools/index.html">Tools</a>
-        <a href="../converters/index.html">Converters</a>
-        <a href="index.html">Calculators</a>
-        <a href="../blog/index.html">Blog</a>
-      </div>
-    </nav>
-  </header>
-
-  <main class="main-content">
-    <article class="tool-container">
-      <h1>Gross Margin Calculator</h1>
-      <p class="lead-text">Calculate gross profit, gross profit margin percentage, and markup percentage from your total revenue and Cost of Goods Sold (COGS).</p>
-
-      <!-- Ad Placement Zone -->
-      <div id="ad-placement" class="ad-zone" data-ad-unit="horizontal"></div>
-
-      <div class="calculator-card">
-        <div class="form-group">
-          <label for="revenue">Total Revenue / Selling Price ($):</label>
-          <input type="number" id="revenue" min="0" step="any" placeholder="e.g. 1000" class="input-field">
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../calculators/">Calculators</a>
+            <a href="../converters/">Converters</a>
+            <a href="../blog/">Blog</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Gross Margin Calculator</h1>
+        <p>Determine the financial health of your products by calculating gross profit and gross margin percentage.</p>
+        
+        <div class="calculator-box">
+            <label for="revenue">Total Revenue ($):</label>
+            <input type="number" id="revenue" placeholder="e.g., 10000">
+            
+            <label for="cogs">Cost of Goods Sold - COGS ($):</label>
+            <input type="number" id="cogs" placeholder="e.g., 4000">
+            
+            <button onclick="calculateGrossMargin()">Calculate Margin</button>
+            
+            <div id="result" class="result-area" style="margin-top: 20px; font-weight: bold;"></div>
         </div>
 
-        <div class="form-group">
-          <label for="cogs">Cost of Goods Sold (COGS) ($):</label>
-          <input type="number" id="cogs" min="0" step="any" placeholder="e.g. 600" class="input-field">
+        <script>
+            function calculateGrossMargin() {
+                const rev = parseFloat(document.getElementById('revenue').value);
+                const cogs = parseFloat(document.getElementById('cogs').value);
+                const res = document.getElementById('result');
+                if (isNaN(rev) || isNaN(cogs) || rev <= 0) {
+                    res.innerText = 'Please enter valid positive numbers for revenue and COGS.';
+                    return;
+                }
+                const profit = rev - cogs;
+                const margin = (profit / rev) * 100;
+                res.innerHTML = `Gross Profit: $${profit.toFixed(2)}<br>Gross Margin: ${margin.toFixed(2)}%`;
+            }
+        </script>
+
+        <section style="margin-top: 40px;">
+            <h2>Recommended Tools for Your Business</h2>
+            <p>Need a robust workspace to track financials? Try <a href="https://www.notion.so/?r=YOUR_REFERRAL_CODE" target="_blank">Notion</a> to manage your business operations.</p>
+        </section>
+
+        <div class="tip-box" style="margin-top: 40px; padding: 20px; background: #f4f4f4; border-radius: 8px;">
+            <h3>Support This Project</h3>
+            <p>Found this calculator useful? Consider supporting our zero-cost operations via our <a href="../guides/crypto-tips.html">Crypto Tip Box</a>.</p>
         </div>
-
-        <button id="calc-btn" class="btn-primary" type="button">Calculate Margin</button>
-
-        <div id="result-box" class="result-box" style="display:none;">
-          <h3>Results</h3>
-          <p><strong>Gross Profit:</strong> $<span id="gross-profit">0.00</span></p>
-          <p><strong>Gross Margin:</strong> <span id="gross-margin">0.00</span>%</p>
-          <p><strong>Markup:</strong> <span id="markup-percentage">0.00</span>%</p>
-        </div>
-      </div>
-
-      <section class="content-section">
-        <h2>Gross Margin Formula & Explanation</h2>
-        <p>Gross Profit Margin measures the percentage of revenue remaining after subtracting direct production costs:</p>
-        <pre><code>Gross Profit = Revenue - COGS
-Gross Margin (%) = (Gross Profit / Revenue) * 100
-Markup (%) = (Gross Profit / COGS) * 100</code></pre>
-        <p>A higher gross margin indicates greater operational efficiency and more capital available to cover operating expenses.</p>
-      </section>
-
-      <section class="related-tools">
-        <h2>Related Business Calculators</h2>
-        <ul>
-          <li><a href="net-profit-margin-calculator.html">Net Profit Margin Calculator</a></li>
-          <li><a href="operating-margin-calculator.html">Operating Margin Calculator</a></li>
-          <li><a href="break-even-calculator.html">Break-Even Calculator</a></li>
-          <li><a href="roi-calculator.html">ROI Calculator</a></li>
-        </ul>
-      </section>
-
-      <section class="newsletter-card">
-        <h3>Subscribe to Business Insights</h3>
-        <p>Get weekly updates with actionable financial formulas, calculator releases, and business tools.</p>
-        <form action="https://buttondown.email/api/emails/embed-subscribe/business-tools" method="post" target="popupwindow" class="newsletter-form">
-          <input type="email" name="email" placeholder="Enter your email" required class="input-field">
-          <button type="submit" class="btn-secondary">Subscribe</button>
-        </form>
-      </section>
-    </article>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <p>&copy; 2026 FreeTools Hub. All rights reserved.</p>
-      <p>
-        <a href="../guides/crypto-tips.html">Support / Tip</a> | 
-        <a href="../guides/affiliate-disclosure.html">Affiliate Disclosure</a>
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('calc-btn').addEventListener('click', function() {
-      const rev = parseFloat(document.getElementById('revenue').value);
-      const cogs = parseFloat(document.getElementById('cogs').value);
-      const resBox = document.getElementById('result-box');
-
-      if (isNaN(rev) || isNaN(cogs) || rev < 0 || cogs < 0) {
-        alert('Please enter valid, non-negative numbers for revenue and COGS.');
-        return;
-      }
-      if (rev === 0) {
-        alert('Revenue must be greater than zero to calculate margins.');
-        return;
-      }
-
-      const profit = rev - cogs;
-      const margin = (profit / rev) * 100;
-      const markup = cogs > 0 ? (profit / cogs) * 100 : 0;
-
-      document.getElementById('gross-profit').textContent = profit.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      document.getElementById('gross-margin').textContent = margin.toFixed(2);
-      document.getElementById('markup-percentage').textContent = markup.toFixed(2);
-      resBox.style.display = 'block';
-    });
-  </script>
-  <script data-goatcounter="https://your-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    </main>
+    <footer>
+        <p>&copy; 2026 Zero-Cost AI Business. All rights reserved.</p>
+    </footer>
 </body>
 </html>

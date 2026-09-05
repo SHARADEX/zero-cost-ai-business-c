@@ -5842,3 +5842,17 @@ FAIL gemini/gemini-
   - Step 3: validate_html (OK) — ✓ docs/calculators/customer-lifetime-value-calculator.html passed validation (no
   - Stopped: LLM failed at step 4.
 ---
+## Run 2026-09-05 08:45:16 UTC
+**Model:** gemini
+**Budget:** full
+**Steps taken:** 1
+**Tokens used:** 37974
+
+**Steps:**
+  Step 1: action=write_file | tokens=18823 | result=Wrote file: docs/calculators/gross-margin-calculator.html (3175 chars)
+
+**Run Summary:**
+  - Step 1: write_file (OK) — Wrote file: docs/calculators/gross-margin-calculator.html (3175 chars)
+  - Step 2: LLM retry failed.
+  - Stopped: LLM failed at step 3.
+---
