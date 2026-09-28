@@ -5,109 +5,109 @@
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1790610174.9348173
+      "timestamp": 1790615253.4498265
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1790610175.3749375
+      "timestamp": 1790615253.6425838
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See http",
-      "timestamp": 1790610175.5681083
+      "timestamp": 1790615253.9120512
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See http",
-      "timestamp": 1790610175.6962132
+      "timestamp": 1790615254.038369
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See http",
-      "timestamp": 1790610175.8166482
+      "timestamp": 1790615254.178311
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See http",
-      "timestamp": 1790610175.9286504
+      "timestamp": 1790615254.3177974
     },
     {
       "provider": "cerebras",
       "success": false,
       "error": "HTTP 401: {\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}",
-      "timestamp": 1790610176.1401458
+      "timestamp": 1790615254.6363738
     },
     {
       "provider": "cerebras",
       "success": false,
       "error": "HTTP 401: {\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}",
-      "timestamp": 1790610176.2188373
+      "timestamp": 1790615254.8051674
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610176.433277
+      "timestamp": 1790615255.205412
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610176.4981225
+      "timestamp": 1790615255.3319125
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610176.5720353
+      "timestamp": 1790615255.4722517
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610176.6397197
+      "timestamp": 1790615255.611182
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610176.7078152
+      "timestamp": 1790615255.7662928
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610176.7703977
+      "timestamp": 1790615255.8986948
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610176.9454365
+      "timestamp": 1790615256.0246356
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610177.0137546
+      "timestamp": 1790615256.1623788
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610177.0936913
+      "timestamp": 1790615256.3025966
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1790610177.5039158
+      "timestamp": 1790615256.4646916
     }
   ]
 }
