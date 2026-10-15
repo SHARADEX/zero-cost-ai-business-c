@@ -5,109 +5,109 @@
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1792059197.5004685
+      "timestamp": 1792077024.5157688
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1792059198.003576
+      "timestamp": 1792077024.6415427
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See http",
-      "timestamp": 1792059198.212408
+      "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.",
+      "timestamp": 1792077024.8066661
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See http",
-      "timestamp": 1792059198.3095515
+      "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.",
+      "timestamp": 1792077024.9099267
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See http",
-      "timestamp": 1792059198.4008858
+      "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.",
+      "timestamp": 1792077025.0090094
     },
     {
       "provider": "gemini",
       "success": false,
-      "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See http",
-      "timestamp": 1792059198.5261047
+      "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.",
+      "timestamp": 1792077025.0996056
     },
     {
       "provider": "cerebras",
       "success": false,
       "error": "HTTP 401: {\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}",
-      "timestamp": 1792059198.7038116
+      "timestamp": 1792077025.3995128
     },
     {
       "provider": "cerebras",
       "success": false,
       "error": "HTTP 401: {\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}",
-      "timestamp": 1792059198.7863593
+      "timestamp": 1792077025.5564275
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.1055424
+      "timestamp": 1792077025.8680124
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.186018
+      "timestamp": 1792077025.9523444
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.2501116
+      "timestamp": 1792077026.1134598
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.329351
+      "timestamp": 1792077026.2043753
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.4167347
+      "timestamp": 1792077026.286635
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.4866712
+      "timestamp": 1792077026.3733938
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.5637236
+      "timestamp": 1792077026.4624615
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.6331036
+      "timestamp": 1792077026.5476553
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.7260509
+      "timestamp": 1792077026.6311874
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792059199.8009837
+      "timestamp": 1792077026.7230308
     }
   ]
 }
