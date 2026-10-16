@@ -5,109 +5,109 @@
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1792103560.3234663
+      "timestamp": 1792112261.1573238
     },
     {
       "provider": "groq",
       "success": false,
       "error": "HTTP 400: {\"error\":{\"message\":\"`max_tokens` must be less than or equal to `512`, the maximum value for `max_tokens` is less than the `context_window` for this model\",\"type\":\"invalid_request_error\",\"pa",
-      "timestamp": 1792103560.5195732
+      "timestamp": 1792112261.7162526
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.",
-      "timestamp": 1792103560.8049521
+      "timestamp": 1792112261.8837025
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.",
-      "timestamp": 1792103560.926432
+      "timestamp": 1792112261.9615886
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.",
-      "timestamp": 1792103561.0503993
+      "timestamp": 1792112262.0379572
     },
     {
       "provider": "gemini",
       "success": false,
       "error": "HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.",
-      "timestamp": 1792103561.1853275
+      "timestamp": 1792112262.1208377
     },
     {
       "provider": "cerebras",
       "success": false,
       "error": "HTTP 401: {\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}",
-      "timestamp": 1792103561.517116
+      "timestamp": 1792112262.3023365
     },
     {
       "provider": "cerebras",
       "success": false,
       "error": "HTTP 401: {\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}",
-      "timestamp": 1792103561.6860633
+      "timestamp": 1792112262.3773534
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103562.1140158
+      "timestamp": 1792112262.591396
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103562.246277
+      "timestamp": 1792112262.6689546
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103562.3954082
+      "timestamp": 1792112262.9520109
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103562.5331416
+      "timestamp": 1792112263.207561
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103562.6713731
+      "timestamp": 1792112263.3928187
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103562.8026383
+      "timestamp": 1792112263.6002657
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103562.931256
+      "timestamp": 1792112263.6512194
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103563.0660365
+      "timestamp": 1792112264.4612339
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103563.197584
+      "timestamp": 1792112264.5446887
     },
     {
       "provider": "openrouter",
       "success": false,
       "error": "HTTP 401: {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
-      "timestamp": 1792103563.3358064
+      "timestamp": 1792112264.6202679
     }
   ]
 }
